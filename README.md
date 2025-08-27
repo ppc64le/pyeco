@@ -80,5 +80,3 @@ export LD_LIBRARY_PATH=/path/to/libs:$LD_LIBRARY_PATH
 - Use `--prefer-binary` to avoid unnecessary source builds.
 
 ---
-
-Would you like a ready-to-run script or Dockerfile to automate this setup for your team?
