@@ -68,7 +68,6 @@ export LD_LIBRARY_PATH=/path/to/libs:$LD_LIBRARY_PATH
 - Ensure you're using the correct Python version.
 - If a package is missing, request it via:
   - [IBM TechXchange thread](https://community.ibm.com/community/user/discussion/unleash-the-power-of-ai-with-optimized-python-packages-for-ibm-power)
-  - IBM Slack: `#taas-artifactory-help`
 
 ---
 
