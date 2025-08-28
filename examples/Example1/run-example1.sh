@@ -6,9 +6,11 @@ source .venv/bin/activate
 
 pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt 
 
+pip install --prefer-binary libprotobuf==4.25.8 openblas --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+
 pip install --upgrade pip
 
-export LD_LIBRARY_PATH=./venv/lib/python3.12/site-packages/openblas/lib:./venv/lib/python3.12/site-packages/libprotobuf/lib64
+export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:./.venv/lib/python3.12/site-packages/libprotobuf/lib64
 
 python3.12 example1.py
 python3.12 sub-test1.py
