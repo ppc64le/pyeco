@@ -1,6 +1,18 @@
 # pyeco
 Python Ecosystem for Power Hints and Tips, Issue Tracking
 
+NOTE:  We are starting to add a few requirements.txt base examples and a few tested programs using those to help people get
+started.  Like with Pypi, there are a lot of possible permutations and combinations and not all will be tested, but the goal
+is that there should be a clear path for major python toolset combinations.  We will also welcome additonal snippets or example
+to help clarify.  We will ask for a DCO on any contributions.  We are also going to track any issues or requests here, although
+note that as we are building this out, requests will be "as we can" while we are focused on some particular projects and combinations.
+
+We appreciate your patience, and hopefully this guidance below is generalized, and you can see consolidated examples in the examples directory.
+
+THANKS!!
+
+--- 
+
 Here's a **comprehensive and streamlined guide** to using **optimized Python packages on IBM Power systems**.
 
 ---
