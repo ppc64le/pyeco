@@ -4,7 +4,8 @@ from vllm import LLM
 
 print("=== 1. Model Initialization Test ===")
 try:
-    llm = LLM(model="facebook/opt-125m")
+    llm = LLM(model="ibm-granite/granite-3.1-2b-instruct",
+              max_model_len = 4096)
     print("[INFO] Model loaded successfully.")
 except Exception as e:
     print("[ERROR] Model loading failed:", e)

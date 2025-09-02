@@ -1,9 +1,9 @@
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_name = "google/flan-t5-small"  # You can also try flan-t5-base or flan-t5-large
+model_name = "ibm-granite/granite-3.1-2b-instruct"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
 
 prompts = [
     "What is first letter of Alphabet?",
@@ -13,7 +13,7 @@ prompts = [
 
 for prompt in prompts:
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids
-    outputs = model.generate(input_ids, max_new_tokens=20)
+    outputs = model.generate(input_ids, max_new_tokens=50)
     print(f"Prompt: {prompt}")
     print("Output:", tokenizer.decode(outputs[0], skip_special_tokens=True))
     print("-" * 30)
