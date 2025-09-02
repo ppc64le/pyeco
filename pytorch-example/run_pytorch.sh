@@ -20,10 +20,10 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install gcc-toolset-13 python3.11-devel python3.11-pip -y --skip-broken --nobest
+            dnf install gcc-toolset-13 python3.11-devel python3.11-pip -y --skip-broken --nobest
             source /opt/rh/gcc-toolset-13/enable
         else
-            sudo yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
+            yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
             source /opt/rh/gcc-toolset-13/enable
         fi
         ;;
