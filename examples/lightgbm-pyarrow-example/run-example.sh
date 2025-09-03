@@ -29,7 +29,7 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         sudo apt update
-        sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++
+        sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++ libjpeg62
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
