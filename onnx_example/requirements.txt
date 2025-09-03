@@ -14,7 +14,6 @@ onnxmltools==1.13.0
 onnxruntime==1.22.0
 openblas==0.3.29
 packaging==25.0
-protobuf==4.25.3
 requests==2.32.5
 scikit-learn==1.6.1
 scipy==1.16.0
