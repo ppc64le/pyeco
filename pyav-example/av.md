@@ -5,8 +5,8 @@ This project provides a simple and robust test to verify the successful installa
 1. Place the `av-example.py` and `av.sh` scripts in the same directory.
 2. Run the main shell script from your terminal:
 
-./av.sh
-The `av.sh` script will automatically handle the installation of system dependencies, create a virtual environment, install the necessary Python packages, and run the tests to confirm that your setup is working.
+./run_av.sh
+The `run_av.sh` script will automatically handle the installation of system dependencies, create a virtual environment, install the necessary Python packages, and run the tests to confirm that your setup is working.
 
 ## What It Tests
 The `av-example.py` script performs two key checks:
