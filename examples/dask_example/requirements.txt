@@ -1,0 +1,14 @@
+absl-py==2.3.1
+attrs==25.3.0
+click==8.2.1
+cloudpickle==3.1.1
+dask==2024.5.0
+dm-tree==0.1.9
+fsspec==2025.9.0
+locket==1.0.0
+numpy==2.3.2
+packaging==25.0
+partd==1.4.2
+PyYAML==6.0.2
+toolz==1.0.0
+wrapt==1.17.3
