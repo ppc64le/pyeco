@@ -60,3 +60,6 @@ python3.12 test1.py
 
 printf "\nRunning test2.py\n"
 python3.12 test2.py
+
+printf "\nRunning test3.py\n"
+python3.12 test3.py
