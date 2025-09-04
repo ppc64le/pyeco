@@ -12,6 +12,7 @@ pip install --upgrade pip
 
 export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:./.venv/lib/python3.12/site-packages/libprotobuf/lib64
 
+python3.12 example.py
 
 python3.12 sub-test1.py
 
