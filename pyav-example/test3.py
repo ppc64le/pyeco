@@ -1,4 +1,3 @@
-# subtest_pillow.py
 from PIL import Image, ImageChops
 import numpy as np
 import io
