@@ -5,7 +5,7 @@ How to Run
 Put the files example.py, subtest.py, and run_av.sh in one folder.
 
 Open a terminal and run:
-./run_av.sh
+sh run_pyav.sh
 
 This script will install what you need and run the tests.
 
