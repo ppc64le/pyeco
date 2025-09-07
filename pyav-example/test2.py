@@ -1,4 +1,3 @@
-# subtest.py - Secondary integration test for Pillow, ml_dtypes, llvmlite, PyAV
 import io
 import numpy as np
 from PIL import Image
