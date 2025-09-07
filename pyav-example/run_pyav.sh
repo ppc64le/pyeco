@@ -49,7 +49,7 @@ export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/ffmpeg/lib:$LD_LIBR
 export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/libvpx/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/lame/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/opus/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="/.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH"
 
 # Run Python scripts
 printf "\nRunning av-example.py\n"
