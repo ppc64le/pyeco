@@ -27,13 +27,13 @@ echo "Installing prerequisites..."
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            dnf install -y git gcc-toolset-13 make wget \
+            sudo dnf install -y git gcc-toolset-13 make wget \
                 openssl-devel bzip2-devel libffi-devel zlib-devel \
                 python3.11 python3.11-devel python3-pip \
                 rust cargo
             source /opt/rh/gcc-toolset-13/enable || true
         else
-            yum install -y git gcc-toolset-13 make wget \
+            sudo yum install -y git gcc-toolset-13 make wget \
                 openssl-devel bzip2-devel libffi-devel zlib-devel \
                 python3.11 python3.11-devel python3-pip \
                 rust cargo
@@ -41,8 +41,8 @@ case $DISTRO in
         fi
         ;;
     "ubuntu"|"debian")
-        apt update
-        apt install -y git build-essential wget \
+        sudo apt update
+        sudo apt install -y git build-essential wget \
             libssl-dev libbz2-dev libffi-dev zlib1g-dev \
             python3.11 python3.11-dev python3-pip python3.11-venv \
             rustc cargo
