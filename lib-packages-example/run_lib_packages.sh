@@ -27,8 +27,10 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
-        apt update &&  apt install -y \
-        install python3-protobuf libopenblas-base libopenblas-dev python3.12 python3.12-dev python3.12-venv python3-pip
+        apt update && apt install -y \
+        gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
+        python3-protobuf libopenblas-dev
+
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -36,9 +38,6 @@ case $DISTRO in
         ;;
 esac
 
-yum 
-
-apt 
 
 python3.12 -m venv venv
 source venv/bin/activate
@@ -63,6 +62,9 @@ export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/snappy/lib:$LD_LIBR
 export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/thriftcpp/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/utf8proc/lib:$LD_LIBRARY_PATH
 
+python lib_package_example.py
+
+echo "==== Testing ===="
 
 python sub-test1.py
 python sub-test2.py
