@@ -20,15 +20,15 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            dnf install -y python3-protobuf openblas openblas-devel
+            dnf install -y python3-protobuf openblas openblas-devel python3.12-devel python3.12-pip
         else
-            yum install -y python3-protobuf openblas openblas-devel  
+            yum install -y python3-protobuf openblas openblas-devel python3.12-devel python3.12-pip
         fi
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
         apt update &&  apt install -y \
-        install python3-protobuf libopenblas-base libopenblas-dev
+        install python3-protobuf libopenblas-base libopenblas-dev python3.12 python3.12-dev python3.12-venv python3-pip
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
