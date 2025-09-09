@@ -20,16 +20,16 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            dnf install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel cmake
+            sudo dnf install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel cmake
             source /opt/rh/gcc-toolset-13/enable
         else
-            yum install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel cmake
+            sudo yum install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel cmake
             source /opt/rh/gcc-toolset-13/enable
         fi
         ;;
     "ubuntu"|"debian")
-         apt update
-         apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++ libjpeg62 camke
+         sudo apt update
+         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++ libjpeg62 camke
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
