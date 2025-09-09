@@ -1,4 +1,4 @@
-sudo dnf install cargo cmake python3.12 python3.12-devel ncurses gcc gcc-c++ libjpeg-devel gfortran --skip-broken --nobest
+sudo dnf -y install cargo cmake python3.12 python3.12-devel ncurses gcc gcc-c++ libjpeg-devel gfortran --skip-broken --nobest
 
 python3.12 -m venv .venv
 
