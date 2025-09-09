@@ -20,21 +20,21 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            dnf install gcc-toolset-13 python3.11-devel python3.11-pip -y --skip-broken --nobest
+            sudo dnf install gcc-toolset-13 python3.11-devel python3.11-pip -y --skip-broken --nobest
             source /opt/rh/gcc-toolset-13/enable
         else
-            yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
+            sudo yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
             source /opt/rh/gcc-toolset-13/enable
         fi
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
-        apt update -y
-        apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
+        sudo apt update -y
+        sudo apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
 
         add-apt-repository ppa:deadsnakes/ppa -y
-        apt update -y
-        apt install -y python3.11 python3.11-venv python3.11-distutils libgfortran5 gcc-13
+        sudo apt update -y
+        sudo apt install -y python3.11 python3.11-venv python3.11-distutils libgfortran5 gcc-13
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"

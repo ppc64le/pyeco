@@ -20,14 +20,14 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            dnf install -y python3-protobuf openblas openblas-devel python3.12-devel python3.12-pip
+            sudo dnf install -y python3-protobuf openblas openblas-devel python3.12-devel python3.12-pip
         else
-            yum install -y python3-protobuf openblas openblas-devel python3.12-devel python3.12-pip
+            sudo yum install -y python3-protobuf openblas openblas-devel python3.12-devel python3.12-pip
         fi
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
-        apt update && apt install -y \
+        sudo apt update && sudo apt install -y \
         gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
         python3-protobuf libopenblas-dev
 
