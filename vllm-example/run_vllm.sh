@@ -34,7 +34,7 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
-        sudo apt update &&  apt install -y \
+        sudo apt update &&  sudo apt install -y \
         gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
         libjpeg-turbo8-dev libnuma-dev \
         xz-utils cmake libssl-dev libopenblas-dev \
