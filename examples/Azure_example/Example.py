@@ -1,4 +1,4 @@
-# Example.py
+# example.py
 
 from azure.mgmt.authorization import AuthorizationManagementClient
 from azure.mgmt.batch import BatchManagementClient
