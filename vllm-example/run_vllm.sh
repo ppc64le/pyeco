@@ -20,13 +20,13 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            dnf install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
+            sudo dnf install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
             zlib-devel autoconf automake libtool cargo \
             pkgconf-pkg-config fontconfig fontconfig-devel sqlite-devel -y --skip-broken --nobest
             
             source /opt/rh/gcc-toolset-13/enable
         else
-            yum install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
+            sudo yum install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
             zlib-devel autoconf automake libtool cargo \
             pkgconf-pkg-config fontconfig fontconfig-devel sqlite-devel -y
             source /opt/rh/gcc-toolset-13/enable
@@ -34,7 +34,7 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
-        apt update &&  apt install -y \
+        sudo apt update &&  sudo apt install -y \
         gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
         libjpeg-turbo8-dev libnuma-dev \
         xz-utils cmake libssl-dev libopenblas-dev \
