@@ -54,8 +54,8 @@ export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIB
 echo "Running environment test..."
 python3 dask_example.py
 
-echo "\n ==== Running sub-test1 ==== \n"
+echo " ==== Running sub-test1 ==== "
 python3 sub-test1.py
 
-echo "\n ==== Running sub-test2 ==== \n"
+echo " ==== Running sub-test2 ==== "
 python3 sub-test2.py
