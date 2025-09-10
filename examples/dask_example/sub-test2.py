@@ -11,6 +11,7 @@ from packaging.version import parse as vparse
 import partd
 import locket
 import time
+import shutil
 
 
 # --------------------
@@ -105,6 +106,9 @@ def test_packaging_sort():
 # partd + locket: multiple values under same key
 # --------------------
 def test_partd_locket_multiple():
+    # Clean old store before using
+    shutil.rmtree("store2", ignore_errors=True)
+
     store = partd.File("store2")
     lock = locket.lock_file("store2/lock")
 
@@ -129,4 +133,4 @@ if __name__ == "__main__":
     test_dmtree_transform()
     test_packaging_sort()
     test_partd_locket_multiple()
-    print("\n✅ All second-round package tests passed!")
+    print("\n All second-round package tests passed!")
