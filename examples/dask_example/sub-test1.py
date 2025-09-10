@@ -10,6 +10,8 @@ import tree
 from packaging import version
 import partd
 import locket
+import shutil
+import os
 
 
 # --------------------
@@ -99,11 +101,14 @@ def test_packaging():
 # partd + locket
 # --------------------
 def test_partd_locket():
+    # Always clean previous store
+    shutil.rmtree("store", ignore_errors=True)
+
     store = partd.File("store")
     lock = locket.lock_file("store/lock")
 
     with lock:
-        store.append({"key": b"123"})   # ✅ must pass dict
+        store.append({"key": b"123"})   
         store.append({"key2": b"456"})
         val1 = store.get("key")
         val2 = store.get("key2")
@@ -124,4 +129,4 @@ if __name__ == "__main__":
     test_dmtree()
     test_packaging()
     test_partd_locket()
-    print("\n✅ All package tests passed!")
+    print("\n All package tests passed!")
