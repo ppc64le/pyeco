@@ -11,7 +11,6 @@ from packaging import version
 import partd
 import locket
 import shutil
-import os
 
 
 # --------------------
