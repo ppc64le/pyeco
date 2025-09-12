@@ -52,7 +52,7 @@ export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIB
 
 # Run Python scripts
 printf "\nRunning example.py\n"
-python3.12 example.py
+python3.12 nbformat_nbconvert_example.py
 
 printf "\nRunning sub-test1.py\n"
 python3.12 sub-test1.py
