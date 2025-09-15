@@ -88,8 +88,8 @@ pip install --upgrade pip
 export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:./.venv/lib/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH
 
 # Run scripts
-echo -e "\nRunning example1.py"
-python3.12 example1.py
+echo -e "\nRunning scikitlearn_ibmcossdk_jwt_example.py"
+python3.12 scikitlearn_ibmcossdk_jwt_example.py
 
 echo -e "\nRunning sub-test1.py"
 python3.12 sub-test1.py
