@@ -1,4 +1,4 @@
-## ✅ Program : Auto Notebook Generator 
+## ✅ Program : NotebookExecExporter
 
 ### Purpose: 
 Validates the generation, execution, and export of a Jupyter notebook using scientific and Jupyter-related packages.  
