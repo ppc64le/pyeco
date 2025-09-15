@@ -77,7 +77,7 @@ pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.
 
 # Install specific additional packages
 pip install --prefer-binary \
-    libprotobuf==4.25.8 \
+    libprotobuf==4.25.3 \
     openblas \
     --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
 
