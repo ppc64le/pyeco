@@ -1,0 +1,5 @@
+black==22.12.0
+click==8.2.1
+mypy_extensions==1.1.0
+pathspec==0.12.1
+platformdirs==4.4.0
