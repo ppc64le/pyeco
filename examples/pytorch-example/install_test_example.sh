@@ -36,6 +36,10 @@ case $DISTRO in
         sudo apt update -y
         sudo apt install -y python3.11 python3.11-venv python3.11-distutils libgfortran5 gcc-13
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc13 python311 python311-pip gcc13-fortran
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1

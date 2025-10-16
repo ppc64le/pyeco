@@ -62,6 +62,23 @@ case $DISTRO in
             gfortran \
             libncurses-dev
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc gcc-fortran python312 python312-pip python312-devel libjpeg62-devel gcc-c++ freetype2-devel
+        sudo zypper install -y cargo cmake ncurses-devel gawk libopenssl-devel perl libgfortran5
+        sudo zypper install -y zlib-devel libffi-devel readline-devel xz-devel sqlite3-devel libzip-devel bzip2 wget tar 
+
+        wget https://www.openssl.org/source/openssl-3.2.0.tar.gz
+        tar -xzf openssl-3.2.0.tar.gz
+        cd openssl-3.2.0
+        ./Configure --prefix=/opt/openssl-3.2 --openssldir=/opt/openssl-3.2 linux-ppc64le
+        make -j$(nproc)
+        sudo make install_sw
+        cd ..
+
+        export LD_RUN_PATH=/opt/openssl-3.2/lib
+        export LD_LIBRARY_PATH=/opt/openssl-3.2/lib:$LD_LIBRARY_PATH
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1

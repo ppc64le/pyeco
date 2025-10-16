@@ -31,6 +31,10 @@ case $DISTRO in
         sudo apt update
         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++ libjpeg62
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ 
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1

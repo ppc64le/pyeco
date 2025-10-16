@@ -41,6 +41,13 @@ case $DISTRO in
         libbz2-dev libbz2-1.0 libffi-dev zlib1g-dev autoconf automake libtool \
         cargo pkg-config fontconfig libfontconfig1-dev sqlite3 libsqlite3-dev libjpeg62
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc gcc-fortran python312 python312-pip python312-devel libjpeg62-devel gcc-c++ freetype2-devel
+        sudo zypper install -y libgfortran5 make cmake autoconf automake libtool pkg-config cargo rust
+        sudo zypper install -y xz libbz2-devel libbz2-1 libffi-devel zlib-devel openssl-devel sqlite3 sqlite3-devel fontconfig-devel
+        sudo zypper install -y libjpeg62-devel libnuma-devel 
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
