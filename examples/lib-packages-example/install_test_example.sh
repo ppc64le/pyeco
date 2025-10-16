@@ -32,6 +32,11 @@ case $DISTRO in
         python3-protobuf libopenblas-dev
 
         ;;
+    "sles")
+        # Enable necessary modules
+        sudo zypper refresh
+        sudo zypper install -y python312 python312-devel python312-pip
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
@@ -69,6 +74,3 @@ echo "==== Testing ===="
 python sub-test1.py
 python sub-test2.py
 python sub-test2.py
-
-
-
