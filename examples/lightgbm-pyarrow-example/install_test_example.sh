@@ -31,6 +31,10 @@ case $DISTRO in
         sudo apt update
         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++ libjpeg62
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ 
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
@@ -51,8 +55,8 @@ pip install --upgrade pip
 export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
 
 # Run Python scripts
-printf "\nRunning example.py\n"
-python3.12 example.py
+printf "\nRunning lightgbm_pyarrow_example.py\n"
+python3.12 lightgbm_pyarrow_example.py
 
 printf "\nRunning sub-test1.py\n"
 python3.12 sub-test1.py
