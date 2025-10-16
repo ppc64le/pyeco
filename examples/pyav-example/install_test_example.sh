@@ -31,6 +31,10 @@ case $DISTRO in
         sudo apt update
         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ freetype2-devel
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
@@ -56,10 +60,10 @@ printf "\nRunning av-example.py\n"
 python3.12 av-example.py
 
 printf "\nRunning test1.py\n"
-python3.12 test1.py
+python3.12 sub-test1.py
 
 printf "\nRunning test2.py\n"
-python3.12 test2.py
+python3.12 sub-test2.py
 
 printf "\nRunning test3.py\n"
-python3.12 test3.py
+python3.12 sub-test3.py
