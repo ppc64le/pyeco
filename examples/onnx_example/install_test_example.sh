@@ -36,6 +36,10 @@ case $DISTRO in
         sudo apt update -y
         sudo apt install -y python3.12 python3.12-venv python3.12-distutils libgfortran5 gcc-13
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ 
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
@@ -61,4 +65,3 @@ echo "\n ==== Running tests ==== \n"
 
 python3.12 sub-test1.py
 python3.12 sub-test2.py
-
