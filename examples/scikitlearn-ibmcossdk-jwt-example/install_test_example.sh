@@ -62,6 +62,23 @@ case $DISTRO in
             gfortran \
             libncurses-dev
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc gcc-fortran python312 python312-pip python312-devel libjpeg62-devel gcc-c++ freetype2-devel
+        sudo zypper install -y cargo cmake ncurses-devel gawk libopenssl-devel perl libgfortran5
+        sudo zypper install -y zlib-devel libffi-devel readline-devel xz-devel sqlite3-devel libzip-devel bzip2 wget tar 
+
+        wget https://www.openssl.org/source/openssl-3.2.0.tar.gz
+        tar -xzf openssl-3.2.0.tar.gz
+        cd openssl-3.2.0
+        ./Configure --prefix=/opt/openssl-3.2 --openssldir=/opt/openssl-3.2 linux-ppc64le
+        make -j$(nproc)
+        sudo make install_sw
+        cd ..
+
+        export LD_RUN_PATH=/opt/openssl-3.2/lib
+        export LD_LIBRARY_PATH=/opt/openssl-3.2/lib:$LD_LIBRARY_PATH
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
@@ -77,7 +94,7 @@ pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.
 
 # Install specific additional packages
 pip install --prefer-binary \
-    libprotobuf==4.25.8 \
+    libprotobuf==4.25.3 \
     openblas \
     --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
 
@@ -88,8 +105,8 @@ pip install --upgrade pip
 export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:./.venv/lib/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH
 
 # Run scripts
-echo -e "\nRunning example1.py"
-python3.12 example1.py
+echo -e "\nRunning scikitlearn_ibmcossdk_jwt_example.py"
+python3.12 scikitlearn_ibmcossdk_jwt_example.py
 
 echo -e "\nRunning sub-test1.py"
 python3.12 sub-test1.py
