@@ -47,6 +47,23 @@ case $DISTRO in
             python3.11 python3.11-dev python3-pip python3.11-venv \
             rustc cargo
         ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y gcc13 python311 python311-pip gcc13-fortran gcc13-c++ zlib-devel cargo
+        sudo zypper install -y git make wget libopenssl-devel libbz2-devel libbz2-1 libffi-devel rust 
+
+        wget https://www.openssl.org/source/openssl-3.2.0.tar.gz
+        tar -xzf openssl-3.2.0.tar.gz
+        cd openssl-3.2.0
+        ./Configure --prefix=/opt/openssl-3.2 --openssldir=/opt/openssl-3.2 linux-ppc64le
+        make -j$(nproc)
+        sudo make install_sw
+        cd ..
+
+        export LD_RUN_PATH=/opt/openssl-3.2/lib
+        export LD_LIBRARY_PATH=/opt/openssl-3.2/lib:$LD_LIBRARY_PATH
+
+        ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
