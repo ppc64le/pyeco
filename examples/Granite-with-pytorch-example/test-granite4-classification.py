@@ -13,7 +13,6 @@ model = AutoModelForCausalLM.from_pretrained(
 test_cases = [
     "Classify the sentiment of this sentence: 'I absolutely love this phone!' Answer with Positive, Neutral, or Negative.",
     "Extract the person's name and location from this sentence: 'Alice went to New York to attend a tech conference.' Return as JSON.",
-    "Explain what this Python code does:\n\nfor i in range(5):\n    print(i * i)"
 ]
 
 # Run each test case

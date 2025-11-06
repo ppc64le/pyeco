@@ -33,7 +33,7 @@ case $DISTRO in
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ 
+        sudo zypper install -y python312 python312-pip python312-devel gcc13 gcc13-fortran libjpeg62-devel gcc13-c++ 
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -52,8 +52,8 @@ pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.
 pip install --upgrade pip
 
 # Set library path for IBM packages
-export LD_LIBRARY_PATH=./.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
-
+export LD_LIBRARY_PATH=./venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=./.venv/lib64/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH
 # Run Python scripts
 printf "\nRunning lightgbm_pyarrow_example.py\n"
 python3.12 lightgbm_pyarrow_example.py

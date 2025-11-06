@@ -35,7 +35,11 @@ case $DISTRO in
     "sles")
         # Enable necessary modules
         sudo zypper refresh
-        sudo zypper install -y python3-protobuf python3.12-devel python3-pip libgfortran gcc gcc-c++ make
+        sudo zypper install -y  libgfortran5 python312 python312-pip python312-devel gcc13 gcc13-fortran gcc13-c++ zlib-devel cargo kernel-default-devel make
+        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 100
+        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 100
+        sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++-13 100
+        sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-13 100
 
         ;;
     *)
