@@ -33,7 +33,7 @@ case $DISTRO in
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++
+        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ 
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
