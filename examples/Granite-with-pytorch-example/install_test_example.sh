@@ -60,12 +60,12 @@ echo "USING Granite 3"
 echo "Running: granite3-run.py"
 python granite3-run.py
 
-echo "Running: test-granite3-classification.py"
-python test-granite3-classification.py
+echo "Running: granite3-sub-test1.py"
+python granite3-sub-test1.py
 
 echo "USING Granite 4"
 echo "Running: granite4-run.py"
 python granite4-run.py
 
-echo "Running: test-granite4-classification.py"
-python test-granite4-classification.py
+echo "Running: granite4-sub-test1.py"
+python granite4-sub-test1.py
