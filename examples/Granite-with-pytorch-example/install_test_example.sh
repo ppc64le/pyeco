@@ -57,15 +57,15 @@ pip install --no-cache --prefer-binary --extra-index-url https://wheels.develope
 export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/libprotobuf/lib64:./venv/lib64/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
 
 echo "USING Granite 3"
-echo "Running: granite3-run.py"
-python granite3-run.py
+echo "Running: granite3-example.py"
+python granite3-example.py
 
 echo "Running: granite3-sub-test1.py"
 python granite3-sub-test1.py
 
 echo "USING Granite 4"
-echo "Running: granite4-run.py"
-python granite4-run.py
+echo "Running: granite4-example.py"
+python granite4-example.py
 
 echo "Running: granite4-sub-test1.py"
 python granite4-sub-test1.py
