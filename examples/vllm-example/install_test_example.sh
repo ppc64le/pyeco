@@ -20,33 +20,20 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
-            zlib-devel autoconf automake libtool cargo \
-            pkgconf-pkg-config fontconfig fontconfig-devel sqlite-devel -y --skip-broken --nobest
-            
-            source /opt/rh/gcc-toolset-13/enable
+            sudo dnf install python3.12-devel python3.12-pip libatomic -y
+
         else
-            sudo yum install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
-            zlib-devel autoconf automake libtool cargo \
-            pkgconf-pkg-config fontconfig fontconfig-devel sqlite-devel -y
-            source /opt/rh/gcc-toolset-13/enable
+            sudo yum install python3.12-devel python3.12-pip libatomic -y
         fi
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
         sudo apt update &&  sudo apt install -y \
-        gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
-        libjpeg-turbo8-dev libnuma-dev \
-        xz-utils cmake libssl-dev libopenblas-dev \
-        libbz2-dev libbz2-1.0 libffi-dev zlib1g-dev autoconf automake libtool \
-        cargo pkg-config fontconfig libfontconfig1-dev sqlite3 libsqlite3-dev libjpeg62
+        python3.12 python3.12-dev python3.12-venv python3-pip libatomic\
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc gcc-fortran python312 python312-pip python312-devel libjpeg62-devel gcc-c++ freetype2-devel
-        sudo zypper install -y libgfortran5 make cmake autoconf automake libtool pkg-config cargo rust
-        sudo zypper install -y xz libbz2-devel libbz2-1 libffi-devel zlib-devel openssl-devel sqlite3 sqlite3-devel fontconfig-devel
-        sudo zypper install -y libjpeg62-devel libnuma-devel 
+        sudo zypper install -y python312 python312-pip python312-devel libatomic
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -60,11 +47,6 @@ source venv/bin/activate
 export VLLM_USE_CUSTOM_OPS=0
 
 pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
-
-pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux libprotobuf==4.25.8 openblas
-
-export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH
 
 python vllm_example.py
 
