@@ -20,25 +20,19 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install gcc-toolset-13 python3.11-devel python3.11-pip -y --skip-broken --nobest
-            source /opt/rh/gcc-toolset-13/enable
+            sudo dnf install python3.11-devel python3.11-pip -y --skip-broken --nobest
         else
-            sudo yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
-            source /opt/rh/gcc-toolset-13/enable
+            sudo yum install python3.11-devel python3.11-pip -y
         fi
         ;;
     "ubuntu"|"debian")
-        # Use: bash script.sh
-        sudo apt update -y
-        sudo apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
-
         add-apt-repository ppa:deadsnakes/ppa -y
         sudo apt update -y
-        sudo apt install -y python3.11 python3.11-venv python3.11-distutils libgfortran5 gcc-13
+        sudo apt install -y python3.11 python3.11-venv python3.11-distutils
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc13 python311 python311-pip gcc13-fortran
+        sudo zypper install -y python311 python311-pip
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -50,11 +44,6 @@ python3.11 -m venv venv
 source venv/bin/activate
 
 pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
-
-pip install libprotobuf==4.25.8 openblas --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux
-
-export LD_LIBRARY_PATH=./venv/lib64/python3.11/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=./venv/lib64/python3.11/site-packages/openblas/lib:$LD_LIBRARY_PATH
 
 python pytorch_example.py
 
