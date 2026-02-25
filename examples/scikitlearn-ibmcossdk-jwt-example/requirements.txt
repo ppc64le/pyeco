@@ -11,7 +11,6 @@ grpcio==1.71.0
 httptools==0.6.4
 humanfriendly==10.0
 ibm-cloud-sdk-core==3.24.1
-ibm-code-engine-sdk==4.20.0
 ibm-cos-sdk==2.14.1
 ibm-cos-sdk-core==2.14.1
 ibm-cos-sdk-s3transfer==2.14.1
