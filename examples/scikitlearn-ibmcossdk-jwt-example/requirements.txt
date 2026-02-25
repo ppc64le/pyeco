@@ -6,7 +6,7 @@ chroma-hnswlib==0.7.6
 coloredlogs==15.0.1
 cryptography==45.0.3
 dulwich==0.21.7
-flatbuffers==20250127095939
+flatbuffers==25.2.10
 grpcio==1.71.0
 httptools==0.6.4
 humanfriendly==10.0
