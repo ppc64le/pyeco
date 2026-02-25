@@ -27,41 +27,18 @@ echo "Installing prerequisites..."
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y git gcc-toolset-13 make wget \
-                openssl-devel bzip2-devel libffi-devel zlib-devel \
-                python3.11 python3.11-devel python3-pip \
-                rust cargo
-            source /opt/rh/gcc-toolset-13/enable || true
+            sudo dnf install -y python3.11 python3.11-devel python3-pip 
         else
-            sudo yum install -y git gcc-toolset-13 make wget \
-                openssl-devel bzip2-devel libffi-devel zlib-devel \
-                python3.11 python3.11-devel python3-pip \
-                rust cargo
-            source /opt/rh/gcc-toolset-13/enable || true
+            sudo yum install -y python3.11 python3.11-devel python3-pip 
         fi
         ;;
     "ubuntu"|"debian")
         sudo apt update
-        sudo apt install -y git build-essential wget \
-            libssl-dev libbz2-dev libffi-dev zlib1g-dev \
-            python3.11 python3.11-dev python3-pip python3.11-venv \
-            rustc cargo
+        sudo apt install -y python3.11 python3.11-dev python3-pip python3.11-venv 
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc13 python311 python311-pip gcc13-fortran gcc13-c++ zlib-devel cargo
-        sudo zypper install -y git make wget libopenssl-devel libbz2-devel libbz2-1 libffi-devel rust 
-
-        wget https://www.openssl.org/source/openssl-3.2.0.tar.gz
-        tar -xzf openssl-3.2.0.tar.gz
-        cd openssl-3.2.0
-        ./Configure --prefix=/opt/openssl-3.2 --openssldir=/opt/openssl-3.2 linux-ppc64le
-        make -j$(nproc)
-        sudo make install_sw
-        cd ..
-
-        export LD_RUN_PATH=/opt/openssl-3.2/lib
-        export LD_LIBRARY_PATH=/opt/openssl-3.2/lib:$LD_LIBRARY_PATH
+        sudo zypper install -y python311 python311-pip
 
         ;;
     *)
@@ -81,7 +58,7 @@ source .venv/bin/activate
 # -------------------------------
 pip install --upgrade pip
 pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
-export LD_LIBRARY_PATH=./.venv/lib/python3.11/site-packages/openblas/lib:$LD_LIBRARY_PATH
+
 # -------------------------------
 # Run the environment test
 # -------------------------------

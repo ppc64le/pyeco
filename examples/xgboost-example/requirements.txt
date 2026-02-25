@@ -11,7 +11,6 @@ Jinja2==3.1.6
 MarkupSafe==3.0.2
 numpy==2.3.1
 pandas==2.3.0
-openblas==0.3.29
 packaging==25.0
 pycparser==2.22
 roman==5.1
