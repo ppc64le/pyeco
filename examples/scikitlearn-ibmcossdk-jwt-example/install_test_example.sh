@@ -39,7 +39,7 @@ case $DISTRO in
             python3.12 \
             python3.12-dev \
             python3.12-venv \
-            python3-pip \
+            python3-pip 
         ;;
     "sles")
         sudo zypper refresh
