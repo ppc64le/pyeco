@@ -85,7 +85,6 @@ kiwisolver==1.4.9
 krb5==0.7.0
 lark==1.2.2
 lazy_loader==0.4
-libprotobuf==4.25.8
 lightgbm==4.6.0
 llvmlite==0.44.0
 locket==1.0.0
@@ -113,7 +112,6 @@ notebook_shim==0.2.4
 numba==0.62.0.dev0
 numexpr==2.10.2
 numpy==1.26.4
-openblas==0.3.29
 opencv-python==4.10.0.84
 packaging==25.0
 pandas==2.3.0

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Function to detect Linux distribution
+# -------------------------------
+# Function to detect Linux distro
+# -------------------------------
 detect_distro() {
     if [ -f /etc/os-release ]; then
         . /etc/os-release
@@ -14,33 +16,36 @@ detect_distro() {
     fi
 }
 
-# Install system dependencies based on distribution
 DISTRO=$(detect_distro)
+echo "Detected distribution: $DISTRO"
+echo "Installing prerequisites..."
 
+# -------------------------------
+# Install system dependencies
+# -------------------------------
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf -y install gcc-toolset-13 python3.12-devel python3.12-pip -y --skip-broken --nobest
-            source /opt/rh/gcc-toolset-13/enable
+            sudo dnf install -y python3.11 python3.11-devel python3-pip 
         else
-            sudo yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
-            source /opt/rh/gcc-toolset-13/enable
+            sudo yum install -y python3.11 python3.11-devel python3-pip 
         fi
         ;;
     "ubuntu"|"debian")
-        # Use: bash script.sh
-        sudo apt update -y
-        sudo apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
+        sudo apt update
+        sudo apt install -y python3.11 python3.11-dev python3-pip python3.11-venv 
+        ;;
+    "sles")
+        sudo zypper refresh
+        sudo zypper install -y python311 python311-pip
 
-        sudo add-apt-repository ppa:deadsnakes/ppa -y
-        sudo apt update -y
-        sudo apt update && apt install -y python3.12 python3.12-dev python3.12-venv python3-pip
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
         ;;
 esac
+
 
 
 
@@ -51,13 +56,9 @@ python3.12 -m pip install --no-cache --prefer-binary --extra-index-url https://w
 
 WORKDIR=$(pwd)
 
-export LD_LIBRARY_PATH="./venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH"
-cd ./venv/lib/python3.12/site-packages/libprotobuf/lib64/
-ln -s libprotobuf.so.25.4.0 libprotobuf.so.25.3.0
-export LD_LIBRARY_PATH="./venv/lib/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH"
 cd $WORKDIR
 
-python3.12 example.py
+python3.12 bcrypt_example.py
 
 echo "\n ==== Running tests ==== \n"
 

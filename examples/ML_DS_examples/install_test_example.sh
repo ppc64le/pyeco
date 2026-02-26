@@ -54,14 +54,12 @@ python3.12 -m pip install --no-cache --prefer-binary --extra-index-url https://w
 
 WORKDIR=$(pwd)
 
-export LD_LIBRARY_PATH="./venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH"
-cd ./venv/lib/python3.12/site-packages/libprotobuf/lib64/
-ln -s libprotobuf.so.25.4.0 libprotobuf.so.25.3.0
-export LD_LIBRARY_PATH="./venv/lib/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH"
+SITE_PACKAGES=$(python -c "import sysconfig; print(sysconfig.get_paths()['purelib'])")
+
 cd $WORKDIR
 
-python3.12 black_example.py
+echo "Running example.py . . . ."
+python3.12 ml_ds_example.py
 
-echo "\n ==== Running tests ==== \n"
-
-python3.12 sub-test1.py
+echo "Running test . . . . ."
+python3.12 test.py
