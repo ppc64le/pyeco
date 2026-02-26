@@ -1,5 +1,5 @@
 import unittest
-import examples.ML_DS_examples.ml_ds_example as ex  # Use variables & imports from example.py
+import examples.ml_ds_examples.ml_ds_example as ex  # Use variables & imports from example.py
 
 
 class TestAllLibraries(unittest.TestCase):
