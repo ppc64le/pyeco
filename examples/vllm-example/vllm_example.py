@@ -1,14 +1,44 @@
 import wrapt
 import subprocess
+import os
+import sys
+
+# Set critical environment variables before importing vllm
+os.environ['VLLM_USE_CUSTOM_OPS'] = '0'
+os.environ['VLLM_CPU_KVCACHE_SPACE'] = '8'  # Increase from default 4 GiB to 8 GiB
+os.environ['VLLM_WORKER_MULTIPROC_METHOD'] = 'spawn'  # Use spawn instead of fork
+os.environ['OMP_NUM_THREADS'] = '4'  # Limit OpenMP threads to avoid oversubscription
+os.environ['MKL_NUM_THREADS'] = '4'  # Limit MKL threads
+os.environ['OPENBLAS_NUM_THREADS'] = '4'  # Limit OpenBLAS threads
+
 from vllm import LLM
 
 print("=== 1. Model Initialization Test ===")
+print("[INFO] Environment variables set:")
+print(f"  VLLM_USE_CUSTOM_OPS: {os.environ.get('VLLM_USE_CUSTOM_OPS')}")
+print(f"  VLLM_CPU_KVCACHE_SPACE: {os.environ.get('VLLM_CPU_KVCACHE_SPACE')} GiB")
+print(f"  VLLM_WORKER_MULTIPROC_METHOD: {os.environ.get('VLLM_WORKER_MULTIPROC_METHOD')}")
+print(f"  OMP_NUM_THREADS: {os.environ.get('OMP_NUM_THREADS')}")
+
 try:
-    llm = LLM(model="ibm-granite/granite-3.1-2b-instruct",
-              max_model_len = 1024)
+    # Initialize with CPU-specific settings
+    llm = LLM(
+        model="ibm-granite/granite-3.1-2b-instruct",
+        max_model_len=4096,
+        enforce_eager=True,  # Disable CUDA graphs (CPU doesn't support them)
+        dtype="float32",  # Use float32 for CPU (more stable than bfloat16)
+        tensor_parallel_size=1,  # Single process for CPU
+        gpu_memory_utilization=0.0,  # Not using GPU
+        trust_remote_code=False,
+        max_num_seqs=1,  # Reduce concurrent sequences for CPU
+        max_num_batched_tokens=2048,  # Reduce batch size for CPU
+    )
     print("[INFO] Model loaded successfully.")
 except Exception as e:
     print("[ERROR] Model loading failed:", e)
+    import traceback
+    traceback.print_exc()
+    sys.exit(1)
 
 print("\n=== 2. Check Model Config / Supported Tasks ===")
 try:
