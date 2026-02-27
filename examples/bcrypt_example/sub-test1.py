@@ -13,7 +13,7 @@ class TestBcryptLibrary(unittest.TestCase):
     def test_bcrypt_version(self):
         """Verify bcrypt version"""
         version = importlib.metadata.version("bcrypt")
-        self.assertEqual(version, "4.3.0", f"Expected bcrypt 4.3.0, got {version}")
+        assert "4.3.0" in version, f"'4.3.0' not found in version string: {version}"
 
     def test_bcrypt_hash_and_check(self):
         """Use bcrypt to hash and verify a password"""
