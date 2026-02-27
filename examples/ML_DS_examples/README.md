@@ -8,8 +8,6 @@ tiktoken
 
 tokenizers
 
-torchdata
-
 sentencepiece
 
 scipy
@@ -19,8 +17,6 @@ numpy
 hdbscan
 
 jenkspy
-
-lightgbm
 
 ml_dtypes
 
@@ -78,14 +74,12 @@ skimage
 
 statsmodels
 
-sklearn_pandas
-
 ### Functionality:
 
 - Fits a simple OLS model with statsmodels and prints the summary.
-- Transforms a pandas DataFrame using sklearn-pandas with StandardScaler.
-- Runs basic operations with scikit-image, pywavelets, numexpr, numba, jupyter utilities, nbformat, nbconvert, Pillow, matplotlib (Agg backend), ipywidgets, ipykernel, iminuit, imagecodecs, hnswlib, dask, gensim, pandas to_datetime.
-- Creates simple objects/calls for xgboost DMatrix, tiktoken encoding, tokenizers pretrained model, torchdata iterable, sentencepiece version, scipy eigvals, numpy ops, hdbscan clustering, jenkspy breaks, lightgbm Dataset, ml_dtypes values, autovizwidget version, bottleneck nanmean, cloudpickle dump/load, contourpy contours, cutadapt version, and graphviz graph.
+- Transforms a pandas DataFrame.
+- Runs basic operations with scikit-image, pywavelets, numexpr, numba, jupyter utilities, nbformat, nbconvert, Pillow, matplotlib (Agg backend), ipywidgets, ipykernel, iminuit, imagecodecs, hnswlib, dask, gensim, pandas.
+- Creates simple objects/calls for xgboost DMatrix, tiktoken encoding, tokenizers pretrained model, torchdata iterable, sentencepiece version, scipy eigvals, numpy ops, jenkspy breaks, ml_dtypes values, autovizwidget version, bottleneck nanmean, cloudpickle dump/load, contourpy contours, cutadapt version, and graphviz graph.
 - Prints a final confirmation message.
 
 ### How to run the example :

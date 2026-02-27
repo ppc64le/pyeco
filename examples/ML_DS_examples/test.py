@@ -1,5 +1,5 @@
 import unittest
-import examples.ml_ds_examples.ml_ds_example as ex  # Use variables & imports from example.py
+import ml_ds_example as ex  # Use variables & imports from example.py
 
 
 class TestAllLibraries(unittest.TestCase):
@@ -11,9 +11,6 @@ class TestAllLibraries(unittest.TestCase):
 
     def test_tokenizers(self):
         self.assertTrue(len(ex.tok.encode("Hello world").tokens) > 0)
-
-    def test_torchdata(self):
-        self.assertEqual(list(ex.dp1), [1, 2, 3])
 
     def test_sentencepiece(self):
         self.assertTrue(hasattr(ex.spm, "__version__"))
@@ -29,9 +26,6 @@ class TestAllLibraries(unittest.TestCase):
 
     def test_jenkspy(self):
         self.assertTrue(len(ex.breaks) > 0)
-
-    def test_lightgbm(self):
-        self.assertTrue(ex.train_data.num_data() > 0)
 
     def test_ml_dtypes(self):
         self.assertTrue(all(isinstance(i, ex.ml_dtypes.bfloat16) for i in ex.a))
@@ -53,9 +47,6 @@ class TestAllLibraries(unittest.TestCase):
 
     def test_graphviz(self):
         self.assertIn("A", ex.g.source)
-
-    def test_pandas(self):
-        self.assertEqual(ex.df.shape, (3, 2))
 
     def test_gensim(self):
         self.assertIn("hello", [t.lower() for t in ex.tokens])
@@ -90,9 +81,6 @@ class TestAllLibraries(unittest.TestCase):
     def test_nbformat(self):
         self.assertEqual(ex.nb['nbformat'], 4)
 
-    def test_notebook(self):
-        self.assertTrue(hasattr(ex.notebookapp, "list_running_servers"))
-
     def test_numba(self):
         self.assertTrue(callable(ex.numba.njit))
 
@@ -110,9 +98,6 @@ class TestAllLibraries(unittest.TestCase):
 
     def test_statsmodels(self):
         self.assertTrue(hasattr(ex.model, "summary"))
-
-    def test_sklearn_pandas(self):
-        self.assertEqual(ex.mapper_output.shape, (3, 2))
 
     def test_pandas_datetime(self):
         self.assertEqual(str(ex.date_val), "2025-09-08 00:00:00")

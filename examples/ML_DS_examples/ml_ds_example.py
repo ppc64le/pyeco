@@ -1,13 +1,11 @@
 import xgboost as xgb
 import tiktoken
 from tokenizers import Tokenizer
-import torchdata.datapipes as dp
 import sentencepiece as spm
 import scipy
 import numpy as np
 import hdbscan
 import jenkspy
-import lightgbm as lgb
 import ml_dtypes
 import autovizwidget
 import bottleneck as bn
@@ -30,7 +28,6 @@ import matplotlib
 from PIL import Image
 import nbconvert
 import nbformat
-from notebook import notebookapp
 import numba
 import numexpr
 from pyiceberg.schema import Schema, NestedField
@@ -38,7 +35,6 @@ from pyiceberg.types import LongType, StringType
 import pywt
 from skimage import data, filters
 import pandas as pd
-from sklearn_pandas import DataFrameMapper
 from sklearn.preprocessing import StandardScaler
 import statsmodels.api as sm
 
@@ -50,8 +46,6 @@ X = sm.add_constant(X)
 model = sm.OLS(y, X).fit()
 print(model.summary())
 
-df=pd.DataFrame({'a':[1,2,3],'b':[10,20,30]})
-print(DataFrameMapper([(['a'], StandardScaler()), (['b'], StandardScaler())]).fit_transform(df))
 
 
 
@@ -80,7 +74,6 @@ print(numexpr.evaluate('2+3'))
 
 print(callable(numba.njit))
 
-print(hasattr(notebookapp, 'list_running_servers'))
 
 nb_str = '{\"cells\":[],\"metadata\":{},\"nbformat\":4,\"nbformat_minor\":5}'
 nb = nbformat.reads(nb_str, as_version=4)
@@ -149,9 +142,6 @@ print("tiktoken encoding:", enc.encode("Hello world"))
 tok = Tokenizer.from_pretrained("bert-base-uncased")
 print("tokenizers encoding:", tok.encode("Hello world").tokens)
 
-#  torchdata simple datapipes
-dp1 = dp.iter.IterableWrapper([1, 2, 3])
-print("torchdata example:", list(dp1))
 
 # sentencepiece simple processor
 # Using a mock model since real training is big; just check version
@@ -176,10 +166,6 @@ values = [1, 2, 2, 3, 4, 10]
 breaks = jenkspy.jenks_breaks(values, n_classes=3)
 print("jenkspy breaks:", breaks)
 
-#  lightgbm dataset creation
-train_data = lgb.Dataset(data, label=label)
-train_data.construct()  # initialize the dataset
-print("lightgbm dataset created:", train_data.num_data())
 
 #  ml_dtypes simple type usage
 import ml_dtypes
@@ -223,11 +209,6 @@ ne_eval = ne.evaluate("2+3")
 import pandas as pd
 date_val = pd.to_datetime("2025-09-08")
 
-# For sklearn-pandas DataFrameMapper output
-df = pd.DataFrame({'a': [1, 2, 3], 'b': [10, 20, 30]})
-from sklearn_pandas import DataFrameMapper
-from sklearn.preprocessing import StandardScaler
-mapper_output = DataFrameMapper([(['a'], StandardScaler()), (['b'], StandardScaler())]).fit_transform(df)
 
 # For Pillow test
 from PIL import Image
