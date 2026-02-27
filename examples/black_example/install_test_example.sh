@@ -25,18 +25,18 @@ echo "Installing prerequisites..."
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y python3.11 python3.11-devel python3-pip 
+            sudo dnf install -y python3.12 python3.12-devel python3-pip 
         else
-            sudo yum install -y python3.11 python3.11-devel python3-pip 
+            sudo yum install -y python3.12 python3.12-devel python3-pip 
         fi
         ;;
     "ubuntu"|"debian")
         sudo apt update
-        sudo apt install -y python3.11 python3.11-dev python3-pip python3.11-venv 
+        sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv 
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y python311 python311-pip
+        sudo zypper install -y python312 python312-pip
 
         ;;
     *)

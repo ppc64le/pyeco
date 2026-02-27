@@ -42,7 +42,7 @@ case $DISTRO in
             sudo dnf -y install gcc-toolset-13 python3.12-devel python3.12-pip -y --skip-broken --nobest
             source /opt/rh/gcc-toolset-13/enable
         else
-            sudo yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
+            sudo yum install gcc-toolset-13 python3.12-devel python3.12-pip -y
             source /opt/rh/gcc-toolset-13/enable
         fi
         ;;
@@ -52,7 +52,7 @@ case $DISTRO in
         sudo apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
 
         sudo add-apt-repository ppa:deadsnakes/ppa -y
-        sudo apt update -y
+        sudo apt update -y  
         sudo apt update && apt install -y python3.12 python3.12-dev python3.12-venv python3-pip
         ;;
     "sles")
