@@ -1,8 +1,8 @@
 absl-py==2.4.0
 astunparse==1.6.3
-certifi==2026.2.25
+certifi==2025.7.14+ppc64le1
 charset-normalizer==3.4.4
-flatbuffers==25.12.19
+flatbuffers==25.2.10+ppc64le1
 gast==0.7.0
 h5py==3.7.0+ppc64le1
 idna==3.11
@@ -21,7 +21,7 @@ requests==2.32.5
 rich==14.3.3
 six==1.17.0
 tensorflow==2.14.1+ppc64le1
-termcolor==3.3.0
+termcolor==3.1.0+ppc64le1
 typing_extensions==4.15.0
 urllib3==2.6.3
-wrapt==2.1.2
+wrapt==1.17.3+ppc64le1
