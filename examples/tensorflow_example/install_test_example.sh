@@ -48,6 +48,7 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
+        export DEBIAN_FRONTEND=noninteractive
         sudo apt update -y
         sudo apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
 

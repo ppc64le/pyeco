@@ -27,6 +27,7 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
+        export DEBIAN_FRONTEND=noninteractive
         sudo apt update -y
         sudo apt install -y python3.12 python3.12-venv python3.12-distutils
         ;;

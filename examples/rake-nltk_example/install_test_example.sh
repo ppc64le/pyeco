@@ -32,7 +32,8 @@ case $DISTRO in
         fi
         ;;
     "ubuntu"|"debian")
-        sudo apt update
+        export DEBIAN_FRONTEND=noninteractive
+        sudo apt update -y
         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv 
         ;;
     "sles")
