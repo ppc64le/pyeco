@@ -45,6 +45,7 @@ case $DISTRO in
         ;;
 
     "ubuntu"|"debian")
+        export DEBIAN_FRONTEND=noninteractive
         sudo apt update && sudo apt install -y \
         python3.10 python3.10-dev python3.10-venv python3-pip \
         python3-protobuf
