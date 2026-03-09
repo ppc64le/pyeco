@@ -29,7 +29,7 @@ case $DISTRO in
         DEBIAN_FRONTEND=noninteractive 
         add-apt-repository ppa:deadsnakes/ppa -y
         sudo apt update -y
-        sudo apt install -y python3.11 python3.11-venv python3.11-distutils
+        sudo apt install -y python3.11 python3.11-venv python3.11-dev
         ;;
     "sles")
         sudo zypper refresh
