@@ -20,21 +20,33 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install python3.12-devel python3.12-pip libatomic -y
-
+            sudo dnf install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
+            zlib-devel autoconf automake libtool cargo \
+            pkgconf-pkg-config fontconfig fontconfig-devel sqlite-devel -y --skip-broken --nobest
+            
+            source /opt/rh/gcc-toolset-13/enable
         else
-            sudo yum install python3.12-devel python3.12-pip libatomic -y
+            sudo yum install gcc-toolset-13 python3.12-devel python3.12-pip libjpeg-turbo-devel numactl gcc gcc-c++ gcc-gfortran xz cmake yum-utils openssl-devel openblas-devel bzip2-devel bzip2 libffi-devel \
+            zlib-devel autoconf automake libtool cargo \
+            pkgconf-pkg-config fontconfig fontconfig-devel sqlite-devel -y
+            source /opt/rh/gcc-toolset-13/enable
         fi
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
-        export DEBIAN_FRONTEND=noninteractive 
         sudo apt update &&  sudo apt install -y \
-        python3.12 python3.12-dev python3.12-venv python3-pip libatomic\
+        gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
+        libjpeg-turbo8-dev libnuma-dev \
+        xz-utils cmake libssl-dev libopenblas-dev \
+        libbz2-dev libbz2-1.0 libffi-dev zlib1g-dev autoconf automake libtool \
+        cargo pkg-config fontconfig libfontconfig1-dev sqlite3 libsqlite3-dev libjpeg62
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y python312 python312-pip python312-devel libatomic
+        sudo zypper install -y gcc gcc-fortran python312 python312-pip python312-devel libjpeg62-devel gcc-c++ freetype2-devel
+        sudo zypper install -y libgfortran5 make cmake autoconf automake libtool pkg-config cargo rust
+        sudo zypper install -y xz libbz2-devel libbz2-1 libffi-devel zlib-devel openssl-devel sqlite3 sqlite3-devel fontconfig-devel
+        sudo zypper install -y libjpeg62-devel libnuma-devel 
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
