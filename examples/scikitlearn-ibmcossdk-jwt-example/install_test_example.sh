@@ -34,6 +34,7 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         echo "Installing packages using apt..."
+        export DEBIAN_FRONTEND=noninteractive 
         sudo apt update
         sudo apt install -y \
             python3.12 \
