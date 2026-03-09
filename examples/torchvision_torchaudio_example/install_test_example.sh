@@ -29,7 +29,7 @@ case $DISTRO in
         # Use: bash script.sh
         export DEBIAN_FRONTEND=noninteractive
         sudo apt update -y
-        sudo apt install -y python3.12 python3.12-venv python3.12-distutils
+        sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv
         ;;
     "sles")
         sudo zypper refresh
