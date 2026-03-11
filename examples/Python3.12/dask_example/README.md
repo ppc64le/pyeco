@@ -16,8 +16,8 @@ dask numpy absl-py attrs PyYAML fsspec toolz cloudpickle wrapt
 
 ### How to run the example :
 
-chmod +x install_test_example.sh
-./install_test_example.sh
+1. chmod +x install_test_example.sh
+2. ./install_test_example.sh
 
 
 ### License:
