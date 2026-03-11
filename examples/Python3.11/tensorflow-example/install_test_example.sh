@@ -58,7 +58,7 @@ case $DISTRO in
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc gcc-fortran python312 python312-pip python312-devel libjpeg62-devel gcc-c++ freetype2-devel
+        sudo zypper install -y gcc gcc-fortran python311 python311-pip python311-devel libjpeg62-devel gcc-c++ freetype2-devel
         sudo zypper install -y cargo cmake ncurses-devel gawk libopenssl-devel perl libgfortran5
         sudo zypper install -y zlib-devel libffi-devel readline-devel xz-devel sqlite3-devel libzip-devel bzip2 wget tar 
         ;;
