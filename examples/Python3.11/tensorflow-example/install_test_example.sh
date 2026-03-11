@@ -73,7 +73,7 @@ esac
 python3.11 -m venv .venv
 source .venv/bin/activate
 
-python3.11 -m pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt --no-deps
+python3.11 -m pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
 
 WORKDIR=$(pwd)
 
