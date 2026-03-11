@@ -33,7 +33,7 @@ case $DISTRO in
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y python311 python311-pip
+        sudo zypper install -y python312 python312-pip
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
