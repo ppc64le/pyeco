@@ -39,10 +39,10 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf -y install gcc-toolset-13 python3.11-devel python3.11-pip -y --skip-broken --nobest
+            sudo dnf -y install gcc-toolset-13 python3.12-devel python3.12-pip -y --skip-broken --nobest
             source /opt/rh/gcc-toolset-13/enable
         else
-            sudo yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
+            sudo yum install gcc-toolset-13 python3.12-devel python3.12-pip -y
             source /opt/rh/gcc-toolset-13/enable
         fi
         ;;
@@ -54,7 +54,7 @@ case $DISTRO in
 
         sudo add-apt-repository ppa:deadsnakes/ppa -y
         sudo apt update -y  
-        sudo apt update && apt install -y python3.11 python3.11-dev python3.11-venv python3-pip
+        sudo apt update && apt install -y python3.12 python3.12-dev python3.12-venv python3-pip
         ;;
     "sles")
         sudo zypper refresh
@@ -70,18 +70,18 @@ esac
 
 
 
-python3.11 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 
-python3.11 -m pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
+python3.12 -m pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
 
 WORKDIR=$(pwd)
 
 cd $WORKDIR
 
 echo "Running example.py . . . ."
-python3.11 tf_example.py
+python3.12 tf_example.py
 
 echo "Running test . . . . ."
-python3.11 sub-test1.py
-python3.11 sub-test2.py
+python3.12 sub-test1.py
+python3.12 sub-test2.py
