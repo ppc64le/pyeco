@@ -1,1 +1,43 @@
-pip install msgspec==0.19.0 psutil==7.0.0  sentencepiece==0.2.0 httptools==0.6.4 uvloop==0.21.0  tiktoken==0.7.0  pillow==11.3.0 pandas==2.3.3 pyarrow==21.0.0 numpy==2.2.6 vllm==0.11.2.dev0 --extra-index-url  https://py4power@ibm.com:eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiI1Z0dyZUE3SUk1NWNZelJDSmVHcDJXV01YSnV2SjJvWUNfeVcwNnM5WFQwIn0.eyJzdWIiOiJqZi1hY2Nlc3NAYzE0NTBhNDMtZjgyNS00MDA2LTg2ZjMtNDMzNzJiOTVmNjAxL3VzZXJzL3B5NHBvd2VyQGlibS5jb20iLCJzY3AiOiJhcHBsaWVkLXBlcm1pc3Npb25zL3VzZXIiLCJhdWQiOiIqQCoiLCJpc3MiOiJqZi1hY2Nlc3NAYzE0NTBhNDMtZjgyNS00MDA2LTg2ZjMtNDMzNzJiOTVmNjAxIiwiZXhwIjoxNzc1MDE5NjAxLCJpYXQiOjE3NjcyNDM2MDEsImp0aSI6ImJjYzdjOGUzLWE3NGQtNDRlOS05NTlhLTBlZjY3NmI3NzU0NCJ9.afs5nOH6ZYO10WYL2C1YirYM3A6WpDgfywtz2TvPG4MskMci6M7Oj9mvPARp316GdiVYFqZra9HzJ8XHr1jOZuxGH9uPoWjdEiaQq0krQsdT3fvz91CD80-MfMizrgwosoKFF70eEBO-vAPjhDWL_gJoGDpDCNzrx8dKlXkjB-jE5utJ5XZwYbFxKYgZYpm8ad1PuS4fheGCcvFA5G70PPDqN7pT_sWmNU_MIFnfRZADsru3331uZ4CoZMKYnuWKuTQD94N-Zb2sBLFb2NguerJ_brwz6uaVmpZALPVEQ6p92z3yu2dLPVjoGwlLq2XSPYW6UHujSdWGXhgp9Hm5_Q@na.artifactory.swg-devops.com/artifactory/api/pypi/sys-linux-power-team-pyeco-release-testing-pypi-local/simple
+## ✅ Program : vLLM CPU Model Initialization and Environment Test
+
+### Purpose:
+Tests whether the **vLLM inference engine** can be successfully initialized and inspected in a **CPU-only environment**.  
+The script verifies model loading, tokenizer access, engine configuration, CLI availability, and error handling without performing actual text generation.
+
+### Packages used:
+vllm  
+wrapt  
+subprocess  
+os  
+sys  
+multiprocessing  
+
+### Functionality:
+- Sets CPU-friendly environment variables to run vLLM without GPU acceleration.
+- Initializes the **IBM Granite 3.1 2B Instruct** model using vLLM.
+- Prints environment configuration for debugging CPU execution.
+- Verifies model configuration including:
+  - Model name
+  - Maximum sequence length
+  - Supported tasks
+- Wraps the `generate()` method using `wrapt` so generation calls are logged but **not executed**.
+- Retrieves tokenizer information and vocabulary size if accessible.
+- Inspects the vLLM engine configuration and device settings.
+- Intentionally attempts to load a **nonexistent model** to confirm graceful error handling.
+- Runs the `vllm --help` CLI command to verify that the vLLM command line interface is installed.
+- Ensures the vLLM engine shuts down cleanly to prevent multiprocessing worker crashes.
+
+### How to run the example :
+```
+chmod +x install_test_example.sh
+./install_test_example.sh
+```
+
+### Notes:
+- The script is configured for **CPU execution only**.
+- Custom GPU operations are disabled using environment variables.
+- Multiprocessing is configured with **spawn mode** to ensure compatibility with Python 3.12+.
+- The `generate()` function is intentionally wrapped to avoid performing inference during the test.
+
+### License:
+This project is covered under **Apache 2.0 License**.
