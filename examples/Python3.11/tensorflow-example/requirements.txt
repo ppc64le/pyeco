@@ -15,7 +15,7 @@ keras==2.14.0
 libclang==18.1.1+ppc64le1
 Markdown==3.8.2+ppc64le1
 markdown-it-py==4.0.0
-MarkupSafe==3.0.2+ppc64le1
+MarkupSafe==3.0.2+ppc64le2
 mdurl==0.1.2
 ml-dtypes==0.2.0
 namex==0.1.0

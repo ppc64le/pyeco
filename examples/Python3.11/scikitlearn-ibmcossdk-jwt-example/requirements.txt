@@ -17,7 +17,7 @@ ibm-cos-sdk-s3transfer==2.14.1+ppc64le1
 idna==3.10
 jmespath==1.0.1
 joblib==1.5.2
-MarkupSafe==3.0.2+ppc64le1
+MarkupSafe==3.0.2+ppc64le2
 ml_dtypes==0.5.3+ppc64le1
 mpmath==1.3.0+ppc64le1
 msgpack==1.1.1+ppc64le1
