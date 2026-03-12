@@ -4,7 +4,10 @@
 Demonstrates a simple Conv1D signal‑classification model using synthetic waveform data, trained with Keras on the TensorFlow backend.
 
 ### Packages used:
-tensorflow keras numpy scipy
+- tensorflow
+- keras
+- numpy
+- scipy
 
 ### Functionality:
 - Generates filtered sine‑wave signals with noise.
@@ -12,9 +15,10 @@ tensorflow keras numpy scipy
 - Saves the trained model (trained_model.h5) and sample inputs.
 
 ### How to run the example :
-
-1. chmod +x install_test_example.sh
-2. ./install_test_example.sh
+```
+chmod +x install_test_example.sh
+./install_test_example.sh
+```
 
 
 ### License:
