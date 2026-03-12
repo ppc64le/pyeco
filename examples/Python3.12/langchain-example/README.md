@@ -4,7 +4,12 @@
 Demonstrates a small LangChain workflow using prompts, fake LLM responses, structured parsing, and runnable composition.
 
 ### Packages used:
-langchain langchain-core langchain‑community numpy json pydantic
+- langchain
+- langchain-core
+- langchain‑community
+- numpy
+- json
+- pydantic
 
 ### Functionality:
 - Creates prompt templates and passes them through a FakeListLLM.
@@ -14,9 +19,13 @@ langchain langchain-core langchain‑community numpy json pydantic
 - Prints results for summarization, JSON parsing, and classification.
 
 ### How to run the example :
+```
+chmod +x install_test_example.sh
+./install_test_example.sh
+```
 
-1. chmod +x install_test_example.sh
-2. ./install_test_example.sh
+### License: 
+It's covered under MIT licenses
 
 
 ### License:
