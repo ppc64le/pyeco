@@ -13,7 +13,7 @@ langchain==0.3.27+ppc64le1
 langchain-core==0.3.83
 langchain-text-splitters==0.3.11
 langsmith==0.7.10
-numpy==1.26.4+ppc64le1
+numpy==2.3.3+ppc64le1
 orjson==3.11.7
 packaging==25.0
 pydantic==2.12.5
