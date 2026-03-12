@@ -23,9 +23,10 @@ Demonstrates a small data processing pipeline using Dask arrays with configurati
 - Saves processed results to a `.pkl` file using cloudpickle.
 
 ### How to run the example :
-
-1. chmod +x install_test_example.sh
-2. ./install_test_example.sh
+```
+chmod +x install_test_example.sh
+./install_test_example.sh
+```
 
 
 ### License:
