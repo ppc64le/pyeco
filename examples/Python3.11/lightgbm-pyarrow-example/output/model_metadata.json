@@ -1,0 +1,7 @@
+{
+    "model_name": "LightGBM_Iris_Sklearn",
+    "accuracy": 0.8667,
+    "num_classes": 3,
+    "num_features": 4,
+    "num_test_samples": 45
+}
