@@ -4,7 +4,15 @@
 Demonstrates a small data processing pipeline using Dask arrays with configuration loading, computation, and result serialization.
 
 ### Packages used:
-dask numpy absl-py attrs PyYAML fsspec toolz cloudpickle wrapt
+- dask
+- numpy
+- absl-py
+- attrs
+- PyYAML
+- fsspec
+- toolz
+- cloudpickle
+- wrapt
 
 ### Functionality:
 - Loads configuration values from a YAML file.
