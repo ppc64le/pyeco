@@ -28,7 +28,7 @@ onnxconverter-common==1.12.1
 onnxruntime==1.22.0+ppc64le1
 ormsgpack==1.9.1+ppc64le1
 packaging==25.0
-pandas==2.3.3+ppc64le1
+pandas==2.3.2+ppc64le1
 pillow==11.3.0+ppc64le1
 primp==0.15.0+ppc64le1
 protobuf==4.25.3+ppc64le1

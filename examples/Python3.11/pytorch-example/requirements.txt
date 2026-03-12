@@ -6,7 +6,7 @@ MarkupSafe==3.0.3+ppc64le1
 mpmath==1.3.0+ppc64le1
 networkx==3.5
 numpy==2.3.4+ppc64le1
-pandas==2.3.3+ppc64le1
+pandas==2.3.2+ppc64le1
 psutil==7.0.0+ppc64le1
 python-dateutil==2.9.0.post0
 pytz==2025.2
