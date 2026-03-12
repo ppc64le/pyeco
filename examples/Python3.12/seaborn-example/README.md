@@ -4,7 +4,11 @@
 Demonstrates a complete visualization workflow using Seaborn, Matplotlib, Pandas, and NumPy to generate statistical plots, compute correlations, and validate rendered images.
 
 ### Packages used:
-seaborn matplotlib pandas numpy pillow
+- seaborn
+- matplotlib
+- pandas
+- numpy
+- pillow
 
 ### Functionality:
 - Generates a synthetic dataset with numeric features and categorical labels.
@@ -15,9 +19,10 @@ seaborn matplotlib pandas numpy pillow
 - Saves a plot to an in‑memory PNG and validates it with Pillow.
 
 ### How to run the example :
-
-1. chmod +x install_test_example.sh
-2. ./install_test_example.sh
+```
+chmod +x install_test_example.sh
+./install_test_example.sh
+```
 
 
 ### License:
