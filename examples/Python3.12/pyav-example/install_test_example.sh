@@ -20,20 +20,19 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel freetype-devel
-            source /opt/rh/gcc-toolset-13/enable
+            sudo dnf install -y python3.12 python3.12-devel python3.12-pip
         else
-            sudo yum install -y python3.12 python3.12-devel python3.12-pip gcc-toolset-13 libjpeg-devel
-            source /opt/rh/gcc-toolset-13/enable
+            sudo yum install -y python3.12 python3.12-devel python3.12-pip 
         fi
         ;;
     "ubuntu"|"debian")
+        export DEBIAN_FRONTEND=noninteractive 
         sudo apt update
-        sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv gcc libjpeg-dev libgfortran5 g++
+        sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv 
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ freetype2-devel
+        sudo zypper install -y python312 python312-pip python312-devel
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -47,13 +46,6 @@ source .venv/bin/activate
 
 pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
 
-# Manually set LD_LIBRARY_PATH for the libraries installed via pip
-echo "Setting LD_LIBRARY_PATH to include all required libraries..."
-export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/ffmpeg/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/libvpx/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/lame/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/opus/lib:$LD_LIBRARY_PATH"
-export LD_LIBRARY_PATH="./.venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH"
 
 # Run Python scripts
 printf "\nRunning av-example.py\n"

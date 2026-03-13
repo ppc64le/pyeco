@@ -34,6 +34,7 @@ case $DISTRO in
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
+        export DEBIAN_FRONTEND=noninteractive
         sudo apt update &&  sudo apt install -y \
         gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
         libjpeg-turbo8-dev libnuma-dev \
@@ -60,11 +61,6 @@ source venv/bin/activate
 export VLLM_USE_CUSTOM_OPS=0
 
 pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
-
-pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux libprotobuf==4.25.8 openblas
-
-export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH
 
 python vllm_example.py
 

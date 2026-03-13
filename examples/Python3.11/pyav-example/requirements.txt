@@ -1,0 +1,5 @@
+av==15.1.0+ppc64le1
+llvmlite==0.44.0+ppc64le2
+ml_dtypes==0.5.3+ppc64le1
+numpy==2.3.4+ppc64le1
+pillow==11.2.1+ppc64le1
