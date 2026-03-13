@@ -20,25 +20,24 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install gcc-toolset-13 python3.12-devel python3.12-pip -y --skip-broken --nobest
-            source /opt/rh/gcc-toolset-13/enable
+            sudo dnf install python3.12-devel python3.12-pip -y --skip-broken --nobest
         else
-            sudo yum install gcc-toolset-13 python3.11-devel python3.11-pip -y
-            source /opt/rh/gcc-toolset-13/enable
+            sudo yum install python3.12-devel python3.12-pip -y
         fi
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
+        export DEBIAN_FRONTEND=noninteractive
         sudo apt update -y
         sudo apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
 
         sudo add-apt-repository ppa:deadsnakes/ppa -y
         sudo apt update -y
-        sudo apt install -y python3.12 python3.12-venv python3.12-distutils libgfortran5 gcc-13
+        sudo apt install -y python3.12 python3.12-venv python3.12-distutils
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y gcc13 gcc13-fortran python312 python312-pip python312-devel libjpeg62-devel gcc13-c++ 
+        sudo zypper install -y python312 python312-pip python312-devel 
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -53,10 +52,6 @@ python3.12 -m pip install --no-cache --prefer-binary --extra-index-url https://w
 
 WORKDIR=$(pwd)
 
-export LD_LIBRARY_PATH="./venv/lib/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH"
-cd ./venv/lib/python3.12/site-packages/libprotobuf/lib64/
-ln -s libprotobuf.so.25.4.0 libprotobuf.so.25.3.0
-export LD_LIBRARY_PATH="./venv/lib/python3.12/site-packages/libprotobuf/lib64:$LD_LIBRARY_PATH"
 cd $WORKDIR
 
 python3.12 onnx_example.py

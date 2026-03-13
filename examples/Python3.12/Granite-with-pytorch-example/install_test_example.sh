@@ -20,27 +20,23 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y python3-protobuf python3.12-devel python3.12-pip libgfortran gcc gcc-c++ make
+            sudo dnf install -y python3-protobuf python3.12-devel python3.12-pip
         else
-            sudo yum install -y python3-protobuf python3.12-devel python3.12-pip libgfortran gcc gcc-c++ make
+            sudo yum install -y python3-protobuf python3.12-devel python3.12-pip
         fi
         ;;
     "ubuntu"|"debian")
         # Use: bash script.sh
+        export DEBIAN_FRONTEND=noninteractive
         sudo apt update && sudo apt install -y \
-        gcc g++ gfortran python3.12 python3.12-dev python3.12-venv python3-pip \
-        python3-protobuf libopenblas-dev make
+        python3.12 python3.12-dev python3.12-venv python3-pip \
+        python3-protobuf
 
         ;;
     "sles")
         # Enable necessary modules
         sudo zypper refresh
-        sudo zypper install -y  libgfortran5 python312 python312-pip python312-devel gcc13 gcc13-fortran gcc13-c++ zlib-devel cargo kernel-default-devel make
-        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 100
-        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 100
-        sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++-13 100
-        sudo update-alternatives --install /usr/bin/gfortran gfortran /usr/bin/gfortran-13 100
-
+        sudo zypper install -y python312 python312-pip python312-devel
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
@@ -54,7 +50,6 @@ source venv/bin/activate
 
 pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
 
-export LD_LIBRARY_PATH=./venv/lib64/python3.12/site-packages/libprotobuf/lib64:./venv/lib64/python3.12/site-packages/openblas/lib:$LD_LIBRARY_PATH
 
 echo "USING Granite 3"
 echo "Running: granite3-example.py"
