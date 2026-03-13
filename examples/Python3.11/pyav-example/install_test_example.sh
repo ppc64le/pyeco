@@ -28,7 +28,7 @@ case $DISTRO in
     "ubuntu"|"debian")
         export DEBIAN_FRONTEND=noninteractive 
         sudo apt update
-        sudo apt install -y python3.11 python3.11-dev python3-pip python3.11-venv 
+        sudo apt install -y libglib2.0-0 python3.11 python3.11-dev python3-pip python3.11-venv 
         ;;
     "sles")
         sudo zypper refresh
