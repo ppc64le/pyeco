@@ -24,4 +24,4 @@ tqdm==4.67.1
 transformers==4.57.1
 typing_extensions==4.15.0
 urllib3==2.5.0
-hf_xet==1.2.0+ppc64le1
+hf_xet==1.1.9+ppc64le1
