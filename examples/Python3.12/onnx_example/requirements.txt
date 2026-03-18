@@ -14,7 +14,7 @@ onnxruntime==1.23.1+ppc64le1
 packaging==25.0
 requests==2.32.5
 scikit-learn==1.6.1+ppc64le2
-scipy==1.16.2+ppc64le1
+scipy==1.17.0+ppc64le1
 setuptools==80.9.0
 six==1.17.0
 skl2onnx==1.18.0+ppc64le1
