@@ -88,7 +88,7 @@ source .venv/bin/activate
 python3 -m pip install --upgrade pip
 
 # Install requirements
-python3 -m pip install --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
+python3 -m pip install --prefer-binary --extra-index-url https://wheels-staging.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
 
 # Run Python scripts
 echo "Running environment test..."
