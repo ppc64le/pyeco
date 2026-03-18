@@ -107,12 +107,12 @@ parso==0.8.6
 partd==1.4.2+ppc64le1
 patsy==1.0.2
 pexpect==4.9.0
-pillow==11.3.0+ppc64le1
+pillow==12.1.1+ppc64le1
 platformdirs==4.9.2
 plotly==6.5.2
 prometheus_client==0.24.1
 prompt_toolkit==3.0.52
-psutil==7.2.2
+psutil==7.2.2+ppc64le1
 ptyprocess==0.7.0
 pure_eval==0.2.3+ppc64le1
 pycparser==3.0
@@ -137,7 +137,7 @@ rich==13.9.4
 rpds-py==0.30.0
 scikit-image==0.25.2+ppc64le2
 scikit-learn==1.7.0+ppc64le1
-scipy==1.16.2+ppc64le1
+scipy==1.17.0+ppc64le1
 Send2Trash==2.1.0
 sentencepiece==0.2.0+ppc64le1
 setuptools==82.0.0
@@ -157,7 +157,7 @@ tiktoken==0.7.0+ppc64le1
 tinycss2==1.4.0
 tokenizers==0.21.1+ppc64le1
 toolz==1.1.0
-torch==2.8.0+ppc64le1
+torch==2.10.0+ppc64le1
 torchdata==0.11.0
 tornado==6.5.2+ppc64le1
 tqdm==4.67.3
