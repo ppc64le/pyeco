@@ -4,11 +4,11 @@ Jinja2==3.1.6
 MarkupSafe==3.0.3+ppc64le1
 mpmath==1.3.0+ppc64le1
 networkx==3.6.1
-numpy==2.3.4+ppc64le1
-Pillow==10.0.1+ppc64le1
+numpy==2.4.1+ppc64le1
+Pillow==12.1.1+ppc64le1
 setuptools==82.0.0
 sympy==1.14.0
-torch==2.7.1+ppc64le1
-torchaudio==2.7.1+ppc64le1
-torchvision==0.22.1+ppc64le1
+torch==2.9.1+ppc64le1
+torchaudio==2.9.1+ppc64le1
+torchvision==0.24.1+ppc64le1
 typing_extensions==4.15.0

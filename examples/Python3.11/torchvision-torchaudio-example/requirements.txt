@@ -7,7 +7,7 @@ Jinja2==3.1.6
 MarkupSafe==3.0.3+ppc64le1
 mpmath==1.3.0+ppc64le1
 networkx==3.6.1
-numpy==2.3.4+ppc64le1
+numpy==2.4.2+ppc64le1
 Pillow==10.0.1+ppc64le1
 requests==2.32.5
 sympy==1.13.1

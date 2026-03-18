@@ -28,12 +28,9 @@ case $DISTRO in
     "ubuntu"|"debian")
         # Use: bash script.sh
         export DEBIAN_FRONTEND=noninteractive
-        sudo apt update -y
-        sudo apt install -y software-properties-common curl lsb-release gnupg2  libgomp1
-
-        sudo add-apt-repository ppa:deadsnakes/ppa -y
-        sudo apt update -y
-        sudo apt install -y python3.12 python3.12-venv python3.12-distutils
+        sudo apt update && sudo apt install -y \
+        python3.12 python3.12-dev python3.12-venv python3-pip \
+        python3-protobuf
         ;;
     "sles")
         sudo zypper refresh

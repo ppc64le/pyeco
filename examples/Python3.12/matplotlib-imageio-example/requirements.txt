@@ -4,9 +4,9 @@ fonttools==4.61.1
 ImageIO==2.37.0+ppc64le1
 kiwisolver==1.4.4+ppc64le1
 matplotlib==3.10.7+ppc64le1
-numpy==2.3.4+ppc64le1
+numpy==2.4.1+ppc64le1
 packaging==26.0
-pillow==11.3.0+ppc64le1
+pillow==12.1.1+ppc64le1
 pyparsing==3.2.5+ppc64le1
 python-dateutil==2.9.0.post0
 setuptools==68.2.2
