@@ -544,6 +544,7 @@ unicodedata2==16.0.0+ppc64le1
 uvloop==0.21.0+ppc64le1
 uvloop==0.22.1+ppc64le1
 vllm==0.11.2.dev0+g439368496.d20260219.cpuppc64le1
+vllm==0.15.2.dev0+g1892993bc.d20260306.cpuppc64le1
 vllm==0.8.4+cpu
 vllm==0.8.4+cpuppc64le1
 wrapt==1.14.1

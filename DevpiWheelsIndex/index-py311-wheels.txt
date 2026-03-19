@@ -548,6 +548,7 @@ unicodedata2==15.1.0
 unicodedata2==15.1.0+ppc64le1
 unicodedata2==16.0.0+ppc64le1
 uvloop==0.21.0+ppc64le1
+vllm==0.15.2.dev0+g1892993bc.d20260306.cpuppc64le1
 wrapt==1.14.1
 wrapt==1.14.1+ppc64le1
 wrapt==1.17.2
