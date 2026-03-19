@@ -114,6 +114,7 @@ hf-xet==1.1.1+ppc64le1
 hf-xet==1.1.5+ppc64le1
 hf-xet==1.1.8+ppc64le1
 hf-xet==1.1.9+ppc64le1
+hf-xet==1.2.0+ppc64le1
 hnswlib==0.8.0
 hnswlib==0.8.0+ppc64le1
 httptools==0.6.4
@@ -253,6 +254,7 @@ psutil==6.1.1
 psutil==6.1.1+ppc64le1
 psutil==7.0.0
 psutil==7.0.0+ppc64le1
+psutil==7.2.2+ppc64le1
 psycopg2==2.9.10
 psycopg2==2.9.10+ppc64le2
 psycopg2==2.9.11+ppc64le1
@@ -372,6 +374,8 @@ tornado==6.4.2
 tornado==6.4.2+ppc64le1
 tornado==6.5.1+ppc64le1
 tornado==6.5.2+ppc64le1
+tree-sitter-c==0.23.2+ppc64le1
+tree-sitter-typescript==0.23.2+ppc64le1
 ujson==5.10.0
 ujson==5.10.0+ppc64le1
 ujson==5.11.0+ppc64le1
