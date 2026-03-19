@@ -8011,13 +8011,6 @@
 | vllm-0.11.2.dev0+g439368496.d20260219.cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`, `MIT` |
 
 ----
-- **vllm==0.15.2.dev0+g1892993bc.d20260226.cpu**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| vllm-0.15.2.dev0+g1892993bc.d20260226.cpu-cp311-cp311-linux_ppc64le.whl<br>vllm-0.15.2.dev0+g1892993bc.d20260226.cpu-cp312-cp312-linux_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`MIT` |
-
-----
 - **vllm==0.8.4+cpu**
 
 | Wheel File | License |
