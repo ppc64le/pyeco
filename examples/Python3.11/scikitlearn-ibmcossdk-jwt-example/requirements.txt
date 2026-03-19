@@ -22,7 +22,7 @@ ml_dtypes==0.5.3+ppc64le1
 mpmath==1.3.0+ppc64le1
 msgpack==1.1.1+ppc64le1
 numexpr==2.13.1+ppc64le1
-numpy==1.26.4+ppc64le1
+numpy==2.4.2+ppc64le1
 onnx==1.17.0+ppc64le1
 onnxconverter-common==1.12.1
 onnxruntime==1.22.0+ppc64le1
