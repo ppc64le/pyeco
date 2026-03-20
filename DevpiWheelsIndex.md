@@ -6804,7 +6804,7 @@
 
 | Wheel File | License |
 |:-----------|:-------:|
-| sentencepiece-0.1.97-cp310-cp310-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp311-cp311-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp312-cp312-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp313-cp313-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp39-cp39-linux_ppc64le.whl | `Apache-2.0`, `nan` |
+| sentencepiece-0.1.97-cp310-cp310-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp311-cp311-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp312-cp312-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp313-cp313-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp39-cp39-linux_ppc64le.whl | `Apache-2.0` |
 
 ----
 - **sentencepiece==0.1.97+ppc64le1**
