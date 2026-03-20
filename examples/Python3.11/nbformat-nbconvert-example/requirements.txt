@@ -30,7 +30,7 @@ nbclient==0.10.2
 nbconvert==7.16.6+ppc64le1
 nbformat==5.10.4+ppc64le1
 nest-asyncio==1.6.0
-numpy==2.3.4+ppc64le1
+numpy==2.4.2+ppc64le1
 packaging==25.0
 pandocfilters==1.5.1
 parso==0.8.5
