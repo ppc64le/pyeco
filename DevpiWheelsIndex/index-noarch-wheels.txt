@@ -354,6 +354,7 @@ py-make==0.1.3.dev0+ga7d8bbf.d20250607
 pyjarowinkler==2.0.0
 pyjarowinkler==2.0.0+ppc64le1
 pylatexenc==2.1+ppc64le1
+pylatexenc==2.10+ppc64le1
 pyopengl==3.1.7+ppc64le1
 pyparsing==3.2.1+ppc64le1
 pyparsing==3.2.3
