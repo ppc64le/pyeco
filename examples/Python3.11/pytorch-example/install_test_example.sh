@@ -44,7 +44,7 @@ esac
 python3.11 -m venv venv
 source venv/bin/activate
 
-pip install --no-cache --prefer-binary --extra-index-url https://wheels-staging.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
+pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
 
 python pytorch_example.py
 
