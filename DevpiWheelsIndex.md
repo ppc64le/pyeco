@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: March 19, 2026
+### Last Updated On: March 20, 2026
 
 ----
 - **abseil-cpp==20230802.3+ppc64le1**
@@ -5750,6 +5750,13 @@
 | pylatexenc-2.1+ppc64le1-py3-none-any.whl | `MIT` |
 
 ----
+- **pylatexenc==2.10+ppc64le1**
+
+| Wheel File | License |
+|:-----------|:-------:|
+| pylatexenc-2.10+ppc64le1-py3-none-any.whl | `MIT` |
+
+----
 - **pymongo==4.13.0**
 
 | Wheel File | License |
@@ -6797,7 +6804,7 @@
 
 | Wheel File | License |
 |:-----------|:-------:|
-| sentencepiece-0.1.97-cp310-cp310-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp311-cp311-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp312-cp312-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp313-cp313-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp39-cp39-linux_ppc64le.whl | `Apache-2.0` |
+| sentencepiece-0.1.97-cp310-cp310-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp311-cp311-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp312-cp312-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp313-cp313-linux_ppc64le.whl<br>sentencepiece-0.1.97-cp39-cp39-linux_ppc64le.whl | `Apache-2.0`, `nan` |
 
 ----
 - **sentencepiece==0.1.97+ppc64le1**
