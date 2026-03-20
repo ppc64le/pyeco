@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: March 19, 2026
+### Last Updated On: March 20, 2026
 
 ----
 - **abseil-cpp==20230802.3+ppc64le1**
@@ -5748,6 +5748,13 @@
 | Wheel File | License |
 |:-----------|:-------:|
 | pylatexenc-2.1+ppc64le1-py3-none-any.whl | `MIT` |
+
+----
+- **pylatexenc==2.10+ppc64le1**
+
+| Wheel File | License |
+|:-----------|:-------:|
+| pylatexenc-2.10+ppc64le1-py3-none-any.whl | `MIT` |
 
 ----
 - **pymongo==4.13.0**
