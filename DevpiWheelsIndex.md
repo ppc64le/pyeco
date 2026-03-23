@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: March 20, 2026
+### Last Updated On: March 23, 2026
 
 ----
 - **abseil-cpp==20230802.3+ppc64le1**
@@ -6314,7 +6314,7 @@
 
 | Wheel File | License |
 |:-----------|:-------:|
-| ray-2.52.1+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`GPL-1.0-or-later`,<br>`MIT`, `MPL-2.0`,<br>`PSF-2.0`, `Python-2.0` |
+| ray-2.52.1+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>ray-2.52.1+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`GPL-1.0-or-later`,<br>`MIT`, `MPL-2.0`,<br>`PSF-2.0`, `Python-2.0` |
 
 ----
 - **rdflib==7.1.4**

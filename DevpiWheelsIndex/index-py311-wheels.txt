@@ -437,6 +437,7 @@ pyzmq==27.0.1+ppc64le1
 pyzmq==27.0.2+ppc64le1
 pyzmq==27.1.0+ppc64le1
 ray==2.47.1+ppc64le1
+ray==2.52.1+ppc64le1
 ruamel-yaml-clib==0.2.11+ppc64le1
 ruamel-yaml-clib==0.2.14+ppc64le1
 ruamel.yaml.clib==0.2.11
