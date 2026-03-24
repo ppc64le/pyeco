@@ -1,0 +1,2 @@
+numpy==2.4.1+ppc64le1
+rtree==1.4.1+ppc64le1
