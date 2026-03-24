@@ -1,0 +1,2 @@
+ollama-python-package==0.13.5+ppc64le1
+wrapt==1.17.3+ppc64le1
