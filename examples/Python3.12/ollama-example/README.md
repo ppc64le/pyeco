@@ -1,4 +1,4 @@
-## ✅ Program: Ollama POWER10 ppc64le Wheel Validation Scripts
+## Program: Ollama POWER10 ppc64le Wheel Validation Scripts
 
 ## Purpose
 This repository provides example scripts to validate the installation, configuration, and inference functionality of the **Ollama Power10-optimized ppc64le wheel**.
@@ -60,7 +60,7 @@ This repository provides example scripts to validate the installation, configura
 
 ## Supported Architecture
 
-- ✅ IBM Power10 (ppc64le)
+- IBM Power10 (ppc64le)
 
 ---
 
