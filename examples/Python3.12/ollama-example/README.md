@@ -60,7 +60,8 @@ This repository provides example scripts to validate the installation, configura
 
 ## Supported Architecture
 
-- IBM Power10 (ppc64le)
+- The Ollama wheel is built for Power10 and newer POWER processors.
+- If you're running on a Power9 system, the wheel will not be compatible.
 
 ---
 
