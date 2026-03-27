@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: March 23, 2026
+### Last Updated On: March 27, 2026
 
 ----
 - **abseil-cpp==20230802.3+ppc64le1**
@@ -3531,6 +3531,13 @@
 | llguidance-1.2.0+ppc64le1-cp39-abi3-manylinux_2_34_ppc64le.whl | `MIT` |
 
 ----
+- **llguidance==1.3.0+ppc64le1**
+
+| Wheel File | License |
+|:-----------|:-------:|
+| llguidance-1.3.0+ppc64le1-cp39-abi3-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause OR Apache-2.0`,<br>`BSL-1.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`Unlicense` |
+
+----
 - **llvmlite==0.40.0**
 
 | Wheel File | License |
@@ -4735,6 +4742,13 @@
 | opencv_python_headless-4.12.0.88+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>opencv_python_headless-4.12.0.88+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>opencv_python_headless-4.12.0.88+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>opencv_python_headless-4.12.0.88+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-4-Clause`,<br>`bzip2-1.0.6`, `FTL`,<br>`HPND-sell-variant`,<br>`IJG`, `ISC`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-only`,<br>`LGPL-3.0-only`,<br>`Libpng`, `libtiff`,<br>`MIT`, `MIT-open-group`,<br>`MPL-2.0`, `OpenSSL`,<br>`OpenSSL-standalone`,<br>`SSLeay-standalone`,<br>`Zlib` |
 
 ----
+- **opencv-python-headless==4.13.0.92+ppc64le1**
+
+| Wheel File | License |
+|:-----------|:-------:|
+| opencv_python_headless-4.13.0.92+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>opencv_python_headless-4.13.0.92+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-4-Clause`,<br>`bzip2-1.0.6`, `FTL`,<br>`HPND-sell-variant`,<br>`IJG`, `ISC`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-only`,<br>`LGPL-3.0-only`,<br>`Libpng`, `libtiff`,<br>`MIT`, `MIT-open-group`,<br>`MPL-2.0`, `OpenSSL`,<br>`OpenSSL-standalone`,<br>`SSLeay-standalone`,<br>`Zlib` |
+
+----
 - **opencv-python==4.10.0.84**
 
 | Wheel File | License |
@@ -4859,6 +4873,13 @@
 | Wheel File | License |
 |:-----------|:-------:|
 | outlines_core-0.1.26+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0` |
+
+----
+- **outlines-core==0.2.11+ppc64le1**
+
+| Wheel File | License |
+|:-----------|:-------:|
+| outlines_core-0.2.11+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>outlines_core-0.2.11+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause OR Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSL-1.0`, `CC0-1.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`,<br>`MIT OR Apache-2.0`,<br>`MPL-2.0`, `Unlicense` |
 
 ----
 - **pallets-sphinx-themes==2.3.0+ppc64le1**
@@ -7588,7 +7609,7 @@
 
 | Wheel File | License |
 |:-----------|:-------:|
-| torch-2.10.0+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `0BSD`, `AML-glslang`,<br>`Apache-1.1`,<br>`Apache-2.0`,<br>`Apache-2.0 WITH LLVM-exception`,<br>`BSD-2-Clause`,<br>`BSD-2-Clause OR Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR Apache-2.0`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`BSL-1.0`, `bzip2-1.0.6`,<br>`dtoa`, `fmt-exception`,<br>`GPL-3.0-only`,<br>`GPL-3.0-or-later WITH Bison-exception-2.2`,<br>`HPND`, `LGPL-2.1-only`,<br>`LGPL-3.0-only`, `MIT`,<br>`MIT-0`,<br>`MIT-Khronos-old`,<br>`MPL-2.0`, `NCSA`,<br>`PostgreSQL`, `Zlib` |
+| torch-2.10.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>torch-2.10.0+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `0BSD`, `AML-glslang`,<br>`Apache-1.1`,<br>`Apache-2.0`,<br>`Apache-2.0 WITH LLVM-exception`,<br>`BSD-2-Clause`,<br>`BSD-2-Clause OR Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR Apache-2.0`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`BSL-1.0`, `bzip2-1.0.6`,<br>`dtoa`, `fmt-exception`,<br>`GPL-3.0-only`,<br>`GPL-3.0-or-later WITH Bison-exception-2.2`,<br>`HPND`, `LGPL-2.1-only`,<br>`LGPL-3.0-only`, `MIT`,<br>`MIT-0`,<br>`MIT-Khronos-old`,<br>`MPL-2.0`, `NCSA`,<br>`PostgreSQL`, `Zlib` |
 
 ----
 - **torch==2.5.1**
