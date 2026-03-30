@@ -120,7 +120,7 @@ tzdata==2025.3
 urllib3==2.6.3
 uvicorn==0.41.0
 uvloop==0.21.0+ppc64le1
-vllm==0.11.2.dev0+g439368496.d20260219.cpuppc64le1
+vllm==0.15.2.dev0+g1892993bc.d20260306.cpuppc64le1
 watchfiles==1.1.1
 websockets==16.0
 wrapt==1.17.3+ppc64le1
