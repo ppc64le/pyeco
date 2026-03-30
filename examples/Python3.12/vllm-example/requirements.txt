@@ -45,7 +45,7 @@ jmespath==1.1.0
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 lark==1.2.2
-llguidance==1.2.0+ppc64le1
+llguidance==1.3.0+ppc64le1
 llvmlite==0.44.0+ppc64le1
 lm-format-enforcer==0.11.3
 loguru==0.7.3
@@ -64,7 +64,7 @@ numba==0.61.2+ppc64le1
 numpy==2.2.6+ppc64le1
 openai==2.26.0
 openai-harmony==0.0.8
-opencv-python-headless==4.12.0.88+ppc64le1
+opencv-python-headless==4.13.0.92+ppc64le1
 packaging==26.0
 pandas==2.3.2+ppc64le1
 partial-json-parser==0.2.1.1.post7
