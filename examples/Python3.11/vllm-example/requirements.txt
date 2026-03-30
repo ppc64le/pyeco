@@ -63,7 +63,7 @@ multidict==6.7.1
 networkx==3.6.1
 ninja==1.13.0
 numba==0.61.2+ppc64le1
-numpy==2.4.2+ppc64le1
+numpy==2.2.6+ppc64le1
 openai==2.29.0
 openai-harmony==0.0.8
 opencv-python-headless==4.13.0.92+ppc64le1
@@ -120,5 +120,6 @@ uvicorn==0.42.0
 vllm==0.15.2.dev0+g1892993bc.d20260306.cpuppc64le1
 watchfiles==1.1.1
 websockets==16.0
+wrapt==2.1.2
 xgrammar==0.1.29
 yarl==1.23.0
