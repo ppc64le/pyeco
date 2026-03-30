@@ -5,11 +5,11 @@ import sys
 
 # CPU-friendly env vars
 os.environ['VLLM_USE_CUSTOM_OPS'] = '0'
-os.environ['VLLM_CPU_KVCACHE_SPACE'] = '8'
+os.environ['VLLM_CPU_KVCACHE_SPACE'] = '2'
 os.environ['VLLM_WORKER_MULTIPROC_METHOD'] = 'spawn'
-os.environ['OMP_NUM_THREADS'] = '4'
-os.environ['MKL_NUM_THREADS'] = '4'
-os.environ['OPENBLAS_NUM_THREADS'] = '4'
+os.environ['OMP_NUM_THREADS'] = '2'
+os.environ['MKL_NUM_THREADS'] = '2'
+os.environ['OPENBLAS_NUM_THREADS'] = '2'
 os.environ['VLLM_TARGET_DEVICE'] = 'cpu'
 
 from vllm import LLM
@@ -27,10 +27,10 @@ def main():
     try:
         llm = LLM(
             model="ibm-granite/granite-3.1-2b-instruct",
-            max_model_len=2048,          # matches batch tokens
-            max_num_batched_tokens=2048, # must be >= max_model_len
+            max_model_len=1024,          # matches batch tokens
+            max_num_batched_tokens=1024, # must be >= max_model_len
             enforce_eager=True,
-            dtype="float32",
+            dtype="bfloat16",
             tensor_parallel_size=1,
             trust_remote_code=False,
             max_num_seqs=1,
