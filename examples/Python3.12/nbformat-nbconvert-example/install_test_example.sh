@@ -45,7 +45,7 @@ python3.12 -m venv .venv
 source .venv/bin/activate
 
 # Install from requirements.txt with IBM ppc64le repository
-pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
+pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.03.31 -r requirements.txt
 
 # Upgrade pip
 pip install --upgrade pip

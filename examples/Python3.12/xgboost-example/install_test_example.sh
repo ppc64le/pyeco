@@ -57,7 +57,7 @@ source .venv/bin/activate
 # Upgrade pip and install packages
 # -------------------------------
 pip install --upgrade pip
-pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
+pip install --prefer-binary --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.03.31 -r requirements.txt
 
 # -------------------------------
 # Run the environment test
