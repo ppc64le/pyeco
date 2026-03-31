@@ -20,8 +20,8 @@ Here's a **comprehensive and streamlined guide** to using **optimized Python pac
 ## 🚀 Optimized Python Packages on IBM Power: Complete Setup Guide
 
 ### ✅ 1. **Choose a Supported Python Version**
-- Recommended: **Python 3.10, 3.11, or 3.12**
-- Best support: **3.11 and 3.12** (most packages available)
+- Supported versions: **Python 3.11 and 3.12 only**
+- Note: **Other Python versions are not supported**
 
 ---
 
@@ -56,23 +56,7 @@ devpi list
 
 ---
 
-### 🛠️ 5. **Set `LD_LIBRARY_PATH` for Native Libraries**
-Some packages (e.g., TensorFlow, PyTorch, OpenBLAS) require shared libraries at runtime.
-
-If you encounter errors like:
-```
-ImportError: libXYZ.so: cannot open shared object file
-```
-Set the path to your native libraries:
-```bash
-export LD_LIBRARY_PATH=/path/to/libs:$LD_LIBRARY_PATH
-```
-
-💡 Use `ldd $(which python)` or `ldd <binary>` to check for missing `.so` files.
-
----
-
-### 🧰 6. **Troubleshooting Tips from the Community**
+### 🧰 5. **Troubleshooting Tips from the Community**
 - If a package fails to install:
   ```bash
   pip install --prefer-binary --no-cache-dir <package-name>
@@ -83,7 +67,7 @@ export LD_LIBRARY_PATH=/path/to/libs:$LD_LIBRARY_PATH
 
 ---
 
-### 🧼 7. **Best Practices**
+### 🧼 6. **Best Practices**
 - Always use a virtual environment.
 - Keep tools up to date:
   ```bash
