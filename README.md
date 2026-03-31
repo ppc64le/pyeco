@@ -56,10 +56,10 @@ devpi list
 
 ---
 
-### 🛠️ 5. **Set `LD_LIBRARY_PATH` for Native Libraries**
-Some packages (e.g., TensorFlow, PyTorch, OpenBLAS) require shared libraries at runtime.
+### 🛠️ 5. **Set `LD_LIBRARY_PATH` for Native Libraries (Only if not using manylinux wheels)**
+Most Python packages (e.g., TensorFlow, PyTorch) ship as manylinux wheels, which include all required shared libraries so normally, you don’t need to set LD_LIBRARY_PATH.
 
-If you encounter errors like:
+If you installed a **non-manylinux wheel**, you might see errors like:
 ```
 ImportError: libXYZ.so: cannot open shared object file
 ```
