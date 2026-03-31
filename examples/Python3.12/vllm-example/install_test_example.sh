@@ -60,7 +60,7 @@ source venv/bin/activate
 
 export VLLM_USE_CUSTOM_OPS=0
 
-pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.03.31  -r requirements.txt
+pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.03.31 -r requirements.txt
 
 python vllm_example.py
 
