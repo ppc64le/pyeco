@@ -38,7 +38,7 @@ source venv/bin/activate
 Use `--prefer-binary` to prioritize prebuilt Power wheels:
 ```bash
 pip install --prefer-binary <package-name> \
-  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.03.31
 ```
 
 - This pulls from IBM’s Power-optimized wheel repo.
@@ -50,7 +50,7 @@ pip install --prefer-binary <package-name> \
 Use `devpi-client` to explore the repository:
 ```bash
 pip install devpi-client
-devpi use https://wheels.developerfirst.ibm.com/ppc64le/linux
+devpi use https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.03.31
 devpi list
 ```
 

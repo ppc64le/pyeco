@@ -47,7 +47,7 @@ source venv/bin/activate
 pip install --upgrade pip
 
 pip install --no-cache --prefer-binary \
-    --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
+    --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.03.31 \
     -r requirements.txt
 
 # ----------------------------------------
