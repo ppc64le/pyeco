@@ -1,0 +1,93 @@
+FROM registry.suse.com/suse/sle15:latest
+
+ENV LANG=C.UTF-8
+
+# ----------------------------
+# Install build dependencies
+# ----------------------------
+RUN zypper --non-interactive refresh && \
+    zypper --non-interactive install --no-recommends -y \
+        gcc \
+        gcc-c++ \
+        make \
+        binutils \
+        awk \
+        file \
+        gawk \
+        wget \
+        tar \
+        gzip \
+        bzip2 \
+        xz \
+        xz-devel \
+        zlib-devel \
+        openssl-devel \
+        libffi-devel \
+        sqlite3-devel \
+        readline-devel \
+        libbz2-devel \
+        ncurses-devel \
+        gmp-devel \
+        mpc-devel \
+        mpfr-devel && \
+    zypper clean --all
+
+WORKDIR /usr/src
+
+# ----------------------------
+# Install Python 3.11.8
+# ----------------------------
+RUN wget https://www.python.org/ftp/python/3.11.8/Python-3.11.8.tgz && \
+    tar -xzf Python-3.11.8.tgz && \
+    cd Python-3.11.8 && \
+    ./configure --enable-optimizations && \
+    make -j$(nproc) && \
+    make altinstall
+
+# ----------------------------
+# Install Python 3.12.2
+# ----------------------------
+RUN wget https://www.python.org/ftp/python/3.12.2/Python-3.12.2.tgz && \
+    tar -xzf Python-3.12.2.tgz && \
+    cd Python-3.12.2 && \
+    ./configure --enable-optimizations && \
+    make -j$(nproc) && \
+    make altinstall
+
+# ----------------------------
+# Install GCC 11.5
+# ----------------------------
+RUN wget https://ftp.gnu.org/gnu/gcc/gcc-11.5.0/gcc-11.5.0.tar.gz && \
+    tar -xf gcc-11.5.0.tar.gz && \
+    cd gcc-11.5.0 && \
+    ./contrib/download_prerequisites && \
+    mkdir build && \
+    mkdir -p /opt/gcc-11 && \
+    cd build && \
+    ../configure \
+        --prefix=/opt/gcc-11 \
+        --enable-languages=c,c++ \
+        --disable-multilib && \
+    make -j$(nproc) && \
+    make install
+
+# ----------------------------
+# Add GCC to PATH
+# ----------------------------
+ENV PATH=/opt/gcc-11/bin:$PATH
+ENV CC=/opt/gcc-11/bin/gcc
+ENV CXX=/opt/gcc-11/bin/g++
+
+# ----------------------------
+# Cleanup source
+# ----------------------------
+RUN rm -rf /usr/src/*
+
+# ----------------------------
+# Verify installations
+# ----------------------------
+RUN python3.11 --version && \
+    python3.12 --version && \
+    gcc --version
+
+CMD ["/bin/bash"]
