@@ -1,0 +1,30 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# System deps
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    ca-certificates \
+    curl \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Add deadsnakes PPA
+RUN add-apt-repository ppa:deadsnakes/ppa
+
+# Install Python versions
+RUN apt-get update && apt-get install -y \
+    python3.11 python3.11-venv python3.11-dev \
+    python3.12 python3.12-venv python3.12-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install pip for all versions
+RUN curl -sS https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+    python3.11 get-pip.py && \
+    python3.12 get-pip.py && \
+    rm get-pip.py
+
+# Helpful aliases
+RUN ln -s /usr/bin/python3.11 /usr/local/bin/python3.11 && \
+    ln -s /usr/bin/python3.12 /usr/local/bin/python3.12
