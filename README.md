@@ -73,13 +73,19 @@ export LD_LIBRARY_PATH=/path/to/libs:$LD_LIBRARY_PATH
 ---
 
 ### 🧰 6. **Troubleshooting Tips from the Community**
-- If a package fails to install:
+- If a package fails to install, try forcing binary wheels and disabling cache:
   ```bash
-  pip install --prefer-binary --no-cache-dir <package-name>
+  pip install --prefer-binary --no-cache-dir <package-name> \
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
   ```
 - Ensure you're using the correct Python version.
+  ```bash
+  python --version
+  ```
 - If a package is missing, request it via:
-  - [IBM TechXchange thread](https://community.ibm.com/community/user/discussion/unleash-the-power-of-ai-with-optimized-python-packages-for-ibm-power)
+  - IBM Power ISV ecosystem enablement form:
+[IBM Power ISV enablement request](https://www.ibm.com/power/resources/isv/enablement-request/)
+
 
 ---
 
