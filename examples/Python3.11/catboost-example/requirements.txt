@@ -1,0 +1,4 @@
+catboost==1.2.7+ppc64le1
+numpy==2.4.1+ppc64le1
+pandas==2.2.3+ppc64le1
+scikit-learn==1.6.1+ppc64le1
