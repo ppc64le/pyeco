@@ -11,11 +11,11 @@ attrs==26.1.0
 blake3==1.0.8
 cachetools==7.0.5
 cbor2==5.9.0
-certifi==2026.2.25
+certifi==2026.2.25+ppc64le1
 cffi==2.0.0
 charset_normalizer==3.4.6
 click==8.3.1
-cloudpickle==3.1.2
+cloudpickle==3.1.2+ppc64le1
 compressed-tensors==0.13.0
 depyf==0.20.0
 dill==0.4.1
@@ -29,9 +29,9 @@ fastapi==0.135.2
 fastapi-cli==0.0.24
 fastapi-cloud-cli==0.15.0
 fastar==0.9.0
-filelock==3.25.2
+filelock==3.25.2+ppc64le1
 frozenlist==1.8.0
-fsspec==2026.2.0
+fsspec==2026.2.0+ppc64le1
 gguf==0.18.0
 grpcio==1.71.0+ppc64le2
 h11==0.16.0
@@ -63,7 +63,7 @@ multidict==6.7.1
 networkx==3.6.1
 ninja==1.13.0
 numba==0.61.2+ppc64le1
-numpy==2.2.6+ppc64le1
+numpy==2.2.6+ppc64le1 
 openai==2.29.0
 openai-harmony==0.0.8
 opencv-python-headless==4.13.0.92+ppc64le1
@@ -83,7 +83,7 @@ pydantic==2.12.5
 pydantic-core==2.41.5
 pydantic-extra-types==2.11.1
 pydantic-settings==2.13.1
-pygments==2.19.2
+pygments==2.19.2+ppc64le1
 pyjwt==2.12.1
 python-dotenv==1.2.2
 python-json-logger==4.0.0
@@ -109,7 +109,7 @@ starlette==0.52.1
 supervisor==4.3.0
 sympy==1.14.0
 tokenizers==0.22.2
-torch==2.10.0+ppc64le1
+torch==2.11.0+ppc64le1
 tqdm==4.67.3
 transformers==4.57.6
 typer==0.24.1
@@ -117,7 +117,7 @@ typing-inspection==0.4.2
 typing_extensions==4.15.0
 urllib3==2.6.3
 uvicorn==0.42.0
-vllm==0.15.2.dev0+g1892993bc.d20260306.cpuppc64le1
+vllm==0.16.0+cpuppc64le1
 watchfiles==1.1.1
 websockets==16.0
 wrapt==2.1.2
