@@ -30,11 +30,11 @@ echo "========== Installing system dependencies =========="
 
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
-        $SUDO dnf install -y python3.12 python3.12-devel python3.12-pip gcc gcc-c++ make
+        $SUDO dnf install -y python3.11 python3.11-devel python3.11-pip gcc gcc-c++ make
         ;;
     "ubuntu"|"debian")
         $SUDO apt update
-        $SUDO apt install -y python3.12 python3.12-dev python3.12-venv python3-pip build-essential
+        $SUDO apt install -y python3.11 python3.11-dev python3.11-venv python3-pip build-essential
         ;;
     *)
         echo " Unsupported distro: $DISTRO"
@@ -47,7 +47,7 @@ esac
 # -------------------------------
 echo "========== Creating virtual environment =========="
 
-python3.12 -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 
 python --version
@@ -92,7 +92,7 @@ echo "========== Verifying CatBoost =========="
 
 python - <<EOF
 import catboost
-print("✅ CatBoost version:", catboost.__version__)
+print(" CatBoost version:", catboost.__version__)
 EOF
 
 # -------------------------------
