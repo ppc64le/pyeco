@@ -22,5 +22,3 @@ catboost numpy pandas scikit-learn
 chmod +x install_test_example.sh
 ./install_test_example.sh
 ```
-### License: 
-It's covered under Apache 2.0 licenses

@@ -1,63 +1,111 @@
 #!/bin/bash
+set -e
 
-# Function to detect Linux distribution
+echo "========== START: CatBoost Example Setup =========="
+
+# -------------------------------
+# Detect OS
+# -------------------------------
 detect_distro() {
     if [ -f /etc/os-release ]; then
         . /etc/os-release
         echo $ID
-    elif [ -f /etc/redhat-release ]; then
-        echo "rhel"
-    elif [ -f /etc/debian_version ]; then
-        echo "debian"
     else
         echo "unknown"
     fi
 }
 
-# Install system dependencies based on distribution
 DISTRO=$(detect_distro)
+
+if [ "$EUID" -eq 0 ]; then
+    SUDO=""
+else
+    SUDO="sudo"
+fi
+
+# -------------------------------
+# Install system dependencies
+# -------------------------------
+echo "========== Installing system dependencies =========="
 
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
-        if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y python3.11 python3.11-devel python3.11-pip
-        else
-            sudo yum install -y python3.11 python3.11-devel python3.11-pip 
-        fi
+        $SUDO dnf install -y python3.12 python3.12-devel python3.12-pip gcc gcc-c++ make
         ;;
     "ubuntu"|"debian")
-        export DEBIAN_FRONTEND=noninteractive 
-        sudo apt update
-        sudo apt install -y libglib2.0-0 python3.11 python3.11-dev python3-pip python3.11-venv 
-        ;;
-    "sles")
-        sudo zypper refresh
-        sudo zypper install -y python311 python311-pip python311-devel
+        $SUDO apt update
+        $SUDO apt install -y python3.12 python3.12-dev python3.12-venv python3-pip build-essential
         ;;
     *)
-        echo "Unsupported distribution: $DISTRO"
+        echo " Unsupported distro: $DISTRO"
         exit 1
         ;;
 esac
 
-# Create and activate virtual environment
-python3.11 -m venv .venv
+# -------------------------------
+# Create venv
+# -------------------------------
+echo "========== Creating virtual environment =========="
+
+python3.12 -m venv .venv
 source .venv/bin/activate
+
+python --version
+
+# -------------------------------
+# Upgrade pip
+# -------------------------------
+echo "========== Upgrading pip =========="
+
+pip install --upgrade pip setuptools wheel
+
+# -------------------------------
+# Install base deps
+# -------------------------------
+echo "========== Installing base dependencies =========="
 
 pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
 
 
-# Run Python scripts
-printf "\nRunning catboost_example.py\n"
-python3.11 catboost_example.py
+# -------------------------------
+# Install CatBoost (STRICT)
+# -------------------------------
+echo "========== Installing CatBoost =========="
 
-printf "\nRunning sub-test1.py\n"
-python3.11 sub-test1.py
+if ! pip install --prefer-binary --no-cache catboost; then
+    echo ""
+    echo " CatBoost installation FAILED"
+    echo " Reason: No prebuilt wheel available (ppc64le)"
+    echo " Source build is intentionally NOT allowed (unstable)"
+    echo ""
+    echo " ACTION REQUIRED:"
+    echo "   - Upload CatBoost wheel to IBM repo OR JFrog"
+    echo "   - OR install from internal repository"
+    echo ""
+    exit 1
+fi
 
-printf "\nRunning sub-test2.py\n"
-python3.11 sub-test2.py
+# -------------------------------
+# Verify installation
+# -------------------------------
+echo "========== Verifying CatBoost =========="
 
-printf "\nRunning sub-test3.py\n"
-python3.11 sub-test3.py
+python - <<EOF
+import catboost
+print("✅ CatBoost version:", catboost.__version__)
+EOF
 
-# Made with Bob
+# -------------------------------
+# Run tests
+# -------------------------------
+echo "========== Running tests =========="
+
+python catboost_example.py
+python sub-test1.py
+echo "Test-1 passed"
+python sub-test2.py
+echo "Test-2 passed"
+python sub-test3.py
+echo "Test-3 passed"
+
+echo "ALL TESTS PASSED SUCCESSFULLY"

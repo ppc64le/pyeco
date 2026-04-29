@@ -97,4 +97,4 @@ print(importance_df.head())
 print("\n🎉 All packages tested successfully together!")
 print("✅ CatBoost, NumPy, Pandas, and Scikit-learn integration complete!")
 
-# Made with Bob
+
