@@ -1,0 +1,2 @@
+tiktoken==0.7.0+ppc64le1
+regex==2024.9.11
