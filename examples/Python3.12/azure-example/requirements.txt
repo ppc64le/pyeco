@@ -32,6 +32,6 @@ msrest==0.7.1
 oauthlib==3.3.1
 requests==2.32.5
 requests-oauthlib==2.0.0+ppc64le1
-six==1.17.0
+six==1.16.0+ppc64le1
 typing_extensions==4.15.0
 urllib3==2.5.0
