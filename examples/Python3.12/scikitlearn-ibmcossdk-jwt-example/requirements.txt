@@ -25,7 +25,7 @@ numexpr==2.14.1+ppc64le1
 numpy==2.4.4+ppc64le1
 onnx==1.21.0+ppc64le1
 onnxconverter-common==1.12.1
-onnxruntime==1.23.2+ppc64le1
+onnxruntime==1.23.2+ppc64le2
 ormsgpack==1.12.0+ppc64le1
 packaging==25.0
 pandas==3.0.2+ppc64le1
@@ -43,7 +43,7 @@ PyYAML==6.0.3+ppc64le1
 pyzmq==27.1.0+ppc64le1
 requests==2.32.2
 scikit-learn==1.8.0+ppc64le1
-scipy==1.17.1+ppc64le1
+scipy==1.17.1+ppc64le2
 six==1.16.0+ppc64le1
 skl2onnx==1.20.0
 sympy==1.15.0.dev0+ppc64le1

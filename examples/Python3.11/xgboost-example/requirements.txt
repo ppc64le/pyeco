@@ -19,7 +19,7 @@ pytz==2026.1.post1
 requests==2.32.5
 roman==5.1
 roman-numerals-py==3.1.0
-scipy==1.17.1+ppc64le1
+scipy==1.17.1+ppc64le2
 sentencepiece==0.2.1+ppc64le2
 six==1.17.0
 snowballstemmer==3.0.1
