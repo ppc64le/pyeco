@@ -5,11 +5,11 @@ joblib==1.5.2
 kiwisolver==1.4.4+ppc64le1
 lightgbm==4.6.0+ppc64le1
 matplotlib==3.10.8+ppc64le1
-numpy==1.26.4
+numpy==2.4.4+ppc64le1
 packaging==25.0
 pandas==3.0.2+ppc64le1
 pillow==12.2.0+ppc64le1
-pyarrow==23.0.1+ppc64le1
+pyarrow==21.0.0+ppc64le1
 pyparsing==3.3.1+ppc64le1
 python-dateutil==2.9.0.post0
 pytz==2025.2

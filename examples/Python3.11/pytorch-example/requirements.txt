@@ -1,5 +1,5 @@
-filelock==3.18.0+ppc64le1
-fsspec==2025.7.0
+filelock==3.25.2+ppc64le1
+fsspec==2026.2.0+ppc64le1
 Jinja2==3.1.6
 joblib==1.5.2
 MarkupSafe==3.0.2+ppc64le2
@@ -12,8 +12,8 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 scikit-learn==1.8.0+ppc64le1
 scipy==1.17.1+ppc64le2
-six==1.17.0
-sympy==1.14.0
+six==1.16.0+ppc64le1
+sympy==1.15.0.dev0+ppc64le1
 threadpoolctl==3.6.0
 torch==2.11.0+ppc64le1
 typing_extensions==4.15.0

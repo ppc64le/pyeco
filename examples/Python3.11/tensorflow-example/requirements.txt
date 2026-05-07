@@ -1,6 +1,6 @@
 absl-py==2.4.0
 astunparse==1.6.3
-certifi==2025.7.14+ppc64le1
+certifi==2026.2.25+ppc64le1
 charset-normalizer==3.4.4
 cryptography==46.0.7+ppc64le1
 flatbuffers==25.2.10+ppc64le1
@@ -28,12 +28,12 @@ protobuf==4.25.3+ppc64le1
 pyasn1==0.6.2
 pyasn1_modules==0.4.2
 pycparser==3.0
-Pygments==2.19.2
+Pygments==2.19.2+ppc64le1
 requests==2.32.5
 requests-oauthlib==2.0.0+ppc64le1
 rich==14.3.3
 rsa==4.9.1
-six==1.17.0
+six==1.16.0+ppc64le1
 tensorboard==2.18.0
 tensorboard-data-server==0.7.2
 tensorflow==2.18.1+ppc64le1
