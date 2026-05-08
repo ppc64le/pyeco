@@ -28,7 +28,7 @@ matplotlib-inline==0.1.7
 mistune==2.0.5
 nbclient==0.10.2
 nbconvert==7.17.1+ppc64le1
-nbformat==5.10.3+ppc64le1
+nbformat==5.10.4+ppc64le1
 nest-asyncio==1.6.0
 numpy==2.4.4+ppc64le1
 packaging==25.0
@@ -38,7 +38,7 @@ pexpect==4.9.0
 pillow==12.2.0+ppc64le1
 platformdirs==4.4.0
 prompt_toolkit==3.0.52
-psutil==7.1.3+ppc64le1
+psutil==7.2.2+ppc64le1
 ptyprocess==0.7.0
 pure_eval==0.2.3+ppc64le1
 Pygments==2.19.2

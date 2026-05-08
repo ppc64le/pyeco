@@ -29,4 +29,4 @@ typing_extensions==4.15.0
 urllib3==2.6.3
 uuid_utils==0.14.1
 xxhash==3.6.0
-zstandard==0.23.0
+zstandard==0.25.0
