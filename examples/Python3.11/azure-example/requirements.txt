@@ -24,7 +24,7 @@ azure-mgmt-sql==4.0.0b21+ppc64le1
 azure-mgmt-storage==23.0.0+ppc64le1
 azure-mgmt-trafficmanager==1.1.0+ppc64le1
 azure-mgmt-web==8.0.0+ppc64le1
-certifi==2025.7.14+ppc64le1
+certifi==2026.2.25+ppc64le1
 charset-normalizer==3.4.3
 idna==3.10
 isodate==0.7.2
@@ -32,6 +32,6 @@ msrest==0.7.1
 oauthlib==3.3.1
 requests==2.32.5
 requests-oauthlib==2.0.0+ppc64le1
-six==1.17.0
+six==1.16.0+ppc64le1
 typing_extensions==4.15.0
 urllib3==2.5.0

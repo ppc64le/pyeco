@@ -117,7 +117,7 @@ ptyprocess==0.7.0
 pure_eval==0.2.3+ppc64le1
 pycparser==3.0
 pydantic==2.10.3+ppc64le1
-pydantic_core==2.27.1
+pydantic_core==2.27.1+ppc64le1
 Pygments==2.19.2
 pyiceberg==0.8.1+ppc64le1
 pyparsing==3.3.1+ppc64le1
