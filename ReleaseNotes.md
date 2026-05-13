@@ -71,6 +71,9 @@ Detailed package license information and CVE disclosures are available at
 
 **Note:** This list highlights selected CVE fixes and is not exhaustive. 
 
+## ⚠️ Python 3.9 Discontinuation Notice
+- Please note that support for Python 3.9 wheels will be discontinued in an upcoming release.
+
 ## 🔒 Feedback and Support
 
 We welcome your feedback. For bug reports or enhancement suggestions, please raise an issue in [PyEco repository](https://github.com/ppc64le/pyeco/).
