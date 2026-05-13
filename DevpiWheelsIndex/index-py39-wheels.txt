@@ -114,6 +114,8 @@ dm-tree==0.1.8+ppc64le1
 dm-tree==0.1.9+ppc64le1
 docling-parse==4.7.1+ppc64le1
 docling-parse==4.7.3+ppc64le1
+duckdb==1.4.3+ppc64le1
+duckdb==1.4.4+ppc64le1
 editdistance==0.8.1+ppc64le1
 ephem==4.1.5+ppc64le1
 ephem==4.2+ppc64le1
