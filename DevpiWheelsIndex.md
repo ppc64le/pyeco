@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: May 11, 2026
+### Last Updated On: May 13, 2026
 ### Last CVE Scan On: May 08, 2026
 
 ----
@@ -428,6 +428,15 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | av-16.1.0+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>av-16.1.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>av-16.1.0+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>av-16.1.0+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>av-16.1.0+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-3.0-or-later`,<br>`MIT`, `MS-RL`, `Zlib` | N.A |
+
+----
+
+### awx
+- **awx==24.6.1+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| awx-24.6.1+ppc64le1-py3-none-any.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC0-1.0`, `MIT`,<br>`OFL-1.1` | `GHSA-39q2-94rc-95cp`, `GHSA-3p68-rc4w-qgx5`, `GHSA-3w6x-2g7m-8v23`, `GHSA-43fc-jf86-j433`, `GHSA-445q-vr5w-6q77`, `GHSA-4hjh-wcwx-xvwj`, `GHSA-5c9x-8gcm-mpgx`, `GHSA-62hf-57xw-28j9`, `GHSA-67hx-6x53-jw92`, `GHSA-6chq-wfr3-2hj9`, `GHSA-8hc4-vh64-cxmj`, `GHSA-968p-4wvh-cqc8`, `GHSA-9wv6-86v2-598j`, `GHSA-cj63-jhhr-wcxv`, `GHSA-cjmm-f4jc-qw8r`, `GHSA-crv5-9vww-q3g8`, `GHSA-cxjh-pqwp-8mfp`, `GHSA-f23m-r3pf-42rh`, `GHSA-fjxv-7rqg-78g4`, `GHSA-fvcv-3m26-pcqx`, `GHSA-gx9m-whjm-85jf`, `GHSA-h7mw-gpvr-xq4m`, `GHSA-h8r8-wccr-v5f2`, `GHSA-jr5f-v2jv-69x6`, `GHSA-m7pr-hjqh-92cm`, `GHSA-mh29-5h37-fv8m`, `GHSA-mmhx-hmjr-r674`, `GHSA-p3vf-v8qc-cwcr`, `GHSA-pf86-5x62-jrwf`, `GHSA-pmwg-cvhr-8vh7`, `GHSA-q8qp-cvcw-x6jj`, `GHSA-r4q5-vmmm-2653`, `GHSA-r5fr-rjxr-66jc`, `GHSA-vf2m-468p-8v99`, `GHSA-vhxf-7vqr-mrjg`, `GHSA-w9j2-pvgh-6h63`, `GHSA-xhjh-pmcv-23jw`, `GHSA-xx6v-rp6x-q39c`, `GHSA-xxjr-mmjv-4gpg` |
 
 ----
 
@@ -2203,6 +2212,22 @@
 
 ----
 
+### duckdb
+- **duckdb==1.4.3+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| duckdb-1.4.3+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.3+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.3+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.3+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.3+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.3+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC0-1.0`,<br>`GPL-2.0-only OR Apache-2.0`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `NGPL`,<br>`Python-2.0` | N.A |
+
+----
+- **duckdb==1.4.4+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| duckdb-1.4.4+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.4+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.4+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.4+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.4+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl<br>duckdb-1.4.4+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC0-1.0`,<br>`GPL-2.0-only OR Apache-2.0`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `NGPL`,<br>`Python-2.0` | N.A |
+
+----
+
 ### editdistance
 - **editdistance==0.8.1+ppc64le1**
 
@@ -2777,6 +2802,15 @@
 
 ----
 
+### gradio
+- **gradio==6.9.0+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| gradio-6.9.0+ppc64le1-py3-none-any.whl | `0BSD`, `Apache-2.0`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`CC-BY-4.0`, `ISC`,<br>`MIT`, `MPL-2.0`,<br>`OFL-1.1` | N.A |
+
+----
+
 ### graphite2
 - **graphite2==1.3.14**
 
@@ -3149,6 +3183,13 @@
 ----
 
 ### h5py
+- **h5py==3.10.0+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| h5py-3.10.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl | `BSD-3-Clause`, `MIT` | N.A |
+
+----
 - **h5py==3.11.0**
 
 | Wheel File | License | CVE IDs |
@@ -6130,14 +6171,21 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| openblas-0.3.29+ppc64le1-py3-none-any.whl<br>openblas-0.3.29+ppc64le1-py3-none-manylinux2014_ppc64le.whl | `Apache-2.0`,<br>`BSD-2-Clause-Views`,<br>`BSD-3-Clause` | N.A |
+| openblas-0.3.29+ppc64le1-py3-none-any.whl<br>openblas-0.3.29+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>openblas-0.3.29+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-2-Clause-Views`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 - **openblas==0.3.30+ppc64le1**
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| openblas-0.3.30+ppc64le1-py3-none-manylinux2014_ppc64le.whl | `BSD-2-Clause-Views`,<br>`BSD-3-Clause` | N.A |
+| openblas-0.3.30+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>openblas-0.3.30+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause-Views`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+
+----
+- **openblas==0.3.32+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| openblas-0.3.32+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause-Views`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 
@@ -9188,7 +9236,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| spacy-3.8.7+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`Apache-2.0 OR LGPL-3.0-only`,<br>`BSD-3-Clause`,<br>`CC-BY-3.0`, `CC-BY-4.0`,<br>`MIT` | N.A |
+| spacy-3.8.7+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>spacy-3.8.7+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`Apache-2.0 OR LGPL-3.0-only`,<br>`BSD-3-Clause`,<br>`CC-BY-3.0`, `CC-BY-4.0`,<br>`MIT` | `GHSA-3936-cmfr-pm3m`, `GHSA-fj7x-q9j7-g6q6` |
 
 ----
 
