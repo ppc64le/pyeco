@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: May 13, 2026
+### Last Updated On: May 18, 2026
 ### Last CVE Scan On: May 08, 2026
 
 ----
@@ -4485,6 +4485,15 @@
 
 ----
 
+### lapack
+- **lapack==3.12.1+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| lapack-3.12.1+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause`,<br>`BSD-3-Clause-Open-MPI`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+
+----
+
 ### libclang
 - **libclang==14.0.6**
 
@@ -5457,6 +5466,15 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | notebook-6.5.7+ppc64le1-py3-none-any.whl | `BSD-2-Clause`,<br>`BSD-3-Clause` | N.A |
+
+----
+
+### numactl
+- **numactl==2.0.19+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| numactl-2.0.19+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `GPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-only`,<br>`LGPL-3.0-only` | N.A |
 
 ----
 
