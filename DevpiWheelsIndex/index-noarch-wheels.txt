@@ -304,6 +304,7 @@ langchain==1.2.10+ppc64le1
 langdetect==1.0.8+ppc64le1
 langgraph==1.0.9+ppc64le1
 langgraph==1.1.7a2+ppc64le1
+lapack==3.12.1+ppc64le1
 libclang==14.0.6
 libclang==14.0.6+ppc64le1
 libclang==18.1.1
@@ -352,6 +353,7 @@ notebook==6.5.4
 notebook==6.5.4+ppc64le1
 notebook==6.5.7
 notebook==6.5.7+ppc64le1
+numactl==2.0.19+ppc64le1
 ollama-python-package==0.12.10+ppc64le1
 ollama-python-package==0.13.1+ppc64le1
 ollama-python-package==0.13.5+ppc64le1
