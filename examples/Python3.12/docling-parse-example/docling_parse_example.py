@@ -14,9 +14,9 @@ def parse_pdf_with_docling(pdf_path: str) -> str:
         Extracted text content from the PDF
     """
     try:
-        # Create parser instance and parse the PDF document
+        # Create parser instance and load the PDF document
         parser = DoclingPdfParser()
-        doc = parser.parse(pdf_path)
+        doc = parser.load(pdf_path)
         
         # Extract text content from pages
         text_content = ""

@@ -36,9 +36,9 @@ class TestDoclingParseIntegration(unittest.TestCase):
         try:
             from docling_parse.pdf_parser import DoclingPdfParser
             
-            # Create parser and parse the test PDF
+            # Create parser and load the test PDF
             parser = DoclingPdfParser()
-            doc = parser.parse(self.test_pdf_path)
+            doc = parser.load(self.test_pdf_path)
             
             # Basic assertions
             self.assertIsNotNone(doc, "Parsed document should not be None")
@@ -57,12 +57,12 @@ class TestDoclingParseIntegration(unittest.TestCase):
         try:
             from docling_parse.pdf_parser import DoclingPdfParser
             
-            # Try to parse a non-existent file
+            # Try to load a non-existent file
             non_existent_pdf = "this_file_does_not_exist.pdf"
             parser = DoclingPdfParser()
             
             with self.assertRaises(Exception):
-                parser.parse(non_existent_pdf)
+                parser.load(non_existent_pdf)
                 
         except ImportError:
             self.skipTest("docling-parse not available")
