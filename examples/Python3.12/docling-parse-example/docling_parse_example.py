@@ -18,17 +18,17 @@ def parse_pdf_with_docling(pdf_path: str) -> str:
         parser = DoclingPdfParser()
         doc = parser.load(pdf_path)
         
-        # Extract text content from pages
+        # Extract text content from all pages
         text_content = ""
         
-        if hasattr(doc, 'pages') and doc.pages:
-            for page in doc.pages:
-                # Extract text from cells in the page
-                if hasattr(page, 'cells'):
-                    for cell in page.cells:
-                        if hasattr(cell, 'text'):
-                            text_content += cell.text + " "
-                    text_content += "\n"
+        for page_num in range(1, doc.number_of_pages() + 1):
+            page = doc.get_page(page_num)
+            
+            # Extract text from word cells
+            if hasattr(page, 'word_cells') and page.word_cells:
+                for cell in page.word_cells:
+                    text_content += cell.text + " "
+                text_content += "\n"
         
         return text_content.strip() if text_content else "No text content extracted"
         

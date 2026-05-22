@@ -43,11 +43,21 @@ class TestDoclingParseIntegration(unittest.TestCase):
             # Basic assertions
             self.assertIsNotNone(doc, "Parsed document should not be None")
             
-            # Check if document has expected attributes
-            has_pages = hasattr(doc, 'pages')
+            # Check if document has number_of_pages method
+            self.assertTrue(hasattr(doc, 'number_of_pages'),
+                          "Document should have number_of_pages method")
             
-            # Document should have pages
-            self.assertTrue(has_pages, "Parsed document should have pages attribute")
+            # Check that we can get pages
+            num_pages = doc.number_of_pages()
+            self.assertGreater(num_pages, 0, "Document should have at least one page")
+            
+            # Try to get the first page
+            page = doc.get_page(1)
+            self.assertIsNotNone(page, "Should be able to get page 1")
+            
+            # Check that page has word_cells
+            self.assertTrue(hasattr(page, 'word_cells'),
+                          "Page should have word_cells attribute")
             
         except Exception as e:
             self.fail(f"Failed to parse PDF with docling-parse: {e}")
