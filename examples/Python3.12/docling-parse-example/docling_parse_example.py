@@ -1,121 +1,209 @@
 import sys
 from pathlib import Path
+from typing import List, Dict
 from docling_parse.docling_parse import pdf_parser_v2
 
-def parse_pdf_document(pdf_path: str) -> dict:
+def parse_pdf_with_docling(pdf_path: str) -> str:
     """
-    Parse a PDF document using docling-parse library.
+    Parse a PDF document using docling-parse and extract text content.
     
     Args:
         pdf_path: Path to the PDF file to parse
         
     Returns:
-        Dictionary containing parsed document information
+        Extracted text content from the PDF
     """
     try:
-        # Parse the PDF document
+        # Parse the PDF document using docling-parse v2
         doc = pdf_parser_v2(pdf_path)
         
-        # Extract basic information
-        result = {
-            "success": True,
-            "num_pages": len(doc.pages) if hasattr(doc, 'pages') else 0,
-            "has_text": bool(doc.text) if hasattr(doc, 'text') else False,
-            "parser_version": "v2"
-        }
+        # Extract text content
+        text_content = ""
         
-        # Try to get page count and basic metadata
-        if hasattr(doc, 'pages') and doc.pages:
-            result["first_page_info"] = {
-                "page_num": 1,
-                "has_content": bool(doc.pages[0]) if doc.pages else False
-            }
+        # Try different methods to extract text
+        if hasattr(doc, 'text') and doc.text:
+            text_content = doc.text
+        elif hasattr(doc, 'pages') and doc.pages:
+            # Extract text from each page
+            for page in doc.pages:
+                if hasattr(page, 'text'):
+                    text_content += page.text + "\n"
         
-        return result
+        return text_content if text_content else "No text content extracted"
         
     except Exception as e:
-        return {
-            "success": False,
-            "error": str(e),
-            "error_type": type(e).__name__
-        }
+        return f"Error parsing PDF: {str(e)}"
+
+
+def create_document_chunks(text: str, chunk_size: int = 500) -> List[str]:
+    """
+    Split document text into smaller chunks for RAG processing.
+    
+    Args:
+        text: Full document text
+        chunk_size: Size of each chunk in characters
+        
+    Returns:
+        List of text chunks
+    """
+    # Simple chunking by character count
+    chunks = []
+    words = text.split()
+    current_chunk = []
+    current_size = 0
+    
+    for word in words:
+        word_size = len(word) + 1  # +1 for space
+        if current_size + word_size > chunk_size and current_chunk:
+            chunks.append(" ".join(current_chunk))
+            current_chunk = [word]
+            current_size = word_size
+        else:
+            current_chunk.append(word)
+            current_size += word_size
+    
+    if current_chunk:
+        chunks.append(" ".join(current_chunk))
+    
+    return chunks
+
+
+def simple_keyword_search(chunks: List[str], query: str) -> List[Dict[str, any]]:
+    """
+    Simple keyword-based retrieval (mock RAG retrieval).
+    In a real RAG system, this would use embeddings and vector search.
+    
+    Args:
+        chunks: List of document chunks
+        query: Search query
+        
+    Returns:
+        List of relevant chunks with scores
+    """
+    results = []
+    query_lower = query.lower()
+    query_words = set(query_lower.split())
+    
+    for idx, chunk in enumerate(chunks):
+        chunk_lower = chunk.lower()
+        # Simple scoring: count matching words
+        matches = sum(1 for word in query_words if word in chunk_lower)
+        
+        if matches > 0:
+            results.append({
+                "chunk_id": idx,
+                "text": chunk,
+                "score": matches,
+                "preview": chunk[:200] + "..." if len(chunk) > 200 else chunk
+            })
+    
+    # Sort by score (descending)
+    results.sort(key=lambda x: x["score"], reverse=True)
+    return results
 
 
 def create_sample_pdf():
     """
-    Create a simple sample PDF for testing purposes.
+    Create a sample PDF document with RAG-relevant content.
     """
     try:
         from reportlab.pdfgen import canvas
         from reportlab.lib.pagesizes import letter
         
-        pdf_path = "sample_document.pdf"
+        pdf_path = "rag_sample_document.pdf"
         c = canvas.Canvas(pdf_path, pagesize=letter)
         
-        # Add some text content
-        c.drawString(100, 750, "Sample PDF Document")
-        c.drawString(100, 730, "This is a test document for docling-parse")
-        c.drawString(100, 710, "Page 1 of 1")
+        # Add content about AI and machine learning
+        y_position = 750
+        content = [
+            "Introduction to Artificial Intelligence",
+            "",
+            "Artificial Intelligence (AI) is the simulation of human intelligence",
+            "processes by machines, especially computer systems. These processes",
+            "include learning, reasoning, and self-correction.",
+            "",
+            "Machine Learning is a subset of AI that provides systems the ability",
+            "to automatically learn and improve from experience without being",
+            "explicitly programmed. Deep learning is a subset of machine learning.",
+            "",
+            "Natural Language Processing (NLP) is a branch of AI that helps",
+            "computers understand, interpret and manipulate human language.",
+            "NLP draws from many disciplines, including computer science and",
+            "computational linguistics.",
+        ]
+        
+        for line in content:
+            c.drawString(50, y_position, line)
+            y_position -= 20
         
         c.showPage()
         c.save()
         
-        print(f"Created sample PDF: {pdf_path}")
+        print(f"✓ Created sample PDF: {pdf_path}")
         return pdf_path
         
     except ImportError:
-        print("reportlab not available, skipping PDF creation")
+        print("✗ reportlab not available, skipping PDF creation")
         return None
 
 
 if __name__ == "__main__":
-    print("=" * 60)
-    print("Docling-Parse PDF Parsing Example")
-    print("=" * 60)
+    print("=" * 70)
+    print("Simple RAG Application with Docling-Parse")
+    print("=" * 70)
     
-    # Check if a PDF path was provided as argument
+    # Step 1: Get or create PDF document
     if len(sys.argv) > 1:
         pdf_path = sys.argv[1]
-        print(f"\nParsing provided PDF: {pdf_path}")
+        print(f"\n[1/5] Using provided PDF: {pdf_path}")
     else:
-        # Try to create a sample PDF
+        print("\n[1/5] Creating sample PDF document...")
         pdf_path = create_sample_pdf()
         if not pdf_path:
-            print("\nNo PDF provided and couldn't create sample PDF")
+            print("\n✗ No PDF provided and couldn't create sample PDF")
             print("Usage: python docling_parse_example.py [path_to_pdf]")
             sys.exit(1)
     
     # Check if file exists
     if not Path(pdf_path).exists():
-        print(f"\nError: PDF file not found: {pdf_path}")
+        print(f"\n✗ Error: PDF file not found: {pdf_path}")
         sys.exit(1)
     
-    # Parse the PDF
-    print(f"\nParsing PDF document...")
-    result = parse_pdf_document(pdf_path)
+    # Step 2: Parse PDF with docling-parse
+    print("\n[2/5] Parsing PDF with docling-parse...")
+    document_text = parse_pdf_with_docling(pdf_path)
+    print(f"✓ Extracted {len(document_text)} characters")
     
-    # Display results
-    print("\n" + "=" * 60)
-    print("Parsing Results:")
-    print("=" * 60)
+    # Step 3: Create document chunks
+    print("\n[3/5] Creating document chunks for RAG...")
+    chunks = create_document_chunks(document_text, chunk_size=300)
+    print(f"✓ Created {len(chunks)} chunks")
     
-    if result["success"]:
-        print(f"✓ Successfully parsed PDF")
-        print(f"  - Number of pages: {result.get('num_pages', 'N/A')}")
-        print(f"  - Has text content: {result.get('has_text', 'N/A')}")
-        print(f"  - Parser version: {result.get('parser_version', 'N/A')}")
-        
-        if "first_page_info" in result:
-            print(f"\n  First page information:")
-            print(f"    - Page number: {result['first_page_info']['page_num']}")
-            print(f"    - Has content: {result['first_page_info']['has_content']}")
-    else:
-        print(f"✗ Failed to parse PDF")
-        print(f"  - Error type: {result.get('error_type', 'Unknown')}")
-        print(f"  - Error message: {result.get('error', 'No details available')}")
+    # Step 4: Demonstrate retrieval
+    print("\n[4/5] Performing keyword-based retrieval...")
+    query = "machine learning"
+    print(f"Query: '{query}'")
     
-    print("\n" + "=" * 60)
-    print("Example completed successfully!")
-    print("=" * 60)
+    results = simple_keyword_search(chunks, query)
+    print(f"✓ Found {len(results)} relevant chunks")
+    
+    # Step 5: Display results
+    print("\n[5/5] Top Retrieved Chunks:")
+    print("=" * 70)
+    
+    for i, result in enumerate(results[:3], 1):  # Show top 3
+        print(f"\nChunk #{result['chunk_id']} (Score: {result['score']})")
+        print("-" * 70)
+        print(result['preview'])
+    
+    print("\n" + "=" * 70)
+    print("RAG Example completed successfully!")
+    print("=" * 70)
+    print("\nNote: This is a simplified RAG demonstration.")
+    print("Production RAG systems would use:")
+    print("  - Vector embeddings (e.g., sentence-transformers)")
+    print("  - Vector databases (e.g., FAISS, Chroma)")
+    print("  - LLM for generation (e.g., vLLM, Ollama)")
+    print("=" * 70)
 
 # Made with Bob
