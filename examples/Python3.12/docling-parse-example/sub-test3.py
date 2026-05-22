@@ -34,7 +34,7 @@ class TestDoclingParseIntegration(unittest.TestCase):
             self.skipTest("Test PDF not available")
         
         try:
-            from docling_parse.docling_parse import pdf_parser_v2
+            from docling_parse import pdf_parser_v2
             
             # Parse the test PDF
             doc = pdf_parser_v2(self.test_pdf_path)
@@ -56,7 +56,7 @@ class TestDoclingParseIntegration(unittest.TestCase):
     def test_docling_parse_error_handling(self):
         """Test error handling for non-existent PDF"""
         try:
-            from docling_parse.docling_parse import pdf_parser_v2
+            from docling_parse import pdf_parser_v2
             
             # Try to parse a non-existent file
             non_existent_pdf = "this_file_does_not_exist.pdf"

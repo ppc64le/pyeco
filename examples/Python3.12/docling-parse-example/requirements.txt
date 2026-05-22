@@ -1,4 +1,4 @@
 docling-parse==5.8.0+ppc64le1
-reportlab==4.2.5+ppc64le1
-Pillow==11.1.0+ppc64le1
+reportlab==4.2.5
+Pillow==11.1.0
 numpy==2.4.4+ppc64le1

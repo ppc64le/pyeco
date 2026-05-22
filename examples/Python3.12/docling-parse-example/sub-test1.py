@@ -17,7 +17,7 @@ class TestDoclingParseLibrary(unittest.TestCase):
     def test_pdf_parser_import(self):
         """Check if pdf_parser_v2 can be imported"""
         try:
-            from docling_parse.docling_parse import pdf_parser_v2
+            from docling_parse import pdf_parser_v2
             self.assertIsNotNone(pdf_parser_v2, "pdf_parser_v2 should not be None")
         except ImportError as e:
             self.fail(f"Failed to import pdf_parser_v2: {e}")

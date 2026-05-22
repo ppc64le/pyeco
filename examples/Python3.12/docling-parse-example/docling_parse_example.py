@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 from typing import List, Dict
-from docling_parse.docling_parse import pdf_parser_v2
+from docling_parse import pdf_parser_v2
 
 def parse_pdf_with_docling(pdf_path: str) -> str:
     """
