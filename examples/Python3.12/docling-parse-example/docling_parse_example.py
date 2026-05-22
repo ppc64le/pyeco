@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 from typing import List, Dict
-from docling_parse import pdf_parser_v2
+from docling_parse.pdf_parser import DoclingPdfParser
 
 def parse_pdf_with_docling(pdf_path: str) -> str:
     """
@@ -14,22 +14,23 @@ def parse_pdf_with_docling(pdf_path: str) -> str:
         Extracted text content from the PDF
     """
     try:
-        # Parse the PDF document using docling-parse v2
-        doc = pdf_parser_v2(pdf_path)
+        # Create parser instance and parse the PDF document
+        parser = DoclingPdfParser()
+        doc = parser.parse(pdf_path)
         
-        # Extract text content
+        # Extract text content from pages
         text_content = ""
         
-        # Try different methods to extract text
-        if hasattr(doc, 'text') and doc.text:
-            text_content = doc.text
-        elif hasattr(doc, 'pages') and doc.pages:
-            # Extract text from each page
+        if hasattr(doc, 'pages') and doc.pages:
             for page in doc.pages:
-                if hasattr(page, 'text'):
-                    text_content += page.text + "\n"
+                # Extract text from cells in the page
+                if hasattr(page, 'cells'):
+                    for cell in page.cells:
+                        if hasattr(cell, 'text'):
+                            text_content += cell.text + " "
+                    text_content += "\n"
         
-        return text_content if text_content else "No text content extracted"
+        return text_content.strip() if text_content else "No text content extracted"
         
     except Exception as e:
         return f"Error parsing PDF: {str(e)}"

@@ -34,21 +34,20 @@ class TestDoclingParseIntegration(unittest.TestCase):
             self.skipTest("Test PDF not available")
         
         try:
-            from docling_parse import pdf_parser_v2
+            from docling_parse.pdf_parser import DoclingPdfParser
             
-            # Parse the test PDF
-            doc = pdf_parser_v2(self.test_pdf_path)
+            # Create parser and parse the test PDF
+            parser = DoclingPdfParser()
+            doc = parser.parse(self.test_pdf_path)
             
             # Basic assertions
             self.assertIsNotNone(doc, "Parsed document should not be None")
             
             # Check if document has expected attributes
             has_pages = hasattr(doc, 'pages')
-            has_text = hasattr(doc, 'text')
             
-            # At least one of these should be true for a valid parse
-            self.assertTrue(has_pages or has_text, 
-                          "Parsed document should have pages or text attribute")
+            # Document should have pages
+            self.assertTrue(has_pages, "Parsed document should have pages attribute")
             
         except Exception as e:
             self.fail(f"Failed to parse PDF with docling-parse: {e}")
@@ -56,13 +55,14 @@ class TestDoclingParseIntegration(unittest.TestCase):
     def test_docling_parse_error_handling(self):
         """Test error handling for non-existent PDF"""
         try:
-            from docling_parse import pdf_parser_v2
+            from docling_parse.pdf_parser import DoclingPdfParser
             
             # Try to parse a non-existent file
             non_existent_pdf = "this_file_does_not_exist.pdf"
+            parser = DoclingPdfParser()
             
             with self.assertRaises(Exception):
-                pdf_parser_v2(non_existent_pdf)
+                parser.parse(non_existent_pdf)
                 
         except ImportError:
             self.skipTest("docling-parse not available")
