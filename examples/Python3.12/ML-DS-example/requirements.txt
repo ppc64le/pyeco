@@ -101,7 +101,7 @@ numba==0.63.1+ppc64le1
 numexpr==2.13.1+ppc64le1
 numpy==2.3.5+ppc64le1
 packaging==26.0
-pandas==2.3.3+ppc64le1
+pandas==3.0.3+ppc64le1
 pandocfilters==1.5.1
 parso==0.8.6
 partd==1.4.1+ppc64le1
