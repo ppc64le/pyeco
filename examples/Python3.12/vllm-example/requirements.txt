@@ -64,7 +64,7 @@ networkx==3.6.1
 ninja==1.13.0
 numba==0.61.2+ppc64le3
 numpy==2.2.6+ppc64le1
-openai==2.0.0
+openai==1.99.1
 openai-harmony==0.0.8+ppc64le1
 opencv-python-headless==4.13.0.92+ppc64le1
 outlines_core==0.2.11+ppc64le1
@@ -117,7 +117,7 @@ typing-inspection==0.4.2
 typing_extensions==4.15.0
 urllib3==2.6.3
 uvicorn==0.42.0
-vllm==0.21.0+cpuppc64le1
+vllm==0.18.1+cpuppc64le1
 watchfiles==0.21.0+ppc64le1
 websockets==16.0
 wrapt==2.1.2
