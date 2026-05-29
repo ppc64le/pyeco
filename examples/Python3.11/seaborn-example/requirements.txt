@@ -5,7 +5,7 @@ kiwisolver==1.4.4+ppc64le1
 matplotlib==3.10.8+ppc64le1
 numpy==2.4.4+ppc64le1
 packaging==26.0
-pandas==3.0.2+ppc64le1
+pandas==3.0.3+ppc64le1
 pillow==12.2.0+ppc64le1
 pyparsing==3.3.1+ppc64le1
 python-dateutil==2.9.0.post0

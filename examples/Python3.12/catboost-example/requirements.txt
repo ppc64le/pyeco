@@ -9,7 +9,7 @@ matplotlib==3.10.8+ppc64le1
 narwhals==2.20.0
 numpy==1.26.4+ppc64le1
 packaging==26.1
-pandas==3.0.2+ppc64le1
+pandas==3.0.3+ppc64le1
 pillow==12.2.0+ppc64le1
 plotly==6.7.0
 pyparsing==3.3.1+ppc64le1

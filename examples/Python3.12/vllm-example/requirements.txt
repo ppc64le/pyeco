@@ -88,7 +88,7 @@ pyjwt==2.12.1
 python-dotenv==1.2.2
 python-json-logger==4.0.0
 python-multipart==0.0.22
-pyyaml==6.0.3+ppc64le1
+pyyaml==6.0.3+ppc64le2
 pyzmq==27.1.0+ppc64le1
 referencing==0.37.0
 regex==2024.11.6+ppc64le1
