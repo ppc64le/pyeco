@@ -12,7 +12,7 @@ class TestDoclingParseLibrary(unittest.TestCase):
     def test_docling_parse_version(self):
         """Verify docling-parse version"""
         version = importlib.metadata.version("docling-parse")
-        assert "5.8.0" in version, f"Expected docling-parse 5.8.0, got {version}"
+        assert "5.11.0" in version, f"Expected docling-parse 5.11.0, got {version}"
 
     def test_pdf_parser_import(self):
         """Check if DoclingPdfParser can be imported"""
