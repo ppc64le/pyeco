@@ -118,6 +118,7 @@ dm-tree==0.1.9
 dm-tree==0.1.9+ppc64le2
 docling-parse==4.7.1+ppc64le1
 docling-parse==4.7.3+ppc64le1
+docling-parse==5.11.0+ppc64le1
 docling-parse==5.3.2+ppc64le1
 docling-parse==5.6.2+ppc64le1
 docling-parse==5.7.0+ppc64le1
@@ -127,6 +128,7 @@ duckdb==1.4.4+ppc64le1
 ephem==4.1.5+ppc64le1
 ephem==4.2+ppc64le1
 fastavro==1.12.1+ppc64le1
+fastavro==1.12.1+ppc64le2
 fiona==1.10.1
 fiona==1.10.1+ppc64le1
 fiona==1.9.6+ppc64le1
@@ -151,6 +153,7 @@ greenlet==3.2.4+ppc64le1
 greenlet==3.3.0+ppc64le1
 grpcio-tools==1.74.0+ppc64le1
 grpcio-tools==1.78.1+ppc64le1
+grpcio-tools==1.80.0+ppc64le1
 grpcio==1.53.0
 grpcio==1.53.0+ppc64le1
 grpcio==1.54.3
@@ -208,6 +211,7 @@ hf-xet==1.1.8+ppc64le1
 hf-xet==1.1.9+ppc64le1
 hf-xet==1.2.0+ppc64le1
 hf-xet==1.4.2+ppc64le1
+hf-xet==1.5.0+ppc64le1
 hnswlib==0.8.0
 hnswlib==0.8.0+ppc64le1
 httptools==0.6.4
@@ -251,6 +255,7 @@ krb5==0.6.0+ppc64le1
 krb5==0.7.0
 krb5==0.7.0+ppc64le1
 librt==0.8.1+ppc64le1
+lingua-language-detector==2.2.0+ppc64le1
 llguidance==0.7.19
 llguidance==0.7.19+ppc64le1
 llguidance==1.2.0+ppc64le1
@@ -265,6 +270,7 @@ llvmlite==0.44.0rc1+ppc64le1
 llvmlite==0.45.1+ppc64le1
 llvmlite==0.46.0+ppc64le1
 lxml==6.0.2+ppc64le1
+lxml==6.1.0+ppc64le1
 macs3==3.0.1
 macs3==3.0.1+ppc64le1
 macs3==3.0.3
@@ -307,6 +313,7 @@ msgspec==0.19.0
 msgspec==0.19.0+ppc64le2
 multidict==6.0.2
 multidict==6.0.2+ppc64le1
+multidict==6.0.2+ppc64le2
 multidict==6.7.1+ppc64le1
 numba==0.59.0
 numba==0.59.0+ppc64le1
@@ -358,6 +365,7 @@ onnx==1.17.0+ppc64le2
 onnx==1.18.0
 onnx==1.18.0+ppc64le2
 onnx==1.19.0+ppc64le1
+onnx==1.19.0+ppc64le2
 onnx==1.19.1+ppc64le1
 onnx==1.20.0+ppc64le1
 onnx==1.20.1+ppc64le1
@@ -371,9 +379,11 @@ onnxruntime==1.21.1+ppc64le1
 onnxruntime==1.22.0
 onnxruntime==1.22.0+ppc64le1
 onnxruntime==1.22.1+ppc64le1
+onnxruntime==1.22.1+ppc64le2
 onnxruntime==1.23.0+ppc64le1
 onnxruntime==1.23.1+ppc64le1
 onnxruntime==1.23.2+ppc64le2
+onnxruntime==1.25.1+ppc64le1
 openai-harmony==0.0.4+ppc64le1
 openai-harmony==0.0.8+ppc64le1
 opencv-python-headless==4.10.0.84+ppc64le1
@@ -394,6 +404,7 @@ ormsgpack==1.9.1+ppc64le1
 outlines-core==0.1.26
 outlines-core==0.1.26+ppc64le1
 outlines-core==0.2.11+ppc64le1
+outlines-core==0.2.14+ppc64le1
 pandas==1.5.3
 pandas==1.5.3+ppc64le1
 pandas==2.1.4+ppc64le1
@@ -406,6 +417,7 @@ pandas==2.3.3+ppc64le1
 pandas==3.0.0+ppc64le1
 pandas==3.0.1+ppc64le1
 pandas==3.0.2+ppc64le1
+pandas==3.0.3+ppc64le1
 persistent==6.1.1
 persistent==6.1.1+ppc64le1
 Pillow==10.0.1
@@ -489,6 +501,7 @@ pyhdf==0.11.6
 pyhdf==0.11.6+ppc64le1
 pyiceberg==0.8.1
 pyiceberg==0.8.1+ppc64le1
+pyjnius==1.6.1+ppc64le1
 pymongo==4.13.0
 pymongo==4.13.0+ppc64le1
 pymongo==4.6.2+ppc64le1
@@ -527,6 +540,7 @@ pyyaml==6.0.1+ppc64le1
 pyyaml==6.0.2
 pyyaml==6.0.2+ppc64le2
 pyyaml==6.0.3+ppc64le1
+pyyaml==6.0.3+ppc64le2
 pyzmq==25.1.0
 pyzmq==25.1.0+ppc64le1
 pyzmq==26.2.1
@@ -543,6 +557,7 @@ ray==2.47.1+ppc64le1
 ray==2.52.1+ppc64le1
 ray==2.53.0+ppc64le1
 regex==2024.11.6+ppc64le1
+rfc3161-client==1.0.6+ppc64le1
 rpds-py==0.22.3+ppc64le1
 rtree==1.4.1+ppc64le1
 rtree==1.4.1b1+ppc64le1
@@ -585,7 +600,9 @@ scipy==1.15.3+ppc64le1
 scipy==1.16.0
 scipy==1.16.0+ppc64le2
 scipy==1.16.1+ppc64le1
+scipy==1.16.1+ppc64le2
 scipy==1.16.2+ppc64le1
+scipy==1.16.2+ppc64le2
 scipy==1.16.3+ppc64le2
 scipy==1.17.0+ppc64le1
 scipy==1.17.1+ppc64le2
@@ -631,6 +648,7 @@ tokenizers==0.21.1
 tokenizers==0.21.1+ppc64le1
 torch==2.1.0+ppc64le1
 torch==2.10.0+ppc64le1
+torch==2.10.0+ppc64le2
 torch==2.11.0+ppc64le1
 torch==2.5.1
 torch==2.5.1+ppc64le2
@@ -657,7 +675,9 @@ torchvision==0.22.0+ppc64le1
 torchvision==0.22.1+ppc64le1
 torchvision==0.24.0+ppc64le2
 torchvision==0.24.1+ppc64le1
+torchvision==0.24.1+ppc64le2
 torchvision==0.25.0+ppc64le1
+torchvision==0.25.0+ppc64le2
 torchvision==0.26.0+ppc64le1
 tornado==6.3.3
 tornado==6.3.3+ppc64le1
@@ -680,6 +700,7 @@ ujson==5.10.0
 ujson==5.10.0+ppc64le1
 ujson==5.11.0+ppc64le1
 ujson==5.12.0+ppc64le1
+ujson==5.12.1+ppc64le1
 unicodedata2==15.1.0
 unicodedata2==15.1.0+ppc64le1
 unicodedata2==16.0.0+ppc64le1
