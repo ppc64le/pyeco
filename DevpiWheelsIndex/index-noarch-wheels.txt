@@ -316,6 +316,7 @@ libprotobuf==25.4+ppc64le1
 libprotobuf==25.8+ppc64le1
 libprotobuf==4.25.3
 libprotobuf==4.25.3+ppc64le1
+librt==0.8.1+ppc64le1
 libvpx==1.13.1
 libvpx==1.13.1+ppc64le1
 libvpx==1.9.0
@@ -328,7 +329,9 @@ markdown==3.6+ppc64le1
 markdown==3.8
 markdown==3.8+ppc64le1
 markdown==3.8.2+ppc64le1
+milvus-lite==2.4.11+ppc64le1
 milvus-lite==2.4.12+ppc64le1
+milvus-lite==2.5.0+ppc64le1
 mock==5.2.0
 mock==5.2.0+ppc64le1
 mongoengine==0.29.1
@@ -366,6 +369,7 @@ openblas==0.3.29
 openblas==0.3.29+ppc64le1
 openblas==0.3.30+ppc64le1
 openblas==0.3.32+ppc64le1
+openblas==0.3.33+ppc64le1
 openmpi==5.0.6
 openmpi==5.0.6+ppc64le1
 openmpi==5.0.8+ppc64le1
@@ -544,6 +548,7 @@ thrift-cpp==0.21.0+ppc64le1
 torchdata==0.7.1+5e6f7b7
 torchdata==0.7.1+ppc64le1
 traitlets==5.7.1+ppc64le1
+transformers==5.1.0+ppc64le1
 treepoem==3.24.0+ppc64le1
 treepoem==3.27.1
 treepoem==3.27.1+ppc64le1
