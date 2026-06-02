@@ -187,6 +187,7 @@ hf-xet==1.1.8+ppc64le1
 hf-xet==1.1.9+ppc64le1
 hf-xet==1.2.0+ppc64le1
 hf-xet==1.4.2+ppc64le1
+hf-xet==1.5.0+ppc64le1
 hnswlib==0.8.0
 hnswlib==0.8.0+ppc64le1
 httptools==0.6.4
@@ -443,6 +444,7 @@ pyzmq==27.0.2+ppc64le1
 pyzmq==27.1.0+ppc64le1
 ray==2.53.0+ppc64le1
 regex==2024.11.6+ppc64le1
+rfc3161-client==1.0.6+ppc64le1
 rpds-py==0.22.3+ppc64le1
 rtree==1.4.1+ppc64le1
 rtree==1.4.1b1+ppc64le1

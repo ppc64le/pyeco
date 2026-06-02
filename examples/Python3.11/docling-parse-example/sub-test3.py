@@ -1,0 +1,82 @@
+import unittest
+from pathlib import Path
+import sys
+
+class TestDoclingParseIntegration(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        """Create a test PDF before running tests"""
+        try:
+            from reportlab.pdfgen import canvas
+            from reportlab.lib.pagesizes import letter
+            
+            cls.test_pdf_path = "integration_test.pdf"
+            c = canvas.Canvas(cls.test_pdf_path, pagesize=letter)
+            c.drawString(100, 750, "Integration Test PDF")
+            c.drawString(100, 730, "This document is used for testing docling-parse")
+            c.drawString(100, 710, "Line 3 of test content")
+            c.showPage()
+            c.save()
+            
+        except Exception as e:
+            print(f"Warning: Could not create test PDF: {e}")
+            cls.test_pdf_path = None
+
+    @classmethod
+    def tearDownClass(cls):
+        """Clean up test PDF after tests"""
+        if cls.test_pdf_path and Path(cls.test_pdf_path).exists():
+            Path(cls.test_pdf_path).unlink()
+
+    def test_parse_pdf_with_docling(self):
+        """Test parsing a PDF with docling-parse"""
+        if not self.test_pdf_path:
+            self.skipTest("Test PDF not available")
+        
+        try:
+            from docling_parse.pdf_parser import DoclingPdfParser
+            
+            # Create parser and load the test PDF
+            parser = DoclingPdfParser()
+            doc = parser.load(self.test_pdf_path)
+            
+            # Basic assertions
+            self.assertIsNotNone(doc, "Parsed document should not be None")
+            
+            # Check if document has number_of_pages method
+            self.assertTrue(hasattr(doc, 'number_of_pages'),
+                          "Document should have number_of_pages method")
+            
+            # Check that we can get pages
+            num_pages = doc.number_of_pages()
+            self.assertGreater(num_pages, 0, "Document should have at least one page")
+            
+            # Try to get the first page
+            page = doc.get_page(1)
+            self.assertIsNotNone(page, "Should be able to get page 1")
+            
+            # Check that page has word_cells
+            self.assertTrue(hasattr(page, 'word_cells'),
+                          "Page should have word_cells attribute")
+            
+        except Exception as e:
+            self.fail(f"Failed to parse PDF with docling-parse: {e}")
+
+    def test_docling_parse_error_handling(self):
+        """Test error handling for non-existent PDF"""
+        try:
+            from docling_parse.pdf_parser import DoclingPdfParser
+            
+            # Try to load a non-existent file
+            non_existent_pdf = "this_file_does_not_exist.pdf"
+            parser = DoclingPdfParser()
+            
+            with self.assertRaises(Exception):
+                parser.load(non_existent_pdf)
+                
+        except ImportError:
+            self.skipTest("docling-parse not available")
+
+if __name__ == "__main__":
+    unittest.main()
+

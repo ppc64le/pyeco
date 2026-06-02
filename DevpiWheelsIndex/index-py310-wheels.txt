@@ -120,6 +120,7 @@ dm-tree==0.1.9
 dm-tree==0.1.9+ppc64le2
 docling-parse==4.7.1+ppc64le1
 docling-parse==4.7.3+ppc64le1
+docling-parse==5.11.0+ppc64le1
 docling-parse==5.3.2+ppc64le1
 docling-parse==5.7.0+ppc64le1
 docling-parse==5.8.0+ppc64le1
@@ -155,6 +156,7 @@ greenlet==3.2.4+ppc64le1
 greenlet==3.3.0+ppc64le1
 grpcio-tools==1.74.0+ppc64le1
 grpcio-tools==1.78.1+ppc64le1
+grpcio-tools==1.80.0+ppc64le1
 grpcio==1.53.0
 grpcio==1.53.0+ppc64le1
 grpcio==1.54.3
@@ -203,6 +205,7 @@ hf-xet==1.1.8+ppc64le1
 hf-xet==1.1.9+ppc64le1
 hf-xet==1.2.0+ppc64le1
 hf-xet==1.4.2+ppc64le1
+hf-xet==1.5.0+ppc64le1
 hnswlib==0.8.0
 hnswlib==0.8.0+ppc64le1
 httptools==0.6.4
@@ -257,6 +260,7 @@ lxml==4.9.2+ppc64le1
 lxml==4.9.3
 lxml==4.9.3+ppc64le1
 lxml==6.0.2+ppc64le1
+lxml==6.1.0+ppc64le1
 macs3==3.0.1
 macs3==3.0.1+ppc64le1
 macs3==3.0.3
@@ -301,6 +305,7 @@ msgspec==0.19.0
 msgspec==0.19.0+ppc64le2
 multidict==6.0.2
 multidict==6.0.2+ppc64le1
+multidict==6.0.2+ppc64le2
 multidict==6.7.1+ppc64le1
 numba==0.57.0
 numba==0.57.0+ppc64le1
@@ -347,6 +352,7 @@ onnx==1.16.0+ppc64le1
 onnx==1.17.0
 onnx==1.17.0+ppc64le1
 onnx==1.19.0+ppc64le1
+onnx==1.19.0+ppc64le2
 onnx==1.19.1+ppc64le1
 onnx==1.20.0+ppc64le1
 onnx==1.20.1+ppc64le1
@@ -357,6 +363,7 @@ onnxruntime==1.21.1+ppc64le1
 onnxruntime==1.22.0
 onnxruntime==1.22.0+ppc64le1
 onnxruntime==1.22.1+ppc64le1
+onnxruntime==1.22.1+ppc64le2
 onnxruntime==1.23.2+ppc64le2
 openai-harmony==0.0.4+ppc64le1
 openai-harmony==0.0.8+ppc64le1
@@ -375,6 +382,7 @@ ormsgpack==1.11.0+ppc64le1
 ormsgpack==1.9.1
 ormsgpack==1.9.1+ppc64le1
 outlines-core==0.2.11+ppc64le1
+outlines-core==0.2.14+ppc64le1
 pandas==1.5.3
 pandas==1.5.3+ppc64le1
 pandas==2.1.1
@@ -469,6 +477,7 @@ pyhdf==0.11.6
 pyhdf==0.11.6+ppc64le1
 pyiceberg==0.8.1
 pyiceberg==0.8.1+ppc64le1
+pyjnius==1.6.1+ppc64le1
 pymongo==4.13.0
 pymongo==4.13.0+ppc64le1
 pymongo==4.6.2+ppc64le1
@@ -513,6 +522,7 @@ pyyaml==6.0.1+ppc64le1
 pyyaml==6.0.2
 pyyaml==6.0.2+ppc64le2
 pyyaml==6.0.3+ppc64le1
+pyyaml==6.0.3+ppc64le2
 pyzmq==23.2.0
 pyzmq==23.2.0+ppc64le1
 pyzmq==25.1.0
@@ -530,6 +540,7 @@ pyzmq==27.1.0+ppc64le1
 ray==2.52.1+ppc64le1
 ray==2.53.0+ppc64le1
 regex==2024.11.6+ppc64le1
+rfc3161-client==1.0.6+ppc64le1
 rtree==1.4.1+ppc64le1
 rtree==1.4.1b1+ppc64le1
 ruamel-yaml-clib==0.2.11+ppc64le1
@@ -646,6 +657,7 @@ torchtext==0.16.2
 torchtext==0.16.2+ppc64le1
 torchvision==0.16.2+ppc64le1
 torchvision==0.24.1+ppc64le1
+torchvision==0.25.0+ppc64le1
 torchvision==0.26.0+ppc64le1
 tornado==6.3.3
 tornado==6.3.3+ppc64le1
@@ -661,6 +673,7 @@ tornado==6.5.5+ppc64le1
 tree-sitter-c==0.23.2+ppc64le1
 tree-sitter-c==0.23.4+ppc64le1
 tree-sitter-c==0.24.1+ppc64le1
+tree-sitter-c==0.24.2+ppc64le1
 tree-sitter-javascript==0.23.1+ppc64le1
 tree-sitter-javascript==0.25.0+ppc64le1
 tree-sitter-python==0.23.6+ppc64le1
@@ -671,6 +684,7 @@ ujson==5.10.0
 ujson==5.10.0+ppc64le1
 ujson==5.11.0+ppc64le1
 ujson==5.12.0+ppc64le1
+ujson==5.12.1+ppc64le1
 unicodedata2==15.1.0
 unicodedata2==15.1.0+ppc64le1
 unicodedata2==16.0.0+ppc64le1

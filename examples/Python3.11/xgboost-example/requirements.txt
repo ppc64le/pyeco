@@ -11,7 +11,7 @@ Jinja2==3.1.6
 MarkupSafe==3.0.2+ppc64le2
 numpy==2.4.4+ppc64le1
 packaging==25.0
-pandas==3.0.2+ppc64le1
+pandas==3.0.3+ppc64le1
 pycparser==2.22
 Pygments==2.19.2+ppc64le1
 python-dateutil==2.9.0.post0
