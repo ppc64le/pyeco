@@ -332,6 +332,7 @@ markdown==3.8.2+ppc64le1
 milvus-lite==2.4.11+ppc64le1
 milvus-lite==2.4.12+ppc64le1
 milvus-lite==2.5.0+ppc64le1
+milvus-lite==2.5.1+ppc64le1
 mock==5.2.0
 mock==5.2.0+ppc64le1
 mongoengine==0.29.1
