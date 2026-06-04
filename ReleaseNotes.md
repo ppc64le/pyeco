@@ -42,9 +42,23 @@ Detailed package license information and CVE disclosures are available at
 | **torchaudio** | 2.9.1+ppc64le3 | 3.11 | 2.9.1 | 
 
 ## Prerequisites
-- JDK is required for PyJNIus. 
+- JDK is required for PyJNIus.
 
 ## Known Issues
+- **vllm v0.21.0** requires xgrammar. Prebuilt wheels are not available for xgrammar. As a result, xgrammar must be built from source, or gcc, g++, etc. must be installed and available at runtime to compile xgrammar from source.
+- **milvus-lite 2.5.1**: Two issues have been identified on ppc64le:
+  1. The bundled milvus executable lacks execute permissions. Apply `chmod 755` to the milvus binary located at `/opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/milvus`.
+  2. The bundled `libgcc_s.so.1` requires a newer glibc version than available in some environments. Rename or disable the bundled library to allow the runtime to use the system-provided `libgcc_s.so.1`.
+  
+  **Workaround:**
+  ```bash
+  pip install milvus-lite==2.5.1 --index-url=<your-index-url> && \
+  chmod 755 /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/milvus && \
+  # Use the system libgcc_s.so.1 because the bundled copy requires a newer glibc.
+  mv /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1 \
+     /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1.disabled
+  ```
+
 - Ollama is not supported on Power9.
 - spacy and thinc depend on the murmurhash, preshed, and srsly packages. Prebuilt wheels are not available for these dependencies. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source. 
 
