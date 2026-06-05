@@ -46,6 +46,7 @@ Detailed package license information and CVE disclosures are available at
 
 ## Known Issues
 - **vllm v0.21.0** requires xgrammar, which in turn depends on apache-tvm-ffi. Prebuilt wheels are not available for xgrammar and apache-tvm-ffi. As a result, both packages must be built from source, or development tools must be installed and available at runtime to compile these packages from source.
+- All versions of **vllm** require `httptools==0.8.0`. Prebuilt wheels for `httptools==0.8.0` are not available, so development tools such as `gcc` and `g++` must be installed and available at runtime to compile this package from source.
 - Ollama is not supported on Power9.
 - spacy and thinc depend on the murmurhash, preshed, and srsly packages. Prebuilt wheels are not available for these dependencies. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source.
 
