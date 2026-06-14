@@ -1,1 +1,1 @@
-agno==2.6.13+ppc64le1
+agno==2.6.6+ppc64le1
