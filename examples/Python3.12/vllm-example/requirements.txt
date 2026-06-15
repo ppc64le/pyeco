@@ -121,5 +121,5 @@ vllm==0.21.0+cpuppc64le1
 watchfiles==0.21.0+ppc64le1
 websockets==16.0
 wrapt==2.1.2
-xgrammar===0.2.0
+xgrammar===0.2.1+ppc64le1
 yarl==1.23.0+ppc64le1
