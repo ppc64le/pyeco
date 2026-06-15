@@ -38,7 +38,7 @@ h11==0.16.0
 httpcore==1.0.9
 httptools==0.8.0+ppc64le1
 httpx==0.28.1
-httpx-sse==0.4.3
+httpx-sse==0.4.3+ppc64le1
 huggingface-hub==0.36.2
 idna==3.11
 ijson==3.5.0+ppc64le1
@@ -63,7 +63,7 @@ multidict==6.7.1+ppc64le1
 networkx==3.6.1
 ninja==1.13.0
 numba==0.65.1+ppc64le1
-numpy==2.4.6+ppc64le1
+numpy==2.3.5+ppc64le1
 openai==2.0.0
 openai-harmony==0.0.8+ppc64le1
 opencv-python-headless==4.13.0.92+ppc64le1
