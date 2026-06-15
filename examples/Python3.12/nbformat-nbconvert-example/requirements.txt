@@ -33,7 +33,7 @@ nest-asyncio==1.6.0
 numpy==2.4.6+ppc64le1
 packaging==25.0
 pandocfilters==1.5.1
-parso==0.8.5
+parso==0.8.6
 pexpect==4.9.0
 pillow==12.2.0+ppc64le1
 platformdirs==4.4.0
