@@ -10,10 +10,10 @@ flatbuffers==25.2.10+ppc64le1
 grpcio==1.80.0+ppc64le1
 httptools==0.8.0+ppc64le1
 humanfriendly==10.0
-ibm-cloud-sdk-core==3.24.1
-ibm-cos-sdk==2.14.1+ppc64le1
-ibm-cos-sdk-core==2.14.1+ppc64le1
-ibm-cos-sdk-s3transfer==2.14.1+ppc64le1
+ibm-cloud-sdk-core==3.24.4+ppc64le1
+ibm-cos-sdk==2.16.2+ppc64le1
+ibm-cos-sdk-core==2.16.2+ppc64le1
+ibm-cos-sdk-s3transfer==2.16.2+ppc64le1
 idna==3.10
 jmespath==1.0.1
 joblib==1.5.2

@@ -12,9 +12,9 @@ packaging==26.1
 pandas==3.0.3+ppc64le1
 pillow==12.2.0+ppc64le1
 plotly==6.7.0
-pyparsing==3.3.1+ppc64le1
+pyparsing==3.3.2+ppc64le1
 python-dateutil==2.9.0.post0
 scikit-learn==1.8.0+ppc64le1
 scipy==1.17.1+ppc64le2
-six==1.16.0+ppc64le1
+six==1.17.0+ppc64le1
 threadpoolctl==3.6.0

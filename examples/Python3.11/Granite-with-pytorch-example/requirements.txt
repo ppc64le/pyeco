@@ -2,7 +2,7 @@ accelerate==1.10.1
 certifi==2026.2.25+ppc64le1
 charset-normalizer==3.4.4
 filelock==3.25.2+ppc64le1
-fsspec==2026.2.0+ppc64le1
+fsspec==2026.4.0+ppc64le1
 huggingface-hub==0.35.3
 idna==3.11
 Jinja2==3.1.6

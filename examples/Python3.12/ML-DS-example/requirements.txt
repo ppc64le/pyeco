@@ -44,7 +44,7 @@ httpx==0.28.1
 huggingface_hub==0.36.2
 idna==3.11
 imagecodecs==2025.8.2+ppc64le1
-ImageIO==2.37.2
+ImageIO==2.37.3+ppc64le1
 iminuit==2.31.0+ppc64le1
 ipykernel==6.29.5+ppc64le1
 ipython==9.10.0
@@ -59,7 +59,7 @@ joblib==1.5.3
 json5==0.13.0
 jsonpointer==3.0.0
 jsonschema==4.26.0
-jsonschema-specifications==2025.9.1
+jsonschema-specifications==2025.9.1+ppc64le1
 jupyter==1.1.1+ppc64le1
 jupyter-console==6.6.3
 jupyter-events==0.12.0
@@ -118,7 +118,7 @@ pure_eval==0.2.3+ppc64le1
 pycparser==3.0
 pydantic==2.10.3+ppc64le1
 pydantic_core==2.27.1+ppc64le1
-Pygments==2.19.2
+Pygments==2.20.0+ppc64le1
 pyiceberg==0.8.1+ppc64le1
 pyparsing==3.3.2+ppc64le1
 python-dateutil==2.9.0.post0

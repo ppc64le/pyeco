@@ -17,7 +17,7 @@ ipython_pygments_lexers==1.1.1
 jedi==0.20.0+ppc64le1
 Jinja2==3.1.6
 jsonschema==4.25.1
-jsonschema-specifications==2024.10.1+ppc64le1
+jsonschema-specifications==2025.9.1+ppc64le1
 jupyter_client==8.6.3
 jupyter_core==5.9.1+ppc64le1
 jupyterlab_pygments==0.3.0
@@ -41,7 +41,7 @@ prompt_toolkit==3.0.52
 psutil==7.2.2+ppc64le1
 ptyprocess==0.7.0
 pure_eval==0.2.3+ppc64le1
-Pygments==2.19.2
+Pygments==2.20.0+ppc64le1
 pyparsing==3.3.2+ppc64le1
 python-dateutil==2.9.0.post0
 pyzmq==27.1.0+ppc64le1

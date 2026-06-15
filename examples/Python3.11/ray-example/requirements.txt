@@ -6,7 +6,7 @@ filelock==3.25.2+ppc64le1
 idna==3.11
 joblib==1.5.3
 jsonschema==4.26.0
-jsonschema-specifications==2024.10.1+ppc64le1
+jsonschema-specifications==2025.9.1+ppc64le1
 msgpack==1.1.2+ppc64le1
 numpy==2.4.6+ppc64le1
 packaging==26.0
