@@ -37,12 +37,11 @@ pulsar-client==3.8.0+ppc64le1
 pycparser==2.22
 pycryptodome==3.23.0+ppc64le2
 PyJWT==2.11.0
-
 python-dateutil==2.9.0.post0
 pytz==2025.2
 PyYAML==6.0.3+ppc64le1
 pyzmq==27.1.0+ppc64le1
-requests==2.32.4
+requests==2.33.0
 scikit-learn==1.8.0+ppc64le1
 scipy==1.17.1+ppc64le2
 six==1.17.0+ppc64le1
