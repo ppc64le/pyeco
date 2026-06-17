@@ -46,7 +46,7 @@ pyparsing==3.3.2+ppc64le1
 python-dateutil==2.9.0.post0
 pyzmq==27.1.0+ppc64le1
 referencing==0.36.2
-rpds-py==0.22.3+ppc64le1
+rpds-py==0.30.0+ppc64le1
 six==1.17.0+ppc64le1
 soupsieve==2.8
 stack-data==0.6.3

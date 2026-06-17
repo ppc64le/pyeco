@@ -134,8 +134,8 @@ rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
 rich==13.9.4
-rpds-py==0.30.0
-scikit-image==0.25.2+ppc64le2
+rpds-py==0.30.0+ppc64le1
+scikit-image==0.26.0+ppc64le1
 scikit-learn==1.7.0+ppc64le1
 scipy==1.17.1+ppc64le2
 Send2Trash==2.1.0
