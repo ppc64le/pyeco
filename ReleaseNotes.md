@@ -1,10 +1,10 @@
-# DevPi V5
+# DevPi V6
 
-**Release Date:** May 29, 2026
+**Release Date:** Jun 18, 2026
 
 ## Overview
 
-This release includes updates to 20+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes updates to 70+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 ---
  
 ## Supported Platforms
@@ -18,8 +18,12 @@ This release includes updates to 20+ Python packages across multiple Python vers
 
 
 ## 🚀 Major Updates
-- Expanded PowerPC (ppc64le) wheel support, with updates covering more than 20 packages.
-- Newly added packages include lingua_language_detector, rfc3161-client, pyjnius.
+- Expanded PowerPC (ppc64le) wheel support to over 70 additional packages.
+- Added new packages, including agno and couchbase.
+- Added missing dependencies for vLLM and spaCy/Thinc, including xgrammar v0.2.1, apache_tvm_ffi v0.1.9, httptools v0.8.0, murmurhash v1.0.15, and preshed v3.0.13.
+- Resolved a performance issue in PyTorch v2.11.0, improving overall efficiency.
+- Replaced previously supplied PyTorch v2.11.0 wheels with newly built wheels that include this fix. 
+
 
 ## Package Licenses and CVE Details
 
@@ -35,7 +39,7 @@ Detailed package license information and CVE disclosures are available at
 | **torchvision** | 0.24.1+ppc64le1 | 3.10, 3.12 | 2.9.x |
 | **torchvision** | 0.24.1+ppc64le2 | 3.11, 3.12, 3.13, 3.14 | 2.9.x |
 | **torchvision** | 0.25.0+ppc64le1 | 3.11, 3.14 | 2.9.0 |
-| **torchtext** | 0.18.0+ppc64le1 | 3.12 | 2.5.1 |
+| **torchtext** | 0.18.0+ppc64le1 | 3.12 | 2.8.0 |
 | **torchaudio** | 2.7.1+ppc64le1 | 3.10, 3.11, 3.12, 3.13 | 2.7.1 | 
 | **torchaudio** | 2.9.0+ppc64le1 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.0 | 
 | **torchaudio** | 2.9.1+ppc64le2 | 3.10, 3.12, 3.13, 3.14 | 2.9.1 | 
@@ -45,10 +49,12 @@ Detailed package license information and CVE disclosures are available at
 - JDK is required for PyJNIus.
 
 ## Known Issues
-- **vllm v0.21.0** requires xgrammar, which in turn depends on apache-tvm-ffi. Prebuilt wheels are not available for xgrammar and apache-tvm-ffi. As a result, both packages must be built from source, or development tools must be installed and available at runtime to compile these packages from source.
-- All versions of **vllm** require `httptools==0.8.0`. Prebuilt wheels for `httptools==0.8.0` are not available, so development tools such as `gcc` and `g++` must be installed and available at runtime to compile this package from source.
 - Ollama is not supported on Power9.
-- spacy and thinc depend on the murmurhash, preshed, and srsly packages. Prebuilt wheels are not available for these dependencies. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source.
+- fire < 0.7.0 does not support Python 3.13/3.14.
+- cforge v1.0.0b4 requires jq>=1.11.0 and zeroconf>=0.148.0. As prebuilt wheels are not available, these dependencies must be compiled from source and require development tools. Additionally, cforge does not support Python 3.10/3.14.
+- macs requires cykhash<3.0,>=2.0 and hmmlearn>=0.3; due to missing prebuilt wheels, these dependencies must be built from source using development tools.
+- iminuit v2.28.0 depends on packaging, which must be installed explicitly.
+- spacy and thinc depend on the srsly package for which prebuilt wheel is not available. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source.
 
 ## 🔧 Troubleshooting
 
