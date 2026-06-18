@@ -25,7 +25,7 @@ dnspython==2.8.0
 docstring-parser==0.17.0
 einops==0.8.2+ppc64le1
 email-validator==2.3.0
-fastapi==0.135.2
+fastapi==0.136.1+ppc64le1
 fastapi-cli==0.0.24
 fastapi-cloud-cli==0.15.0
 fastar==0.9.0
@@ -36,7 +36,7 @@ gguf==0.18.0
 grpcio==1.80.0+ppc64le1
 h11==0.16.0
 httpcore==1.0.9
-httptools==0.7.1+ppc64le1
+httptools==0.8.0+ppc64le1
 httpx==0.28.1
 httpx-sse==0.4.3
 huggingface-hub==0.36.2
@@ -47,7 +47,7 @@ jinja2==3.1.6
 jiter==0.13.0
 jmespath==1.1.0
 jsonschema==4.26.0
-jsonschema-specifications==2025.9.1
+jsonschema-specifications==2025.9.1+ppc64le1
 lark==1.2.2
 llguidance==1.3.0+ppc64le1
 lm-format-enforcer==0.11.3
@@ -62,8 +62,8 @@ msgspec==0.19.0+ppc64le2
 multidict==6.7.1+ppc64le1
 networkx==3.6.1
 ninja==1.13.0
-numba==0.61.2+ppc64le3
-numpy==2.2.6+ppc64le1
+numba==0.65.1+ppc64le1
+numpy==2.3.5+ppc64le1
 openai==2.0.0
 openai-harmony==0.0.8+ppc64le1
 opencv-python-headless==4.13.0.92+ppc64le1
@@ -72,7 +72,7 @@ packaging==26.0
 partial-json-parser==0.2.1.1.post7
 prometheus-fastapi-instrumentator==7.1.0
 prometheus_client==0.24.1
-propcache==0.4.1
+propcache==0.5.2+ppc64le1
 protobuf==5.29.6
 psutil==7.2.2+ppc64le1
 py-cpuinfo==9.0.0
@@ -83,7 +83,7 @@ pydantic==2.12.5
 pydantic-core==2.41.5
 pydantic-extra-types==2.11.1
 pydantic-settings==2.13.1
-pygments==2.19.2+ppc64le1
+pygments==2.20.0+ppc64le1
 pyjwt==2.12.1
 python-dotenv==1.2.2
 python-json-logger==4.0.0
@@ -96,13 +96,13 @@ requests==2.32.5
 rich==14.3.3
 rich-toolkit==0.19.7
 rignore==0.7.6
-rpds-py==0.30.0
+rpds-py==0.30.0+ppc64le1
 safetensors==0.7.0
 sentry-sdk==2.56.0
 setproctitle==1.3.7
 setuptools==77.0.3
 shellingham==1.5.4
-six==1.16.0+ppc64le1
+six==1.17.0+ppc64le1
 sniffio==1.3.1+ppc64le1
 sse-starlette==3.3.3
 starlette==0.52.1
@@ -121,5 +121,5 @@ vllm==0.21.0+cpuppc64le1
 watchfiles==0.21.0+ppc64le1
 websockets==16.0
 wrapt==2.1.2
-xgrammar===0.2.0
+xgrammar===0.2.1+ppc64le1
 yarl==1.23.0+ppc64le1
