@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: June 01, 2026
+### Last Updated On: June 04, 2026
 
 ----
 
@@ -5168,6 +5168,13 @@
 | milvus_lite-2.5.0+ppc64le1-py3-none-manylinux2014_ppc64le.whl | `Apache-2.0` | N.A |
 
 ----
+- **milvus-lite==2.5.1+ppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| milvus_lite-2.5.1+ppc64le1-py3-none-manylinux2014_ppc64le.whl | `Apache-2.0` | N.A |
+
+----
 
 ### ml-dtypes
 - **ml-dtypes==0.1.0**
@@ -5824,7 +5831,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| numpy-2.2.6+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `NCSA`, `Zlib` | N.A |
+| numpy-2.2.6+ppc64le1-cp310-cp310-manylinux_2_27_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>numpy-2.2.6+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `NCSA`, `Zlib` | N.A |
 
 ----
 - **numpy==2.2.6+ppc64le2**
@@ -5943,7 +5950,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| numpy-2.4.4+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR LGPL-3.0-only`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-Open-MPI`,<br>`CC0-1.0`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `NCSA`, `Zlib` | N.A |
+| numpy-2.4.4+ppc64le1-cp311-cp311-manylinux_2_27_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp312-cp312-manylinux_2_27_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp313-cp313-manylinux_2_27_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp314-cp314-manylinux_2_27_ppc64le.whl<br>numpy-2.4.4+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR LGPL-3.0-only`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-Open-MPI`,<br>`CC0-1.0`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `NCSA`, `Zlib` | N.A |
 
 ----
 
@@ -10837,11 +10844,25 @@
 ----
 
 ### vllm
+- **vllm==0.11.1+cpuppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| vllm-0.11.1+cpuppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>vllm-0.11.1+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>vllm-0.11.1+cpuppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`,<br>`LGPL-2.1-only`, `MIT` | `GHSA-2pc9-4j83-qjmr`, `GHSA-3mwp-wvh9-7528`, `GHSA-4r2x-xpjr-7cvv`, `GHSA-7972-pg2x-xr59`, `GHSA-grg2-63fw-f2qr`, `GHSA-hpv8-x276-m59f`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-qh4c-xf7m-gxfc`, `GHSA-x368-4g9h-fvv4` |
+
+----
 - **vllm==0.11.2.dev0+g439368496.d20260219.cpuppc64le1**
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | vllm-0.11.2.dev0+g439368496.d20260219.cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`, `MIT` | `GHSA-2pc9-4j83-qjmr`, `GHSA-3mwp-wvh9-7528`, `GHSA-4r2x-xpjr-7cvv`, `GHSA-7972-pg2x-xr59`, `GHSA-grg2-63fw-f2qr`, `GHSA-hpv8-x276-m59f`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-qh4c-xf7m-gxfc`, `GHSA-x368-4g9h-fvv4` |
+
+----
+- **vllm==0.15.1+cpuppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| vllm-0.15.1+cpuppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>vllm-0.15.1+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`,<br>`LGPL-2.1-only`, `MIT` | `GHSA-3mwp-wvh9-7528`, `GHSA-7972-pg2x-xr59`, `GHSA-hpv8-x276-m59f`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-v359-jj2v-j536`, `GHSA-x368-4g9h-fvv4` |
 
 ----
 - **vllm==0.15.2.dev0+g1892993bc.d20260306.cpuppc64le1**
@@ -10855,14 +10876,21 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| vllm-0.16.0+cpuppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>vllm-0.16.0+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`, `MIT` | `GHSA-3mwp-wvh9-7528`, `GHSA-7972-pg2x-xr59`, `GHSA-hpv8-x276-m59f`, `GHSA-pf3h-qjgv-vcpr`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-v359-jj2v-j536`, `GHSA-x368-4g9h-fvv4` |
+| vllm-0.16.0+cpuppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>vllm-0.16.0+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`,<br>`LGPL-2.1-only`, `MIT` | `GHSA-3mwp-wvh9-7528`, `GHSA-7972-pg2x-xr59`, `GHSA-hpv8-x276-m59f`, `GHSA-pf3h-qjgv-vcpr`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-v359-jj2v-j536`, `GHSA-x368-4g9h-fvv4` |
 
 ----
 - **vllm==0.18.1+cpuppc64le1**
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| vllm-0.18.1+cpuppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>vllm-0.18.1+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`, `MIT` | `GHSA-3mwp-wvh9-7528`, `GHSA-83vm-p52w-f9pw`, `GHSA-hpv8-x276-m59f`, `GHSA-pf3h-qjgv-vcpr`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-x368-4g9h-fvv4` |
+| vllm-0.18.1+cpuppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>vllm-0.18.1+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>vllm-0.18.1+cpuppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`,<br>`LGPL-2.1-only`, `MIT` | `GHSA-3mwp-wvh9-7528`, `GHSA-83vm-p52w-f9pw`, `GHSA-hpv8-x276-m59f`, `GHSA-pf3h-qjgv-vcpr`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-x368-4g9h-fvv4` |
+
+----
+- **vllm==0.21.0+cpuppc64le1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| vllm-0.21.0+cpuppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>vllm-0.21.0+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>vllm-0.21.0+cpuppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR GPL-2.0-only`,<br>`GPL-2.0-only`,<br>`LGPL-2.1-only`, `MIT` | N.A |
 
 ----
 - **vllm==0.8.4+cpu**
@@ -10876,7 +10904,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| vllm-0.8.4+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`GPL-2.0-only`, `MIT` | `GHSA-3f6c-7fw2-ppm4`, `GHSA-3mwp-wvh9-7528`, `GHSA-4qjh-9fv9-r85r`, `GHSA-4r2x-xpjr-7cvv`, `GHSA-69j4-grxj-j64p`, `GHSA-6fvq-23cw-5628`, `GHSA-6qc9-v4r8-22xg`, `GHSA-8fr4-5q9j-m8gm`, `GHSA-9f8f-2vmf-885j`, `GHSA-9hcf-v7m4-6m2j`, `GHSA-9pcc-gvx5-r5wm`, `GHSA-c65p-x677-fgj6`, `GHSA-grg2-63fw-f2qr`, `GHSA-hj4w-hm2g-p6w5`, `GHSA-hjq4-87xh-g4fv`, `GHSA-hpv8-x276-m59f`, `GHSA-j828-28rj-hfhp`, `GHSA-pmqf-x6x8-p7qw`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-qh4c-xf7m-gxfc`, `GHSA-rxc4-3w6r-4v47`, `GHSA-vc6m-hm49-g9qg`, `GHSA-vrq3-r879-7m65`, `GHSA-w6q7-j642-7c25`, `GHSA-wr9h-g72x-mwhm`, `GHSA-x368-4g9h-fvv4` |
+| vllm-0.8.4+cpuppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`GPL-2.0-only`,<br>`LGPL-2.1-only`, `MIT` | `GHSA-3f6c-7fw2-ppm4`, `GHSA-3mwp-wvh9-7528`, `GHSA-4qjh-9fv9-r85r`, `GHSA-4r2x-xpjr-7cvv`, `GHSA-69j4-grxj-j64p`, `GHSA-6fvq-23cw-5628`, `GHSA-6qc9-v4r8-22xg`, `GHSA-8fr4-5q9j-m8gm`, `GHSA-9f8f-2vmf-885j`, `GHSA-9hcf-v7m4-6m2j`, `GHSA-9pcc-gvx5-r5wm`, `GHSA-c65p-x677-fgj6`, `GHSA-grg2-63fw-f2qr`, `GHSA-hj4w-hm2g-p6w5`, `GHSA-hjq4-87xh-g4fv`, `GHSA-hpv8-x276-m59f`, `GHSA-j828-28rj-hfhp`, `GHSA-pmqf-x6x8-p7qw`, `GHSA-pq5c-rjhq-qp7p`, `GHSA-qh4c-xf7m-gxfc`, `GHSA-rxc4-3w6r-4v47`, `GHSA-vc6m-hm49-g9qg`, `GHSA-vrq3-r879-7m65`, `GHSA-w6q7-j642-7c25`, `GHSA-wr9h-g72x-mwhm`, `GHSA-x368-4g9h-fvv4` |
 
 ----
 

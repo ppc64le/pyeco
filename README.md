@@ -34,7 +34,7 @@ Before getting started, confirm your environment:
 
 - **Architecture**: ppc64le
 - **Processors**: Power9, Power10, Power11
-- **Python Versions**: 3.9 - 3.13 (3.14 preview for few packages)
+- **Python Versions**: 3.10 - 3.13 (3.14 preview for few packages)
 
 If your system matches the above, you're ready to proceed.
 
