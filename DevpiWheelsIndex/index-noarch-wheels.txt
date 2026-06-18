@@ -3,6 +3,7 @@ abseil-cpp==20240116.2
 abseil-cpp==20240116.2+ppc64le1
 aesara==2.9.4
 aesara==2.9.4+ppc64le1
+agno==2.6.6+ppc64le1
 aiosignal==1.2.0
 aiosignal==1.2.0+ppc64le1
 aiosignal==1.3.1
@@ -20,6 +21,7 @@ ansible-runner==2.3.6+ppc64le1
 ansible-runner==2.4.1
 ansible-runner==2.4.1+ppc64le1
 ansible-sign==0.1.2+ppc64le1
+antlr4-python3-runtime==4.13.2+ppc64le1
 antlr4-python3-runtime==4.9.3+ppc64le1
 apache-airflow==3.0.2+ppc64le1
 appdirs==1.4.4
@@ -106,6 +108,7 @@ certipy==0.2.1
 certipy==0.2.1+ppc64le1
 certipy==0.2.2
 certipy==0.2.2+ppc64le1
+cforge==1.0.0b4+ppc64le1
 chalice==1.32.0
 chalice==1.32.0+ppc64le1
 cloudpickle==3.0.0+ppc64le1
@@ -149,6 +152,7 @@ einops==0.8.2+ppc64le1
 executing==2.2.0
 executing==2.2.0+ppc64le1
 fastapi==0.135.1+ppc64le1
+fastapi==0.136.1+ppc64le1
 fastjsonschema==2.16.2
 fastjsonschema==2.16.2+ppc64le1
 fastjsonschema==2.21.1
@@ -164,6 +168,7 @@ filelock==3.20.3+ppc64le1
 filelock==3.25.2+ppc64le1
 fire==0.4.0
 fire==0.4.0+ppc64le1
+fire==0.6.0+ppc64le1
 fire==0.7.0
 fire==0.7.0+ppc64le1
 flask-security==5.6.2+ppc64le1
@@ -186,6 +191,7 @@ flatbuffers==25.2.10+ppc64le1
 fsspec==2025.3.0+ppc64le1
 fsspec==2025.3.2+ppc64le1
 fsspec==2026.2.0+ppc64le1
+fsspec==2026.4.0+ppc64le1
 furo==2024.4.27+ppc64le1
 furo==2024.8.6
 furo==2024.8.6+ppc64le1
@@ -221,6 +227,7 @@ ibm-cloud-sdk-core==3.16.7
 ibm-cloud-sdk-core==3.16.7+ppc64le1
 ibm-cloud-sdk-core==3.22.1+ppc64le1
 ibm-cloud-sdk-core==3.24.2+ppc64le1
+ibm-cloud-sdk-core==3.24.4+ppc64le1
 ibm-cos-sdk-core==2.13.4
 ibm-cos-sdk-core==2.13.4+ppc64le1
 ibm-cos-sdk-core==2.13.5
@@ -232,6 +239,7 @@ ibm-cos-sdk-core==2.14.1+ppc64le1
 ibm-cos-sdk-core==2.14.2
 ibm-cos-sdk-core==2.14.2+ppc64le1
 ibm-cos-sdk-core==2.14.3+ppc64le1
+ibm-cos-sdk-core==2.16.2+ppc64le1
 ibm-cos-sdk-s3transfer==2.13.4
 ibm-cos-sdk-s3transfer==2.13.4+ppc64le1
 ibm-cos-sdk-s3transfer==2.13.6+ppc64le1
@@ -241,6 +249,7 @@ ibm-cos-sdk-s3transfer==2.14.1+ppc64le1
 ibm-cos-sdk-s3transfer==2.14.2
 ibm-cos-sdk-s3transfer==2.14.2+ppc64le1
 ibm-cos-sdk-s3transfer==2.14.3+ppc64le1
+ibm-cos-sdk-s3transfer==2.16.2+ppc64le1
 ibm-cos-sdk==2.13.4
 ibm-cos-sdk==2.13.4+ppc64le1
 ibm-cos-sdk==2.13.6+ppc64le1
@@ -252,12 +261,14 @@ ibm-cos-sdk==2.14.2+ppc64le1
 ibm-cos-sdk==2.14.3+ppc64le1
 ibm-cos-sdk==2.15.0+ppc64le1
 ibm-cos-sdk==2.16.0+ppc64le1
+ibm-cos-sdk==2.16.2+ppc64le1
 ijson==3.1.4
 ijson==3.1.4+ppc64le1
 ijson==3.3.0+ppc64le1
 imageio==2.34.1+ppc64le1
 imageio==2.37.0+ppc64le1
 imageio==2.37.2+ppc64le1
+imageio==2.37.3+ppc64le1
 import-tracker==3.2.1
 import-tracker==3.2.1+ppc64le1
 impyla==0.21.0
@@ -271,6 +282,7 @@ ipykernel==6.29.5+ppc64le1
 ipywidgets==8.1.2+ppc64le1
 ipywidgets==8.1.7
 ipywidgets==8.1.7+ppc64le1
+ipywidgets==8.1.8+ppc64le1
 itsdangerous==2.1.2+ppc64le1
 itsdangerous==2.2.0+ppc64le1
 jaraco-packaging==10.2.2
@@ -285,7 +297,9 @@ jedi==0.17.0
 jedi==0.17.0+ppc64le1
 jedi==0.19.2
 jedi==0.19.2+ppc64le1
+jedi==0.20.0+ppc64le1
 jsonschema-specifications==2024.10.1+ppc64le1
+jsonschema-specifications==2025.9.1+ppc64le1
 jupyter-core==5.7.2+ppc64le1
 jupyter-core==5.8.1
 jupyter-core==5.8.1+ppc64le1
@@ -325,6 +339,7 @@ lightgbm==3.3.2
 lightgbm==3.3.2+ppc64le1
 luigi==3.6.0
 luigi==3.6.0+ppc64le1
+markdown==3.10.2+ppc64le1
 markdown==3.6+ppc64le1
 markdown==3.8
 markdown==3.8+ppc64le1
@@ -362,6 +377,7 @@ ollama-python-package==0.12.10+ppc64le1
 ollama-python-package==0.13.1+ppc64le1
 ollama-python-package==0.13.5+ppc64le1
 ollama-python-package==0.20.3+ppc64le1
+ollama-python-package==0.23.1+ppc64le1
 onnxconverter-common==1.14.0
 onnxmltools==1.13.0
 openapi-schema-validator==0.6.3
@@ -395,6 +411,7 @@ param==2.3.0+ppc64le1
 param==2.3.1+ppc64le1
 param==2.3.2+ppc64le1
 param==2.3.3+ppc64le1
+param==2.4.0+ppc64le1
 partd==1.4.1+ppc64le1
 partd==1.4.2
 partd==1.4.2+ppc64le1
@@ -427,6 +444,7 @@ py-make==0.1.3.dev0+ga7d8bbf.d20250607
 pydantic==2.10.3+ppc64le1
 pygments==2.19.1+ppc64le1
 pygments==2.19.2+ppc64le1
+pygments==2.20.0+ppc64le1
 pyjarowinkler==2.0.0
 pyjarowinkler==2.0.0+ppc64le1
 pylatexenc==2.1+ppc64le1
@@ -437,6 +455,7 @@ pyparsing==3.2.3
 pyparsing==3.2.3+ppc64le1
 pyparsing==3.2.5+ppc64le1
 pyparsing==3.3.1+ppc64le1
+pyparsing==3.3.2+ppc64le1
 pyphen==0.14.0+ppc64le1
 pyphen==0.17.2+ppc64le1
 pypika==0.48.9
@@ -458,6 +477,7 @@ pysyncobj==0.3.14+ppc64le1
 pytest-aiohttp==1.0.5
 pytest-aiohttp==1.0.5+ppc64le1
 pytest-mock==3.14.1+ppc64le1
+pytest-mock==3.15.1+ppc64le1
 pytest-mypy==1.0.0+ppc64le1
 pytest-mypy==1.0.1
 pytest-mypy==1.0.1+ppc64le1
@@ -477,6 +497,7 @@ rq==2.3.2+ppc64le1
 rq==2.3.3
 rq==2.3.3+ppc64le1
 s3transfer==0.10.4+ppc64le1
+s3transfer==0.17.0+ppc64le1
 seaborn==0.13.2+ppc64le1
 SecretStorage==3.3.3
 SecretStorage==3.3.3+ppc64le1
@@ -489,6 +510,7 @@ semver==3.0.4+ppc64le1
 sentry-sdk==2.29.1+ppc64le1
 sentry-sdk==2.33.0+ppc64le1
 six==1.16.0+ppc64le1
+six==1.17.0+ppc64le1
 skl2onnx==1.18.0
 sklearn-pandas==2.2.0
 sklearn-pandas==2.2.0+ppc64le1
@@ -532,6 +554,7 @@ termcolor==2.1.0+ppc64le1
 termcolor==2.5.0
 termcolor==2.5.0+ppc64le1
 termcolor==3.1.0+ppc64le1
+termcolor==3.3.0+ppc64le1
 terminado==0.18.1
 terminado==0.18.1+ppc64le1
 textstat==0.7.7
@@ -557,6 +580,7 @@ truststore==0.10.0+ppc64le1
 tzdata==2025.1
 tzdata==2025.1+ppc64le1
 tzdata==2025.2+ppc64le1
+tzdata==2026.2+ppc64le1
 uritools==4.0.2
 uritools==4.0.2+ppc64le1
 uritools==5.0.0
