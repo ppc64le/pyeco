@@ -1,6 +1,7 @@
 # DevPi Wheels Index
 ---
 ### Last Updated On: June 18, 2026
+### Last CVE Scanned On: June 18, 2026
 
 ----
 
