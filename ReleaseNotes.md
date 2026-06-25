@@ -18,12 +18,7 @@ This release includes updates to 1500+ Python packages across Python versions 3.
 
 
 ## 🚀 Major Updates
-- Expanded PowerPC (ppc64le) wheel support to over 70 additional packages.
-- Added new packages, including agno and couchbase.
-- Added missing dependencies for vLLM and spaCy/Thinc, including xgrammar v0.2.1, apache_tvm_ffi v0.1.9, httptools v0.8.0, murmurhash v1.0.15, and preshed v3.0.13.
-- Resolved a performance issue in PyTorch v2.11.0, improving overall efficiency.
-- Replaced previously supplied PyTorch v2.11.0 wheels with newly built wheels that include this fix. 
-
+- Comprehensive PowerPC (ppc64le) wheel support to over 1500 packages.
 
 ## Package Licenses and CVE Details
 
