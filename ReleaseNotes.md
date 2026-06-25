@@ -1,6 +1,6 @@
-# DevPi V6
+# AI Foundation 2Q26
 
-**Release Date:** Jun 18, 2026
+**Release Date:** Jun 30, 2026
 
 ## Overview
 
@@ -18,7 +18,7 @@ This release includes updates to 1500+ Python packages across Python versions 3.
 
 
 ## 🚀 Major Updates
-- Comprehensive PowerPC (ppc64le) wheel support to over 1500 packages.
+- Comprehensive PowerPC (ppc64le) wheel support with over 1500 packages.
 
 ## Package Licenses and CVE Details
 
