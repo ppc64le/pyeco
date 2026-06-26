@@ -92,10 +92,6 @@ devpi use https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0
 devpi list
 ```
 
-💡 **Tip**: You no longer need to set LD_LIBRARY_PATH when using Power manylinux wheels. Native dependencies are bundled automatically, so packages install cleanly and work consistently across Linux distributions such as SLES, Ubuntu, and RHEL.
-
-📝 **Note**: Legacy wheels that do not support manylinux still require LD_LIBRARY_PATH to be set for correct execution.
-
 ### Troubleshooting Tips 
 
 - If a package fails to install, try forcing binary wheels and disabling cache:
@@ -112,20 +108,6 @@ devpi list
   ```
 
 - If a package is missing, request it via [IBM Power ISV ecosystem enablement form](https://www.ibm.com/power/resources/isv/enablement-request/)
-
-- Most Python packages (e.g., TensorFlow, PyTorch) ship as manylinux wheels, which include all required shared libraries so normally, you don't need to set LD_LIBRARY_PATH. If you installed a non-manylinux wheel, you might see errors like: 
-
-  ```
-  ImportError: libXYZ.so: cannot open shared object file
-  ```
-
-  Set the path to your native libraries:
-
-  ```bash
-  export LD_LIBRARY_PATH=/path/to/libs:$LD_LIBRARY_PATH
-  ```
-
-  Use `ldd $(which python)` or `ldd <binary>` to check for missing .so files.
 
 ### Best Practices
 
