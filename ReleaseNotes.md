@@ -4,7 +4,7 @@
 
 ## Overview
 
-This release includes updates to 1500+ Python packages across Python versions 3.11 and 3.12 focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes updates to 1100+ Python packages across Python versions 3.11 and 3.12 focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 ---
  
 ## Supported Platforms
@@ -18,7 +18,7 @@ This release includes updates to 1500+ Python packages across Python versions 3.
 
 
 ## 🚀 Major Updates
-- Comprehensive PowerPC (ppc64le) wheel support with over 1500 packages.
+- Comprehensive PowerPC (ppc64le) wheel support with over 1100 packages.
 
 ## Package Licenses and CVE Details
 
