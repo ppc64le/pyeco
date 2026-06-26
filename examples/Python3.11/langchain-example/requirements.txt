@@ -18,7 +18,7 @@ orjson==3.11.7
 packaging==25.0
 pydantic==2.10.3+ppc64le1
 pydantic_core==2.27.1
-PyYAML==6.0.3+ppc64le1
+PyYAML==6.0.3+ppc64le2
 requests==2.32.5
 requests-toolbelt==1.0.0
 setuptools==68.2.2
