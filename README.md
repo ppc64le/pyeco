@@ -22,7 +22,7 @@ IBM's wheels are:
 
 - **Natively built** on IBM Power (not cross-compiled)
 - **Optimized** for AI, ML, and scientific computing
-- **Delivered** through a [DevPI repository](https://wheels.developerfirst.ibm.com/ppc64le/linux) that integrates seamlessly with pip
+- **Delivered** through a [DevPI repository](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0) that integrates seamlessly with pip
 
 ---
 
@@ -46,7 +46,7 @@ This is your main entry point for available optimized wheels:
 
 👉 **Wheel Repository (DevPI)**:
 
-https://wheels.developerfirst.ibm.com/ppc64le/linux
+https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0
 
 ℹ️ **Note**: This page shows only the latest version of each package.
 
