@@ -17,7 +17,7 @@ Markdown==3.10.2+ppc64le1
 markdown-it-py==4.0.0
 MarkupSafe==3.0.3+ppc64le1
 mdurl==0.1.2
-ml-dtypes==0.5.4+ppc64le1
+ml-dtypes==0.5.4+ppc64le2
 namex==0.1.0
 numpy==2.0.2+ppc64le1
 oauthlib==3.3.1
