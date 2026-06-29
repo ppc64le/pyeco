@@ -25,9 +25,9 @@ This release includes updates to 1100+ Python packages across Python versions 3.
 Detailed package license information and CVE disclosures are available at 
 [Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/v2026.06.0/DevpiWheelsIndex.md)
 
-## Package Version compatiblity
+## Package Version Compatiblity
 
-### PyTorch based packages
+### PyTorch-based Packages
 
 | Package | Version | Python Versions | Compatible PyTorch Version | 
 |---------|---------|-----------------|-------------------------|
@@ -43,14 +43,14 @@ Detailed package license information and CVE disclosures are available at
 | **torchaudio** | 2.9.1+ppc64le2 | 3.12 | 2.9.1 | 
 | **torchaudio** | 2.9.1+ppc64le3 | 3.11 | 2.9.1 | 
 
-### TensorFlow based packages
+### TensorFlow-based Packages
 
 | Package | Version | Python Versions | Compatible TensorFlow Version | 
 |---------|---------|-----------------|-------------------------|
 | **tensorflow-io** | 0.35.0+ppc64le1 | 3.11 | 2.14.1 | 
 | **tf2onnx** | 1.15.1+ppc64.e1, 1.16.1+ppc64le1 | 3.11,3.12 | 2.18.1 | 
 
-### ONNX based packages
+### ONNX-based Packages
 | Package | Version | Python Versions | Compatible ONNX Version | 
 |---------|---------|-----------------|-------------------------|
 | **skl2onnx** | 1.18.0+ppc64le1 | 3.11,3.12 | 1.17.0 | 
@@ -64,8 +64,11 @@ Detailed package license information and CVE disclosures are available at
 - packaging is required for iminuit v2.28.0.
 
 ## ⚠️ Known Issues
-### Platform support 
+### Platform Support 
 - Ollama is not supported on Power9.
+
+### Python Version Support 
+- aesera v2.9.4 does not support Python v3.12.
 
 ### Missing Pre-built Wheels for Some Dependencies
 Some packages in this release do not have pre-built wheels available for certain dependencies.
