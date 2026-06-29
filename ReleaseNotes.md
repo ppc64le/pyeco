@@ -27,7 +27,9 @@ Detailed package license information and CVE disclosures are available at
 
 ## Package Version compatiblity
 
-| Package | Version | Python Versions | Compatible Torch Version | 
+### PyTorch based packages
+
+| Package | Version | Python Versions | Compatible PyTorch Version | 
 |---------|---------|-----------------|-------------------------|
 | **torchvision** | 0.22.1+ppc64le1 | 3.11, 3.12 | 2.6.0 | 
 | **torchvision** | 0.24.0+ppc64le1 | 3.11 | 2.9.0 |
@@ -41,16 +43,44 @@ Detailed package license information and CVE disclosures are available at
 | **torchaudio** | 2.9.1+ppc64le2 | 3.12 | 2.9.1 | 
 | **torchaudio** | 2.9.1+ppc64le3 | 3.11 | 2.9.1 | 
 
+### TensorFlow based packages
+
+| Package | Version | Python Versions | Compatible TensorFlow Version | 
+|---------|---------|-----------------|-------------------------|
+| **tensorflow-io** | 0.35.0+ppc64le1 | 3.11 | 2.14.1 | 
+| **tf2onnx** | 1.15.1+ppc64.e1, 1.16.1+ppc64le1 | 3.11,3.12 | 2.18.1 | 
+
 ## Prerequisites
 - JDK is required for PyJNIus.
+- krb5-devel is required for request-kerberos and sparkmagic
+- Rust is required for apache-airflow
 
 ## Known Issues
+### Platform support 
 - Ollama is not supported on Power9.
+
+### Missing Pre-built Wheels for Some Dependencies
+Some packages in this release do not have pre-built wheels available for certain dependencies. As are result these dependencies must be compiled from source and require development tools - GCC/G++ and Python development headers. 
+
+**Affected packages:**
+- ansible_rulebook 1.1.*
+- cforge v1.0.0b4
+- cutadapt 5.1
+- iminuit v2.28.0
+- macs
+- orange3 v3.38.1
+- spacy
+- tensorflow v2.14.1
+- tensorflow-text v2.14.0
+- thinc
+- uvtools
+
+
 - cforge v1.0.0b4 requires jq>=1.11.0 and zeroconf>=0.148.0. As prebuilt wheels are not available, these dependencies must be compiled from source and require development tools. 
 - macs requires cykhash<3.0,>=2.0 and hmmlearn>=0.3; due to missing prebuilt wheels, these dependencies must be built from source using development tools.
 - iminuit v2.28.0 depends on packaging, which must be installed explicitly.
 - spacy and thinc depend on the srsly package for which prebuilt wheel is not available. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source.
-
+  
 ## 🔧 Troubleshooting
 
 ### milvus-lite 2.5.1
