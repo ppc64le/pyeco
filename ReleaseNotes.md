@@ -58,9 +58,10 @@ Detailed package license information and CVE disclosures are available at
 
 ## Prerequisites
 - JDK is required for PyJNIus.
-- krb5-devel is required for request-kerberos and sparkmagic
-- Rust is required for apache-airflow
-- onnxconverter-common is required for skl2onnx.
+- krb5-devel is required for request-kerberos and sparkmagic.
+- Rust is required for apache-airflow.
+- onnxconverter-common is required for skl2onnx v1.18.0.
+- packaging is required for iminuit v2.28.0.
 
 ## ⚠️ Known Issues
 ### Platform support 
@@ -80,7 +81,6 @@ Compilation requires the following development tools:
 - ansible_rulebook 1.1.*
 - cforge v1.0.0b4
 - cutadapt 5.1
-- iminuit v2.28.0
 - macs
 - orange3 v3.38.1
 - spacy
