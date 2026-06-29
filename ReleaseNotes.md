@@ -48,12 +48,12 @@ Detailed package license information and CVE disclosures are available at
 | Package | Version | Python Versions | Compatible TensorFlow Version | 
 |---------|---------|-----------------|-------------------------|
 | **tensorflow-io** | 0.35.0+ppc64le1 | 3.11 | 2.14.1 | 
-| **tf2onnx** | 1.15.1+ppc64.e1, 1.16.1+ppc64le1 | 3.11,3.12 | 2.18.1 | 
+| **tf2onnx** | 1.15.1+ppc64.e1, 1.16.1+ppc64le1 | 3.11, 3.12 | 2.18.1 | 
 
 ### ONNX-based Packages
 | Package | Version | Python Versions | Compatible ONNX Version | 
 |---------|---------|-----------------|-------------------------|
-| **skl2onnx** | 1.18.0+ppc64le1 | 3.11,3.12 | 1.17.0 | 
+| **skl2onnx** | 1.18.0+ppc64le1 | 3.11, 3.12 | 1.17.0 | 
 
 
 ## Prerequisites
