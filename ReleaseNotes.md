@@ -68,7 +68,7 @@ Detailed package license information and CVE disclosures are available at
 - Ollama is not supported on Power9.
 
 ### Python Version Support 
-- aesera v2.9.4 does not support Python v3.12.
+- aesera v2.9.4 and flatbuffers v2.0.0 do not support Python v3.12.
 
 ### Missing Pre-built Wheels for Some Dependencies
 Some packages in this release do not have pre-built wheels available for certain dependencies.
