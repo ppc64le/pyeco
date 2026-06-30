@@ -62,6 +62,7 @@ Detailed package license information and CVE disclosures are available at
 - Rust is required for apache-airflow.
 - onnxconverter-common is required for skl2onnx v1.18.0.
 - packaging is required for iminuit v2.28.0.
+- ruamel.yaml is required for ruamel_yaml_clib.
 
 ## ⚠️ Known Issues
 ### Platform Support 
