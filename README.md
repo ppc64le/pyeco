@@ -33,7 +33,7 @@ Before getting started, confirm your environment:
 ### Supported Platforms
 
 - **Architecture**: ppc64le
-- **Processors**: Power9, Power10, Power11
+- **Processors**: Power10, Power11
 - **Python Versions**: 3.11, 3.12
 
 If your system matches the above, you're ready to proceed.
