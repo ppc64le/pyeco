@@ -22,7 +22,7 @@ IBM's wheels are:
 
 - **Natively built** on IBM Power (not cross-compiled)
 - **Optimized** for AI, ML, and scientific computing
-- **Delivered** through a [DevPI repository](https://wheels.developerfirst.ibm.com/ppc64le/linux) that integrates seamlessly with pip
+- **Delivered** through a [DevPI repository](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0) that integrates seamlessly with pip
 
 ---
 
@@ -33,8 +33,8 @@ Before getting started, confirm your environment:
 ### Supported Platforms
 
 - **Architecture**: ppc64le
-- **Processors**: Power9, Power10, Power11
-- **Python Versions**: 3.10 - 3.13 (3.14 preview for few packages)
+- **Processors**: Power10, Power11
+- **Python Versions**: 3.11, 3.12
 
 If your system matches the above, you're ready to proceed.
 
@@ -46,13 +46,13 @@ This is your main entry point for available optimized wheels:
 
 👉 **Wheel Repository (DevPI)**:
 
-https://wheels.developerfirst.ibm.com/ppc64le/linux
+https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0
 
 ℹ️ **Note**: This page shows only the latest version of each package.
 
 👉 **Simple Index (All versions)**:
 
-To view all available wheel versions for a package, refer to the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/) on the DevPI server, which provides the complete version history for that package.
+To view all available wheel versions for a package, refer to the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0/+simple/) on the DevPI server, which provides the complete version history for that package.
 
 📝 **Note: Wheel Version Suffixes**
 
@@ -62,14 +62,11 @@ IBM Power wheels use a version suffix (for example, `ppc64le1`) to identify buil
 
 To explore all available versions, Python compatibility, and licenses, use the indexes below:
 
-- [DevPiWheelsIndex.md](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md) - Full list of wheels with versions, build suffixes, licenses and associated CVEs
-- [**Python version–specific indexes**](https://github.com/ppc64le/pyeco/tree/main/DevpiWheelsIndex) - Quickly filter wheels for:
-  - Python 3.9
-  - Python 3.10
+- [DevPiWheelsIndex.md](https://github.com/ppc64le/pyeco/blob/v2026.06.0/DevpiWheelsIndex.md) - Full list of wheels with versions, build suffixes, licenses and associated CVEs
+- [**Python version–specific indexes**](https://github.com/ppc64le/pyeco/tree/v2026.06.0/DevpiWheelsIndex) - Quickly filter wheels for:
   - Python 3.11
   - Python 3.12
-  - Python 3.13
-  - Python 3.14
+
 
 ## 4️⃣ Install with pip: Familiar Workflow
 
@@ -81,7 +78,7 @@ Use `--prefer-binary` to prioritize prebuilt Power wheels:
 
 ```bash
 pip install --prefer-binary <package-name> \
-  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0
 ```
 
 - This pulls from IBM's Power-optimized wheel repo.
@@ -91,13 +88,9 @@ pip install --prefer-binary <package-name> \
 
 ```bash
 pip install devpi-client
-devpi use https://wheels.developerfirst.ibm.com/ppc64le/linux
+devpi use https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0
 devpi list
 ```
-
-💡 **Tip**: You no longer need to set LD_LIBRARY_PATH when using Power manylinux wheels. Native dependencies are bundled automatically, so packages install cleanly and work consistently across Linux distributions such as SLES, Ubuntu, and RHEL.
-
-📝 **Note**: Legacy wheels that do not support manylinux still require LD_LIBRARY_PATH to be set for correct execution.
 
 ### Troubleshooting Tips 
 
@@ -105,7 +98,7 @@ devpi list
 
   ```bash
   pip install --prefer-binary --no-cache-dir <package-name> \
-  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0
   ```
 
 - Ensure you're using the correct Python version.
@@ -115,20 +108,6 @@ devpi list
   ```
 
 - If a package is missing, request it via [IBM Power ISV ecosystem enablement form](https://www.ibm.com/power/resources/isv/enablement-request/)
-
-- Most Python packages (e.g., TensorFlow, PyTorch) ship as manylinux wheels, which include all required shared libraries so normally, you don't need to set LD_LIBRARY_PATH. If you installed a non-manylinux wheel, you might see errors like: 
-
-  ```
-  ImportError: libXYZ.so: cannot open shared object file
-  ```
-
-  Set the path to your native libraries:
-
-  ```bash
-  export LD_LIBRARY_PATH=/path/to/libs:$LD_LIBRARY_PATH
-  ```
-
-  Use `ldd $(which python)` or `ldd <binary>` to check for missing .so files.
 
 ### Best Practices
 
@@ -155,11 +134,11 @@ Explore real-world examples built using Power-optimized wheels:
 
 - **Package Index & Metadata**:
 
-  https://github.com/ppc64le/pyeco
+  https://github.com/ppc64le/pyeco/tree/v2026.06.0
 
 - **General Usage Examples**: 
 
-  https://github.com/ppc64le/pyeco/tree/main/examples
+  https://github.com/ppc64le/pyeco/tree/v2026.06.0/examples
 
 These examples demonstrate:
 
@@ -177,10 +156,9 @@ By leveraging IBM Power - optimized python wheels, teams can:
 This curated ecosystem is continuously expanded based on real AI projects across the IBM Power ecosystem.
 
 ## ✅ Your Next Steps
-
-- 🔎 Browse available wheels → [DevPI Repository](https://wheels.developerfirst.ibm.com/ppc64le/linux)
-- 📦 Identify Python version specific packages → [Wheel Indexes](https://github.com/ppc64le/pyeco/tree/main/DevpiWheelsIndex)
-- ▶️ Try examples → [PyEco Examples](https://github.com/ppc64le/pyeco/tree/main/examples)
+- 🔎 Browse available wheels -> [DevPIWheelsIndex.md](https://github.com/ppc64le/pyeco/blob/v2026.06.0/DevpiWheelsIndex.md)
+- 📦 Identify Python version specific packages → [Wheel Indexes](https://github.com/ppc64le/pyeco/tree/v2026.06.0/DevpiWheelsIndex)
+- ▶️ Try examples → [PyEco Examples](https://github.com/ppc64le/pyeco/tree/v2026.06.0/examples)
 - 🧪 Build and optimize your AI/ML workloads on IBM Power
 
 **Welcome to a faster, easier Python experience on IBM Power.**

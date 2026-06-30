@@ -11,7 +11,7 @@ msgpack==1.1.2+ppc64le1
 numpy==2.4.6+ppc64le1
 packaging==26.0
 protobuf==7.34.1
-PyYAML==6.0.3+ppc64le1
+pyyaml==6.0.3+ppc64le2
 ray==2.53.0+ppc64le1
 referencing==0.37.0
 requests==2.33.0
