@@ -18,7 +18,7 @@ This release includes more than 1,500 Python wheels, covering both Python 3.11 a
 
 
 ## 🚀 Major Updates
-- Comprehensive PowerPC (ppc64le) wheel support with over 1100 packages.
+- Comprehensive PowerPC (ppc64le) wheel support with over 1500 wheels.
 
 ## Package Licenses and CVE Details
 
