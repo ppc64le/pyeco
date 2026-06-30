@@ -67,7 +67,7 @@ pip install --upgrade pip setuptools wheel
 # -------------------------------
 echo "========== Installing base dependencies =========="
 
-pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux -r requirements.txt
+pip install --no-cache --prefer-binary --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.06.0 -r requirements.txt
 
 
 # -------------------------------
