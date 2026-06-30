@@ -1,10 +1,10 @@
-# DevPi V6
+# AI Foundation 2Q26
 
-**Release Date:** Jun 18, 2026
+**Release Date:** Jun 30, 2026
 
 ## Overview
 
-This release includes updates to 70+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes updates to 1100+ Python packages across Python versions 3.11 and 3.12 focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 ---
  
 ## Supported Platforms
@@ -13,49 +13,86 @@ This release includes updates to 70+ Python packages across multiple Python vers
 |--------------------|-------------------|
 | Architecture       | ppc64le           |
 | Operating Systems  | RHEL, Ubuntu, SLES |
-| Processors         | Power9, Power10, Power11 |
-| Python Versions    | 3.10 – 3.13<br>3.14 (Preview - for few packages) |
+| Processors         | Power10, Power11 |
+| Python Versions    | 3.11, 3.12 |
 
 
 ## 🚀 Major Updates
-- Expanded PowerPC (ppc64le) wheel support to over 70 additional packages.
-- Added new packages, including agno and couchbase.
-- Added missing dependencies for vLLM and spaCy/Thinc, including xgrammar v0.2.1, apache_tvm_ffi v0.1.9, httptools v0.8.0, murmurhash v1.0.15, and preshed v3.0.13.
-- Resolved a performance issue in PyTorch v2.11.0, improving overall efficiency.
-- Replaced previously supplied PyTorch v2.11.0 wheels with newly built wheels that include this fix. 
-
+- Comprehensive PowerPC (ppc64le) wheel support with over 1100 packages.
 
 ## Package Licenses and CVE Details
 
 Detailed package license information and CVE disclosures are available at 
-[Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
+[Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/v2026.06.0/DevpiWheelsIndex.md)
 
-## Package Version compatiblity
+## Package Version Compatiblity
 
-| Package | Version | Python Versions | Compatible Torch Version | 
+### PyTorch-based Packages
+
+| Package | Version | Python Versions | Compatible PyTorch Version | 
 |---------|---------|-----------------|-------------------------|
-| **torchvision** | 0.22.1+ppc64le1 | 3.11, 3.13 | 2.6.0 | 
+| **torchvision** | 0.22.1+ppc64le1 | 3.11, 3.12 | 2.6.0 | 
 | **torchvision** | 0.24.0+ppc64le1 | 3.11 | 2.9.0 |
-| **torchvision** | 0.24.1+ppc64le1 | 3.10, 3.12 | 2.9.x |
-| **torchvision** | 0.24.1+ppc64le2 | 3.11, 3.12, 3.13, 3.14 | 2.9.x |
-| **torchvision** | 0.25.0+ppc64le1 | 3.11, 3.14 | 2.9.0 |
-| **torchtext** | 0.18.0+ppc64le1 | 3.12 | 2.8.0 |
-| **torchaudio** | 2.7.1+ppc64le1 | 3.10, 3.11, 3.12, 3.13 | 2.7.1 | 
-| **torchaudio** | 2.9.0+ppc64le1 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.0 | 
-| **torchaudio** | 2.9.1+ppc64le2 | 3.10, 3.12, 3.13, 3.14 | 2.9.1 | 
+| **torchvision** | 0.24.0+ppc64le2 | 3.12 | 2.9.0 |
+| **torchvision** | 0.24.1+ppc64le2 | 3.11, 3.12 | 2.9.x |
+| **torchvision** | 0.25.0+ppc64le2 | 3.11, 3.12 | 2.9.0 |
+| **torchtext** | 0.18.0+ppc64le1,  | 3.11 | 2.8.0 |
+| **torchtext** | 0.18.0+ppc64le2,  | 3.12 | 2.8.0 |
+| **torchaudio** | 2.7.1+ppc64le1 | 3.11, 3.12 | 2.7.1 | 
+| **torchaudio** | 2.9.0+ppc64le1 | 3.11, 3.12 | 2.9.0 | 
+| **torchaudio** | 2.9.1+ppc64le2 | 3.12 | 2.9.1 | 
 | **torchaudio** | 2.9.1+ppc64le3 | 3.11 | 2.9.1 | 
+
+### TensorFlow-based Packages
+
+| Package | Version | Python Versions | Compatible TensorFlow Version | 
+|---------|---------|-----------------|-------------------------|
+| **tensorflow-io** | 0.35.0+ppc64le1 | 3.11 | 2.14.1 | 
+| **tf2onnx** | 1.15.1+ppc64.e1, 1.16.1+ppc64le1 | 3.11, 3.12 | 2.18.1 | 
+
+### ONNX-based Packages
+| Package | Version | Python Versions | Compatible ONNX Version | 
+|---------|---------|-----------------|-------------------------|
+| **skl2onnx** | 1.18.0+ppc64le1 | 3.11, 3.12 | 1.17.0 | 
+
 
 ## Prerequisites
 - JDK is required for PyJNIus.
+- krb5-devel is required for request-kerberos and sparkmagic.
+- Rust is required for apache-airflow.
+- onnxconverter-common is required for skl2onnx v1.18.0.
+- packaging is required for iminuit v2.28.0.
+- ruamel.yaml is required for ruamel_yaml_clib.
 
-## Known Issues
+## ⚠️ Known Issues
+### Platform Support 
 - Ollama is not supported on Power9.
-- fire < 0.7.0 does not support Python 3.13/3.14.
-- cforge v1.0.0b4 requires jq>=1.11.0 and zeroconf>=0.148.0. As prebuilt wheels are not available, these dependencies must be compiled from source and require development tools. Additionally, cforge does not support Python 3.10/3.14.
-- macs requires cykhash<3.0,>=2.0 and hmmlearn>=0.3; due to missing prebuilt wheels, these dependencies must be built from source using development tools.
-- iminuit v2.28.0 depends on packaging, which must be installed explicitly.
-- spacy and thinc depend on the srsly package for which prebuilt wheel is not available. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source.
 
+### Python Version Support 
+- aesera v2.9.4 and flatbuffers v2.0.0 do not support Python v3.12.
+
+### Missing Pre-built Wheels for Some Dependencies
+Some packages in this release do not have pre-built wheels available for certain dependencies.
+As a result, these dependencies must be compiled from source during installation.
+
+**Requirements:**
+Compilation requires the following development tools:
+- `gcc`
+- `g++`
+- Python development headers
+
+**Affected packages:**
+- ansible_rulebook 1.1.*
+- cforge v1.0.0b4
+- cutadapt 5.1
+- macs
+- orange3 v3.38.1
+- spacy
+- tensorflow v2.14.1
+- tensorflow-text v2.14.0
+- thinc
+- uvtools
+  
 ## 🔧 Troubleshooting
 
 ### milvus-lite 2.5.1
@@ -73,15 +110,6 @@ chmod 755 /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/milvus &&
 mv /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1 \
    /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1.disabled
 ```
-
-## 🚫 Deprecation Notice: Python 3.9 Support
-Support for Python 3.9 has been removed starting with this release.
-If you’re still using Python 3.9, please plan to upgrade to Python 3.10 or later to ensure compatibility with future updates.
-
-⚠️ Important
-
-- Existing Python 3.9 wheels are still available temporarily.
-- They will be removed in a future release.
 
 ## 🔒 Feedback and Support
 

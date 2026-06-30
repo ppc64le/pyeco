@@ -156,7 +156,6 @@ By leveraging IBM Power - optimized python wheels, teams can:
 This curated ecosystem is continuously expanded based on real AI projects across the IBM Power ecosystem.
 
 ## ✅ Your Next Steps
-
 - 🔎 Browse available wheels -> [DevPIWheelsIndex.md](https://github.com/ppc64le/pyeco/blob/v2026.06.0/DevpiWheelsIndex.md)
 - 📦 Identify Python version specific packages → [Wheel Indexes](https://github.com/ppc64le/pyeco/tree/v2026.06.0/DevpiWheelsIndex)
 - ▶️ Try examples → [PyEco Examples](https://github.com/ppc64le/pyeco/tree/v2026.06.0/examples)
