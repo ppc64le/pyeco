@@ -4,7 +4,7 @@
 
 ## Overview
 
-This release includes updates to 1100+ Python packages across Python versions 3.11 and 3.12 focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes more than 1,500 Python wheels, covering both Python 3.11 and 3.12 environments, with a focus on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 ---
  
 ## Supported Platforms
