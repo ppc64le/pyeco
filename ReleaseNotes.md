@@ -13,7 +13,7 @@ This release includes updates to 1100+ Python packages across Python versions 3.
 |--------------------|-------------------|
 | Architecture       | ppc64le           |
 | Operating Systems  | RHEL, Ubuntu, SLES |
-| Processors         | Power9, Power10, Power11 |
+| Processors         | Power10, Power11 |
 | Python Versions    | 3.11, 3.12 |
 
 
