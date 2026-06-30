@@ -34,7 +34,7 @@ Before getting started, confirm your environment:
 
 - **Architecture**: ppc64le
 - **Processors**: Power9, Power10, Power11
-- **Python Versions**: 3.9 - 3.13 (3.14 preview for few packages)
+- **Python Versions**: 3.10 - 3.13 (3.14 preview for few packages)
 
 If your system matches the above, you're ready to proceed.
 
@@ -178,7 +178,7 @@ This curated ecosystem is continuously expanded based on real AI projects across
 
 ## ✅ Your Next Steps
 
-- 🔎 Browse available wheels → [DevPI Repository](https://wheels.developerfirst.ibm.com/ppc64le/linux)
+- 🔎 Browse available wheels -> [DevPIWheelsIndex.md](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
 - 📦 Identify Python version specific packages → [Wheel Indexes](https://github.com/ppc64le/pyeco/tree/main/DevpiWheelsIndex)
 - ▶️ Try examples → [PyEco Examples](https://github.com/ppc64le/pyeco/tree/main/examples)
 - 🧪 Build and optimize your AI/ML workloads on IBM Power
