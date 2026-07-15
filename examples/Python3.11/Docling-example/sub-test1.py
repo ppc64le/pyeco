@@ -51,6 +51,14 @@ class TestDoclingExample(unittest.TestCase):
         except ImportError as e:
             self.fail(f"Failed to import convert_doc: {e}")
 
+    def test_create_sample_pdf_importable(self):
+        """Verify create_sample_pdf can be imported from docling_example."""
+        try:
+            from docling_example import create_sample_pdf
+            self.assertIsNotNone(create_sample_pdf)
+        except ImportError as e:
+            self.fail(f"Failed to import create_sample_pdf: {e}")
+
     # ------------------------------------------------------------------
     # VLM options construction (inline / transformers)
     # ------------------------------------------------------------------
@@ -142,18 +150,9 @@ class TestDoclingExample(unittest.TestCase):
         from docling.datamodel.base_models import InputFormat
         self.assertTrue(hasattr(InputFormat, "PDF"))
 
-
     # ------------------------------------------------------------------
     # create_sample_pdf helper
     # ------------------------------------------------------------------
-
-    def test_create_sample_pdf_importable(self):
-        """Verify create_sample_pdf can be imported from docling_example."""
-        try:
-            from docling_example import create_sample_pdf
-            self.assertIsNotNone(create_sample_pdf)
-        except ImportError as e:
-            self.fail(f"Failed to import create_sample_pdf: {e}")
 
     def test_create_sample_pdf_skips_existing_file(self):
         """Verify create_sample_pdf returns None when the file already exists."""

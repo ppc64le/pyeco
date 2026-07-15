@@ -1,4 +1,4 @@
-## Purpose: Demonstrates core Docling PDF document-conversion using the IBM Granite Docling model loaded **locally via the `transformers` library** — mirroring the Granite-with-pytorch example pattern.
+## Purpose: Simple RAG application using Docling — demonstrates core Docling PDF document-conversion using the IBM Granite Docling model loaded **locally via the `transformers` library** — mirroring the Granite-with-pytorch example pattern.
 
 ### Model used:
 - **ibm-granite/granite-docling-258M**
