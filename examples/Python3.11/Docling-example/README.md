@@ -6,10 +6,10 @@
 - No Ollama server required — model weights are loaded directly into Python, just like `AutoModelForCausalLM.from_pretrained(...)` in the Granite-with-pytorch example
 
 ### Packages used:
-- docling==2.74.0
-- docling-parse==5.3.2
-- torch==2.9.1
-- torchvision==0.24.1
+- docling==2.100.0
+- docling-parse==6.2.0
+- torch==2.11.0
+- torchvision==0.26.0
 - transformers==4.57.1
 
 ### Python Version:
