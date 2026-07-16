@@ -46,10 +46,5 @@ chmod +x install_test_example.sh
 
 > **Note:** A sample PDF (`sample.pdf`) is automatically generated in the working directory on first run — no manual file setup is required. Model weights are downloaded automatically from HuggingFace on first run and cached locally (same behaviour as the Granite-with-pytorch example).
 
-### How to run only the tests:
-```bash
-python3.11 sub-test1.py
-```
-
 ### License:
-It's covered under Apache 2.0 licenses
+It's covered under MIT License
