@@ -74,6 +74,22 @@ mv /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1 \
    /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1.disabled
 ```
 
+## 🗑️ Removed
+
+### `LD_LIBRARY_PATH` Requirement
+
+Previously, users installing non-manylinux wheels had to manually set `LD_LIBRARY_PATH` to point to native shared libraries, to avoid runtime errors such as:
+
+```
+ImportError: libXYZ.so: cannot open shared object file
+```
+
+All wheels provided in this repository are **manylinux-compliant** and bundle their required native dependencies directly. This means:
+
+- No manual `LD_LIBRARY_PATH` configuration is needed.
+- Packages install cleanly and run consistently across all supported Linux distributions (RHEL, Ubuntu, SLES).
+- The related tip, note, and troubleshooting guidance for `LD_LIBRARY_PATH` have been removed from the README accordingly.
+
 ## 🚫 Deprecation Notice: Python 3.9 Support
 Support for Python 3.9 has been removed starting with this release.
 If you’re still using Python 3.9, please plan to upgrade to Python 3.10 or later to ensure compatibility with future updates.
