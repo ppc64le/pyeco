@@ -15,6 +15,6 @@ scipy==1.18.0+ppc64le1
 six==1.17.0+ppc64le1
 sympy==1.15.0.dev0+ppc64le1
 threadpoolctl==3.6.0
-torch==2.11.0+ppc64le1
+torch==2.12.1+ppc64le1
 typing_extensions==4.15.0
 tzdata==2026.2+ppc64le1

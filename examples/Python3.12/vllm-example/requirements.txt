@@ -109,7 +109,7 @@ starlette==0.52.1
 supervisor==4.3.0
 sympy==1.15.0.dev0+ppc64le1
 tokenizers==0.22.2
-torch==2.11.0+ppc64le1
+torch==2.12.1+ppc64le1
 tqdm==4.67.3
 transformers==5.1.0+ppc64le1
 typer==0.24.1
