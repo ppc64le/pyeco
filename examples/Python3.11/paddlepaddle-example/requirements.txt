@@ -1,12 +1,10 @@
 numpy==2.4.6+ppc64le1
-paddlepaddle==3.0.0
+paddlepaddle==3.0.0+ppc64le1
 pandas==3.0.3+ppc64le1
 Pillow==12.2.0+ppc64le1
 psutil==7.2.2+ppc64le1
 python-dateutil==2.9.0.post0
-pytz==2025.2
 scikit-learn==1.8.0+ppc64le1
 scipy==1.17.1+ppc64le2
 six==1.17.0+ppc64le1
-threadpoolctl==3.6.0
 tzdata==2026.2+ppc64le1
