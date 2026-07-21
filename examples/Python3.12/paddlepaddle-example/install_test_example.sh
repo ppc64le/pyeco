@@ -41,7 +41,12 @@ case $DISTRO in
         ;;
     "sles")
         sudo zypper refresh
-        sudo zypper install -y python312 python312-pip
+        # python312 is not in the default SLE_BCI repo; add the BCI Python 3.12 repo first
+        sudo zypper addrepo --no-gpgcheck --check \
+            "https://download.opensuse.org/repositories/devel:/languages:/python:/Factory/SLE_15_SP6/devel:languages:python:Factory.repo" \
+            python312-repo || true
+        sudo zypper --gpg-auto-import-keys refresh
+        sudo zypper install -y python312 python312-pip python312-devel
         ;;
     *)
         echo "Unsupported distribution: $DISTRO"
