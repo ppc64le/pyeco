@@ -5,7 +5,7 @@ joblib==1.5.2
 kiwisolver==1.5.0+ppc64le1
 lightgbm==4.6.0+ppc64le1
 matplotlib==3.10.9+ppc64le1
-numpy==2.4.6+ppc64le1
+numpy==1.26.4+ppc64le1
 packaging==25.0
 pandas==3.0.3+ppc64le1
 pillow==12.2.0+ppc64le1

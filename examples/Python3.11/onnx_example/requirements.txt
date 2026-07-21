@@ -13,7 +13,7 @@ onnxmltools==1.13.0+ppc64le1
 onnxruntime==1.25.1+ppc64le1
 packaging==25.0
 requests==2.32.5
-scikit-learn==1.8.0+ppc64le1
+scikit-learn==1.6.1+ppc64le1
 scipy==1.17.1+ppc64le2
 setuptools==80.9.0
 six==1.17.0+ppc64le1

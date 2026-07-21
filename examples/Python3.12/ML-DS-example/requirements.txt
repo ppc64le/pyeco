@@ -11,7 +11,7 @@ babel==2.18.0
 beautifulsoup4==4.14.3
 bleach==6.3.0
 bottleneck==1.6.0+ppc64le2
-cachetools==7.0.5+ppc64le1
+cachetools==5.5.2+ppc64le1
 certifi==2026.5.20+ppc64le1
 cffi==2.0.0+ppc64le1
 charset-normalizer==3.4.4
