@@ -41,9 +41,10 @@ case $DISTRO in
         ;;
     "sles")
         sudo zypper refresh
-        # python312 is not in the default SLE_BCI repo; add the BCI Python 3.12 repo first
+        # python312 is not in the default SLE_BCI repo; add the openSUSE Factory PowerPC repo
+        # which provides python312/python312-pip/python312-devel for ppc64le
         sudo zypper addrepo --no-gpgcheck --check \
-            "https://download.opensuse.org/repositories/devel:/languages:/python:/Factory/SLE_15_SP6/devel:languages:python:Factory.repo" \
+            "https://download.opensuse.org/repositories/devel:/languages:/python:/Factory/openSUSE_Factory_PowerPC/devel:languages:python:Factory.repo" \
             python312-repo || true
         sudo zypper --gpg-auto-import-keys refresh
         sudo zypper install -y python312 python312-pip python312-devel
