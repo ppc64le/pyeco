@@ -117,7 +117,7 @@ typing-inspection==0.4.2
 typing_extensions==4.15.0
 urllib3==2.6.3
 uvicorn==0.42.0
-vllm==0.24.0+cpuppc64le1
+vllm==0.22.0+cpuppc64le1
 watchfiles==0.21.0+ppc64le1
 websockets==16.0
 wrapt==2.1.2
