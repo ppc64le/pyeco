@@ -111,13 +111,13 @@ sympy==1.15.0.dev0+ppc64le1
 tokenizers==0.22.2
 torch==2.12.1+ppc64le1
 tqdm==4.67.3
-transformers==5.1.0+ppc64le1
+transformers==4.57.6
 typer==0.24.1
 typing-inspection==0.4.2
 typing_extensions==4.15.0
 urllib3==2.6.3
 uvicorn==0.42.0
-vllm==0.24.0+cpuppc64le1
+vllm==0.21.0+cpuppc64le1
 watchfiles==0.21.0+ppc64le1
 websockets==16.0
 wrapt==2.1.2
