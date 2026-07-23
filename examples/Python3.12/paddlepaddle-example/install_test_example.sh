@@ -41,19 +41,19 @@ case $DISTRO in
         ;;
     "sles")
         sudo zypper refresh
-        # python312 is not available in the default SLE_BCI repo; build from source instead
-        sudo zypper install -y gcc gcc-c++ make wget tar gzip \
-            libopenssl-devel zlib-devel ncurses-devel readline-devel \
-            sqlite3-devel libffi-devel xz-devel libbz2-devel
-        wget https://www.python.org/ftp/python/3.12.10/Python-3.12.10.tgz
-        tar xf Python-3.12.10.tgz
-        cd Python-3.12.10
-        ./configure --enable-optimizations
-        make -j$(nproc)
-        sudo make altinstall
-        cd ..
-        rm -rf Python-3.12.10*
-        ;;
+    	sudo zypper install -y gcc gcc-c++ make
+
+    	if ! command -v python3.12 >/dev/null 2>&1; then
+        	echo "Python 3.12 not found."
+
+        	if zypper search -x python312 | grep -q python312; then
+            	    	sudo zypper install -y python312 python312-devel python312-pip
+        	else
+            		echo "python312 packages unavailable."
+            		exit 1
+        	fi
+    	fi
+    	;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
