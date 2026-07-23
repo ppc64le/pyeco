@@ -21,6 +21,7 @@ This release includes updates to 50+ Python packages across multiple Python vers
 - Added over 150 wheels including: 
     - 7 new packages -  chromadb, jq, paddlepaddle, networkx, mistral_common, setools and srsly.
     - Packaging fixes in 17 native library wheels.
+    - TensorFlow v2.14.1 and its dependencies for UBI 8.10
 
 ## Package Licenses and CVE Details
 
