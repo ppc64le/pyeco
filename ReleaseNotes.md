@@ -45,6 +45,14 @@ Detailed package license information and CVE disclosures are available at
 
 ## Prerequisites
 - JDK is required for PyJNIus.
+- ruamel.yaml is required for ruamel_yaml_clib.
+- httpx is required for httpx_sse.
+- TensorFlow v2.18.1 is compatible with flatbuffers v25.2.10.
+- awx 24.6.1 and setools require setuptools<81.
+- paddlepaddle requires setuptools.
+- h5py v3.10.0 is compatible with numpy==1.26.4.
+- ml_dtypes requires numpy<2.
+- tensorflow-io-gcs-filesystem requires tensorflow.
 
 ## Known Issues
 - Ollama is not supported on Power9.
