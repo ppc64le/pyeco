@@ -1,10 +1,10 @@
-# DevPi V6
+# DevPi V7
 
-**Release Date:** Jun 18, 2026
+**Release Date:** Jul 23, 2026
 
 ## Overview
 
-This release includes updates to 70+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 ---
  
 ## Supported Platforms
@@ -18,12 +18,10 @@ This release includes updates to 70+ Python packages across multiple Python vers
 
 
 ## 🚀 Major Updates
-- Expanded PowerPC (ppc64le) wheel support to over 70 additional packages.
-- Added new packages, including agno and couchbase.
-- Added missing dependencies for vLLM and spaCy/Thinc, including xgrammar v0.2.1, apache_tvm_ffi v0.1.9, httptools v0.8.0, murmurhash v1.0.15, and preshed v3.0.13.
-- Resolved a performance issue in PyTorch v2.11.0, improving overall efficiency.
-- Replaced previously supplied PyTorch v2.11.0 wheels with newly built wheels that include this fix. 
-
+- Added over 150 wheels including: 
+    - 6 new packages -  jq, paddlepaddle, networkx, mistral_common, setools and srsly.
+    - Packaging fixes in 17 native library wheels.
+    - TensorFlow v2.14.1 and its dependencies for UBI 8.10
 
 ## Package Licenses and CVE Details
 
@@ -46,15 +44,22 @@ Detailed package license information and CVE disclosures are available at
 | **torchaudio** | 2.9.1+ppc64le3 | 3.11 | 2.9.1 | 
 
 ## Prerequisites
-- JDK is required for PyJNIus.
+- PyJNIus requires JDK to be installed.
+- ruamel.yaml is required for ruamel_yaml_clib.
+- httpx is required for httpx_sse.
+- AWX 24.6.1 and setools require setuptools < 81.
+- paddlepaddle requires setuptools.
+- h5py v3.10.0 is compatible with numpy==1.26.4.
+- ml_dtypes requires numpy < 2.
+- tensorflow-io-gcs-filesystem requires tensorflow.
+- TensorFlow v2.18.1 is compatible with flatbuffers v25.2.10.
 
 ## Known Issues
 - Ollama is not supported on Power9.
 - fire < 0.7.0 does not support Python 3.13/3.14.
-- cforge v1.0.0b4 requires jq>=1.11.0 and zeroconf>=0.148.0. As prebuilt wheels are not available, these dependencies must be compiled from source and require development tools. Additionally, cforge does not support Python 3.10/3.14.
+- cforge v1.0.0b4 requires zeroconf>=0.148.0. As prebuilt wheel is not available, this dependency must be compiled from source and requires development tools. Additionally, cforge does not support Python 3.10/3.14.
 - macs requires cykhash<3.0,>=2.0 and hmmlearn>=0.3; due to missing prebuilt wheels, these dependencies must be built from source using development tools.
 - iminuit v2.28.0 depends on packaging, which must be installed explicitly.
-- spacy and thinc depend on the srsly package for which prebuilt wheel is not available. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source.
 
 ## 🔧 Troubleshooting
 
