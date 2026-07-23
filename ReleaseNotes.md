@@ -1,4 +1,4 @@
-# DevPi V6
+# DevPi V7
 
 **Release Date:** Jul 23, 2026
 
@@ -19,8 +19,8 @@ This release includes updates to 50+ Python packages across multiple Python vers
 
 ## 🚀 Major Updates
 - Added over 150 wheels including: 
-    - Added 7 new packages -  chromadb, jq, paddlepaddle, networkx, mistral_common, setools and srsly.
-    - Fixes in packaging in 17 native library wheels.
+    - 7 new packages -  chromadb, jq, paddlepaddle, networkx, mistral_common, setools and srsly.
+    - Packaging fixes in 17 native library wheels.
 
 ## Package Licenses and CVE Details
 
