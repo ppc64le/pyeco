@@ -1,5 +1,5 @@
 catboost==1.2.7+ppc64le2
-contourpy==1.3.3+ppc64le1
+contourpy==1.3.3+ppc64le2
 cycler==0.12.1
 fonttools==4.62.1
 graphviz==0.21

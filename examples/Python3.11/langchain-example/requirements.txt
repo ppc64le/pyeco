@@ -1,6 +1,6 @@
 annotated-types==0.7.0
 anyio==4.12.1
-certifi==2026.2.25+ppc64le1
+certifi==2026.5.20+ppc64le1
 charset-normalizer==3.4.4
 greenlet==3.5.0+ppc64le1
 h11==0.16.0
@@ -16,13 +16,13 @@ langsmith==0.7.10
 numpy==2.4.6+ppc64le1
 orjson==3.11.7
 packaging==25.0
-pydantic==2.10.3+ppc64le1
-pydantic_core==2.27.1
-PyYAML==6.0.3+ppc64le1
+pydantic==2.12.5+ppc64le1
+pydantic_core==2.41.5+ppc64le1
+pyyaml==6.0.3+ppc64le2
 requests==2.32.5
 requests-toolbelt==1.0.0
 setuptools==68.2.2
-SQLAlchemy==1.4.39+ppc64le1
+sqlalchemy==2.0.50+ppc64le1
 tenacity==9.1.4
 typing-inspection==0.4.2
 typing_extensions==4.15.0

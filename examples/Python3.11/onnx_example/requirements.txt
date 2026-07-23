@@ -1,4 +1,4 @@
-certifi==2025.7.14+ppc64le1
+certifi==2026.5.20+ppc64le1
 charset-normalizer==3.4.3
 coloredlogs==15.0.1
 flatbuffers==25.2.10+ppc64le1
