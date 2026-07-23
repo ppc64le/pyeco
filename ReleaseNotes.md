@@ -1,10 +1,10 @@
 # DevPi V6
 
-**Release Date:** Jun 18, 2026
+**Release Date:** Jul 23, 2026
 
 ## Overview
 
-This release includes updates to 70+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 ---
  
 ## Supported Platforms
@@ -18,12 +18,9 @@ This release includes updates to 70+ Python packages across multiple Python vers
 
 
 ## 🚀 Major Updates
-- Expanded PowerPC (ppc64le) wheel support to over 70 additional packages.
-- Added new packages, including agno and couchbase.
-- Added missing dependencies for vLLM and spaCy/Thinc, including xgrammar v0.2.1, apache_tvm_ffi v0.1.9, httptools v0.8.0, murmurhash v1.0.15, and preshed v3.0.13.
-- Resolved a performance issue in PyTorch v2.11.0, improving overall efficiency.
-- Replaced previously supplied PyTorch v2.11.0 wheels with newly built wheels that include this fix. 
-
+- Added over 150 wheels including: 
+    - Added 7 new packages -  chromadb, jq, paddlepaddle, networkx, mistral_common, setools and srsly.
+    - Fixes in packaging in 17 native library wheels.
 
 ## Package Licenses and CVE Details
 
@@ -51,10 +48,9 @@ Detailed package license information and CVE disclosures are available at
 ## Known Issues
 - Ollama is not supported on Power9.
 - fire < 0.7.0 does not support Python 3.13/3.14.
-- cforge v1.0.0b4 requires jq>=1.11.0 and zeroconf>=0.148.0. As prebuilt wheels are not available, these dependencies must be compiled from source and require development tools. Additionally, cforge does not support Python 3.10/3.14.
+- cforge v1.0.0b4 requires zeroconf>=0.148.0. As prebuilt wheel is not available, this dependency must be compiled from source and requires development tools. Additionally, cforge does not support Python 3.10/3.14.
 - macs requires cykhash<3.0,>=2.0 and hmmlearn>=0.3; due to missing prebuilt wheels, these dependencies must be built from source using development tools.
 - iminuit v2.28.0 depends on packaging, which must be installed explicitly.
-- spacy and thinc depend on the srsly package for which prebuilt wheel is not available. As a result, gcc, g++, and Python development headers (Python.h) must be installed and available at runtime to compile these packages from source.
 
 ## 🔧 Troubleshooting
 
