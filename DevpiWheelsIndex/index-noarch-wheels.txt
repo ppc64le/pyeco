@@ -1,3 +1,4 @@
+abseil-cpp==20230125.4+ppc64le1
 abseil-cpp==20230802.3+ppc64le1
 abseil-cpp==20240116.2+ppc64le1
 aesara==2.9.4+ppc64le1
@@ -61,7 +62,10 @@ certifi==2024.8.30+ppc64le1
 certifi==2025.1.31+ppc64le1
 certifi==2025.11.12+ppc64le1
 certifi==2025.7.14+ppc64le1
+certifi==2026.1.4+ppc64le1
 certifi==2026.2.25+ppc64le1
+certifi==2026.4.22+ppc64le1
+certifi==2026.5.20+ppc64le1
 certipy==0.2.1+ppc64le1
 certipy==0.2.2+ppc64le1
 cforge==1.0.0b4+ppc64le1
@@ -99,6 +103,7 @@ fastapi==0.136.1+ppc64le1
 fastjsonschema==2.16.2+ppc64le1
 fastjsonschema==2.21.1+ppc64le1
 ffmpeg==4.2.2+ppc64le1
+ffmpeg==4.4.2+ppc64le1
 ffmpeg==5.1.6+ppc64le1
 ffmpeg==7.1+ppc64le1
 filelock==3.18.0+ppc64le1
@@ -124,6 +129,8 @@ geomet==1.1.0+ppc64le1
 gradio==6.9.0+ppc64le1
 graphite2==1.3.14+ppc64le1
 graphviz==0.20.2+ppc64le1
+grpc-cpp==1.54.3+ppc64le1
+grpc-cpp==1.68.0+ppc64le1
 gunicorn==21.2.0+ppc64le1
 gunicorn==23.0.0+ppc64le1
 hdf5==1.12.1+ppc64le1
@@ -133,6 +140,7 @@ hdf5==1.14.6+ppc64le1
 hdijupyterutils==0.20.0+ppc64le1
 hjson==3.0.2+ppc64le1
 httpx-sse==0.4.0+ppc64le1
+httpx-sse==0.4.3+ppc64le1
 iaesdk==3.3.0+ppc64le1
 ibm-cloud-sdk-core==3.16.7+ppc64le1
 ibm-cloud-sdk-core==3.22.1+ppc64le1
@@ -202,18 +210,23 @@ langdetect==1.0.8+ppc64le1
 langgraph==1.0.9+ppc64le1
 langgraph==1.1.7a2+ppc64le1
 lapack==3.12.1+ppc64le1
+lapack==3.12.1+ppc64le2
 libclang==14.0.6+ppc64le1
 libclang==18.1.1+ppc64le1
+libprotobuf==21.12+ppc64le1
 libprotobuf==25.0
 libprotobuf==25.0+ppc64le1
 libprotobuf==25.4
 libprotobuf==25.4+ppc64le1
 libprotobuf==25.8+ppc64le1
+libprotobuf==28.0+ppc64le1
 libprotobuf==4.25.3+ppc64le1
+libprotobuf==4.25.8+ppc64le1
 librt==0.8.1+ppc64le1
 libvpx==1.13.1+ppc64le1
 libvpx==1.9.0+ppc64le1
 lightgbm==3.3.2+ppc64le1
+lightgbm==4.6.0+ppc64le1
 luigi==3.6.0+ppc64le1
 markdown==3.10.2+ppc64le1
 markdown==3.6+ppc64le1
@@ -223,6 +236,7 @@ milvus-lite==2.4.11+ppc64le1
 milvus-lite==2.4.12+ppc64le1
 milvus-lite==2.5.0+ppc64le1
 milvus-lite==2.5.1+ppc64le1
+mistral-common==1.11.5+ppc64le1
 mock==5.2.0+ppc64le1
 mongoengine==0.29.1+ppc64le1
 mpmath==1.3.0+ppc64le1
@@ -238,14 +252,17 @@ nbconvert==7.17.0+ppc64le1
 nbconvert==7.17.1+ppc64le1
 nbformat==5.10.3+ppc64le1
 nbformat==5.10.4+ppc64le1
+networkx==3.6.1+ppc64le1
 notebook==6.5.4+ppc64le1
 notebook==6.5.7+ppc64le1
 numactl==2.0.19+ppc64le1
+numactl==2.0.19+ppc64le2
 ollama-python-package==0.12.10+ppc64le1
 ollama-python-package==0.13.1+ppc64le1
 ollama-python-package==0.13.5+ppc64le1
 ollama-python-package==0.20.3+ppc64le1
 ollama-python-package==0.23.1+ppc64le1
+ollama-python-package==0.30.10+ppc64le1
 openapi-schema-validator==0.6.3+ppc64le1
 openblas==0.3.29+ppc64le1
 openblas==0.3.30+ppc64le1
@@ -256,6 +273,7 @@ openmpi==5.0.8+ppc64le1
 opentelemetry-python-contrib==1.16.0+ppc64le1
 opentelemetry-python==1.37.0+ppc64le1
 opus==1.3.1+ppc64le1
+orc==2.0.3+ppc64le1
 pallets-sphinx-themes==2.3.0+ppc64le1
 param==1.13.0+ppc64le1
 param==2.0.0+ppc64le1
@@ -270,6 +288,7 @@ param==2.3.1+ppc64le1
 param==2.3.2+ppc64le1
 param==2.3.3+ppc64le1
 param==2.4.0+ppc64le1
+param==2.4.1+ppc64le1
 partd==1.4.1+ppc64le1
 partd==1.4.2+ppc64le1
 patroni==4.0.5+ppc64le1
@@ -288,6 +307,8 @@ protobuf==4.21.12+ppc64le1
 pure-eval==0.2.3+ppc64le1
 py-make==0.1.2+ppc64le1
 pydantic==2.10.3+ppc64le1
+pydantic==2.12.5+ppc64le1
+pydantic==2.13.4+ppc64le1
 pygments==2.19.1+ppc64le1
 pygments==2.19.2+ppc64le1
 pygments==2.20.0+ppc64le1
@@ -355,6 +376,7 @@ sphinx-rtd-theme==3.0.2+ppc64le1
 sphinx-rtd-theme==3.1.0rc1+ppc64le1
 sphinx==8.2.3+ppc64le1
 sphinxcontrib-programoutput==0.18+ppc64le1
+sqlalchemy==2.0.50+ppc64le1
 sqlite-vec==0.1.9+ppc64le1
 stripe==10.5.0+ppc64le1
 stripe==12.2.0+ppc64le1
@@ -377,6 +399,8 @@ thrift-cpp==0.18.0+ppc64le1
 thrift-cpp==0.21.0+ppc64le1
 torchdata==0.7.1+ppc64le1
 traitlets==5.7.1+ppc64le1
+transformers==4.57.1+ppc64le1
+transformers==4.57.6+ppc64le1
 transformers==5.1.0+ppc64le1
 treepoem==3.24.0+ppc64le1
 treepoem==3.27.1+ppc64le1

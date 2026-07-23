@@ -62,6 +62,7 @@ cryptography==46.0.3+ppc64le1
 cryptography==46.0.5+ppc64le1
 cryptography==46.0.6+ppc64le1
 cryptography==46.0.7+ppc64le1
+cryptography==48.0.0+ppc64le1
 cutadapt==5.1+ppc64le1
 cx-oracle==8.3.0+ppc64le2
 cymem==2.0.7+ppc64le1
@@ -129,6 +130,7 @@ hf-xet==1.1.9+ppc64le1
 hf-xet==1.2.0+ppc64le1
 hf-xet==1.4.2+ppc64le1
 hf-xet==1.5.0+ppc64le1
+hf-xet==1.5.1+ppc64le1
 hnswlib==0.8.0+ppc64le1
 httptools==0.6.4+ppc64le2
 httptools==0.7.1+ppc64le1
