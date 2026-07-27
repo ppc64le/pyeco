@@ -32,16 +32,22 @@ Detailed package license information and CVE disclosures are available at
 
 | Package | Version | Python Versions | Compatible Torch Version | 
 |---------|---------|-----------------|-------------------------|
-| **torchvision** | 0.22.1+ppc64le1 | 3.11, 3.13 | 2.6.0 | 
-| **torchvision** | 0.24.0+ppc64le1 | 3.11 | 2.9.0 |
-| **torchvision** | 0.24.1+ppc64le1 | 3.10, 3.12 | 2.9.x |
-| **torchvision** | 0.24.1+ppc64le2 | 3.11, 3.12, 3.13, 3.14 | 2.9.x |
-| **torchvision** | 0.25.0+ppc64le1 | 3.11, 3.14 | 2.9.0 |
-| **torchtext** | 0.18.0+ppc64le1 | 3.12 | 2.8.0 |
-| **torchaudio** | 2.7.1+ppc64le1 | 3.10, 3.11, 3.12, 3.13 | 2.7.1 | 
-| **torchaudio** | 2.9.0+ppc64le1 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.0 | 
-| **torchaudio** | 2.9.1+ppc64le2 | 3.10, 3.12, 3.13, 3.14 | 2.9.1 | 
-| **torchaudio** | 2.9.1+ppc64le3 | 3.11 | 2.9.1 | 
+| **torchvision** | 0.22.1 | 3.11, 3.13 | 2.6.0 | 
+| **torchvision** | 0.24.0 | 3.11 | 2.9.0 |
+| **torchvision** | 0.24.1 | 3.10, 3.12 | 2.9.x |
+| **torchvision** | 0.24.1 | 3.11, 3.12, 3.13, 3.14 | 2.9.x |
+| **torchvision** | 0.25.0 | 3.11, 3.14 | 2.9.0 |
+| **torchtext** | 0.15.2 | 3.12 | 2.8.0 |
+| **torchtext** | 0.16.2 | 3.120, 3.11 | 2.8.0 |
+| **torchtext** | 0.18.0 | 3.10, 3.11, 3.12, 3.13 | 2.8.0 |
+| **torchaudio** | 2.6.0 | 3.11, 3.12 | 2.6.0 |
+| **torchaudio** | 2.7.1 | 3.10, 3.11, 3.12, 3.13 | 2.7.1 | 
+| **torchaudio** | 2.8.0 | 3.12 | 2.8.0 |
+| **torchaudio** | 2.9.0 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.0 | 
+| **torchaudio** | 2.9.1 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.1 | 
+
+For version compatiblity between PyTorch and domain libraries - [PyTorch - Domain libraries version compatibility matrix](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions)
+ 
 
 ## Prerequisites
 - PyJNIus requires JDK to be installed.
