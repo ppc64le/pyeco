@@ -23,13 +23,22 @@ Additionally, wheels without local version identifiers (suffixes) are now provid
     - 6 new packages -  jq, paddlepaddle, networkx, mistral_common, setools and srsly.
     - Packaging fixes in 17 native library wheels.
     - TensorFlow v2.14.1 and its dependencies for UBI 8.10
-
+ 
 ## Package Licenses and CVE Details
 
 Detailed package license information and CVE disclosures are available at 
 [Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
 
+## Package Prerequisites
+- PyJNIus requires JDK to be installed. 
+- ruamel.yaml is required for ruamel_yaml_clib.
+- httpx is required for httpx_sse.
+- tensorflow-io-gcs-filesystem requires tensorflow.
+- TensorFlow v2.18.1 is compatible with flatbuffers v25.2.10.
+
 ## Package Version compatiblity
+
+### PyTorch compatibility
 
 | Package | Version | Python Versions | Compatible Torch Version | 
 |---------|---------|-----------------|-------------------------|
@@ -50,6 +59,7 @@ Detailed package license information and CVE disclosures are available at
 For complete version compatiblity between PyTorch and domain libraries, pls see - [PyTorch - Domain libraries version compatibility matrix](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions)
  
 ### Numpy compatibility
+
 The following packages require **NumPy 1.26.4** and are not compatible with NumPy 2.x.
 
 - bottleneck 1.3.5
@@ -71,13 +81,6 @@ The following packages require **setuptools < 81**.
 - AWX 24.6.1
 - setools
 - xgboost
-
-## Package Prerequisites
-- PyJNIus requires JDK to be installed. 
-- ruamel.yaml is required for ruamel_yaml_clib.
-- httpx is required for httpx_sse.
-- tensorflow-io-gcs-filesystem requires tensorflow.
-- TensorFlow v2.18.1 is compatible with flatbuffers v25.2.10.
 
 ## ⚠️ Known Issues
 ### Platform Support 
