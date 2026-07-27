@@ -32,10 +32,10 @@ Detailed package license information and CVE disclosures are available at
 [Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
 
 ## Package Prerequisites
-- PyJNIus requires JDK to be installed. 
+- JDK is required for PyJNIus. 
 - ruamel.yaml is required for ruamel_yaml_clib.
 - httpx is required for httpx_sse.
-- tensorflow-io-gcs-filesystem requires tensorflow.
+- TensorFlow is required for tensorflow-io-gcs-filesystem.
 - TensorFlow v2.18.1 is compatible with flatbuffers v25.2.10.
 
 ## Package Version compatiblity
