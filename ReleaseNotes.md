@@ -50,7 +50,7 @@ Detailed package license information and CVE disclosures are available at
 | **torchvision** | 0.24.1 | 3.11, 3.12, 3.13, 3.14 | 2.9.x |
 | **torchvision** | 0.25.0 | 3.11, 3.14 | 2.9.0 |
 | **torchtext** | 0.15.2 | 3.12 | 2.8.0 |
-| **torchtext** | 0.16.2 | 3.120, 3.11 | 2.8.0 |
+| **torchtext** | 0.16.2 | 3.10, 3.11 | 2.8.0 |
 | **torchtext** | 0.18.0 | 3.10, 3.11, 3.12, 3.13 | 2.8.0 |
 | **torchaudio** | 2.6.0 | 3.11, 3.12 | 2.6.0 |
 | **torchaudio** | 2.7.1 | 3.10, 3.11, 3.12, 3.13 | 2.7.1 | 
@@ -58,7 +58,7 @@ Detailed package license information and CVE disclosures are available at
 | **torchaudio** | 2.9.0 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.0 | 
 | **torchaudio** | 2.9.1 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.1 | 
 
-For complete version compatiblity between PyTorch and domain libraries, pls see - [PyTorch - Domain libraries version compatibility matrix](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions)
+For complete version compatibility information between PyTorch and its domain libraries, see the - [PyTorch - Domain libraries version compatibility matrix](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions)
  
 ### Numpy compatibility
 
@@ -77,7 +77,7 @@ The following packages require **NumPy 1.26.4** and are not compatible with NumP
 
 ### setuptools compatibility
 
-The following packages require **setuptools < 81**. 
+The following packages require **setuptools < 81** and may not function correctly with newer setuptools versions.
 - milvus-lite
 - paddlepaddle
 - AWX 24.6.1
@@ -101,7 +101,7 @@ Compilation requires the following development tools:
 
 **Affected packages:**
 - ansible_rulebook 1.1.*
-- autovizwidget v0.22.0
+- autovizwidget 0.22.0
 - cforge v1.0.0b4
 - cutadapt 5.1
 - lightgbm 3.3.2
@@ -109,8 +109,8 @@ Compilation requires the following development tools:
 - orange3 v3.38.1
 - poetry 1.8.*
 - sparkmagic 0.20.0
-- tensorflow v2.14.1
-- tensorflow-text v2.14.0
+- tensorflow 2.14.1
+- tensorflow-text 2.14.0
 - uvtools
 - apache-airflow (requires Rust and Cargo)
 
