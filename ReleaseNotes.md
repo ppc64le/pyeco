@@ -5,6 +5,7 @@
 ## Overview
 
 This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+Additionally, wheels without local version identifiers (suffixes) are now provided for uv compatibility. These wheels are available alongside the corresponding versions that include local version suffixes.
 ---
  
 ## Supported Platforms
@@ -77,18 +78,10 @@ The following packages require **setuptools < 81**.
 - httpx is required for httpx_sse.
 - tensorflow-io-gcs-filesystem requires tensorflow.
 - TensorFlow v2.18.1 is compatible with flatbuffers v25.2.10.
-- 
-
-
 
 ## ⚠️ Known Issues
 ### Platform Support 
 - Ollama is not supported on Power9.
-
-### Python Version Support 
-- aesera v2.9.4 and flatbuffers v2.0.0 do not support Python v3.12.
-- ansible-core v2.18.6: Python 3.10 is not supported.
-- cforge v1.0.0b4: Supports Python ≥ 3.11.
 
 ### Missing Pre-built Wheels for Some Dependencies
 Some packages in this release do not have pre-built wheels available for certain dependencies.
