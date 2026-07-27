@@ -5,7 +5,9 @@
 ## Overview
 
 This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+
 Additionally, wheels without local version identifiers (suffixes) are now provided for uv compatibility. These wheels are available alongside the corresponding versions that include local version suffixes.
+
 ---
  
 ## Supported Platforms
