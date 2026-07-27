@@ -36,7 +36,8 @@ Detailed package license information and CVE disclosures are available at
 - ruamel.yaml is required for ruamel_yaml_clib.
 - httpx is required for httpx_sse.
 - TensorFlow is required for tensorflow-io-gcs-filesystem.
-- TensorFlow v2.18.1 is compatible with flatbuffers v25.2.10.
+- TensorFlow 2.18.1 is compatible with flatbuffers 25.2.10.
+- iminuit 2.28.0 depends on packaging, which must be installed explicitly.
 
 ## Package Version compatiblity
 
