@@ -64,7 +64,7 @@ IBM Power wheels are published in two forms:
 | **Suffix wheel** | `2.2.6+ppc64le1`, `2.2.6+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix is the latest build**. |
 | **Suffix-free wheel** | `2.2.6` | A fixed, stable build provided for compatibility with tools like `uv` that work best without version suffixes. |
 
-- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up security patches or compiler improvements.
+- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up dependency updates or build script improvements.
 - The **suffix-free** wheel is a **convenience build** for simple installs. If you need build traceability or want to ensure a specific build is used, always pin to the explicit suffixed version (e.g. `numpy==2.2.6+ppc64le1`).
 - Both forms are available simultaneously — you can use either depending on your workflow.
 
@@ -172,7 +172,7 @@ devpi list
 # Using pip
 pip install uv
 
-# Or using the official standalone installer (Linux/macOS)
+# Or using the official standalone installer
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
@@ -180,25 +180,23 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 IBM Power wheels are published as **suffix-free** builds (e.g. `2.2.6`) in addition to suffixed builds (e.g. `2.2.6+ppc64le1`, `2.2.6+ppc64le2`). The suffix-free wheel is a **fixed, stable build** that lets `uv` install without needing to know the exact suffix. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
 
-Use `--extra-index-url` and `--index-strategy unsafe-best-match` to prefer Power-optimized wheels when available:
+Use `--index` to set the IBM Power DevPI repository as the primary index. `uv` will check it first and fall back to PyPI for any packages not available there:
 
 ```bash
-uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --index-strategy unsafe-best-match \
+uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
   --prefer-binary \
   <package-name>
 ```
 
-- **`--index-strategy unsafe-best-match`** — allows `uv` to select the best-matching wheel across all configured indexes (PyPI + DevPI), prioritising Power-optimized wheels.
+- **`--index`** — sets IBM DevPI as the primary index; `uv` checks it first before falling back to PyPI.
 - **`--prefer-binary`** — skips source builds and installs prebuilt wheels whenever possible.
-- Any `noarch` dependencies will still be resolved from PyPI.
+- Any packages not on DevPI will still be resolved from PyPI.
 
 **Pinning to a specific IBM Power build**: Specify the full suffixed version if you need a particular build:
 
 ```bash
 uv pip install "numpy==2.2.6+ppc64le2" \
-  --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --index-strategy unsafe-best-match
+  --index https://wheels.developerfirst.ibm.com/ppc64le/linux
 ```
 
 ### Using `uv add` with pyproject.toml
@@ -223,8 +221,6 @@ uv sync
   → matches   numpy==2.2.6+ppc64le2  on IBM DevPI  ✅
   → installs  numpy==2.2.6+ppc64le2
 ```
-
-> ⚠️ **Portability note**: If the same `pyproject.toml` is used on a non-ppc64le system without the IBM DevPI index configured, `uv` will fall back to the PyPI wheel for `numpy==2.2.6`. Ensure the IBM DevPI index is configured for all IBM Power environments.
 
 **Verifying which build was actually installed**
 
@@ -255,11 +251,10 @@ If the output shows `2.2.6` without a suffix, the PyPI wheel was picked up inste
 uv venv .venv
 
 # Activate it
-source .venv/bin/activate          
+source .venv/bin/activate
 
 # Install packages into the virtual environment
-uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --index-strategy unsafe-best-match \
+uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
   --prefer-binary \
   <package-name>
 ```
@@ -268,8 +263,7 @@ uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/l
 
 ```bash
 uv pip install -r requirements.txt \
-  --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --index-strategy unsafe-best-match \
+  --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
   --prefer-binary
 ```
 
@@ -280,8 +274,7 @@ uv pip install -r requirements.txt \
 
   ```bash
   uv pip install --no-cache --reinstall \
-    --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
-    --index-strategy unsafe-best-match \
+    --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
     <package-name>
   ```
 
