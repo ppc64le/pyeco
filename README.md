@@ -64,8 +64,8 @@ IBM Power wheels are published in two forms:
 | **Suffix wheel** | `1.2.3+ppc64le1`, `1.2.3+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix is the latest build**. |
 | **Suffix-free wheel** | `1.2.3` | A fixed, stable build provided for compatibility with tools like `uv` that work best without version suffixes. |
 
-- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up security patches or compiler improvements.
-- The **suffix-free** wheel is a **fixed build** published once. It was chosen from the available suffixed builds at time of publication. It may not correspond to the highest-suffix (latest) build.
+- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version.
+- The **suffix-free** wheel is a **convenience build** for simple installs. If you need build traceability or want to ensure a specific build is used, always pin to the explicit suffixed version (e.g. `numpy==2.2.6+ppc64le1`).
 - Both forms are available simultaneously — you can use either depending on your workflow.
 
 **Choosing the right version**:
@@ -80,11 +80,11 @@ IBM Power wheels are published in two forms:
 
 ```bash
 # pip
-pip install "numpy==2.2.6+ppc64le2" \
+pip install "numpy==1.26.4+ppc64le2" \
   --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
 
 # uv
-uv pip install "numpy==2.2.6+ppc64le2" \
+uv pip install "numpy==1.26.4+ppc64le2" \
   --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
   --index-strategy unsafe-best-match
 ```
@@ -253,7 +253,7 @@ If the output shows `2.2.6` without a suffix, the PyPI wheel was picked up inste
 uv venv .venv
 
 # Activate it
-source .venv/bin/activate
+source .venv/bin/activate          # Linux/macOS
 
 # Install packages into the virtual environment
 uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
@@ -269,6 +269,14 @@ uv pip install -r requirements.txt \
   --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
   --index-strategy unsafe-best-match \
   --prefer-binary
+```
+
+### Offline / Air-gapped Installation
+
+If you have pre-downloaded wheels locally:
+
+```bash
+uv pip install --no-index --find-links ./wheels/ <package-name>
 ```
 
 ### Troubleshooting Tips
