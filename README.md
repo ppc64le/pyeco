@@ -61,10 +61,10 @@ IBM Power wheels are published in two forms:
 
 | Wheel type | Example version | Purpose |
 |---|---|---|
-| **Suffix wheel** | `1.2.3+ppc64le1`, `1.2.3+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix is the latest build**. |
-| **Suffix-free wheel** | `1.2.3` | A fixed, stable build provided for compatibility with tools like `uv` that work best without version suffixes. |
+| **Suffix wheel** | `2.2.6+ppc64le1`, `2.2.6+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix is the latest build**. |
+| **Suffix-free wheel** | `2.2.6` | A fixed, stable build provided for compatibility with tools like `uv` that work best without version suffixes. |
 
-- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version.
+- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up security patches or compiler improvements.
 - The **suffix-free** wheel is a **convenience build** for simple installs. If you need build traceability or want to ensure a specific build is used, always pin to the explicit suffixed version (e.g. `numpy==2.2.6+ppc64le1`).
 - Both forms are available simultaneously — you can use either depending on your workflow.
 
@@ -72,19 +72,19 @@ IBM Power wheels are published in two forms:
 
 | Goal | What to install |
 |---|---|
-| Latest IBM Power build | Highest-suffix version, e.g. `1.2.3+ppc64le2` |
-| Simple install with no suffix needed (e.g. with `uv`) | Suffix-free version `1.2.3` |
-| A specific known build | Full suffixed version, e.g. `1.2.3+ppc64le1` |
+| Latest IBM Power build | Highest-suffix version, e.g. `2.2.6+ppc64le2` |
+| Simple install with no suffix needed (e.g. with `uv`) | Suffix-free version `2.2.6` |
+| A specific known build | Full suffixed version, e.g. `2.2.6+ppc64le1` |
 
 **Pinning to a specific build**: Specify the full suffixed version explicitly:
 
 ```bash
 # pip
-pip install "numpy==1.26.4+ppc64le2" \
+pip install "numpy==2.2.6+ppc64le2" \
   --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
 
 # uv
-uv pip install "numpy==1.26.4+ppc64le2" \
+uv pip install "numpy==2.2.6+ppc64le2" \
   --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
   --index-strategy unsafe-best-match
 ```
@@ -172,13 +172,13 @@ devpi list
 # Using pip
 pip install uv
 
-# Or using the official standalone installer
+# Or using the official standalone installer (Linux/macOS)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ### Installation using the IBM Power DevPI Repository
 
-IBM Power wheels are published as **suffix-free** builds (e.g. `1.2.3`) in addition to suffixed builds (e.g. `1.2.3+ppc64le1`, `1.2.3+ppc64le2`). The suffix-free wheel is a **fixed, stable build** that lets `uv` install without needing to know the exact suffix. Note that it may not correspond to the highest-suffix (latest) build — if you need the latest, pin to the highest suffixed version explicitly. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
+IBM Power wheels are published as **suffix-free** builds (e.g. `2.2.6`) in addition to suffixed builds (e.g. `2.2.6+ppc64le1`, `2.2.6+ppc64le2`). The suffix-free wheel is a **fixed, stable build** that lets `uv` install without needing to know the exact suffix. Note that it may not correspond to the highest-suffix (latest) build — if you need the latest, pin to the highest suffixed version explicitly. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
 
 Use `--extra-index-url` and `--index-strategy unsafe-best-match` to prefer Power-optimized wheels when available:
 
@@ -224,6 +224,8 @@ uv sync
   → installs  numpy==2.2.6+ppc64le2
 ```
 
+> ⚠️ **Portability note**: If the same `pyproject.toml` is used on a non-ppc64le system without the IBM DevPI index configured, `uv` will fall back to the PyPI wheel for `numpy==2.2.6`. Ensure the IBM DevPI index is configured for all IBM Power environments.
+
 **Verifying which build was actually installed**
 
 After running `uv add` or `uv sync`, use any of the following to confirm the exact build installed:
@@ -254,6 +256,7 @@ uv venv .venv
 
 # Activate it
 source .venv/bin/activate          # Linux/macOS
+.venv\Scripts\activate             # Windows
 
 # Install packages into the virtual environment
 uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
