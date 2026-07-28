@@ -224,8 +224,6 @@ uv sync
   → installs  numpy==2.2.6+ppc64le2
 ```
 
-> ⚠️ **Portability note**: If the same `pyproject.toml` is used on a non-ppc64le system without the IBM DevPI index configured, `uv` will fall back to the PyPI wheel for `numpy==2.2.6`. Ensure the IBM DevPI index is configured for all IBM Power environments.
-
 **Verifying which build was actually installed**
 
 After running `uv add` or `uv sync`, use any of the following to confirm the exact build installed:
