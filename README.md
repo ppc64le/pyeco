@@ -201,6 +201,53 @@ uv pip install "numpy==2.2.6+ppc64le2" \
   --index-strategy unsafe-best-match
 ```
 
+### Using `uv add` with pyproject.toml
+
+`uv add` is the recommended way to manage dependencies in a `uv`-based project. It installs the IBM Power wheel but records only the **base version** (without the local suffix) in `pyproject.toml`, keeping the project portable:
+
+```bash
+uv add numpy==2.2.6 --index https://wheels.developerfirst.ibm.com/ppc64le/linux
+# Installed: numpy==2.2.6+ppc64le2
+# Recorded in pyproject.toml: "numpy==2.2.6"
+```
+
+This is correct behaviour. PEP 440 local version segments (`+ppc64le2`) are **not permitted in dependency specifiers**, so `uv` intentionally strips them when writing to `pyproject.toml`.
+
+**Will `uv sync` from that `pyproject.toml` work on IBM Power?**
+
+Yes. When `uv` later resolves `numpy==2.2.6` (e.g. via `uv sync`), PEP 440 specifies that a local version segment is **ignored during dependency resolution** — so `numpy==2.2.6` matches `numpy==2.2.6+ppc64le2` on the IBM DevPI index and the correct IBM Power wheel is installed.
+
+```
+uv sync
+  → resolves  numpy==2.2.6  (from pyproject.toml)
+  → matches   numpy==2.2.6+ppc64le2  on IBM DevPI  ✅
+  → installs  numpy==2.2.6+ppc64le2
+```
+
+> ⚠️ **Portability note**: If the same `pyproject.toml` is used on a non-ppc64le system without the IBM DevPI index configured, `uv` will fall back to the PyPI wheel for `numpy==2.2.6`. Ensure the IBM DevPI index is configured for all IBM Power environments.
+
+**Verifying which build was actually installed**
+
+After running `uv add` or `uv sync`, use any of the following to confirm the exact build installed:
+
+```bash
+# Shows the full installed version including the local suffix
+uv pip show numpy
+
+# Lists all installed packages with their full versions
+uv pip freeze | grep numpy
+
+# Inspect the installed distribution metadata directly
+python -c "import importlib.metadata; print(importlib.metadata.version('numpy'))"
+```
+
+Expected output (on IBM Power with the DevPI index):
+```
+2.2.6+ppc64le2
+```
+
+If the output shows `2.2.6` without a suffix, the PyPI wheel was picked up instead of the IBM Power build — verify your index configuration.
+
 ### Using a Virtual Environment with uv
 
 ```bash
