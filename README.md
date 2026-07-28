@@ -178,7 +178,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### Installation using the IBM Power DevPI Repository
 
-IBM Power wheels are published as **suffix-free** builds (e.g. `2.2.6`) in addition to suffixed builds (e.g. `2.2.6+ppc64le1`, `2.2.6+ppc64le2`). The suffix-free wheel is a **fixed, stable build** that lets `uv` install without needing to know the exact suffix. Note that it may not correspond to the highest-suffix (latest) build — if you need the latest, pin to the highest suffixed version explicitly. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
+IBM Power wheels are published as **suffix-free** builds (e.g. `2.2.6`) in addition to suffixed builds (e.g. `2.2.6+ppc64le1`, `2.2.6+ppc64le2`). The suffix-free wheel is a **fixed, stable build** that lets `uv` install without needing to know the exact suffix. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
 
 Use `--extra-index-url` and `--index-strategy unsafe-best-match` to prefer Power-optimized wheels when available:
 
