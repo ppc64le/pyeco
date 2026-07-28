@@ -8,8 +8,9 @@ This readme is designed to help new users quickly understand, discover, and use 
 2. [**Check Compatibility**](#2️⃣-check-compatibility-is-this-right-for-you) - Architecture, processors, and Python versions
 3. [**Discover Available Wheels**](#3️⃣-discover-available-wheels-find-the-right-packages) - Find packages and versions easily
 4. [**Install with pip**](#4️⃣-install-with-pip-familiar-workflow) - Use familiar workflows with DevPI
-5. [**Explore Examples**](#5️⃣-learn-by-example--general-usage-applications) - General usage applications
-6. [**Go Further**](#6️⃣-go-further-build-faster-easier-and-explore-the-ecosystem) - Build faster, easier and explore the Ecosystem
+5. [**Install with uv**](#5️⃣-install-with-uv-fast-modern-package-management) - Fast, modern package management with uv
+6. [**Explore Examples**](#6️⃣-learn-by-example--general-usage-applications) - General usage applications
+7. [**Go Further**](#7️⃣-go-further-build-faster-easier-and-explore-the-ecosystem) - Build faster, easier and explore the Ecosystem
 
 
 ---
@@ -54,9 +55,41 @@ https://wheels.developerfirst.ibm.com/ppc64le/linux
 
 To view all available wheel versions for a package, refer to the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/) on the DevPI server, which provides the complete version history for that package.
 
-📝 **Note: Wheel Version Suffixes**
+📝 **Note: Wheel Versions and Suffixes**
 
-IBM Power wheels use a version suffix (for example, `ppc64le1`) to identify build updates. When a wheel is rebuilt for the same upstream package version, the suffix is incremented (`ppc64le2`, `ppc64le3`, etc.). This allows incremental improvements while preserving the original upstream version number and clearly distinguishing updated builds.
+IBM Power wheels are published in two forms:
+
+| Wheel type | Example version | Purpose |
+|---|---|---|
+| **Suffix wheel** | `1.2.3+ppc64le1`, `1.2.3+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix is the latest build**. |
+| **Suffix-free wheel** | `1.2.3` | A fixed, stable build provided for compatibility with tools like `uv` that work best without version suffixes. |
+
+- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up security patches or compiler improvements.
+- The **suffix-free** wheel is a **fixed build** published once. It was chosen from the available suffixed builds at time of publication. It may not correspond to the highest-suffix (latest) build.
+- Both forms are available simultaneously — you can use either depending on your workflow.
+
+**Choosing the right version**:
+
+| Goal | What to install |
+|---|---|
+| Latest IBM Power build | Highest-suffix version, e.g. `1.2.3+ppc64le2` |
+| Simple install with no suffix needed (e.g. with `uv`) | Suffix-free version `1.2.3` |
+| A specific known build | Full suffixed version, e.g. `1.2.3+ppc64le1` |
+
+**Pinning to a specific build**: Specify the full suffixed version explicitly:
+
+```bash
+# pip
+pip install "numpy==2.2.6+ppc64le2" \
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+
+# uv
+uv pip install "numpy==2.2.6+ppc64le2" \
+  --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
+  --index-strategy unsafe-best-match
+```
+
+To see all available builds for a package, browse the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/).
 
 ### 📦 Complete Package & Version Indexes
 
@@ -129,7 +162,101 @@ devpi list
 
 - Use `--prefer-binary` to avoid unnecessary source builds.
 
-## 5️⃣ Learn by Example:  General Usage Applications
+## 5️⃣ Install with uv: Fast, Modern Package Management
+
+[`uv`](https://github.com/astral-sh/uv) is an extremely fast Python package manager written in Rust. It is a drop-in replacement for `pip` and `pip-tools`, and works seamlessly with the IBM Power DevPI repository.
+
+### Installing uv
+
+```bash
+# Using pip
+pip install uv
+
+# Or using the official standalone installer (Linux/macOS)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### Installation using the IBM Power DevPI Repository
+
+IBM Power wheels are published as **suffix-free** builds (e.g. `1.2.3`) in addition to suffixed builds (e.g. `1.2.3+ppc64le1`, `1.2.3+ppc64le2`). The suffix-free wheel is a **fixed, stable build** that lets `uv` install without needing to know the exact suffix. Note that it may not correspond to the highest-suffix (latest) build — if you need the latest, pin to the highest suffixed version explicitly. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
+
+Use `--extra-index-url` and `--index-strategy unsafe-best-match` to prefer Power-optimized wheels when available:
+
+```bash
+uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
+  --index-strategy unsafe-best-match \
+  --prefer-binary \
+  <package-name>
+```
+
+- **`--index-strategy unsafe-best-match`** — allows `uv` to select the best-matching wheel across all configured indexes (PyPI + DevPI), prioritising Power-optimized wheels.
+- **`--prefer-binary`** — skips source builds and installs prebuilt wheels whenever possible.
+- Any `noarch` dependencies will still be resolved from PyPI.
+
+**Pinning to a specific IBM Power build**: Specify the full suffixed version if you need a particular build:
+
+```bash
+uv pip install "numpy==2.2.6+ppc64le2" \
+  --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
+  --index-strategy unsafe-best-match
+```
+
+### Using a Virtual Environment with uv
+
+```bash
+# Create a virtual environment
+uv venv .venv
+
+# Activate it
+source .venv/bin/activate
+
+# Install packages into the virtual environment
+uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
+  --index-strategy unsafe-best-match \
+  --prefer-binary \
+  <package-name>
+```
+
+### Installing from a requirements file
+
+```bash
+uv pip install -r requirements.txt \
+  --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
+  --index-strategy unsafe-best-match \
+  --prefer-binary
+```
+
+### Troubleshooting Tips
+
+- If a package is not found, verify the package name against the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/).
+- Force a fresh install and bypass the cache:
+
+  ```bash
+  uv pip install --no-cache --reinstall \
+    --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
+    --index-strategy unsafe-best-match \
+    <package-name>
+  ```
+
+- Check the installed `uv` version:
+
+  ```bash
+  uv --version
+  ```
+
+### Best Practices
+
+- Always use `uv venv` to create isolated environments per project.
+- Pin your dependencies with `uv pip freeze > requirements.txt` for reproducible builds.
+- Keep `uv` up to date:
+
+  ```bash
+  pip install --upgrade uv
+  ```
+
+---
+
+## 6️⃣ Learn by Example:  General Usage Applications
 
 Explore real-world examples built using Power-optimized wheels:
 
@@ -148,7 +275,7 @@ These examples demonstrate:
 - Best practices for Power systems
 - Practical usage of optimized libraries
 
-## 6️⃣ Go Further: Build faster, easier and explore the Ecosystem
+## 7️⃣ Go Further: Build faster, easier and explore the Ecosystem
 
 By leveraging IBM Power - optimized python wheels, teams can:
 
