@@ -62,7 +62,7 @@ IBM Power wheels are published in two forms:
 | Wheel type | Example version | Purpose |
 |---|---|---|
 | **Suffix wheel** | `2.2.6+ppc64le1`, `2.2.6+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix is the latest build**. |
-| **Suffix-free wheel** | `2.2.6` | A fixed, stable build provided for compatibility with tools like `uv` that work best without version suffixes. |
+| **Suffix-free wheel** | `2.2.6` | A fixed, stable build provided for compatibility with package management workflows, including uv, where a canonical version without local suffixes may simplify dependency resolution and version matching. |
 
 - The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up dependency updates or build script improvements.
 - The **suffix-free** wheel is a **convenience build** for simple installs. If you need build traceability or want to ensure a specific build is used, always pin to the explicit suffixed version (e.g. `numpy==2.2.6+ppc64le1`).
@@ -85,8 +85,7 @@ pip install "numpy==2.2.6+ppc64le2" \
 
 # uv
 uv pip install "numpy==2.2.6+ppc64le2" \
-  --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --index-strategy unsafe-best-match
+  --index https://wheels.developerfirst.ibm.com/ppc64le/linux
 ```
 
 To see all available builds for a package, browse the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/).
@@ -178,9 +177,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### Installation using the IBM Power DevPI Repository
 
-IBM Power wheels are published as **suffix-free** builds (e.g. `2.2.6`) in addition to suffixed builds (e.g. `2.2.6+ppc64le1`, `2.2.6+ppc64le2`). The suffix-free wheel is a **fixed, stable build** that lets `uv` install without needing to know the exact suffix. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
-
-Use `--index` to set the IBM Power DevPI repository as the primary index. `uv` will check it first and fall back to PyPI for any packages not available there:
+IBM Power wheels are published as suffix-free builds (e.g. `2.2.6`) in addition to suffixed builds (e.g. `2.2.6+ppc64le1`, `2.2.6+ppc64le2`). The suffix-free wheel is a fixed, stable build that enables package managers such as uv to install the package using the canonical version (`2.2.6`) without requiring knowledge of the exact local-version suffix.. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
 
 ```bash
 uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
@@ -201,7 +198,7 @@ uv pip install "numpy==2.2.6+ppc64le2" \
 
 ### Using `uv add` with pyproject.toml
 
-`uv add` is the recommended way to manage dependencies in a `uv`-based project. It installs the IBM Power wheel but records only the **base version** (without the local suffix) in `pyproject.toml`, keeping the project portable:
+`uv add` is the recommended way to manage dependencies in a `uv`-based project. It installs the IBM Power wheel while recording only the **base (canonical) version** in `pyproject.toml`, eliminating the need to specify a platform-specific local version suffix and helping maintain portability.
 
 ```bash
 uv add numpy==2.2.6 --index https://wheels.developerfirst.ibm.com/ppc64le/linux
@@ -209,11 +206,11 @@ uv add numpy==2.2.6 --index https://wheels.developerfirst.ibm.com/ppc64le/linux
 # Recorded in pyproject.toml: "numpy==2.2.6"
 ```
 
-This is correct behaviour. PEP 440 local version segments (`+ppc64le2`) are **not permitted in dependency specifiers**, so `uv` intentionally strips them when writing to `pyproject.toml`.
+This is the expected behavior. Although uv installs the IBM Power wheel (`numpy==2.2.6+ppc64le2`), it records the dependency using the canonical public version (`numpy==2.2.6`) in `pyproject.toml`, rather than the platform-specific local version.
 
 **Will `uv sync` from that `pyproject.toml` work on IBM Power?**
 
-Yes. When `uv` later resolves `numpy==2.2.6` (e.g. via `uv sync`), PEP 440 specifies that a local version segment is **ignored during dependency resolution** — so `numpy==2.2.6` matches `numpy==2.2.6+ppc64le2` on the IBM DevPI index and the correct IBM Power wheel is installed.
+Yes. When `uv` later resolves `numpy==2.2.6` (for example, via `uv sync`), it can match and install the IBM Power wheel `numpy==2.2.6+ppc64le2` from the IBM DevPI index. This allows dependencies to be specified using the canonical public version while still resolving to the appropriate platform-specific build.
 
 ```
 uv sync
@@ -264,7 +261,6 @@ uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
 ```bash
 uv pip install -r requirements.txt \
   --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --prefer-binary
 ```
 
 ### Troubleshooting Tips
@@ -286,9 +282,9 @@ uv pip install -r requirements.txt \
 
 ### Best Practices
 
-- Always use `uv venv` to create isolated environments per project.
-- Pin your dependencies with `uv pip freeze > requirements.txt` for reproducible builds.
-- Keep `uv` up to date:
+- Always use `uv venv` to create an isolated environment for each project.
+- Commit both `pyproject.toml` and `uv.lock` to ensure reproducible builds.
+- Keep `uv` up to date.
 
   ```bash
   pip install --upgrade uv
