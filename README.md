@@ -255,8 +255,7 @@ If the output shows `2.2.6` without a suffix, the PyPI wheel was picked up inste
 uv venv .venv
 
 # Activate it
-source .venv/bin/activate          # Linux/macOS
-.venv\Scripts\activate             # Windows
+source .venv/bin/activate          
 
 # Install packages into the virtual environment
 uv pip install --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
@@ -272,14 +271,6 @@ uv pip install -r requirements.txt \
   --extra-index-url https://wheels.developerfirst.ibm.com/ppc64le/linux \
   --index-strategy unsafe-best-match \
   --prefer-binary
-```
-
-### Offline / Air-gapped Installation
-
-If you have pre-downloaded wheels locally:
-
-```bash
-uv pip install --no-index --find-links ./wheels/ <package-name>
 ```
 
 ### Troubleshooting Tips
