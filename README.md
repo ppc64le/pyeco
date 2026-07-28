@@ -172,7 +172,7 @@ devpi list
 # Using pip
 pip install uv
 
-# Or using the official standalone installer (Linux/macOS)
+# Or using the official standalone installer
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
