@@ -61,11 +61,11 @@ IBM Power wheels are published in two forms:
 
 | Wheel type | Example version | Purpose |
 |---|---|---|
-| **Suffix wheel** | `2.2.6+ppc64le1`, `2.2.6+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix is the latest build**. |
+| **Suffix wheel** | `2.2.6+ppc64le1`, `2.2.6+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix for a given upstream version is the latest build**.|
 | **Suffix-free wheel** | `2.2.6` | A fixed, stable build provided for compatibility with package management workflows, including uv, where a canonical version without local suffixes may simplify dependency resolution and version matching. |
 
 - The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up dependency updates or build script improvements.
-- The **suffix-free** wheel is a **convenience build** for simple installs. If you need build traceability or want to ensure a specific build is used, always pin to the explicit suffixed version (e.g. `numpy==2.2.6+ppc64le1`).
+- The **suffix-free** wheel is provided for workflows that prefer or require the canonical version without a local version suffix. If you need build traceability or want to ensure a specific build is used, always pin to the explicit suffixed version (e.g. `numpy==2.2.6+ppc64le1`).
 - Both forms are available simultaneously — you can use either depending on your workflow.
 
 **Choosing the right version**:
