@@ -181,13 +181,12 @@ IBM Power wheels are published as suffix-free builds (e.g. `2.2.6`) in addition 
 
 ```bash
 uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --prefer-binary \
   <package-name>
 ```
 
 - **`--index`** — sets IBM DevPI as the primary index; `uv` checks it first before falling back to PyPI.
-- **`--prefer-binary`** — skips source builds and installs prebuilt wheels whenever possible.
 - Any packages not on DevPI will still be resolved from PyPI.
+- `uv` prefers binary wheels by default — no extra flag needed.
 
 **Pinning to a specific IBM Power build**: Specify the full suffixed version if you need a particular build:
 
@@ -252,7 +251,6 @@ source .venv/bin/activate
 
 # Install packages into the virtual environment
 uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
-  --prefer-binary \
   <package-name>
 ```
 
@@ -260,7 +258,7 @@ uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
 
 ```bash
 uv pip install -r requirements.txt \
-  --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
+  --index https://wheels.developerfirst.ibm.com/ppc64le/linux
 ```
 
 ### Troubleshooting Tips
