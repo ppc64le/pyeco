@@ -51,7 +51,6 @@ cryptography==46.0.1+ppc64le1
 cryptography==46.0.2+ppc64le1
 cryptography==46.0.5+ppc64le1
 cutadapt==5.1+ppc64le1
-cx-oracle==8.3.0+ppc64le2
 cytoolz==1.0.1+ppc64le2
 dm-tree==0.1.8+ppc64le1
 dm-tree==0.1.9+ppc64le2
@@ -350,3 +349,4 @@ zfpy==1.0.1+ppc64le1
 zstd==1.5.5.1+ppc64le1
 zstd==1.5.6.1+ppc64le1
 zstd==1.5.7.2+ppc64le1
+
