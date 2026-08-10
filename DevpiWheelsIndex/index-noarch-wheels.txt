@@ -378,7 +378,6 @@ jaraco-packaging==10.2.2
 jaraco-packaging==10.2.2+ppc64le1
 jaraco-test==5.5.1
 jaraco-test==5.5.1+ppc64le1
-jax==0.4.7+ppc64le1
 jedi==0.16.0
 jedi==0.16.0+ppc64le1
 jedi==0.17.0
@@ -535,7 +534,6 @@ openmpi==5.0.6
 openmpi==5.0.6+ppc64le1
 openmpi==5.0.8
 openmpi==5.0.8+ppc64le1
-opentelemetry-python-contrib==1.16.0+ppc64le1
 opentelemetry-python==1.37.0
 opentelemetry-python==1.37.0+ppc64le1
 opus==1.3.1
@@ -592,9 +590,6 @@ poetry==2.3.4
 poetry==2.3.4+ppc64le1
 polars==1.38.1
 polars==1.38.1+ppc64le1
-primp==0.14.0+ppc64le1
-primp==0.15.0+ppc64le1
-primp==0.8.1+ppc64le1
 promise==2.3
 promise==2.3+ppc64le1
 protobuf==4.21.12
@@ -653,7 +648,6 @@ pyro4==4.82
 pyro4==4.82+ppc64le1
 pyspnego==0.10.2
 pyspnego==0.10.2+ppc64le1
-pystan==3.10.0+ppc64le1
 pysyncobj==0.3.14
 pysyncobj==0.3.14+ppc64le1
 pytest-aiohttp==1.0.5
@@ -774,8 +768,6 @@ terminado==0.18.1
 terminado==0.18.1+ppc64le1
 textstat==0.7.7
 textstat==0.7.7+ppc64le1
-tf-model-optimization-nightly==0.7.4+ppc64le1
-tf-model-optimization-nightly==0.8.0+ppc64le1
 tf2onnx==1.15.1
 tf2onnx==1.15.1+ppc64le1
 thrift-cpp==0.18.0
@@ -828,4 +820,3 @@ xgboost==3.0.2
 xgboost==3.0.2+ppc64le1
 ZConfig==4.2
 ZConfig==4.2+ppc64le1
-
