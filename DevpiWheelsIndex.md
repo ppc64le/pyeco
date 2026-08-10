@@ -1,8 +1,9 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: March 30, 2026
+### Last Updated On: August 10, 2026
 
 ----
+
 - **abseil-cpp==20230802.3+ppc64le1**
 
 | Wheel File | License |
@@ -778,13 +779,6 @@
 | Wheel File | License |
 |:-----------|:-------:|
 | cutadapt-5.1+ppc64le1-cp311-cp311-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl<br>cutadapt-5.1+ppc64le1-cp312-cp312-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl | `MIT` |
-
-----
-- **cx-oracle==8.3.0+ppc64le2**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| cx_oracle-8.3.0+ppc64le2-cp311-cp311-manylinux_2_34_ppc64le.whl<br>cx_oracle-8.3.0+ppc64le2-cp312-cp312-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` |
 
 ----
 - **cytoolz==1.0.1+ppc64le2**
@@ -1746,13 +1740,6 @@
 | javabridge-1.0.19+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>javabridge-1.0.19+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl | `Apache-1.1`,<br>`Apache-2.0`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-4-Clause`,<br>`GPL-1.0-or-later`,<br>`GPL-2.0-only`,<br>`GPL-2.0-only WITH Classpath-exception-2.0`,<br>`IJG`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `MPL-2.0`, `W3C`,<br>`Zlib` |
 
 ----
-- **jax==0.4.7+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| jax-0.4.7+ppc64le1-py3-none-any.whl | `Apache-2.0`,<br>`BSD-3-Clause` |
-
-----
 - **jedi==0.16.0+ppc64le1**
 
 | Wheel File | License |
@@ -2313,13 +2300,6 @@
 | notebook-6.5.7+ppc64le1-py3-none-any.whl | `BSD-2-Clause`,<br>`BSD-3-Clause` |
 
 ----
-- **numba==0.57.0+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| numba-0.57.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-4-Clause`,<br>`CC-BY-4.0`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `Python-2.0` |
-
-----
 - **numba==0.59.0+ppc64le1**
 
 | Wheel File | License |
@@ -2733,13 +2713,6 @@
 | openmpi-5.0.8+ppc64le1-py3-none-any.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-Open-MPI`,<br>`CC-PDDC`, `ISC`, `MIT`,<br>`MIT OR GPL-2.0-only`,<br>`mpich2`, `OFL-1.1` |
 
 ----
-- **opentelemetry-python-contrib==1.16.0+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| opentelemetry_python_contrib-1.16.0+ppc64le1-py3-none-any.whl | `Apache-2.0`,<br>`BSD-3-Clause` |
-
-----
 - **opentelemetry-python==1.37.0+ppc64le1**
 
 | Wheel File | License |
@@ -3011,27 +2984,6 @@
 | Wheel File | License |
 |:-----------|:-------:|
 | poetry-1.8.5+ppc64le1-py3-none-any.whl | `MIT`, `Python-2.0` |
-
-----
-- **primp==0.14.0+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| primp-0.14.0+ppc64le1-py3-none-any.whl | `MIT` |
-
-----
-- **primp==0.15.0+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| primp-0.15.0+ppc64le1-py3-none-any.whl | `MIT` |
-
-----
-- **primp==0.8.1+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| primp-0.8.1+ppc64le1-py3-none-any.whl | `MIT` |
 
 ----
 - **promise==2.3+ppc64le1**
@@ -3473,13 +3425,6 @@
 | Wheel File | License |
 |:-----------|:-------:|
 | pyspnego-0.10.2+ppc64le1-py3-none-any.whl | `MIT` |
-
-----
-- **pystan==3.10.0+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| pystan-3.10.0+ppc64le1-py3-none-any.whl | `ISC` |
 
 ----
 - **pysyncobj==0.3.14+ppc64le1**
@@ -4140,13 +4085,6 @@
 | tensorflow_io-0.35.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl | `Apache-2.0` |
 
 ----
-- **tensorflow-model-optimization==0.8.0+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| tensorflow_model_optimization-0.8.0+ppc64le1-py3-none-linux_ppc64le.whl | `Apache-2.0` |
-
-----
 - **tensorflow-text==2.14.0+ppc64le1**
 
 | Wheel File | License |
@@ -4222,20 +4160,6 @@
 | Wheel File | License |
 |:-----------|:-------:|
 | textstat-0.7.7+ppc64le1-py3-none-any.whl | `MIT` |
-
-----
-- **tf-model-optimization-nightly==0.7.4+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| tf_model_optimization_nightly-0.7.4+ppc64le1-py3-none-any.whl | `Apache-2.0` |
-
-----
-- **tf-model-optimization-nightly==0.8.0+ppc64le1**
-
-| Wheel File | License |
-|:-----------|:-------:|
-| tf_model_optimization_nightly-0.8.0+ppc64le1-py3-none-any.whl | `Apache-2.0` |
 
 ----
 - **tf2onnx==1.15.1+ppc64le1**
