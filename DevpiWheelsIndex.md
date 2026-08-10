@@ -1,6 +1,6 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: July 27, 2026
+### Last Updated On: August 10, 2026
 
 ----
 
@@ -2457,7 +2457,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| cx_oracle-8.3.0+ppc64le2-cp310-cp310-manylinux_2_34_ppc64le.whl<br>cx_oracle-8.3.0+ppc64le2-cp311-cp311-manylinux_2_34_ppc64le.whl<br>cx_oracle-8.3.0+ppc64le2-cp312-cp312-manylinux_2_34_ppc64le.whl<br>cx_oracle-8.3.0+ppc64le2-cp313-cp313-manylinux_2_34_ppc64le.whl<br>cx_oracle-8.3.0+ppc64le2-cp39-cp39-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
+| cx_oracle-8.3.0+ppc64le2-cp310-cp310-manylinux_2_34_ppc64le.whl<br>cx_oracle-8.3.0+ppc64le2-cp313-cp313-manylinux_2_34_ppc64le.whl<br>cx_oracle-8.3.0+ppc64le2-cp39-cp39-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
 
 ----
 
@@ -5868,15 +5868,6 @@
 
 ----
 
-### jax
-- **jax==0.4.7+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| jax-0.4.7+ppc64le1-py3-none-any.whl | `Apache-2.0`,<br>`BSD-3-Clause` | N.A |
-
-----
-
 ### jaxlib
 - **jaxlib==0.4.7**
 
@@ -7839,7 +7830,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| numba-0.57.0+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>numba-0.57.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>numba-0.57.0+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-4-Clause`,<br>`CC-BY-4.0`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `Python-2.0` | N.A |
+| numba-0.57.0+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>numba-0.57.0+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-4-Clause`,<br>`CC-BY-4.0`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `Python-2.0` | N.A |
 
 ----
 - **numba==0.59.0**
@@ -9068,15 +9059,6 @@
 
 ----
 
-### opentelemetry-python-contrib
-- **opentelemetry-python-contrib==1.16.0+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| opentelemetry_python_contrib-1.16.0+ppc64le1-py3-none-any.whl | `Apache-2.0`,<br>`BSD-3-Clause` | N.A |
-
-----
-
 ### opus
 - **opus==1.3.1**
 
@@ -10070,29 +10052,6 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | preshed-3.0.13+ppc64le1-cp310-cp310-manylinux_2_31_ppc64le.whl<br>preshed-3.0.13+ppc64le1-cp311-cp311-manylinux_2_31_ppc64le.whl<br>preshed-3.0.13+ppc64le1-cp312-cp312-manylinux_2_31_ppc64le.whl<br>preshed-3.0.13+ppc64le1-cp313-cp313-manylinux_2_31_ppc64le.whl<br>preshed-3.0.13+ppc64le1-cp314-cp314-manylinux_2_31_ppc64le.whl | `MIT` | N.A |
-
-----
-
-### primp
-- **primp==0.14.0+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| primp-0.14.0+ppc64le1-py3-none-any.whl | `MIT` | N.A |
-
-----
-- **primp==0.15.0+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| primp-0.15.0+ppc64le1-py3-none-any.whl | `MIT` | N.A |
-
-----
-- **primp==0.8.1+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| primp-0.8.1+ppc64le1-py3-none-any.whl | `MIT` | N.A |
 
 ----
 
@@ -11551,15 +11510,6 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | pyspnego-0.10.2+ppc64le1-py3-none-any.whl | `MIT` | N.A |
-
-----
-
-### pystan
-- **pystan==3.10.0+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| pystan-3.10.0+ppc64le1-py3-none-any.whl | `ISC` | N.A |
 
 ----
 
@@ -13802,15 +13752,6 @@
 
 ----
 
-### tensorflow-model-optimization
-- **tensorflow-model-optimization==0.8.0+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| tensorflow_model_optimization-0.8.0+ppc64le1-py3-none-linux_ppc64le.whl | `Apache-2.0` | N.A |
-
-----
-
 ### tensorflow-text
 - **tensorflow-text==2.14.0**
 
@@ -13986,22 +13927,6 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | textstat-0.7.7+ppc64le1-py3-none-any.whl | `MIT` | N.A |
-
-----
-
-### tf-model-optimization-nightly
-- **tf-model-optimization-nightly==0.7.4+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| tf_model_optimization_nightly-0.7.4+ppc64le1-py3-none-any.whl | `Apache-2.0` | N.A |
-
-----
-- **tf-model-optimization-nightly==0.8.0+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| tf_model_optimization_nightly-0.8.0+ppc64le1-py3-none-any.whl | `Apache-2.0` | N.A |
 
 ----
 
@@ -16174,4 +16099,3 @@
 | zstd-1.5.7.3+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>zstd-1.5.7.3+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>zstd-1.5.7.3+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>zstd-1.5.7.3+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>zstd-1.5.7.3+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl<br>zstd-1.5.7.3+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause` | N.A |
 
 ----
-
