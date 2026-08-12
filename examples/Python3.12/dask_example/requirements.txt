@@ -6,7 +6,7 @@ dask==2026.1.1+ppc64le1
 dm-tree==0.1.10+ppc64le1
 fsspec==2026.4.0+ppc64le1
 locket==1.0.0
-numpy==2.4.6+ppc64le1
+numpy==2.5.1+ppc64le1
 packaging==25.0
 partd==1.4.2+ppc64le1
 pyyaml==6.0.3+ppc64le2
