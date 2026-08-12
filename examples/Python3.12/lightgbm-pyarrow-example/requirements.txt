@@ -13,7 +13,7 @@ pyarrow==23.0.1+ppc64le1
 pyparsing==3.3.2+ppc64le1
 python-dateutil==2.9.0.post0
 pytz==2025.2
-scikit-learn==1.9.0+ppc64le1
+scikit_learn==1.9.0+ppc64le1
 scipy==1.18.0+ppc64le1
 six==1.17.0+ppc64le1
 threadpoolctl==3.6.0
