@@ -2,7 +2,7 @@ docling==2.100.0
 docling-core==2.87.1
 docling-ibm-models==3.13.3
 docling-parse==7.9.0+ppc64le1
-docling-slim==2.100.0
+docling-slim==2.119.0
 torch==2.12.1+ppc64le1
 torchvision==0.27.1+ppc64le1
 transformers==4.57.1
