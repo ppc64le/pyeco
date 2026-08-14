@@ -19,7 +19,7 @@ safetensors==0.6.2
 setuptools==80.9.0
 sympy==1.15.0.dev0+ppc64le1
 tokenizers==0.22.2
-torch==2.12.1+ppc64le1
+torch==2.13.0+ppc64le1
 tqdm==4.67.1
 transformers==5.1.0+ppc64le1
 typing_extensions==4.15.0

@@ -8,7 +8,7 @@ numpy==2.5.1+ppc64le1
 pillow==12.3.0+ppc64le1
 setuptools==80.9.0
 sympy==1.15.0.dev0+ppc64le1
-torch==2.12.1+ppc64le1
+torch==2.13.0+ppc64le1
 torchaudio==2.11.0+ppc64le1
 torchvision==0.27.1+ppc64le1
 typing_extensions==4.15.0
