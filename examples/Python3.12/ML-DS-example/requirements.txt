@@ -11,7 +11,7 @@ babel==2.18.0
 beautifulsoup4==4.14.3
 bleach==6.3.0
 bottleneck==1.6.0+ppc64le2
-cachetools==7.0.5+ppc64le1
+cachetools==5.5.2+ppc64le1
 certifi==2026.5.20+ppc64le1
 cffi==2.0.0+ppc64le1
 charset-normalizer==3.4.4
@@ -99,9 +99,9 @@ notebook==6.5.7+ppc64le1
 notebook_shim==0.2.4
 numba==0.65.1+ppc64le1
 numexpr==2.14.1+ppc64le2
-numpy==2.5.1+ppc64le1
+numpy==2.4.6+ppc64le1
 packaging==26.0
-pandas==3.0.5+ppc64le1
+pandas==2.3.3+ppc64le1
 pandocfilters==1.5.1
 parso==0.8.6
 partd==1.4.2+ppc64le1
@@ -136,7 +136,7 @@ rfc3987-syntax==1.1.0
 rich==13.9.4
 rpds-py==0.30.0+ppc64le1
 scikit-image==0.26.0+ppc64le1
-scikit-learn==1.8.0+ppc64le1
+scikit-learn==1.7.0+ppc64le1
 scipy==1.18.0+ppc64le1
 Send2Trash==2.1.0
 sentencepiece==0.2.1+ppc64le2

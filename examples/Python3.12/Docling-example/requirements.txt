@@ -1,5 +1,5 @@
-docling==2.100.0
-docling-core==2.87.1
+docling==2.119.0
+docling-core==2.90.0
 docling-ibm-models==3.13.3
 docling-parse==7.9.0+ppc64le1
 docling-slim==2.119.0
