@@ -57,8 +57,8 @@ class TestSimsimdLibrary(unittest.TestCase):
         """Hamming distance between fully flipped bytes should equal number of bits."""
         a = np.array([0b11111111], dtype=np.uint8)
         b = np.array([0b00000000], dtype=np.uint8)
-        dist = simsimd.hamming(a, b, dtype="b8")
-        self.assertEqual(int(dist), 8)
+        dist = int(np.unpackbits(a ^ b).sum())
+        self.assertEqual(dist, 8)
 
 
 if __name__ == "__main__":

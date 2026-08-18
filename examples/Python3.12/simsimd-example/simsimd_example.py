@@ -66,12 +66,13 @@ def demo_batch_distances():
 def demo_hamming_distance():
     """
     Compute Hamming distance between two binary (uint8) byte arrays.
-    The `dtype="b8"` override tells simsimd to treat each byte as 8 packed bits.
+    Computed via NumPy XOR + popcount (unpackbits), since this build of
+    simsimd does not support the binary/Hamming metric.
     """
     a = np.array([0b10101010, 0b11001100, 0b11110000], dtype=np.uint8)
     b = np.array([0b01010101, 0b00110011, 0b00001111], dtype=np.uint8)
 
-    ham = simsimd.hamming(a, b, dtype="b8")
+    ham = int(np.unpackbits(a ^ b).sum())
     print(f"\nBinary array A: {[bin(x) for x in a]}")
     print(f"Binary array B: {[bin(x) for x in b]}")
     print(f"Hamming distance: {ham}")
