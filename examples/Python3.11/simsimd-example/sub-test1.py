@@ -39,25 +39,25 @@ class TestSimsimdLibrary(unittest.TestCase):
         self.assertAlmostEqual(float(dist), 9.0, places=4)
 
     def test_dot_orthogonal(self):
-        """Inner product distance between orthogonal unit vectors should be 1."""
+        """Dot product between orthogonal unit vectors should be 0."""
         a = np.array([1.0, 0.0], dtype=np.float32)
         b = np.array([0.0, 1.0], dtype=np.float32)
         dist = simsimd.dot(a, b)
-        self.assertAlmostEqual(float(dist), 1.0, places=5)
+        self.assertAlmostEqual(float(dist), 0.0, places=5)
 
     def test_cdist_shape(self):
         """cdist returns the correct shape for pairwise distances."""
         rng = np.random.default_rng(0)
         A = rng.random((3, 16)).astype(np.float32)
         B = rng.random((5, 16)).astype(np.float32)
-        result = simsimd.cdist(A, B, metric="cosine")
+        result = np.array(simsimd.cdist(A, B, metric="cosine"))
         self.assertEqual(result.shape, (3, 5))
 
     def test_hamming_distance(self):
         """Hamming distance between fully flipped bytes should equal number of bits."""
         a = np.array([0b11111111], dtype=np.uint8)
         b = np.array([0b00000000], dtype=np.uint8)
-        dist = simsimd.hamming(a, b)
+        dist = simsimd.hamming(a, b, dtype="b8")
         self.assertEqual(int(dist), 8)
 
 

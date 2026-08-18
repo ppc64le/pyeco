@@ -67,13 +67,17 @@ class TestCleverCsvLibrary(unittest.TestCase):
         self.assertEqual(rows[0]["age"], "30")
 
     def test_read_csv_file(self):
-        """read_csv should successfully parse a file with auto-detected dialect."""
+        """reader should successfully parse a file with auto-detected dialect."""
         with tempfile.NamedTemporaryFile(mode="w", suffix=".csv",
                                          delete=False, encoding="utf-8") as f:
             f.write(CSV_SEMICOLON)
             tmp_path = f.name
         try:
-            rows = clevercsv.read_csv(tmp_path, num_chars=10000)
+            with open(tmp_path, newline="", encoding="utf-8") as f:
+                file_text = f.read()
+            dialect = clevercsv.Sniffer().sniff(file_text, verbose=False)
+            with open(tmp_path, newline="", encoding="utf-8") as f:
+                rows = list(clevercsv.reader(f, dialect))
             self.assertGreater(len(rows), 0)
             self.assertEqual(rows[0], ["name", "age", "city"])
         finally:

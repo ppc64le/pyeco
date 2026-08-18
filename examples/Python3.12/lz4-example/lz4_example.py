@@ -49,7 +49,7 @@ def demo_block_compress_decompress(data):
     print("\n--- LZ4 Block API ---")
     original_size = len(data)
 
-    compressed = lz4.block.compress(data)
+    compressed = lz4.block.compress(data, store_size=False)
     compressed_size = len(compressed)
 
     decompressed = lz4.block.decompress(compressed, uncompressed_size=original_size)

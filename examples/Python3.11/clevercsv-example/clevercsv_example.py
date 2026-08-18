@@ -70,9 +70,13 @@ def demo_file_roundtrip(csv_text):
         tmp_path = f.name
 
     try:
-        # clevercsv.read_csv reads from a file path, auto-detecting the dialect
-        rows = clevercsv.read_csv(tmp_path, num_chars=10000)
-        print(f"\n--- File Round-trip (read_csv) ---")
+        # Detect the dialect from the file contents, then read rows with it
+        with open(tmp_path, newline="", encoding="utf-8") as f:
+            file_text = f.read()
+        dialect = clevercsv.Sniffer().sniff(file_text, verbose=False)
+        with open(tmp_path, newline="", encoding="utf-8") as f:
+            rows = list(clevercsv.reader(f, dialect))
+        print(f"\n--- File Round-trip (reader) ---")
         print(f"  File: {tmp_path}")
         print(f"  Total rows read (incl. header): {len(rows)}")
         if rows:

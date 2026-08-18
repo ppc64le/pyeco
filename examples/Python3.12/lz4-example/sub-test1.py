@@ -35,7 +35,7 @@ class TestLz4Library(unittest.TestCase):
 
     def test_block_roundtrip(self):
         """Block compression then decompression should recover original data."""
-        compressed = lz4.block.compress(SAMPLE_DATA)
+        compressed = lz4.block.compress(SAMPLE_DATA, store_size=False)
         decompressed = lz4.block.decompress(compressed, uncompressed_size=len(SAMPLE_DATA))
         self.assertEqual(decompressed, SAMPLE_DATA)
 
