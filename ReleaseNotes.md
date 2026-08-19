@@ -1,6 +1,6 @@
-# DevPi V7
+# DevPi V8
 
-**Release Date:** Jul 23, 2026
+**Release Date:** Aug 20, 2026
 
 ## Overview
 
