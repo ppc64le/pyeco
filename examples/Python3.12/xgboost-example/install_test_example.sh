@@ -38,9 +38,20 @@ case $DISTRO in
         sudo apt install -y python3.12 python3.12-dev python3-pip python3.12-venv 
         ;;
     "sles")
-        sudo zypper refresh
-        sudo zypper install -y python312 python312-pip
-        ;;
+    	sudo zypper refresh
+    	sudo zypper install -y gcc gcc-c++ make
+
+    	if ! command -v python3.12 >/dev/null 2>&1; then
+        	echo "Python 3.12 not found."
+
+        	if zypper search -x python312 | grep -q python312; then
+            	    	sudo zypper install -y python312 python312-devel python312-pip
+        	else
+            		echo "python312 packages unavailable."
+            		exit 1
+        	fi
+    	fi
+    	;;
     *)
         echo "Unsupported distribution: $DISTRO"
         exit 1
