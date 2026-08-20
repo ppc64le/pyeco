@@ -1,6 +1,6 @@
 click==8.3.1
 joblib==1.5.3
 nltk==3.9.3
-rake-nltk==1.0.6+ppc64le1
-regex==2024.11.6+ppc64le1
+rake-nltk==1.0.6
+regex==2024.11.6
 tqdm==4.67.3
