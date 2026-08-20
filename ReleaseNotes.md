@@ -6,7 +6,7 @@
 
 This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 
-Additionally, wheels without local version identifiers (suffixes) are now provided for uv compatibility. These wheels are available alongside the corresponding versions that include local version suffixes.
+This release provides most wheels without local version identifiers (suffixes) for uv compatibility. 
 
 ---
  
@@ -21,10 +21,8 @@ Additionally, wheels without local version identifiers (suffixes) are now provid
 
 
 ## 🚀 Major Updates
-- Added over 150 wheels including: 
-    - 6 new packages -  jq, paddlepaddle, networkx, mistral_common, setools and srsly.
-    - Packaging fixes in 17 native library wheels.
-    - TensorFlow v2.14.1 and its dependencies for UBI 8.10
+- Added over 300 wheels including: 
+    - 27 new packages.
  
 ## Package Licenses and CVE Details
 
