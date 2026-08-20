@@ -16,7 +16,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| abseil_cpp-20230125.4+ppc64le1-py3-none-linux_ppc64le.whl<br>abseil_cpp-20230125.4+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0` | N.A |
+| abseil_cpp-20230125.4+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0` | N.A |
 
 ----
 - **abseil-cpp==20230802.3**
@@ -30,7 +30,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| abseil_cpp-20230802.3+ppc64le1-py3-none-any.whl<br>abseil_cpp-20230802.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0` | N.A |
+| abseil_cpp-20230802.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0` | N.A |
 
 ----
 - **abseil-cpp==20240116.2**
@@ -44,7 +44,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| abseil_cpp-20240116.2+ppc64le1-py3-none-any.whl<br>abseil_cpp-20240116.2+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause` | N.A |
+| abseil_cpp-20240116.2+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause` | N.A |
 
 ----
 
@@ -1472,7 +1472,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| c_ares-1.19.1+ppc64le1-py3-none-any.whl<br>c_ares-1.19.1+ppc64le1-py3-none-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl | `Apache-2.0`, `MIT`,<br>`NTP` | N.A |
+| c_ares-1.19.1+ppc64le1-py3-none-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl | `Apache-2.0`, `MIT`,<br>`NTP` | N.A |
 
 ----
 
@@ -3316,7 +3316,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| ffmpeg-4.2.2+ppc64le1-py3-none-any.whl<br>ffmpeg-4.2.2+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`GPL-3.0-only`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-or-later`,<br>`LGPL-3.0-only OR GPL-3.0-only`,<br>`LGPL-3.0-or-later`,<br>`MIT`, `MPL-2.0`, `Zlib` | N.A |
+| ffmpeg-4.2.2+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`GPL-3.0-only`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-or-later`,<br>`LGPL-3.0-only OR GPL-3.0-only`,<br>`LGPL-3.0-or-later`,<br>`MIT`, `MPL-2.0`, `Zlib` | N.A |
 
 ----
 - **ffmpeg==4.4.2**
@@ -3344,7 +3344,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| ffmpeg-5.1.6+ppc64le1-py3-none-any.whl<br>ffmpeg-5.1.6+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`GPL-3.0-only`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-or-later`,<br>`LGPL-3.0-only OR GPL-3.0-only`,<br>`LGPL-3.0-or-later`,<br>`MIT`, `MPL-2.0`,<br>`MS-RL`, `Zlib` | N.A |
+| ffmpeg-5.1.6+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`GPL-3.0-only`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-or-later`,<br>`LGPL-3.0-only OR GPL-3.0-only`,<br>`LGPL-3.0-or-later`,<br>`MIT`, `MPL-2.0`,<br>`MS-RL`, `Zlib` | N.A |
 
 ----
 - **ffmpeg==7.1**
@@ -3358,7 +3358,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| ffmpeg-7.1+ppc64le1-py3-none-any.whl<br>ffmpeg-7.1+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`GPL-3.0-only`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-or-later`,<br>`LGPL-3.0-or-later`,<br>`MIT`, `MPL-2.0`,<br>`MS-RL`, `Zlib` | N.A |
+| ffmpeg-7.1+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`GPL-3.0-only`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later`,<br>`LGPL-2.1-or-later`,<br>`LGPL-3.0-or-later`,<br>`MIT`, `MPL-2.0`,<br>`MS-RL`, `Zlib` | N.A |
 
 ----
 
@@ -4017,7 +4017,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| grpc_cpp-1.54.3+ppc64le1-py3-none-linux_ppc64le.whl<br>grpc_cpp-1.54.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`MPL-2.0`, `NTP` | N.A |
+| grpc_cpp-1.54.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`MPL-2.0`, `NTP` | N.A |
 
 ----
 - **grpc-cpp==1.68.0**
@@ -4031,7 +4031,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| grpc_cpp-1.68.0+ppc64le1-py3-none-linux_ppc64le.whl<br>grpc_cpp-1.68.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`MPL-2.0`, `NTP` | N.A |
+| grpc_cpp-1.68.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`MPL-2.0`, `NTP` | N.A |
 
 ----
 
@@ -4596,7 +4596,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| hdf5-1.12.1+ppc64le1-py3-none-any.whl<br>hdf5-1.12.1+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+| hdf5-1.12.1+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 - **hdf5==1.12.3**
@@ -4610,7 +4610,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| hdf5-1.12.3+ppc64le1-py3-none-any.whl<br>hdf5-1.12.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-LBNL`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+| hdf5-1.12.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-LBNL`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 - **hdf5==1.14.4.3**
@@ -4624,7 +4624,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| hdf5-1.14.4.3+ppc64le1-py3-none-any.whl<br>hdf5-1.14.4.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-LBNL`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+| hdf5-1.14.4.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-LBNL`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 - **hdf5==1.14.6**
@@ -4638,7 +4638,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| hdf5-1.14.6+ppc64le1-py3-none-any.whl<br>hdf5-1.14.6+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-LBNL`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+| hdf5-1.14.6+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause-LBNL`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 
@@ -6226,7 +6226,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| lame-3.100+ppc64le1-py3-none-any.whl<br>lame-3.100+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `GPL-1.0-or-later`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later` | N.A |
+| lame-3.100+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `GPL-1.0-or-later`,<br>`LGPL-2.0-only`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 
@@ -6401,35 +6401,35 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-21.12+ppc64le1-py3-none-linux_ppc64le.whl<br>libprotobuf-21.12+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
+| libprotobuf-21.12+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
 
 ----
 - **libprotobuf==25.0**
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-25.0-py3-none-manylinux2014_ppc64le.whl<br>libprotobuf-25.0-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-25.0-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **libprotobuf==25.0+ppc64le1**
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-25.0+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>libprotobuf-25.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-25.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **libprotobuf==25.4**
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-25.4-py3-none-manylinux2014_ppc64le.whl<br>libprotobuf-25.4-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-25.4-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **libprotobuf==25.4+ppc64le1**
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-25.4+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>libprotobuf-25.4+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-25.4+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **libprotobuf==25.8**
@@ -6443,7 +6443,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-25.8+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>libprotobuf-25.8+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-25.8+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **libprotobuf==28.0**
@@ -6457,7 +6457,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-28.0+ppc64le1-py3-none-linux_ppc64le.whl<br>libprotobuf-28.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-28.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **libprotobuf==4.25.3**
@@ -6471,7 +6471,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-4.25.3+ppc64le1-py3-none-any.whl<br>libprotobuf-4.25.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-4.25.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **libprotobuf==4.25.8**
@@ -6485,7 +6485,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libprotobuf-4.25.8+ppc64le1-py3-none-linux_ppc64le.whl<br>libprotobuf-4.25.8+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+| libprotobuf-4.25.8+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 
@@ -6531,7 +6531,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libvpx-1.13.1+ppc64le1-py3-none-any.whl<br>libvpx-1.13.1+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
+| libvpx-1.13.1+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
 
 ----
 - **libvpx==1.9.0**
@@ -6545,7 +6545,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| libvpx-1.9.0+ppc64le1-py3-none-any.whl<br>libvpx-1.9.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
+| libvpx-1.9.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
 
 ----
 
@@ -8872,7 +8872,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| openblas-0.3.29+ppc64le1-py3-none-any.whl<br>openblas-0.3.29+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>openblas-0.3.29+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-2-Clause-Views`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+| openblas-0.3.29+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-2-Clause-Views`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 - **openblas==0.3.30**
@@ -8886,7 +8886,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| openblas-0.3.30+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>openblas-0.3.30+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause-Views`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
+| openblas-0.3.30+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-2-Clause-Views`,<br>`BSD-3-Clause`,<br>`GPL-2.0-or-later`,<br>`GPL-3.0-or-later`,<br>`LGPL-2.0-or-later` | N.A |
 
 ----
 - **openblas==0.3.32**
@@ -9071,7 +9071,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| opus-1.3.1+ppc64le1-py3-none-any.whl<br>opus-1.3.1+ppc64le1-py3-none-manylinux_2_31_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause` | N.A |
+| opus-1.3.1+ppc64le1-py3-none-manylinux_2_31_ppc64le.whl | `BSD-2-Clause`,<br>`BSD-3-Clause` | N.A |
 
 ----
 
@@ -9119,7 +9119,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| orc-2.0.3+ppc64le1-py3-none-linux_ppc64le.whl<br>orc-2.0.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC-BY-3.0`, `CC-BY-4.0`,<br>`GPL-2.0-or-later`,<br>`MIT`, `Zlib` | N.A |
+| orc-2.0.3+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC-BY-3.0`, `CC-BY-4.0`,<br>`GPL-2.0-or-later`,<br>`MIT`, `Zlib` | N.A |
 
 ----
 
@@ -11962,7 +11962,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| re2-20220401+ppc64le1-py3-none-any.whl<br>re2-20220401+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
+| re2-20220401+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `BSD-3-Clause` | N.A |
 
 ----
 
@@ -13119,7 +13119,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| snappy-1.2.2+ppc64le1-py3-none-any.whl<br>snappy-1.2.2+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC-BY-3.0`, `CC-BY-4.0`,<br>`MIT` | N.A |
+| snappy-1.2.2+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC-BY-3.0`, `CC-BY-4.0`,<br>`MIT` | N.A |
 
 ----
 
@@ -13988,7 +13988,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| thrift_cpp-0.18.0+ppc64le1-py3-none-any.whl<br>thrift_cpp-0.18.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause-flex`,<br>`FSFAP-no-warranty-disclaimer`,<br>`MIT` | N.A |
+| thrift_cpp-0.18.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause-flex`,<br>`FSFAP-no-warranty-disclaimer`,<br>`MIT` | N.A |
 
 ----
 - **thrift-cpp==0.21.0**
@@ -14002,7 +14002,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| thrift_cpp-0.21.0+ppc64le1-py3-none-any.whl<br>thrift_cpp-0.21.0+ppc64le1-py3-none-manylinux2014_ppc64le.whl<br>thrift_cpp-0.21.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause-flex`,<br>`FSFAP-no-warranty-disclaimer`,<br>`MIT` | N.A |
+| thrift_cpp-0.21.0+ppc64le1-py3-none-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause-flex`,<br>`FSFAP-no-warranty-disclaimer`,<br>`MIT` | N.A |
 
 ----
 
@@ -15243,7 +15243,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| utf8proc-2.6.1+ppc64le1-py3-none-any.whl<br>utf8proc-2.6.1+ppc64le1-py3-none-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl | `MIT` | N.A |
+| utf8proc-2.6.1+ppc64le1-py3-none-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl | `MIT` | N.A |
 
 ----
 
