@@ -131,6 +131,23 @@ mv /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1 \
    /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1.disabled
 ```
 
+### ollama-python-package v0.30.10
+The following issues have been identified on ppc64le. If you encounter these problems in your environment, use the workaround below. If ollama-python-package works without issues, no action is needed.
+
+**Identified Issue:**
+1. Inference fails with:
+```
+Error: 500 Internal Server Error: error starting llama-server:
+llama-server binary not found
+```
+
+**If you face this issue, use the following workaround:**
+```
+ln -s \
+  "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama/llama-server" \
+  "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama_python_package/bin/llama-server"
+```
+
 ## 🗑️ Removed
 
 ### `LD_LIBRARY_PATH` Requirement
