@@ -1,1 +1,1 @@
-clevercsv==0.8.5+ppc64le1
+clevercsv==0.8.5

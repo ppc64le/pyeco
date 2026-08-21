@@ -1,2 +1,2 @@
-simsimd==6.5.16+ppc64le1
-numpy==2.4.6+ppc64le1
+simsimd==6.5.16
+numpy==2.4.6
