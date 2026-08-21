@@ -2,6 +2,7 @@ aiohttp==3.9.0
 aiohttp==3.9.0+ppc64le1
 apache-tvm-ffi==0.1.11
 apache-tvm-ffi==0.1.11+ppc64le1
+apache-tvm-ffi==0.1.12
 apache-tvm-ffi==0.1.9
 apache-tvm-ffi==0.1.9+ppc64le1
 argon2-cffi-bindings==21.2.0
@@ -16,6 +17,7 @@ array-record==0.8.2
 array-record==0.8.2+ppc64le2
 array-record==0.8.3
 array-record==0.8.3+ppc64le2
+asyncpg==0.31.0
 av==13.1.0
 av==13.1.0+ppc64le1
 av==14.0.1
@@ -30,6 +32,7 @@ av==16.0.1
 av==16.0.1+ppc64le1
 av==16.1.0
 av==16.1.0+ppc64le1
+bcrypt==4.0.1
 bcrypt==4.2.1
 bcrypt==4.2.1+ppc64le1
 bcrypt==4.3.0
@@ -81,6 +84,7 @@ cassandra-driver==3.29.3
 cassandra-driver==3.29.3+ppc64le1
 cassandra-driver==3.30.0
 cassandra-driver==3.30.0+ppc64le1
+cassandra-driver==3.30.1
 catboost==1.2.7
 catboost==1.2.7+ppc64le2
 cchardet==2.2.0a3
@@ -95,6 +99,8 @@ chroma-hnswlib==0.7.6
 chroma-hnswlib==0.7.6+ppc64le1
 clawpack==5.12.0
 clawpack==5.12.0+ppc64le1
+clevercsv==0.8.5
+clickhouse-connect==0.7.19
 confluent-kafka==2.10.0
 confluent-kafka==2.10.0+ppc64le1
 contourpy==1.0.5
@@ -108,12 +114,15 @@ contourpy==1.3.3+ppc64le1
 contourpy==1.3.3+ppc64le2
 couchbase==4.6.1
 couchbase==4.6.1+ppc64le1
+couchbase==4.6.2
+crc32c==2.8
 cryptography==39.0.1
 cryptography==39.0.1+ppc64le1
 cryptography==42.0.5
 cryptography==42.0.5+ppc64le1
 cryptography==43.0.1
 cryptography==43.0.1+ppc64le1
+cryptography==43.0.1+ppc64le2
 cryptography==43.0.3
 cryptography==43.0.3+ppc64le1
 cryptography==44.0.0
@@ -154,6 +163,7 @@ cryptography==49.0.0
 cryptography==49.0.0+ppc64le1
 cutadapt==5.1
 cutadapt==5.1+ppc64le1
+cykhash==2.0.0
 cymem==2.0.7
 cymem==2.0.7+ppc64le1
 cysignals==1.11.4
@@ -162,6 +172,7 @@ cysignals==1.12.6
 cysignals==1.12.6+ppc64le1
 cytoolz==1.0.1
 cytoolz==1.0.1+ppc64le2
+debugpy==1.8.21
 dm-tree==0.1.10
 dm-tree==0.1.10+ppc64le1
 dm-tree==0.1.8
@@ -184,12 +195,18 @@ docling-parse==5.8.0
 docling-parse==5.8.0+ppc64le1
 docling-parse==6.2.0
 docling-parse==6.2.0+ppc64le1
+docling-parse==7.0.0
+docling-parse==7.6.0
+docling-parse==7.9.0
 duckdb==1.4.3
 duckdb==1.4.3+ppc64le1
 duckdb==1.4.4
 duckdb==1.4.4+ppc64le1
 duckdb==1.5.2
 duckdb==1.5.2+ppc64le1
+duckdb==1.5.3
+duckdb==1.5.4
+duckdb==1.5.5
 ephem==4.1.5
 ephem==4.1.5+ppc64le1
 ephem==4.2
@@ -201,6 +218,8 @@ fastavro==1.12.2
 fastavro==1.12.2+ppc64le1
 fastavro==1.9.7
 fastavro==1.9.7+ppc64le1
+fastparquet==2024.11.0
+fastuuid==0.14.0
 fiona==1.10.1
 fiona==1.10.1+ppc64le1
 fiona==1.9.6
@@ -221,6 +240,7 @@ gmpy2==2.2.2
 gmpy2==2.2.2+ppc64le2
 gmpy2==2.3.0
 gmpy2==2.3.0+ppc64le1
+gmpy2==2.3.1
 google-crc32c==1.7.1
 google-crc32c==1.7.1+ppc64le1
 google-crc32c==1.8.0
@@ -287,6 +307,9 @@ grpcio==1.78.1
 grpcio==1.78.1+ppc64le1
 grpcio==1.80.0
 grpcio==1.80.0+ppc64le1
+grpcio==1.81.0
+grpcio==1.81.1
+grpcio==1.82.1
 h5py==3.11.0
 h5py==3.11.0+ppc64le1
 h5py==3.12.1
@@ -326,6 +349,7 @@ hf-xet==1.5.0
 hf-xet==1.5.0+ppc64le1
 hf-xet==1.5.1
 hf-xet==1.5.1+ppc64le1
+hmmlearn==0.3.3
 hnswlib==0.8.0
 hnswlib==0.8.0+ppc64le1
 httptools==0.6.4
@@ -356,16 +380,19 @@ imagecodecs==2023.1.23
 imagecodecs==2023.1.23+ppc64le1
 imagecodecs==2024.1.1
 imagecodecs==2024.1.1+ppc64le1
+imagecodecs==2024.12.30
 imagecodecs==2025.3.30
 imagecodecs==2025.3.30+ppc64le1
 imagecodecs==2025.8.2
 imagecodecs==2025.8.2+ppc64le1
+imagecodecs==2026.6.6
 iminuit==2.28.0
 iminuit==2.28.0+ppc64le1
 iminuit==2.31.0
 iminuit==2.31.0+ppc64le1
 iminuit==2.31.1
 iminuit==2.31.1+ppc64le1
+impit==0.13.1
 javabridge==1.0.19
 javabridge==1.0.19+ppc64le1
 jaxlib==0.4.7
@@ -390,12 +417,14 @@ krb5==0.6.0
 krb5==0.6.0+ppc64le1
 krb5==0.7.0
 krb5==0.7.0+ppc64le1
+librt==0.11.0
 librt==0.8.1
 librt==0.8.1+ppc64le1
 librt==0.9.0
 librt==0.9.0+ppc64le1
 lingua-language-detector==2.2.0
 lingua-language-detector==2.2.0+ppc64le1
+litellm==1.93.0
 llguidance==0.7.19
 llguidance==0.7.19+ppc64le1
 llguidance==1.2.0
@@ -422,6 +451,7 @@ lxml==6.0.2
 lxml==6.0.2+ppc64le1
 lxml==6.1.0
 lxml==6.1.0+ppc64le1
+lz4==4.4.5
 macs3==3.0.1
 macs3==3.0.1+ppc64le1
 macs3==3.0.3
@@ -450,6 +480,7 @@ matplotlib==3.10.8
 matplotlib==3.10.8+ppc64le1
 matplotlib==3.10.9
 matplotlib==3.10.9+ppc64le1
+matplotlib==3.11.0
 matplotlib==3.7.1
 matplotlib==3.7.1+ppc64le1
 matplotlib==3.8.0
@@ -473,6 +504,7 @@ msgpack==1.1.1
 msgpack==1.1.1+ppc64le1
 msgpack==1.1.2
 msgpack==1.1.2+ppc64le1
+msgpack==1.2.1
 msgspec==0.18.6
 msgspec==0.18.6+ppc64le1
 msgspec==0.19.0
@@ -529,6 +561,7 @@ numpy==2.2.4
 numpy==2.2.4+ppc64le1
 numpy==2.2.5
 numpy==2.2.5+ppc64le1
+numpy==2.2.5+ppc64le2
 numpy==2.2.6
 numpy==2.2.6+ppc64le1
 numpy==2.2.6+ppc64le2
@@ -544,6 +577,7 @@ numpy==2.3.4
 numpy==2.3.4+ppc64le1
 numpy==2.3.5
 numpy==2.3.5+ppc64le1
+numpy==2.3.5+ppc64le2
 numpy==2.4.0
 numpy==2.4.0+ppc64le1
 numpy==2.4.1
@@ -556,6 +590,8 @@ numpy==2.4.4
 numpy==2.4.4+ppc64le1
 numpy==2.4.6
 numpy==2.4.6+ppc64le1
+numpy==2.5.1
+onigurumacffi==1.5.0
 onnx==1.17.0
 onnx==1.17.0+ppc64le2
 onnx==1.18.0
@@ -590,6 +626,8 @@ onnxruntime==1.23.2
 onnxruntime==1.23.2+ppc64le2
 onnxruntime==1.25.1
 onnxruntime==1.25.1+ppc64le1
+onnxruntime==1.26.0
+onnxruntime==1.27.0
 openai-harmony==0.0.4
 openai-harmony==0.0.4+ppc64le1
 openai-harmony==0.0.8
@@ -602,10 +640,12 @@ opencv-python-headless==4.12.0.88
 opencv-python-headless==4.12.0.88+ppc64le1
 opencv-python-headless==4.13.0.92
 opencv-python-headless==4.13.0.92+ppc64le1
+opencv-python-headless==5.0.0.93
 opencv-python==4.10.0.84
 opencv-python==4.10.0.84+ppc64le2
 opencv-python==4.13.0.92
 opencv-python==4.13.0.92+ppc64le1
+opencv-python==5.0.0.93
 oracledb==2.5.1
 oracledb==2.5.1+ppc64le1
 orange3==3.38.1
@@ -650,6 +690,7 @@ pandas==3.0.2
 pandas==3.0.2+ppc64le1
 pandas==3.0.3
 pandas==3.0.3+ppc64le1
+pandas==3.0.5
 persistent==6.1.1
 persistent==6.1.1+ppc64le1
 pillow==10.0.1
@@ -674,6 +715,7 @@ pillow==12.1.1
 pillow==12.1.1+ppc64le1
 pillow==12.2.0
 pillow==12.2.0+ppc64le1
+pillow==12.3.0
 preshed==3.0.13
 preshed==3.0.13+ppc64le1
 propcache==0.5.2
@@ -720,6 +762,7 @@ pulsar-client==3.7.0
 pulsar-client==3.7.0+ppc64le1
 pulsar-client==3.8.0
 pulsar-client==3.8.0+ppc64le1
+py-rust-stemmers==0.1.8
 pyarrow==11.0.0
 pyarrow==11.0.0+ppc64le1
 pyarrow==15.0.1
@@ -742,6 +785,7 @@ pyarrow==23.0.0
 pyarrow==23.0.0+ppc64le1
 pyarrow==23.0.1
 pyarrow==23.0.1+ppc64le1
+pyclipper==1.3.0.post5
 pyclipper==1.3.0.post6
 pyclipper==1.3.0.post6+ppc64le1
 pyclipper==1.4.0
@@ -887,6 +931,7 @@ scikit-learn==1.7.2
 scikit-learn==1.7.2+ppc64le1
 scikit-learn==1.8.0
 scikit-learn==1.8.0+ppc64le1
+scikit-learn==1.9.0
 SciPy==1.11.4
 SciPy==1.11.4+ppc64le1
 scipy==1.13.1
@@ -942,6 +987,7 @@ shapely==2.1.2+ppc64le1
 shapely==2.1.2+ppc64le2
 simplejson==3.17.6
 simplejson==3.17.6+ppc64le1
+simsimd==6.5.16
 snowflake-connector-python==4.3.0
 snowflake-connector-python==4.3.0+ppc64le1
 snowflake-connector-python==4.4.0
@@ -966,16 +1012,19 @@ tensorflow==2.18.1
 tensorflow==2.18.1+ppc64le1
 tesserocr==2.10.0
 tesserocr==2.10.0+ppc64le1
+tesserocr==2.9.0
 tesserocr==2.9.1
 tesserocr==2.9.1+ppc64le1
 thinc==8.3.6
 thinc==8.3.6+ppc64le1
 tiktoken==0.12.0
 tiktoken==0.12.0+ppc64le1
+tiktoken==0.13.0
 tiktoken==0.7.0
 tiktoken==0.7.0+ppc64le1
 tiktoken==0.9.0
 tiktoken==0.9.0+ppc64le1
+tilelang==0.1.10+rocm
 tokenizers==0.21.0
 tokenizers==0.21.0+ppc64le1
 tokenizers==0.21.1
@@ -991,6 +1040,7 @@ torch==2.12.0
 torch==2.12.0+ppc64le1
 torch==2.12.1
 torch==2.12.1+ppc64le1
+torch==2.13.0
 torch==2.5.1
 torch==2.5.1+ppc64le2
 torch==2.6.0
@@ -1004,6 +1054,8 @@ torch==2.9.0
 torch==2.9.0+ppc64le3
 torch==2.9.1
 torch==2.9.1+ppc64le1
+torchaudio==2.10.0
+torchaudio==2.11.0
 torchaudio==2.6.0
 torchaudio==2.6.0+ppc64le1
 torchaudio==2.7.1
@@ -1040,6 +1092,7 @@ torchvision==0.26.0
 torchvision==0.26.0+ppc64le1
 torchvision==0.27.0
 torchvision==0.27.0+ppc64le1
+torchvision==0.27.1
 tornado==6.3.3
 tornado==6.3.3+ppc64le1
 tornado==6.4.1
@@ -1071,6 +1124,7 @@ tree-sitter==0.25.2
 tree-sitter==0.25.2+ppc64le1
 tree-sitter==0.26.0
 tree-sitter==0.26.0+ppc64le1
+triton==3.6.0
 ujson==5.10.0
 ujson==5.10.0+ppc64le1
 ujson==5.11.0
@@ -1093,6 +1147,7 @@ uvloop==0.21.0
 uvloop==0.21.0+ppc64le1
 uvloop==0.22.1
 uvloop==0.22.1+ppc64le1
+uvloop==0.22.1+ppc64le2
 vllm==0.11.1+cpu
 vllm==0.11.1+cpuppc64le1
 vllm==0.15.1+cpu
@@ -1109,6 +1164,8 @@ vllm==0.23.0+cpu
 vllm==0.23.0+cpuppc64le1
 vllm==0.24.0+cpu
 vllm==0.24.0+cpuppc64le1
+vllm==0.25.0+cpu
+vllm==0.26.0+cpu
 vllm==0.8.4+cpu
 vllm==0.8.4+cpuppc64le1
 watchfiles==0.21.0
@@ -1144,12 +1201,16 @@ xgrammar==0.2.0
 xgrammar==0.2.0+ppc64le1
 xgrammar==0.2.1
 xgrammar==0.2.1+ppc64le1
+xgrammar==0.2.3
 yarl==1.18.3
 yarl==1.18.3+ppc64le1
 yarl==1.21.0
 yarl==1.21.0+ppc64le1
 yarl==1.23.0
 yarl==1.23.0+ppc64le1
+zeroconf==0.147.4
+zeroconf==0.149.0
+zeroconf==0.150.0
 zfpy==1.0.0
 zfpy==1.0.0+ppc64le2
 zfpy==1.0.1

@@ -22,6 +22,7 @@ ansible-core==2.19.2
 ansible-core==2.19.2+ppc64le1
 ansible-core==2.19.3
 ansible-core==2.19.3+ppc64le1
+ansible-navigator==25.9.1.dev0
 ansible-rulebook==1.1.2
 ansible-rulebook==1.1.2+ppc64le1
 ansible-rulebook==1.1.6
@@ -180,6 +181,7 @@ dill==0.4.1
 dill==0.4.1+ppc64le1
 distributed==2025.5.1
 distributed==2025.5.1+ppc64le1
+distributed==2026.1.0
 distro==1.9.0
 distro==1.9.0+ppc64le1
 django==5.0.7
@@ -449,6 +451,8 @@ lightgbm==3.3.2
 lightgbm==3.3.2+ppc64le1
 lightgbm==4.6.0
 lightgbm==4.6.0+ppc64le1
+llama-cpp-python-package==1.0+10269
+llama-cpp-python-package==1.0+9803
 luigi==3.6.0
 luigi==3.6.0+ppc64le1
 markdown==3.10.2
@@ -530,6 +534,7 @@ openblas==0.3.32
 openblas==0.3.32+ppc64le1
 openblas==0.3.33
 openblas==0.3.33+ppc64le1
+openblas==0.3.34
 openmpi==5.0.6
 openmpi==5.0.6+ppc64le1
 openmpi==5.0.8
@@ -578,6 +583,7 @@ patroni==4.0.5
 patroni==4.0.5+ppc64le1
 pint==0.24.4
 pint==0.24.4+ppc64le1
+playwright==1.61.0
 poetry-plugin-export==1.8.0
 poetry-plugin-export==1.8.0+ppc64le1
 poetry==1.8.3
@@ -678,6 +684,10 @@ rq==2.3.2
 rq==2.3.2+ppc64le1
 rq==2.3.3
 rq==2.3.3+ppc64le1
+runai-model-streamer-s3==0.15.7
+runai-model-streamer-s3==0.16.1
+runai-model-streamer==0.15.7
+runai-model-streamer==0.16.1
 s3transfer==0.10.4
 s3transfer==0.10.4+ppc64le1
 s3transfer==0.17.0
@@ -740,6 +750,7 @@ sqlalchemy==2.0.50
 sqlalchemy==2.0.50+ppc64le1
 sqlite-vec==0.1.9
 sqlite-vec==0.1.9+ppc64le1
+stepflow-orchestrator==0.13.0
 stripe==10.5.0
 stripe==10.5.0+ppc64le1
 stripe==12.2.0
@@ -774,8 +785,10 @@ thrift-cpp==0.18.0
 thrift-cpp==0.18.0+ppc64le1
 thrift-cpp==0.21.0
 thrift-cpp==0.21.0+ppc64le1
+torch-c-dlpack-ext==0.1.5
 torchdata==0.7.1
 torchdata==0.7.1+ppc64le1
+traceloop-sdk==0.60.0
 traitlets==5.7.1
 traitlets==5.7.1+ppc64le1
 transformers==4.57.1
@@ -818,5 +831,7 @@ xgboost==3.0.1
 xgboost==3.0.1+ppc64le1
 xgboost==3.0.2
 xgboost==3.0.2+ppc64le1
+z3-solver==4.15.4.0
+z3-solver==5.0.0.0
 ZConfig==4.2
 ZConfig==4.2+ppc64le1
