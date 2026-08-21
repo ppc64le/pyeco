@@ -1,12 +1,12 @@
-# DevPi V7
+# DevPi V8
 
-**Release Date:** Jul 23, 2026
+**Release Date:** Aug 20, 2026
 
 ## Overview
 
 This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 
-Additionally, wheels without local version identifiers (suffixes) are now provided for uv compatibility. These wheels are available alongside the corresponding versions that include local version suffixes.
+This release provides most wheels without local version identifiers (suffixes) for uv compatibility. 
 
 ---
  
@@ -21,10 +21,8 @@ Additionally, wheels without local version identifiers (suffixes) are now provid
 
 
 ## 🚀 Major Updates
-- Added over 150 wheels including: 
-    - 6 new packages -  jq, paddlepaddle, networkx, mistral_common, setools and srsly.
-    - Packaging fixes in 17 native library wheels.
-    - TensorFlow v2.14.1 and its dependencies for UBI 8.10
+- Added over 300 wheels including: 
+    - 27 new packages.
  
 ## Package Licenses and CVE Details
 
@@ -131,6 +129,23 @@ chmod 755 /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/milvus &&
 # Use the system libgcc_s.so.1 because the bundled copy requires a newer glibc.
 mv /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1 \
    /opt/app-root/lib64/python3.12/site-packages/milvus_lite/lib/libgcc_s.so.1.disabled
+```
+
+### ollama-python-package v0.30.10
+The following issues have been identified on ppc64le. If you encounter these problems in your environment, use the workaround below. If ollama-python-package works without issues, no action is needed.
+
+**Identified Issue:**
+1. Inference fails with:
+```
+Error: 500 Internal Server Error: error starting llama-server:
+llama-server binary not found
+```
+
+**If you face this issue, use the following workaround:**
+```
+ln -s \
+  "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama/llama-server" \
+  "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama_python_package/bin/llama-server"
 ```
 
 ## 🗑️ Removed
