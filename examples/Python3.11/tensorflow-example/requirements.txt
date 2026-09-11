@@ -2,7 +2,7 @@ absl-py==2.4.0
 astunparse==1.6.3
 certifi==2026.5.20
 charset-normalizer==3.4.4
-cryptography==49.0.0
+cryptography==50.0.0
 flatbuffers==25.2.10
 gast==0.7.0
 google-auth==2.49.0

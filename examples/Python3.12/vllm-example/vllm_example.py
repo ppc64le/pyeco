@@ -5,7 +5,7 @@ import sys
 
 # CPU-friendly env vars
 os.environ['VLLM_USE_CUSTOM_OPS'] = '0'
-os.environ['VLLM_CPU_KVCACHE_SPACE'] = '8'
+os.environ['VLLM_CPU_KVCACHE_SPACE'] = '2'
 os.environ['VLLM_WORKER_MULTIPROC_METHOD'] = 'spawn'
 os.environ['OMP_NUM_THREADS'] = '4'
 os.environ['MKL_NUM_THREADS'] = '4'

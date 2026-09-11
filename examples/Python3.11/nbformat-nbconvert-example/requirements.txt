@@ -44,7 +44,7 @@ pure_eval==0.2.3
 Pygments==2.20.0
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
-pyzmq==27.1.0
+pyzmq==27.2.0
 referencing==0.36.2
 rpds-py==0.30.0
 six==1.17.0

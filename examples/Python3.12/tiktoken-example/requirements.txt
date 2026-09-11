@@ -1,2 +1,2 @@
-tiktoken==0.13.0
+tiktoken==0.14.0
 regex==2024.11.6

@@ -14,7 +14,7 @@ onnxruntime==1.27.0
 packaging==25.0
 requests==2.32.5
 scikit-learn==1.6.1
-scipy==1.18.0
+scipy==1.18.1
 setuptools==80.9.0
 six==1.17.0
 skl2onnx==1.18.0
