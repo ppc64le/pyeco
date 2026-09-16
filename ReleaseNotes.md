@@ -1,10 +1,10 @@
-# DevPi V8
+# DevPi V9
 
-**Release Date:** Aug 20, 2026
+**Release Date:** Sep 17, 2026
 
 ## Overview
 
-This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes updates to 30+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 
 This release provides most wheels without local version identifiers (suffixes) for uv compatibility. 
 
@@ -21,8 +21,8 @@ This release provides most wheels without local version identifiers (suffixes) f
 
 
 ## 🚀 Major Updates
-- Added over 300 wheels including: 
-    - 27 new packages.
+- Added over 150 wheels including: 
+    - 3 new packages.
  
 ## Package Licenses and CVE Details
 
