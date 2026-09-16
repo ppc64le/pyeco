@@ -30,7 +30,8 @@ Detailed package license information and CVE disclosures are available at
 [Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
 
 ## Package Prerequisites
-- JDK is required for PyJNIus. 
+- JDK is required for PyJNIus.
+- libatomic is required for PyArrow v23.0.1.
 - ruamel.yaml is required for ruamel_yaml_clib.
 - httpx is required for httpx_sse.
 - TensorFlow is required for tensorflow-io-gcs-filesystem.
