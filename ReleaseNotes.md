@@ -1,10 +1,10 @@
-# DevPi V8
+# DevPi V9
 
-**Release Date:** Aug 20, 2026
+**Release Date:** Sep 17, 2026
 
 ## Overview
 
-This release includes updates to 50+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
+This release includes updates to 30+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 
 This release provides most wheels without local version identifiers (suffixes) for uv compatibility. 
 
@@ -21,8 +21,8 @@ This release provides most wheels without local version identifiers (suffixes) f
 
 
 ## 🚀 Major Updates
-- Added over 300 wheels including: 
-    - 27 new packages.
+- Added over 150 wheels including: 
+    - 3 new packages.
  
 ## Package Licenses and CVE Details
 
@@ -30,7 +30,8 @@ Detailed package license information and CVE disclosures are available at
 [Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
 
 ## Package Prerequisites
-- JDK is required for PyJNIus. 
+- JDK is required for PyJNIus.
+- libatomic is required for PyArrow v23.0.1.
 - ruamel.yaml is required for ruamel_yaml_clib.
 - httpx is required for httpx_sse.
 - TensorFlow is required for tensorflow-io-gcs-filesystem.
