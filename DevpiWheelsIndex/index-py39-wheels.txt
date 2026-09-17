@@ -321,6 +321,7 @@ llguidance==1.4.0
 llguidance==1.4.0+ppc64le1
 llguidance==1.7.5
 llguidance==1.7.5+ppc64le1
+llguidance==1.7.6
 llvmlite==0.42.0
 llvmlite==0.42.0+ppc64le1
 lxml==4.9.2
