@@ -35,7 +35,7 @@ Before getting started, confirm your environment:
 
 - **Architecture**: ppc64le
 - **Processors**: Power9, Power10, Power11
-- **Python Versions**: 3.10 - 3.13 (3.14 preview for few packages)
+- **Python Versions**: 3.11, 3.12
 
 If your system matches the above, you're ready to proceed.
 
@@ -96,12 +96,8 @@ To explore all available versions, Python compatibility, and licenses, use the i
 
 - [DevPiWheelsIndex.md](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md) - Full list of wheels with versions, build suffixes, licenses and associated CVEs
 - [**Python version–specific indexes**](https://github.com/ppc64le/pyeco/tree/main/DevpiWheelsIndex) - Quickly filter wheels for:
-  - Python 3.9
-  - Python 3.10
   - Python 3.11
   - Python 3.12
-  - Python 3.13
-  - Python 3.14
 
 ## 4️⃣ Install with pip: Familiar Workflow
 
