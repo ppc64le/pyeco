@@ -34,7 +34,7 @@ Before getting started, confirm your environment:
 ### Supported Platforms
 
 - **Architecture**: ppc64le
-- **Processors**: Power9, Power10, Power11
+- **Processors**:  Power10, Power11
 - **Python Versions**: 3.11, 3.12
 
 If your system matches the above, you're ready to proceed.
@@ -57,38 +57,7 @@ To view all available wheel versions for a package, refer to the [Simple Index](
 
 📝 **Note: Wheel Versions and Suffixes**
 
-IBM Power wheels are published in two forms:
-
-| Wheel type | Example version | Purpose |
-|---|---|---|
-| **Suffix wheel** | `2.2.6+ppc64le1`, `2.2.6+ppc64le2` | Identifies a specific IBM Power build. The wheel with the **highest suffix for a given upstream version is the latest build**.|
-| **Suffix-free wheel** | `2.2.6` | A fixed, stable build provided for compatibility with package management workflows, including uv, where a canonical version without local suffixes may simplify dependency resolution and version matching. |
-
-- The **suffix** (`ppc64le1`, `ppc64le2`, …) is incremented each time a wheel is rebuilt for the same upstream version, for example to pick up dependency updates or build script improvements.
-- The **suffix-free** wheel is provided for workflows that prefer or require the canonical version without a local version suffix. If you need build traceability or want to ensure a specific build is used, always pin to the explicit suffixed version (e.g. `numpy==2.2.6+ppc64le1`).
-- Both forms are available simultaneously — you can use either depending on your workflow.
-
-**Choosing the right version**:
-
-| Goal | What to install |
-|---|---|
-| Latest IBM Power build | Highest-suffix version, e.g. `2.2.6+ppc64le2` |
-| Simple install with no suffix needed (e.g. with `uv`) | Suffix-free version `2.2.6` |
-| A specific known build | Full suffixed version, e.g. `2.2.6+ppc64le1` |
-
-**Pinning to a specific build**: Specify the full suffixed version explicitly:
-
-```bash
-# pip
-pip install "numpy==2.2.6+ppc64le2" \
-  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
-
-# uv
-uv pip install "numpy==2.2.6+ppc64le2" \
-  --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
-```
-
-To see all available builds for a package, browse the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0/+simple/).
+IBM Power wheels use a version suffix (for example, `ppc64le1`) to identify build updates. When a wheel is rebuilt for the same upstream package version, the suffix is incremented (`ppc64le2`, `ppc64le3`, etc.). This allows incremental improvements while preserving the original upstream version number and clearly distinguishing updated builds.
 
 ### 📦 Complete Package & Version Indexes
 
