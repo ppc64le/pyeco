@@ -23,7 +23,7 @@ IBM's wheels are:
 
 - **Natively built** on IBM Power (not cross-compiled)
 - **Optimized** for AI, ML, and scientific computing
-- **Delivered** through a [DevPI repository](https://wheels.developerfirst.ibm.com/ppc64le/linux) that integrates seamlessly with pip
+- **Delivered** through a [DevPI repository](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0) that integrates seamlessly with pip
 
 ---
 
@@ -47,13 +47,13 @@ This is your main entry point for available optimized wheels:
 
 👉 **Wheel Repository (DevPI)**:
 
-https://wheels.developerfirst.ibm.com/ppc64le/linux
+https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 
 ℹ️ **Note**: This page shows only the latest version of each package.
 
 👉 **Simple Index (All versions)**:
 
-To view all available wheel versions for a package, refer to the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/) on the DevPI server, which provides the complete version history for that package.
+To view all available wheel versions for a package, refer to the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0/+simple/) on the DevPI server, which provides the complete version history for that package.
 
 📝 **Note: Wheel Versions and Suffixes**
 
@@ -81,14 +81,14 @@ IBM Power wheels are published in two forms:
 ```bash
 # pip
 pip install "numpy==2.2.6+ppc64le2" \
-  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 
 # uv
 uv pip install "numpy==2.2.6+ppc64le2" \
-  --index https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 ```
 
-To see all available builds for a package, browse the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/).
+To see all available builds for a package, browse the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0/+simple/).
 
 ### 📦 Complete Package & Version Indexes
 
@@ -113,7 +113,7 @@ Use `--prefer-binary` to prioritize prebuilt Power wheels:
 
 ```bash
 pip install --prefer-binary <package-name> \
-  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 ```
 
 - This pulls from IBM's Power-optimized wheel repo.
@@ -123,7 +123,7 @@ pip install --prefer-binary <package-name> \
 
 ```bash
 pip install devpi-client
-devpi use https://wheels.developerfirst.ibm.com/ppc64le/linux
+devpi use https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 devpi list
 ```
 
@@ -133,7 +133,7 @@ devpi list
 
   ```bash
   pip install --prefer-binary --no-cache-dir <package-name> \
-  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --extra-index-url=https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
   ```
 
 - Ensure you're using the correct Python version.
@@ -180,7 +180,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 IBM Power wheels are published as suffix-free builds (e.g. `2.2.6`) in addition to suffixed builds (e.g. `2.2.6+ppc64le1`, `2.2.6+ppc64le2`). The suffix-free wheel is a fixed, stable build that enables package managers such as uv to install the package using the canonical version (`2.2.6`) without requiring knowledge of the exact local-version suffix. See the [Wheel Versions and Suffixes](#-note-wheel-versions-and-suffixes) note in section 3 for full details.
 
 ```bash
-uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
+uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0 \
   <package-name>
 ```
 
@@ -192,7 +192,7 @@ uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
 
 ```bash
 uv pip install "numpy==2.2.6+ppc64le2" \
-  --index https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 ```
 
 ### Using `uv add` with pyproject.toml
@@ -200,7 +200,7 @@ uv pip install "numpy==2.2.6+ppc64le2" \
 `uv add` is the recommended way to manage dependencies in a `uv`-based project. It installs the IBM Power wheel while recording only the **base (canonical) version** in `pyproject.toml`, eliminating the need to specify a platform-specific local version suffix and helping maintain portability.
 
 ```bash
-uv add numpy==2.2.6 --index https://wheels.developerfirst.ibm.com/ppc64le/linux
+uv add numpy==2.2.6 --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 # Installed: numpy==2.2.6+ppc64le2
 # Recorded in pyproject.toml: "numpy==2.2.6"
 ```
@@ -250,7 +250,7 @@ uv venv .venv
 source .venv/bin/activate
 
 # Install packages into the virtual environment
-uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
+uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0 \
   <package-name>
 ```
 
@@ -258,17 +258,17 @@ uv pip install --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
 
 ```bash
 uv pip install -r requirements.txt \
-  --index https://wheels.developerfirst.ibm.com/ppc64le/linux
+  --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0
 ```
 
 ### Troubleshooting Tips
 
-- If a package is not found, verify the package name against the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux/+simple/).
+- If a package is not found, verify the package name against the [Simple Index](https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0/+simple/).
 - Force a fresh install and bypass the cache:
 
   ```bash
   uv pip install --no-cache --reinstall \
-    --index https://wheels.developerfirst.ibm.com/ppc64le/linux \
+    --index https://wheels.developerfirst.ibm.com/ppc64le/linux-v2026.09.0 \
     <package-name>
   ```
 
