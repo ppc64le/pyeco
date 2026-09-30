@@ -1,6 +1,6 @@
-# DevPi V9
+# AI Foundation 3Q26
 
-**Release Date:** Sep 17, 2026
+**Release Date:** Sep 30, 2026
 
 ## Overview
 
