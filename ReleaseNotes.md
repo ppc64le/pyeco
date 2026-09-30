@@ -1,12 +1,10 @@
-# DevPi V9
+# AI Foundation 3Q26
 
-**Release Date:** Sep 17, 2026
+**Release Date:** Sep 30, 2026
 
 ## Overview
 
-This release includes updates to 30+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
-
-This release provides most wheels without local version identifiers (suffixes) for uv compatibility. 
+This release includes more than 1,600 Python wheels, covering both Python 3.11 and 3.12 environments, with a focus on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 
 ---
  
@@ -16,18 +14,17 @@ This release provides most wheels without local version identifiers (suffixes) f
 |--------------------|-------------------|
 | Architecture       | ppc64le           |
 | Operating Systems  | RHEL, Ubuntu, SLES |
-| Processors         | Power9, Power10, Power11 |
-| Python Versions    | 3.10 – 3.13<br>3.14 (Preview - for few packages) |
+| Processors         | Power10, Power11 |
+| Python Versions    | 3.11, 3.12 |
 
 
 ## 🚀 Major Updates
-- Added over 150 wheels including: 
-    - 3 new packages.
+- Comprehensive PowerPC (ppc64le) support with over 1600 wheels.
  
 ## Package Licenses and CVE Details
 
 Detailed package license information and CVE disclosures are available at 
-[Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
+[Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/v2026.09.0/DevpiWheelsIndex.md)
 
 ## Package Prerequisites
 - JDK is required for PyJNIus.
@@ -148,31 +145,6 @@ ln -s \
   "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama/llama-server" \
   "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama_python_package/bin/llama-server"
 ```
-
-## 🗑️ Removed
-
-### `LD_LIBRARY_PATH` Requirement
-
-Previously, users installing non-manylinux wheels had to manually set `LD_LIBRARY_PATH` to point to native shared libraries, to avoid runtime errors such as:
-
-```
-ImportError: libXYZ.so: cannot open shared object file
-```
-
-All wheels provided in this repository are **manylinux-compliant** and bundle their required native dependencies directly. This means:
-
-- No manual `LD_LIBRARY_PATH` configuration is needed.
-- Packages install cleanly and run consistently across all supported Linux distributions (RHEL, Ubuntu, SLES).
-- The related tip, note, and troubleshooting guidance for `LD_LIBRARY_PATH` have been removed from the README accordingly.
-
-## 🚫 Deprecation Notice: Python 3.9 Support
-Support for Python 3.9 has been removed starting with this release.
-If you’re still using Python 3.9, please plan to upgrade to Python 3.10 or later to ensure compatibility with future updates.
-
-⚠️ Important
-
-- Existing Python 3.9 wheels are still available temporarily.
-- They will be removed in a future release.
 
 ## 🔒 Feedback and Support
 
