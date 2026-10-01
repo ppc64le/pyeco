@@ -227,6 +227,7 @@ fastavro==1.12.2+ppc64le1
 fastavro==1.9.7
 fastavro==1.9.7+ppc64le1
 fastparquet==2024.11.0
+fastsafetensors==0.4.0
 fastuuid==0.14.0
 fiona==1.10.1
 fiona==1.10.1+ppc64le1

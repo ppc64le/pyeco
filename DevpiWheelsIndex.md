@@ -1,8 +1,7 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: September 16, 2026
-### Last CVE Scanned On: September 10, 2026
-
+### Last Updated On: September 30, 2026
+### Last CVE Scanned On: September 29, 2026
 ----
 
 ### abseil-cpp
@@ -3543,6 +3542,15 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | fastparquet-2024.11.0-cp310-cp310-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl<br>fastparquet-2024.11.0-cp311-cp311-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl<br>fastparquet-2024.11.0-cp312-cp312-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl<br>fastparquet-2024.11.0-cp313-cp313-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl<br>fastparquet-2024.11.0-cp314-cp314-manylinux2014_ppc64le.manylinux_2_17_ppc64le.whl | `Apache-2.0` | N.A |
+
+----
+
+### fastsafetensors
+- **fastsafetensors==0.4.0**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| fastsafetensors-0.4.0-cp312-cp312-manylinux_2_39_ppc64le.whl<br>fastsafetensors-0.4.0-cp313-cp313-manylinux_2_39_ppc64le.whl<br>fastsafetensors-0.4.0-cp314-cp314-manylinux_2_39_ppc64le.whl | `Apache-2.0`, `MIT` | N.A |
 
 ----
 

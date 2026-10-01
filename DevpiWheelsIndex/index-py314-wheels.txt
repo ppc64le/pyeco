@@ -144,6 +144,7 @@ fastavro==1.12.2
 fastavro==1.12.2+ppc64le1
 fastavro==1.9.7
 fastparquet==2024.11.0
+fastsafetensors==0.4.0
 fastuuid==0.14.0
 gmpy2==2.2.2
 gmpy2==2.2.2+ppc64le1
