@@ -14743,16 +14743,6 @@
 | tiktoken-0.9.0+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>tiktoken-0.9.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>tiktoken-0.9.0+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>tiktoken-0.9.0+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>tiktoken-0.9.0+ppc64le1-cp39-cp39-manylinux_2_34_ppc64le.whl | `MIT` | N.A |
 
 ----
-
-### tilelang
-- **tilelang==0.1.10+rocm**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| tilelang-0.1.10+rocm-cp38-abi3-manylinux_2_39_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
-
-----
-
 ### tokenizers
 - **tokenizers==0.21.0**
 
