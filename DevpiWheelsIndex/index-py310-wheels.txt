@@ -984,7 +984,6 @@ tiktoken==0.7.0
 tiktoken==0.7.0+ppc64le1
 tiktoken==0.9.0
 tiktoken==0.9.0+ppc64le1
-tilelang==0.1.10+rocm
 tokenizers==0.21.0
 tokenizers==0.21.0+ppc64le1
 tokenizers==0.21.1
