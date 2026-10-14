@@ -4168,14 +4168,6 @@
 | graphite2-1.3.14-py3-none-any.whl<br>graphite2-1.3.14-py3-none-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_34_ppc64le.whl | `LGPL-2.0-or-later`,<br>`LGPL-2.1-only`,<br>`LGPL-2.1-or-later`,<br>`LGPL-2.1-or-later OR MPL-1.1 OR GPL-2.0-or-later`,<br>`MPL-1.1` | N.A |
 
 ----
-- **graphite2==1.3.14+ppc64le1**
-
-| Wheel File | License | CVE IDs |
-|:-----------|:-------|:--------|
-| graphite2-1.3.14+ppc64le1-py3-none-any.whl | `LGPL-2.0-or-later`,<br>`LGPL-2.1-only`,<br>`LGPL-2.1-or-later`,<br>`LGPL-2.1-or-later OR MPL-1.1 OR GPL-2.0-or-later`,<br>`MPL-1.1` | N.A |
-
-----
-
 ### graphviz
 - **graphviz==0.20.2**
 
