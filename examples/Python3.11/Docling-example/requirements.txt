@@ -1,7 +1,7 @@
 docling==2.126.0
 docling-core==2.95.0
 docling-ibm-models==4.0.2
-docling-parse==7.16.0
+docling-parse==7.22.2
 docling-slim==2.126.0
 torch==2.14.0
 torchvision==0.28.0
