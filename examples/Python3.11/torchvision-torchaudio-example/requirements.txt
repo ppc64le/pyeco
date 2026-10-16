@@ -10,7 +10,7 @@ networkx==3.6.1
 numpy==2.4.6
 pillow==12.3.0
 requests==2.32.5
-sympy==1.15.0
+sympy==1.15.0.dev0
 torch==2.14.0
 torchaudio==2.11.0
 torchvision==0.28.0
