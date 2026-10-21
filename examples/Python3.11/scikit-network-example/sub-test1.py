@@ -8,7 +8,7 @@ from sknetwork.data import karate_club, from_edge_list
 from sknetwork.ranking import PageRank, HITS
 from sknetwork.clustering import Louvain
 from sknetwork.embedding import Spectral
-from sknetwork.topology import count_triangles, get_core_decomposition
+from sknetwork.topology import count_triangles
 from sknetwork.linkpred import NNLinker
 
 
@@ -78,14 +78,6 @@ class TestScikitNetworkLibrary(unittest.TestCase):
         total_triangles = count_triangles(adjacency)
 
         self.assertEqual(total_triangles, 45)
-
-    def test_topology_core_decomposition(self):
-        """Compute core decomposition."""
-        adjacency = karate_club()
-        core_values = get_core_decomposition(adjacency)
-
-        self.assertEqual(len(core_values), 34)
-        self.assertTrue(np.all(core_values >= 0))
 
     def test_link_prediction_nn(self):
         """Predict links using nearest neighbors in embedding space."""

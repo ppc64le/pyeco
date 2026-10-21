@@ -1,7 +1,7 @@
 """
 scikit-network example: Demonstrating graph analytics with sknetwork.
 Covers dataset loading, PageRank, HITS ranking, Louvain clustering,
-Spectral embedding, topology metrics (triangles & core decomposition),
+Spectral embedding, topology metrics (triangle counting),
 and link prediction (nearest neighbors in embedding space).
 """
 
@@ -10,7 +10,7 @@ from sknetwork.data import karate_club, from_edge_list
 from sknetwork.ranking import PageRank, HITS
 from sknetwork.clustering import Louvain
 from sknetwork.embedding import Spectral
-from sknetwork.topology import count_triangles, get_core_decomposition
+from sknetwork.topology import count_triangles
 from sknetwork.linkpred import NNLinker
 
 
@@ -68,13 +68,9 @@ def demo_embedding(adjacency):
 
 def demo_topology(adjacency):
     """Analyze graph topological structure."""
-    print("\n--- 5. Graph Topology (Triangles & Core Decomposition) ---")
+    print("\n--- 5. Graph Topology (Triangles) ---")
     total_triangles = count_triangles(adjacency)
     print(f"Total number of triangles in graph: {total_triangles}")
-
-    core_values = get_core_decomposition(adjacency)
-    print(f"Max coreness (k-core): {np.max(core_values)}")
-    print(f"Node coreness values: {core_values[:10]}...")
 
 
 def demo_link_prediction(adjacency):

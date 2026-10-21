@@ -11,7 +11,7 @@ scipy
 - Computes node centrality and ranking using algorithms like PageRank and HITS.
 - Performs community detection (graph clustering) using the Louvain algorithm.
 - Computes low-dimensional node embeddings via Spectral embedding.
-- Computes graph topological properties such as triangle counting and core decomposition.
+- Computes graph topological properties such as triangle counting.
 - Predicts links using nearest neighbors in the embedding space (NNLinker).
 
 ### How to run the example :
