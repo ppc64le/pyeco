@@ -2,7 +2,7 @@
 scikit-network example: Demonstrating graph analytics with sknetwork.
 Covers dataset loading, PageRank, HITS ranking, Louvain clustering,
 Spectral embedding, topology metrics (triangles & core decomposition),
-and link prediction (Jaccard Index).
+and link prediction (nearest neighbors in embedding space).
 """
 
 import numpy as np
@@ -10,8 +10,8 @@ from sknetwork.data import karate_club, from_edge_list
 from sknetwork.ranking import PageRank, HITS
 from sknetwork.clustering import Louvain
 from sknetwork.embedding import Spectral
-from sknetwork.topology import Triangles, CoreDecomposition
-from sknetwork.linkpred import JaccardIndex
+from sknetwork.topology import count_triangles, get_core_decomposition
+from sknetwork.linkpred import NNLinker
 
 
 def demo_karate_club():
@@ -20,11 +20,9 @@ def demo_karate_club():
     graph = karate_club(metadata=True)
     adjacency = graph.adjacency
     labels = graph.labels
-    names = graph.names
 
     print(f"Number of nodes: {adjacency.shape[0]}")
     print(f"Number of edges: {adjacency.nnz // 2}")
-    print(f"Sample node names: {list(names[:5])}")
     print(f"Ground-truth club affiliations: {labels[:10]}...")
     return graph
 
@@ -71,28 +69,24 @@ def demo_embedding(adjacency):
 def demo_topology(adjacency):
     """Analyze graph topological structure."""
     print("\n--- 5. Graph Topology (Triangles & Core Decomposition) ---")
-    triangles = Triangles()
-    tri_counts = triangles.fit_transform(adjacency)
-    total_triangles = int(np.sum(tri_counts) / 3)
+    total_triangles = count_triangles(adjacency)
     print(f"Total number of triangles in graph: {total_triangles}")
-    print(f"Top 5 nodes by triangle count: {np.argsort(tri_counts)[::-1][:5]}")
 
-    core = CoreDecomposition()
-    core_values = core.fit_transform(adjacency)
+    core_values = get_core_decomposition(adjacency)
     print(f"Max coreness (k-core): {np.max(core_values)}")
     print(f"Node coreness values: {core_values[:10]}...")
 
 
 def demo_link_prediction(adjacency):
-    """Predict link formation likelihood using Jaccard Index."""
-    print("\n--- 6. Link Prediction (Jaccard Index) ---")
-    jaccard = JaccardIndex()
-    jaccard.fit(adjacency)
+    """Predict link formation using nearest neighbors (cosine similarity)."""
+    print("\n--- 6. Link Prediction (NNLinker) ---")
+    linker = NNLinker(n_neighbors=5, threshold=0.5)
+    links = linker.fit_predict(adjacency)
+    print(f"Predicted links matrix shape: {links.shape}")
 
     test_pairs = [(0, 1), (0, 2), (0, 33), (32, 33)]
-    scores = jaccard.predict(test_pairs)
-    for pair, score in zip(test_pairs, scores):
-        print(f"  Link score between node {pair[0]} and node {pair[1]}: {score:.4f}")
+    for i, j in test_pairs:
+        print(f"  Link score between node {i} and node {j}: {links[i, j]:.4f}")
 
 
 def demo_custom_graph():
@@ -103,7 +97,7 @@ def demo_custom_graph():
         (2, 3),
         (3, 4), (4, 5), (5, 3)
     ]
-    graph = from_edge_list(edges, directed=False)
+    graph = from_edge_list(edges, directed=False, matrix_only=False)
     adjacency = graph.adjacency
     print(f"Custom graph nodes: {adjacency.shape[0]}, edges: {len(edges)}")
 

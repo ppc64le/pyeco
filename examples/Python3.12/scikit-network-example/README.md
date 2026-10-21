@@ -12,7 +12,7 @@ scipy
 - Performs community detection (graph clustering) using the Louvain algorithm.
 - Computes low-dimensional node embeddings via Spectral embedding.
 - Computes graph topological properties such as triangle counting and core decomposition.
-- Evaluates link prediction on graph edge pairs using the Jaccard Index.
+- Predicts links using nearest neighbors in the embedding space (NNLinker).
 
 ### How to run the example :
 ```

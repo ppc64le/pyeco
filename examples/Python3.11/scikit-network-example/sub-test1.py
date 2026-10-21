@@ -8,8 +8,8 @@ from sknetwork.data import karate_club, from_edge_list
 from sknetwork.ranking import PageRank, HITS
 from sknetwork.clustering import Louvain
 from sknetwork.embedding import Spectral
-from sknetwork.topology import Triangles, CoreDecomposition
-from sknetwork.linkpred import JaccardIndex
+from sknetwork.topology import count_triangles, get_core_decomposition
+from sknetwork.linkpred import NNLinker
 
 
 class TestScikitNetworkLibrary(unittest.TestCase):
@@ -36,8 +36,7 @@ class TestScikitNetworkLibrary(unittest.TestCase):
 
     def test_pagerank(self):
         """Compute PageRank scores on graph adjacency."""
-        graph = karate_club()
-        adjacency = graph.adjacency
+        adjacency = karate_club()
         pagerank = PageRank(damping_factor=0.85)
         scores = pagerank.fit_predict(adjacency)
 
@@ -47,8 +46,7 @@ class TestScikitNetworkLibrary(unittest.TestCase):
 
     def test_hits(self):
         """Compute HITS authority scores on graph adjacency."""
-        graph = karate_club()
-        adjacency = graph.adjacency
+        adjacency = karate_club()
         hits = HITS()
         scores = hits.fit_predict(adjacency)
 
@@ -57,8 +55,7 @@ class TestScikitNetworkLibrary(unittest.TestCase):
 
     def test_louvain_clustering(self):
         """Perform Louvain community detection."""
-        graph = karate_club()
-        adjacency = graph.adjacency
+        adjacency = karate_club()
         louvain = Louvain()
         labels = louvain.fit_predict(adjacency)
 
@@ -68,8 +65,7 @@ class TestScikitNetworkLibrary(unittest.TestCase):
 
     def test_spectral_embedding(self):
         """Compute 2D Spectral embedding of nodes."""
-        graph = karate_club()
-        adjacency = graph.adjacency
+        adjacency = karate_club()
         spectral = Spectral(n_components=2)
         embedding = spectral.fit_transform(adjacency)
 
@@ -77,43 +73,34 @@ class TestScikitNetworkLibrary(unittest.TestCase):
         self.assertFalse(np.isnan(embedding).any())
 
     def test_topology_triangles(self):
-        """Compute triangle counts for graph nodes."""
-        graph = karate_club()
-        adjacency = graph.adjacency
-        triangles = Triangles()
-        counts = triangles.fit_transform(adjacency)
+        """Count triangles in the graph."""
+        adjacency = karate_club()
+        total_triangles = count_triangles(adjacency)
 
-        self.assertEqual(len(counts), 34)
-        self.assertTrue(np.all(counts >= 0))
-        total_triangles = int(np.sum(counts) / 3)
-        self.assertGreater(total_triangles, 0)
+        self.assertEqual(total_triangles, 45)
 
     def test_topology_core_decomposition(self):
         """Compute core decomposition."""
-        graph = karate_club()
-        adjacency = graph.adjacency
-        core = CoreDecomposition()
-        core_values = core.fit_transform(adjacency)
+        adjacency = karate_club()
+        core_values = get_core_decomposition(adjacency)
 
         self.assertEqual(len(core_values), 34)
         self.assertTrue(np.all(core_values >= 0))
 
-    def test_link_prediction_jaccard(self):
-        """Predict link scores using Jaccard Index."""
-        graph = karate_club()
-        adjacency = graph.adjacency
-        jaccard = JaccardIndex()
-        jaccard.fit(adjacency)
+    def test_link_prediction_nn(self):
+        """Predict links using nearest neighbors in embedding space."""
+        adjacency = karate_club()
+        linker = NNLinker(n_neighbors=5, threshold=0.5)
+        links = linker.fit_predict(adjacency)
 
-        test_pairs = [(0, 1), (0, 33)]
-        scores = jaccard.predict(test_pairs)
-        self.assertEqual(len(scores), 2)
-        self.assertTrue(all(0.0 <= s <= 1.0 for s in scores))
+        self.assertEqual(links.shape, (34, 34))
+        self.assertTrue(sparse.issparse(links))
+        self.assertTrue(np.all(links.data >= 0.5))
 
     def test_custom_graph_from_edge_list(self):
         """Construct custom graph from edge list and verify adjacency."""
         edges = [(0, 1), (1, 2), (2, 0)]
-        graph = from_edge_list(edges, directed=False)
+        graph = from_edge_list(edges, directed=False, matrix_only=False)
         self.assertEqual(graph.adjacency.shape, (3, 3))
         self.assertEqual(graph.adjacency.nnz, 6)
 
