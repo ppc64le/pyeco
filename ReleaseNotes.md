@@ -1,6 +1,6 @@
-# DevPi V9
+# DevPi V10
 
-**Release Date:** Sep 17, 2026
+**Release Date:** Oct 22, 2026
 
 ## Overview
 
@@ -21,8 +21,8 @@ This release provides most wheels without local version identifiers (suffixes) f
 
 
 ## 🚀 Major Updates
-- Added over 150 wheels including: 
-    - 3 new packages.
+- Added over 230 wheels including:
+    - 4 new packages (azure_core_cpp, pgvector, py_spy, scikit_network).
  
 ## Package Licenses and CVE Details
 
@@ -98,6 +98,7 @@ Compilation requires the following development tools:
 - `g++`
 - Python development headers
 - Rust and Cargo (required for apache-airflow)
+- `cmake` (required for vllm 0.29.0 and 0.30.0 on Python 3.14)
 
 **Affected packages:**
 - ansible_rulebook 1.1.*
@@ -112,6 +113,7 @@ Compilation requires the following development tools:
 - tensorflow 2.14.1
 - tensorflow-text 2.14.0
 - uvtools
+- vllm 0.29.0, 0.30.0 (Python 3.14; requires gcc and cmake)
 - apache-airflow (requires Rust and Cargo)
 
 ## 🔧 Troubleshooting
