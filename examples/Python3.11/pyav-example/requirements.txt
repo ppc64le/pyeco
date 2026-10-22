@@ -1,5 +1,5 @@
 av==16.1.0
-llvmlite==0.47.0
+llvmlite==0.49.0
 ml-dtypes==0.5.4
 numpy==2.4.6
 pillow==12.3.0
