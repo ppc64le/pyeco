@@ -54,7 +54,6 @@ print("✅ PyAV video encoded in memory with rawvideo.")
 # ----------------------------------------
 print("⚙️ Running minimal LLVM IR with llvmlite...")
 
-llvm.initialize()
 llvm.initialize_native_target()
 llvm.initialize_native_asmprinter()
 
