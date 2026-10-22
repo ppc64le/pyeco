@@ -1,7 +1,7 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: October 19, 2026
-### Last CVE Scanned On: October 16, 2026
+### Last Updated On: October 22, 2026
+### Last CVE Scanned On: October 22, 2026
 ----
 
 ### abseil-cpp
@@ -7317,6 +7317,13 @@
 | llvmlite-0.47.0+ppc64le1-cp310-cp310-manylinux_2_34_ppc64le.whl<br>llvmlite-0.47.0+ppc64le1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>llvmlite-0.47.0+ppc64le1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>llvmlite-0.47.0+ppc64le1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>llvmlite-0.47.0+ppc64le1-cp314-cp314-manylinux_2_34_ppc64le.whl | `Apache-2.0 WITH LLVM-exception`,<br>`BSD-2-Clause` | N.A |
 
 ----
+- **llvmlite==0.49.0**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| llvmlite-0.49.0-cp310-cp310-manylinux_2_34_ppc64le.whl<br>llvmlite-0.49.0-cp311-cp311-manylinux_2_34_ppc64le.whl<br>llvmlite-0.49.0-cp312-cp312-manylinux_2_34_ppc64le.whl<br>llvmlite-0.49.0-cp313-cp313-manylinux_2_34_ppc64le.whl<br>llvmlite-0.49.0-cp314-cp314-manylinux_2_34_ppc64le.whl | `Apache-2.0 WITH LLVM-exception`,<br>`BSD-2-Clause` | N.A |
+
+----
 
 ### luigi
 - **luigi==3.6.0**
@@ -10779,6 +10786,13 @@
 | polars-1.38.1+ppc64le1-py3-none-any.whl | `BSD-2-Clause`, `MIT`,<br>`MS-PL` | N.A |
 
 ----
+- **polars==1.44.2**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| polars-1.44.2-py3-none-any.whl | `BSD-2-Clause`, `MIT`,<br>`MS-PL` | N.A |
+
+----
 
 ### polars-runtime-32
 - **polars-runtime-32==1.38.1**
@@ -10793,6 +10807,13 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | polars_runtime_32-1.38.1+ppc64le1-cp310-abi3-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSL-1.0`, `CC0-1.0`,<br>`CC0-1.0 OR Apache-2.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`Unlicense` | N.A |
+
+----
+- **polars-runtime-32==1.44.2**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| polars_runtime_32-1.44.2-cp310-abi3-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSL-1.0`, `CC0-1.0`,<br>`CC0-1.0 OR Apache-2.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`Unlicense` | N.A |
 
 ----
 
@@ -10811,6 +10832,13 @@
 | polars_runtime_64-1.38.1+ppc64le1-cp310-abi3-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSL-1.0`, `CC0-1.0`,<br>`CC0-1.0 OR Apache-2.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`Unlicense` | N.A |
 
 ----
+- **polars-runtime-64==1.44.2**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| polars_runtime_64-1.44.2-cp310-abi3-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSL-1.0`, `CC0-1.0`,<br>`CC0-1.0 OR Apache-2.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`Unlicense` | N.A |
+
+----
 
 ### polars-runtime-compat
 - **polars-runtime-compat==1.38.1**
@@ -10825,6 +10853,13 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | polars_runtime_compat-1.38.1+ppc64le1-cp310-abi3-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSL-1.0`, `CC0-1.0`,<br>`CC0-1.0 OR Apache-2.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`Unlicense` | N.A |
+
+----
+- **polars-runtime-compat==1.44.2**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| polars_runtime_compat-1.44.2-cp310-abi3-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSL-1.0`, `CC0-1.0`,<br>`CC0-1.0 OR Apache-2.0`,<br>`LGPL-2.1-or-later`,<br>`LLVM-exception`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`Unlicense` | N.A |
 
 ----
 
