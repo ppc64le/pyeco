@@ -6,10 +6,10 @@
 
 This release includes updates to 30+ Python packages across multiple Python versions (3.10 to 3.14), focusing on AI/ML frameworks, data processing libraries, web frameworks, and infrastructure tools.
 
-This release provides most wheels without local version identifiers (suffixes) for uv compatibility. 
+This release provides most wheels without local version identifiers (suffixes) for uv compatibility.
 
 ---
- 
+
 ## Supported Platforms
 
 | Category           | Supported Options |
@@ -17,34 +17,36 @@ This release provides most wheels without local version identifiers (suffixes) f
 | Architecture       | ppc64le           |
 | Operating Systems  | RHEL, Ubuntu, SLES |
 | Processors         | Power9, Power10, Power11 |
-| Python Versions    | 3.10 – 3.13<br>3.14 (Preview - for few packages) |
+| Python Versions    | 3.10 – 3.13<br>3.14 (Preview - for a few packages) |
 
 
 ## 🚀 Major Updates
 - Added over 230 wheels including:
     - 4 new packages (azure_core_cpp, pgvector, py_spy, scikit_network).
- 
+
 ## Package Licenses and CVE Details
 
-Detailed package license information and CVE disclosures are available at 
+Detailed package license information and CVE disclosures are available at
 [Package Licenses and CVE Details](https://github.com/ppc64le/pyeco/blob/main/DevpiWheelsIndex.md)
 
 ## Package Prerequisites
 - JDK is required for PyJNIus.
-- libatomic is required for PyArrow v23.0.1.
+- A Java runtime is required for javabridge 1.0.18 (Python 3.10, 3.11): `yum install -y java-11-openjdk-devel`.
+- libatomic is required for PyArrow: `yum install -y libatomic`.
+- NumPy is required for zfpy 1.0.1 and must be installed explicitly.
 - ruamel.yaml is required for ruamel_yaml_clib.
 - httpx is required for httpx_sse.
 - TensorFlow is required for tensorflow-io-gcs-filesystem.
 - TensorFlow 2.18.1 is compatible with flatbuffers 25.2.10.
 - iminuit 2.28.0 depends on packaging, which must be installed explicitly.
 
-## Package Version compatiblity
+## Package Version Compatibility
 
-### PyTorch compatibility
+### PyTorch Compatibility
 
-| Package | Version | Python Versions | Compatible Torch Version | 
+| Package | Version | Python Versions | Compatible Torch Version |
 |---------|---------|-----------------|-------------------------|
-| **torchvision** | 0.22.1 | 3.11, 3.13 | 2.6.0 | 
+| **torchvision** | 0.22.1 | 3.11, 3.13 | 2.6.0 |
 | **torchvision** | 0.24.0 | 3.11 | 2.9.0 |
 | **torchvision** | 0.24.1 | 3.10, 3.12 | 2.9.x |
 | **torchvision** | 0.24.1 | 3.11, 3.12, 3.13, 3.14 | 2.9.x |
@@ -53,14 +55,14 @@ Detailed package license information and CVE disclosures are available at
 | **torchtext** | 0.16.2 | 3.10, 3.11 | 2.8.0 |
 | **torchtext** | 0.18.0 | 3.10, 3.11, 3.12, 3.13 | 2.8.0 |
 | **torchaudio** | 2.6.0 | 3.11, 3.12 | 2.6.0 |
-| **torchaudio** | 2.7.1 | 3.10, 3.11, 3.12, 3.13 | 2.7.1 | 
+| **torchaudio** | 2.7.1 | 3.10, 3.11, 3.12, 3.13 | 2.7.1 |
 | **torchaudio** | 2.8.0 | 3.12 | 2.8.0 |
-| **torchaudio** | 2.9.0 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.0 | 
-| **torchaudio** | 2.9.1 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.1 | 
+| **torchaudio** | 2.9.0 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.0 |
+| **torchaudio** | 2.9.1 | 3.10, 3.11, 3.12, 3.13, 3.14 | 2.9.1 |
 
-For complete version compatibility information between PyTorch and its domain libraries, see the - [PyTorch - Domain libraries version compatibility matrix](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions)
- 
-### Numpy compatibility
+For complete version compatibility information between PyTorch and its domain libraries, see the [PyTorch - Domain libraries version compatibility matrix](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions)
+
+### NumPy Compatibility
 
 The following packages require **NumPy 1.26.4** and are not compatible with NumPy 2.x.
 
@@ -75,7 +77,7 @@ The following packages require **NumPy 1.26.4** and are not compatible with NumP
 - PyWavelets 1.4.1
 - pyclaw 5.12.0
 
-### setuptools compatibility
+### Setuptools Compatibility
 
 The following packages require **setuptools < 81** and may not function correctly with newer setuptools versions.
 - milvus-lite
@@ -85,8 +87,12 @@ The following packages require **setuptools < 81** and may not function correctl
 - xgboost
 
 ## ⚠️ Known Issues
-### Platform Support 
+### Platform Support
 - Ollama is not supported on Power9.
+
+### Python Version Support
+- **onnxruntime 1.29.0:** Works on Python 3.11 and later.
+- **openrag 0.7.1:** Works on Python 3.13 and later.
 
 ### Missing Pre-built Wheels for Some Dependencies
 Some packages in this release do not have pre-built wheels available for certain dependencies.
@@ -147,8 +153,8 @@ llama-server binary not found
 **If you face this issue, use the following workaround:**
 ```
 ln -s \
-  "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama/llama-server" \
-  "$PWD/venv/lib/python$PYTON_VERSION/site-packages/ollama_python_package/bin/llama-server"
+  "$PWD/venv/lib/python$PYTHON_VERSION/site-packages/ollama/llama-server" \
+  "$PWD/venv/lib/python$PYTHON_VERSION/site-packages/ollama_python_package/bin/llama-server"
 ```
 
 ## 🗑️ Removed
