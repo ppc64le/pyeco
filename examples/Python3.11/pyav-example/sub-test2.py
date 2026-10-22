@@ -30,7 +30,6 @@ def test_image_processing_and_encoding():
     # ----------------------------------------
     print("⚙️ Compiling multiply function with llvmlite...")
 
-    llvm.initialize()
     llvm.initialize_native_target()
     llvm.initialize_native_asmprinter()
 
