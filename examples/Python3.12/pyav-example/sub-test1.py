@@ -15,7 +15,7 @@ def test_full_stack_rawvideo():
     img_np = np.array(image, dtype=np.float32)
 
     # 2. LLVM brightness adjustment (via JIT)
-    llvm.initialize(); llvm.initialize_native_target(); llvm.initialize_native_asmprinter()
+    llvm.initialize_native_target(); llvm.initialize_native_asmprinter()
     brightness_ir = """
     define float @adjust(float %pixel, float %factor) {
     entry:
