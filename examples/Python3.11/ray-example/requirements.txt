@@ -16,7 +16,7 @@ ray==2.53.0
 referencing==0.37.0
 requests==2.33.0
 rpds-py==0.30.0
-scikit-learn==1.8.0
+scikit-learn==1.9.0
 scipy==1.17.1
 setuptools==68.2.2
 threadpoolctl==3.6.0

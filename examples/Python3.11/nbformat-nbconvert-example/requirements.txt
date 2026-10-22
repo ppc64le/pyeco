@@ -9,7 +9,7 @@ debugpy==1.8.21
 decorator==5.2.1
 defusedxml==0.7.1
 executing==2.2.0
-fastjsonschema==2.21.1
+fastjsonschema==2.22.2
 fonttools==4.59.2
 ipykernel==6.29.5
 ipython==9.5.0
@@ -19,10 +19,10 @@ Jinja2==3.1.6
 jsonschema==4.25.1
 jsonschema-specifications==2025.9.1
 jupyter_client==8.6.3
-jupyter_core==5.9.1
+jupyter-core==5.9.1
 jupyterlab_pygments==0.3.0
 kiwisolver==1.5.0
-MarkupSafe==3.0.3
+markupsafe==3.0.3
 matplotlib==3.11.0
 matplotlib-inline==0.1.7
 mistune==2.0.5
@@ -40,8 +40,8 @@ platformdirs==4.4.0
 prompt_toolkit==3.0.52
 psutil==7.2.2
 ptyprocess==0.7.0
-pure_eval==0.2.3
-Pygments==2.20.0
+pure-eval==0.2.3
+pygments==2.21.0
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 pyzmq==27.2.0
