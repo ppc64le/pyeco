@@ -1,4 +1,4 @@
-docling-parse==7.16.0
+docling-parse==7.22.2
 reportlab==4.2.5
 pillow==12.3.0
 numpy==2.4.6
