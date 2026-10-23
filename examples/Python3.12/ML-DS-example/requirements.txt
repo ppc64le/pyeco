@@ -107,7 +107,7 @@ parso==0.8.6
 partd==1.4.2
 patsy==1.0.2
 pexpect==4.9.0
-pillow==12.3.0
+pillow==13.0.0
 platformdirs==4.9.2
 plotly==6.5.2
 prometheus_client==0.24.1
@@ -173,5 +173,6 @@ webencodings==0.5.1
 websocket-client==1.9.0
 widgetsnbextension==4.0.15
 wrapt==2.1.1
-xgboost==3.4.0
+xgboost==3.0.2
 xopen==2.0.2
+
