@@ -1,7 +1,7 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: October 22, 2026
-### Last CVE Scanned On: October 22, 2026
+### Last Updated On: October 23, 2026
+### Last CVE Scanned On: October 23, 2026
 ----
 
 ### abseil-cpp
@@ -10669,6 +10669,13 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | pillow-12.3.0-cp310-cp310-manylinux_2_34_ppc64le.whl<br>pillow-12.3.0-cp311-cp311-manylinux_2_34_ppc64le.whl<br>pillow-12.3.0-cp312-cp312-manylinux_2_34_ppc64le.whl<br>pillow-12.3.0-cp312-cp312-manylinux_2_38_ppc64le.manylinux_2_39_ppc64le.whl<br>pillow-12.3.0-cp313-cp313-manylinux_2_34_ppc64le.whl<br>pillow-12.3.0-cp313-cp313-manylinux_2_38_ppc64le.manylinux_2_39_ppc64le.whl<br>pillow-12.3.0-cp314-cp314-manylinux_2_34_ppc64le.whl<br>pillow-12.3.0-cp314-cp314-manylinux_2_38_ppc64le.manylinux_2_39_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC-BY-4.0`, `CC0-1.0`,<br>`FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`IJG`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `MIT-CMU`,<br>`Python-2.0`, `Zlib` | N.A |
+
+----
+- **pillow==13.0.0**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| pillow-13.0.0-cp311-cp311-manylinux_2_34_ppc64le.whl<br>pillow-13.0.0-cp312-cp312-manylinux_2_34_ppc64le.whl<br>pillow-13.0.0-cp313-cp313-manylinux_2_34_ppc64le.whl<br>pillow-13.0.0-cp314-cp314-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`,<br>`CC-BY-4.0`, `CC0-1.0`,<br>`FTL`,<br>`GPL-2.0-or-later`,<br>`GPL-2.0-or-later OR LGPL-2.0-or-later`,<br>`IJG`,<br>`LGPL-2.0-or-later`,<br>`MIT`, `MIT-CMU`,<br>`Python-2.0`, `Zlib` | N.A |
 
 ----
 

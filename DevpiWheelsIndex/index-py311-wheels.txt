@@ -749,6 +749,7 @@ pillow==12.1.1+ppc64le1
 pillow==12.2.0
 pillow==12.2.0+ppc64le1
 pillow==12.3.0
+pillow==13.0.0
 preshed==3.0.13
 preshed==3.0.13+ppc64le1
 propcache==0.5.2
