@@ -1,7 +1,7 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: October 23, 2026
-### Last CVE Scanned On: October 23, 2026
+### Last Updated On: October 26, 2026
+### Last CVE Scanned On: October 26, 2026
 ----
 
 ### abseil-cpp
@@ -3309,6 +3309,13 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | docling_parse-7.22.2-cp311-cp311-manylinux_2_34_ppc64le.whl<br>docling_parse-7.22.2-cp312-cp312-manylinux_2_34_ppc64le.whl<br>docling_parse-7.22.2-cp313-cp313-manylinux_2_34_ppc64le.whl<br>docling_parse-7.22.2-cp314-cp314-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
+
+----
+- **docling-parse==7.23.0**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| docling_parse-7.23.0-cp311-cp311-manylinux_2_34_ppc64le.whl<br>docling_parse-7.23.0-cp312-cp312-manylinux_2_34_ppc64le.whl<br>docling_parse-7.23.0-cp313-cp313-manylinux_2_34_ppc64le.whl<br>docling_parse-7.23.0-cp314-cp314-manylinux_2_34_ppc64le.whl | `Apache-2.0`,<br>`BSD-3-Clause`, `MIT` | N.A |
 
 ----
 - **docling-parse==7.6.0**
