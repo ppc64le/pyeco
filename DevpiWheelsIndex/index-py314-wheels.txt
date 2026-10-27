@@ -129,6 +129,7 @@ docling-parse==7.15.0
 docling-parse==7.16.0
 docling-parse==7.20.0
 docling-parse==7.22.2
+docling-parse==7.23.0
 docling-parse==7.6.0
 docling-parse==7.9.0
 duckdb==1.4.3
