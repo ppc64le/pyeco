@@ -1,7 +1,7 @@
 # DevPi Wheels Index
 ---
-### Last Updated On: October 26, 2026
-### Last CVE Scanned On: October 26, 2026
+### Last Updated On: November 12, 2026
+### Last CVE Scanned On: November 12, 2026
 ----
 
 ### abseil-cpp
@@ -11472,6 +11472,13 @@
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
 | pyarrow-24.0.0-cp310-cp310-manylinux_2_34_ppc64le.whl<br>pyarrow-24.0.0-cp311-cp311-manylinux_2_34_ppc64le.whl<br>pyarrow-24.0.0-cp312-cp312-manylinux_2_34_ppc64le.whl<br>pyarrow-24.0.0-cp313-cp313-manylinux_2_34_ppc64le.whl<br>pyarrow-24.0.0-cp314-cp314-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR Apache-2.0`,<br>`BSL-1.0`, `CC-BY-3.0`,<br>`CC-BY-4.0`, `CC0-1.0`,<br>`GPL-2.0-or-later`,<br>`JSON`,<br>`LGPL-2.0-or-later`,<br>`libselinux-1.0`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`MPL-2.0`, `NTP`,<br>`OpenSSL`, `Python-2.0`,<br>`WTFPL`, `Zlib`,<br>`ZPL-2.1` | N.A |
+
+----
+- **pyarrow==26.0.1**
+
+| Wheel File | License | CVE IDs |
+|:-----------|:-------|:--------|
+| pyarrow-26.0.1-cp311-cp311-manylinux_2_34_ppc64le.whl<br>pyarrow-26.0.1-cp312-cp312-manylinux_2_34_ppc64le.whl<br>pyarrow-26.0.1-cp313-cp313-manylinux_2_34_ppc64le.whl<br>pyarrow-26.0.1-cp314-cp314-manylinux_2_34_ppc64le.whl | `0BSD`, `Apache-2.0`,<br>`Apache-2.0 OR MIT`,<br>`Apache-2.0 WITH LLVM-exception`,<br>`BSD-2-Clause`,<br>`BSD-3-Clause`,<br>`BSD-3-Clause OR Apache-2.0`,<br>`BSL-1.0`, `CC-BY-3.0`,<br>`CC-BY-4.0`, `CC0-1.0`,<br>`GPL-2.0-or-later`,<br>`JSON`,<br>`LGPL-2.0-or-later`,<br>`libselinux-1.0`, `MIT`,<br>`MIT OR Apache-2.0`,<br>`MPL-2.0`, `NTP`,<br>`OpenSSL`, `Python-2.0`,<br>`WTFPL`, `Zlib`,<br>`ZPL-2.1` | N.A |
 
 ----
 
