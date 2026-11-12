@@ -26,9 +26,9 @@ echo "Installing prerequisites..."
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y python3.11 python3.11-devel python3-pip
+            sudo dnf install -y libatomic python3.11 python3.11-devel python3-pip
         else
-            sudo yum install -y python3.11 python3.11-devel python3-pip
+            sudo yum install -y libatomic python3.11 python3.11-devel python3-pip
         fi
         ;;
     "ubuntu"|"debian")

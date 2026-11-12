@@ -20,9 +20,9 @@ DISTRO=$(detect_distro)
 case $DISTRO in
     "fedora"|"rhel"|"centos"|"rocky"|"almalinux")
         if command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y python3.12 python3.12-devel python3.12-pip
+            sudo dnf install -y libatomic python3.12 python3.12-devel python3.12-pip
         else
-            sudo yum install -y python3.12 python3.12-devel python3.12-pip
+            sudo yum install -y libatomic python3.12 python3.12-devel python3.12-pip
         fi
         ;;
     "ubuntu"|"debian")
