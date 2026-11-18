@@ -15731,7 +15731,7 @@
 
 | Wheel File | License | CVE IDs |
 |:-----------|:-------|:--------|
-| torchvision-0.29.0-cp312-cp312-manylinux_2_36_ppc64le.manylinux_2_39_ppc64le.whl<br>torchvision-0.29.0-cp313-cp313-manylinux_2_36_ppc64le.manylinux_2_39_ppc64le.whl<br>torchvision-0.29.0-cp314-cp314-manylinux_2_36_ppc64le.manylinux_2_39_ppc64le.whl | `BSD-3-Clause`,<br>`LGPL-2.0-or-later`,<br>`Zlib` | N.A |
+| torchvision-0.29.0-cp311-cp311-manylinux_2_34_ppc64le.whl<br>torchvision-0.29.0-cp312-cp312-manylinux_2_34_ppc64le.whl<br>torchvision-0.29.0-cp312-cp312-manylinux_2_36_ppc64le.manylinux_2_39_ppc64le.whl<br>torchvision-0.29.0-cp313-cp313-manylinux_2_34_ppc64le.whl<br>torchvision-0.29.0-cp313-cp313-manylinux_2_36_ppc64le.manylinux_2_39_ppc64le.whl<br>torchvision-0.29.0-cp314-cp314-manylinux_2_34_ppc64le.whl<br>torchvision-0.29.0-cp314-cp314-manylinux_2_36_ppc64le.manylinux_2_39_ppc64le.whl | `BSD-3-Clause`, `IJG`,<br>`LGPL-2.0-or-later`,<br>`Zlib` | N.A |
 
 ----
 
