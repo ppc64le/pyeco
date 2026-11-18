@@ -9,7 +9,7 @@ numpy==2.4.6
 packaging==25.0
 pandas==3.0.5
 pillow==13.0.0
-pyarrow==24.0.0
+pyarrow==26.0.1
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 pytz==2025.2
