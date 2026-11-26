@@ -1,7 +1,7 @@
 annotated-types==0.7.0
 anyio==4.12.1
 argon2-cffi==25.1.0
-argon2-cffi-bindings==25.1.0
+argon2-cffi-bindings==26.1.0
 arrow==1.4.0
 asttokens==3.0.1
 async-lru==2.2.0
@@ -136,7 +136,7 @@ rfc3987-syntax==1.1.0
 rich==13.9.4
 rpds-py==0.30.0
 scikit-image==0.26.0
-scikit-learn==1.7.0
+scikit-learn==1.7.2
 scipy==1.18.1
 Send2Trash==2.1.0
 sentencepiece==0.2.2
@@ -157,7 +157,7 @@ tiktoken==0.14.0
 tinycss2==1.4.0
 tokenizers==0.21.1
 toolz==1.1.0
-torch==2.13.0
+torch==2.14.0
 torchdata==0.11.0
 tornado==6.5.5
 tqdm==4.67.3
@@ -175,4 +175,3 @@ widgetsnbextension==4.0.15
 wrapt==2.1.1
 xgboost==3.0.2
 xopen==2.0.2
-
