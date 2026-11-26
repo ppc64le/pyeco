@@ -4,7 +4,7 @@ docling-ibm-models==4.0.4
 docling-parse==7.23.0
 docling-slim==2.142.0
 torch==2.14.0
-torchvision==0.28.0
+torchvision==0.29.0
 transformers==5.1.0
 reportlab==4.4.1
 huggingface-hub==1.31.0

@@ -111,7 +111,7 @@ supervisor==4.3.0
 sympy==1.15.0.dev0
 tokenizers==0.22.2
 torch==2.13.0
-torchvision==0.28.0
+torchvision==0.29.0
 tqdm==4.67.3
 transformers==5.10.4
 typer==0.24.1
