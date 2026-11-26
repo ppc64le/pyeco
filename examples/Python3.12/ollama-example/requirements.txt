@@ -1,2 +1,2 @@
-ollama-python-package==0.23.1
+ollama-python-package==0.40.11
 wrapt==1.17.3
